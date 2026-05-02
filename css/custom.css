@@ -1,0 +1,21 @@
+/* 头图与页脚完全透明 */
+#page-header,
+#footer {
+  background: transparent !important;
+}
+
+/* 移除夜间/白天模式下的遮罩层 */
+#page-header::before,
+#footer::before {
+  background: transparent !important;
+}
+
+[data-theme="dark"] #page-header::before,
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+
+/* 可选：让文章区域半透明白底，提升可读性 */
+#article-container {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
