@@ -1,0 +1,73 @@
+
+/* 基础变量定义，方便维护 */
+:root {
+  --card-bg-light: url('img/springBg.png');
+  --card-bg-dark: url('img/aurora.webp');
+  --card-overlay-color: rgba(0, 0, 0, 0.3); /* 遮罩颜色，提升文字对比度 */
+}
+
+/* 通用卡片样式 */
+#aside-content > .card-widget.card-info {
+  position: relative; /* 为绝对定位的遮罩层提供参照 */
+  background-repeat: no-repeat;
+  background-position: center center; /* 确保焦点居中 */
+  background-size: cover; /* 关键：保持比例填满容器，避免变形 */
+  background-color: #f0f0f0; /* 降级背景色，防止图片加载失败白屏 */
+  transition: background-image 0.3s ease-in-out; /* 平滑过渡 */
+  overflow: hidden; /* 确保内容不溢出 */
+}
+
+/* 浅色模式背景 */
+[data-theme="light"] #aside-content > .card-widget.card-info {
+  background-image: var(--card-bg-light);
+}
+
+/* 深色模式背景 */
+[data-theme="dark"] #aside-content > .card-widget.card-info {
+  background-image: var(--card-bg-dark);
+  background-color: #1a1a1a; /* 深色模式下的降级背景 */
+}
+
+/* 可选：添加半透明遮罩层以提升文字可读性 */
+/* 注意：这需要在 HTML 结构中有一个子元素作为遮罩，或者使用伪元素 */
+#aside-content > .card-widget.card-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--card-overlay-color);
+  z-index: 0; /* 置于背景之上，内容之下 */
+  pointer-events: none; /* 允许点击穿透 */
+}
+
+/* 确保卡片内的文字内容位于遮罩层之上 */
+#aside-content > .card-widget.card-info > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 移动端适配：解决 background-attachment: fixed 的性能问题 */
+@media (max-width: 768px) {
+  #aside-content > .card-widget.card-info {
+    background-attachment: scroll !important; /* 强制滚动，避免移动端卡顿 */
+    background-size: cover; /* 移动端也保持覆盖 */
+  }
+  
+  /* 移动端可适当调整遮罩透明度，使图片更清晰或文字更突出 */
+  :root {
+    --card-overlay-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* 可选：毛玻璃效果增强现代感（需浏览器支持） */
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+  #aside-content > .card-widget.card-info .card-content {
+    /* 假设卡片内容包裹在 .card-content 中 */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+  }
+}
