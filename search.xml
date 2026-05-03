@@ -19,22 +19,553 @@
 ]]></content>
   </entry>
   <entry>
-    <title>开启评论</title>
-    <url>/com/2026/04/30/%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA/</url>
-    <content><![CDATA[<h1 id="开启评论"><a href="#开启评论" class="headerlink" title="开启评论"></a>开启评论</h1><p>下面我们来给博客添加一个评论功能，这里我们使用这个 <a href="https://github.com/apps/utterances" title="utterances">utterances</a>插件，它是一个基于 GitHub Issue 的，开源评论插件。</p>
-<p>我们点击安装它，然后选择对应的仓库给它授权。然后在 GitHub 仓库，点击设置，找到 features 下面这个 Discussion 选项，然后点击勾选上这个选项。</p>
-<p>接着我们需要修改 _config.fluid.yml 配置文件，在文件中填入下面的内容，保存就可以了。</p>
-<pre><code>comments:
-  use: utterances
-utterances:
-  repo: your_github_username/your_repo_name # 替换为你的 GitHub 用户名和仓库名
-  issue_term: title
-  label: utterances
-  theme: github-light
-  theme_dark: github-dark
-  crossorigin: anonymous      
-</code></pre>
+    <title>免费图床</title>
+    <url>/com/2026/05/03/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><ol>
+<li>这部分免费图床就太多了，我会把我目前发现的可以免费白嫖一定额度的图床做一个总结列在下面</li>
+<li>这部分图床的搭建门槛较低，所以速度和稳定性良莠不齐，大家自行选择使用哪个</li>
+<li>我这里只给大家演示一种的使用方法，其他图床使用方法也类似</li>
+<li>大家可以看看哪个比较好用的或者自己知道的好用的这里没有，可以留言我会进行补充</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">🍕</th>
+<th align="center">🥗</th>
+<th align="center">🍤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://smms.app/">SMMS</a></td>
+<td align="center"><a href="https://www.superbed.cn/">聚合图床</a></td>
+<td align="center"><a href="https://www.hualigs.cn/">遇见图床</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://postimages.org/">PostImage</a></td>
+<td align="center"><a href="https://imgse.com/">路过图床</a></td>
+<td align="center"><a href="https://www.imgurl.org/">imgURL</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://imgbox.com/">imgbox</a></td>
+<td align="center"><a href="https://pic.iqy.ink/upload">Lsky Pro</a></td>
+<td align="center"><a href="https://upload.cc/">Upload.cc</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://imagelol.com/">imagelol</a></td>
+<td align="center"><a href="https://imgtp.com/">imgtp</a></td>
+<td align="center"><a href="https://cloudimge.com/">云图床</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://mcecy.com/">载涂图床</a></td>
+<td align="center"><a href="https://tuchuang.voooe.cn/">Sky Chart Bed</a></td>
+<td align="center"><a href="https://www.imgbed.link/">风筝图床</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://pz.al/">喷子图床</a></td>
+<td align="center"><a href="https://imgkb.com/">imgkb</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>使用方法：直接进入官网，上传图片然后粘贴地址即可，地址的样式有多样，自行选择</li>
+</ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>刘邦与项羽：一个实用帝王与一个悲剧英雄的千年对决</title>
+    <url>/com/2026/04/18/%E5%88%98%E9%82%A6%E4%B8%8E%E9%A1%B9%E7%BE%BD_%E5%85%AC%E4%BC%97%E5%8F%B7/</url>
+    <content><![CDATA[
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>刘邦与项羽：一个实用帝王与一个悲剧英雄的千年对决</title>
+</head>
+<body style="margin:0;padding:0;background:#f5f0e8;font-family:'PingFang SC','Helvetica Neue',Arial,sans-serif;">
+
+<!-- 外层容器 -->
+<div style="max-width:680px;margin:0 auto;background:#fff;">
+
+  <!-- ===== 封面区域 ===== -->
+  <div style="position:relative;background:linear-gradient(160deg,#1a0a00 0%,#3d1a05 40%,#6b2e0a 70%,#8b4513 100%);padding:60px 32px 50px;text-align:center;overflow:hidden;">
+    <!-- 装饰性印章纹样 -->
+    <div style="position:absolute;top:20px;right:24px;width:72px;height:72px;border:2px solid rgba(212,170,90,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+      <div style="width:54px;height:54px;border:1px solid rgba(212,170,90,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+        <span style="color:rgba(212,170,90,0.6);font-size:18px;letter-spacing:2px;">漢</span>
+      </div>
+    </div>
+    <!-- 小标签 -->
+    <div style="display:inline-block;background:rgba(212,170,90,0.15);border:1px solid rgba(212,170,90,0.4);border-radius:2px;padding:4px 14px;margin-bottom:22px;">
+      <span style="color:#d4aa5a;font-size:12px;letter-spacing:4px;font-weight:500;">中国历史人物</span>
+    </div>
+    <!-- 主标题 -->
+    <h1 style="margin:0 0 12px;color:#f5e8cc;font-size:30px;font-weight:700;line-height:1.35;letter-spacing:2px;text-shadow:0 2px 8px rgba(0,0,0,0.5);">
+      刘邦 <span style="color:#d4aa5a;">vs</span> 项羽
+    </h1>
+    <h2 style="margin:0 0 24px;color:#c8a87a;font-size:15px;font-weight:400;letter-spacing:3px;line-height:1.6;">
+      一个实用帝王 · 一个悲剧英雄
+    </h2>
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px;">
+      <div style="flex:1;max-width:80px;height:1px;background:linear-gradient(to right,transparent,rgba(212,170,90,0.6));"></div>
+      <div style="width:6px;height:6px;background:#d4aa5a;transform:rotate(45deg);"></div>
+      <div style="flex:1;max-width:80px;height:1px;background:linear-gradient(to left,transparent,rgba(212,170,90,0.6));"></div>
+    </div>
+    <!-- 副题 -->
+    <p style="margin:0;color:rgba(245,232,204,0.75);font-size:13px;line-height:1.8;letter-spacing:1px;">
+      从泗水亭长到汉朝开国皇帝<br/>从西楚霸王到乌江自刎——
+    </p>
+  </div>
+
+  <!-- ===== 导语 ===== -->
+  <div style="padding:32px 28px 0;">
+    <div style="background:#fdf8f0;border-left:4px solid #c8823a;border-radius:0 8px 8px 0;padding:18px 20px;margin-bottom:8px;">
+      <p style="margin:0;color:#5c3d1e;font-size:15px;line-height:1.9;font-style:italic;">
+        一个是含着金汤匙出生的贵族才俊，力拔山河气盖世；一个是喝酒打架没正事儿的中年农民老流氓，好吃懒做的混子。然而最终，前者成了千年传诵的悲剧英雄，后者成了缔造四百年汉朝的实用帝王。
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== 正文开始 ===== -->
+  <div style="padding:24px 28px;">
+
+    <!-- 章节一：出身对比 -->
+    <div style="margin-bottom:36px;">
+      <!-- 章节标题 -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:16px;font-weight:700;">壹</span>
+        </div>
+        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">草根混子 vs 贵族才俊</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        刘邦出生在江苏沛县的一个小村庄，爸妈没什么文化，连个正经名字都没给起。兄弟四个，他排行老三，干脆叫"刘季"——有排行最小的意思。打小就跟别人不一样，不爱种地干活，一天到晚斗鸡走犬，广交狐朋狗友，十里八乡谁都能跟他玩到一块儿。
+      </p>
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        连亲爹都瞧不上他，说他不如哥哥。嫂子也烦他，因为他经常把朋友叫到家里吃喝吹牛。可刘邦不在乎，反正在家也不受待见，拍拍屁股就跑去偶像张耳家里混吃混喝，脸皮厚，一住就是小半年。
+      </p>
+
+      <!-- 对比卡片 -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0;">
+        <!-- 刘邦卡片 -->
+        <div style="background:linear-gradient(160deg,#fff8f0,#fef0e0);border:1px solid #e8c898;border-radius:10px;padding:16px 14px;">
+          <div style="text-align:center;margin-bottom:10px;">
+            <div style="display:inline-block;background:#c8823a;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;letter-spacing:1px;">刘邦</div>
+          </div>
+          <ul style="margin:0;padding:0;list-style:none;">
+            <li style="color:#5c3d1e;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #e8c898;">📍 沛县草根农民</li>
+            <li style="color:#5c3d1e;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #e8c898;">🎂 48岁才开始创业</li>
+            <li style="color:#5c3d1e;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #e8c898;">🍖 好吃懒做的混子</li>
+            <li style="color:#5c3d1e;font-size:13px;line-height:1.8;padding:4px 0;">💡 能屈能伸 实用为王</li>
+          </ul>
+        </div>
+        <!-- 项羽卡片 -->
+        <div style="background:linear-gradient(160deg,#f0f4ff,#e8eeff);border:1px solid #a8b8e8;border-radius:10px;padding:16px 14px;">
+          <div style="text-align:center;margin-bottom:10px;">
+            <div style="display:inline-block;background:#3a4c8b;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;letter-spacing:1px;">项羽</div>
+          </div>
+          <ul style="margin:0;padding:0;list-style:none;">
+            <li style="color:#1e2a5c;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #a8b8e8;">📍 楚国名将世家后代</li>
+            <li style="color:#1e2a5c;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #a8b8e8;">💪 身高184，力能举鼎</li>
+            <li style="color:#1e2a5c;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #a8b8e8;">⚔️ 23岁登上历史舞台</li>
+            <li style="color:#1e2a5c;font-size:13px;line-height:1.8;padding:4px 0;">🏆 百战百胜 天纵奇才</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        项羽则截然不同，他是含着金汤匙出生的，项家是楚国名将世家。即使后来秦国把楚国灭了，家道中落，他依然游走在上层圈子里——身高184，力能举鼎，才气过人。
+      </p>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+      <span style="color:#c8823a;font-size:16px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+    </div>
+
+    <!-- 章节二：见秦始皇的反应 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:16px;font-weight:700;">贰</span>
+        </div>
+        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">同一个始皇帝，两种不同的心</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        31岁的刘邦备考两年后考上公务员，当上了泗水亭长，相当于乡镇派出所所长。有一次去咸阳出差，正巧赶上秦始皇出巡的队伍。所有百姓官员都跪在地上，山呼万岁，刘邦也跪于其中，远远地看着那豪华威严的仪仗，不禁感慨：
+      </p>
+
+      <!-- 引用块 -->
+      <div style="background:linear-gradient(135deg,#fdf8ee,#fff8e8);border-radius:10px;padding:20px 22px;margin:20px 0;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-10px;left:14px;font-size:80px;color:rgba(200,130,58,0.1);font-family:serif;line-height:1;">"</div>
+        <p style="margin:0;color:#6b3a1e;font-size:16px;line-height:1.9;font-weight:500;position:relative;z-index:1;">
+          大丈夫就应该是这样的！
+        </p>
+        <div style="margin-top:10px;color:#a87040;font-size:12px;">—— 刘邦，向往</div>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        而远在会稽的项羽，同样也看着秦始皇庞大的船队和仪仗，却对叔叔说了完全不同的话：
+      </p>
+
+      <div style="background:linear-gradient(135deg,#eef0ff,#e8ebff);border-radius:10px;padding:20px 22px;margin:20px 0;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-10px;left:14px;font-size:80px;color:rgba(58,76,139,0.1);font-family:serif;line-height:1;">"</div>
+        <p style="margin:0;color:#1e2a6b;font-size:16px;line-height:1.9;font-weight:500;position:relative;z-index:1;">
+          以后我必定取而代之！
+        </p>
+        <div style="margin-top:10px;color:#4050a0;font-size:12px;">—— 项羽，复仇</div>
+      </div>
+
+      <p style="margin:0;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        一个是草根老百姓的向往羡慕，一个是秦朝让家族没落的气愤复仇。同一个背景，两种截然不同的心理，也预示着两人截然不同的命运走向。
+      </p>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+      <span style="color:#c8823a;font-size:16px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+    </div>
+
+    <!-- 章节三：刘邦的发迹史 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:16px;font-weight:700;">叁</span>
+        </div>
+        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">40岁娶妻，48岁造反创业</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        刘邦人生的转折点，是在一场饭局上。当地来了个姓吕的老头儿，附近有头有脸的人都来拜访。宴会主持人萧何通知说，凡是贺礼不到一千钱的，只能在大堂，进不了包间。刘邦心想，来都来了，肯定要近距离接触。当即大声说：
+      </p>
+
+      <div style="background:linear-gradient(135deg,#fdf8ee,#fff8e8);border-radius:10px;padding:16px 20px;margin:16px 0;border-left:3px solid #c8823a;">
+        <p style="margin:0;color:#6b3a1e;font-size:15px;line-height:1.8;">"我刘季给吕公送礼一万钱！"——实际上兜里比脸还干净，一个字儿都没有，说起谎来脸不红心不跳。</p>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        没想到吕老头会看面相，一见刘邦就觉得此人前途不可限量，宴会一结束就拉着他的手说："我擅长面相，见过了那么多人，没有一个面相比得上您，我有个女儿，您要是还没娶媳妇儿，就让她嫁给您吧。"
+      </p>
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        40岁的刘邦以为自己听错了。这位吕老头的女儿，正是日后与武则天、慈禧并称"中国历史三大女主"的吕雉。
+      </p>
+
+      <!-- 时间线 -->
+      <div style="background:#fafafa;border-radius:10px;padding:20px;margin:20px 0;">
+        <div style="color:#8b4513;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:14px;">📅 刘邦的人生时间线</div>
+        <div style="position:relative;padding-left:20px;">
+          <div style="position:absolute;left:6px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#c8823a,#d4aa5a);border-radius:2px;"></div>
+          <!-- 节点们 -->
+          <div style="position:relative;margin-bottom:12px;">
+            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#c8823a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #c8823a;"></div>
+            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">31岁</span> — 考上泗水亭长（相当于乡镇所长）</div>
+          </div>
+          <div style="position:relative;margin-bottom:12px;">
+            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#c8823a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #c8823a;"></div>
+            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">40岁</span> — 骗吃骗喝，娶了年轻貌美的媳妇吕雉</div>
+          </div>
+          <div style="position:relative;margin-bottom:12px;">
+            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#c8823a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #c8823a;"></div>
+            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">约42岁</span> — 押送犯人，被逼上梁山，躲进芒砀山造反</div>
+          </div>
+          <div style="position:relative;margin-bottom:12px;">
+            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#c8823a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #c8823a;"></div>
+            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">48岁</span> — 趁乱起兵，开启真正的创业之路</div>
+          </div>
+          <div style="position:relative;">
+            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#d4aa5a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #d4aa5a;"></div>
+            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">54岁</span> — 称帝，建立大汉王朝</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+      <span style="color:#c8823a;font-size:16px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+    </div>
+
+    <!-- 章节四：鸿门宴 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:16px;font-weight:700;">肆</span>
+        </div>
+        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">史上最惊险的饭局——鸿门宴</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        先入关中的是刘邦，而不是项羽。这让项羽大怒。谋士范增说："这个姓刘的不能留，必成心腹大患，找机会弄死他。"两人达成一致。
+      </p>
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        消息传到刘邦耳中，他第二天一早带着100号人赶到鸿门给项羽请罪，还没走近，远远就行礼，说自己无意争风，退出咸阳就是等着项大将军来当主人。项羽是个顺毛驴，果不其然，一听这话，反而觉得对不住刘邦了，当场摆下酒宴给刘邦压惊。
+      </p>
+
+      <!-- 鸿门宴人物关系 -->
+      <div style="background:linear-gradient(135deg,#1a0a00,#2d1205);border-radius:12px;padding:24px 20px;margin:20px 0;">
+        <div style="color:#d4aa5a;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:16px;text-align:center;">⚔ 鸿门宴局中局 ⚔</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="background:rgba(58,76,139,0.3);border:1px solid rgba(100,120,200,0.3);border-radius:8px;padding:12px;">
+            <div style="color:#8898e8;font-size:12px;font-weight:600;margin-bottom:8px;letter-spacing:1px;">项羽阵营</div>
+            <div style="color:#c8d0f0;font-size:12.5px;line-height:1.8;">
+              <div>项羽 — 主帅（不想杀）</div>
+              <div>范增 — 谋士（要杀刘邦）</div>
+              <div>项伯 — 叔叔（暗中保护）</div>
+              <div>项庄 — 舞剑刺客（未果）</div>
+            </div>
+          </div>
+          <div style="background:rgba(139,69,19,0.3);border:1px solid rgba(200,130,58,0.3);border-radius:8px;padding:12px;">
+            <div style="color:#e8a870;font-size:12px;font-weight:600;margin-bottom:8px;letter-spacing:1px;">刘邦阵营</div>
+            <div style="color:#f0d0a8;font-size:12.5px;line-height:1.8;">
+              <div>刘邦 — 主角（能屈能伸）</div>
+              <div>张良 — 谋士（运筹帷幄）</div>
+              <div>樊哙 — 武将（闯帐解围）</div>
+              <div>刘邦 — 借口上厕所逃走</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        范增精心策划的暗杀在项伯和樊哙的干扰下彻底失败。樊哙闯入大帐后说的话才是真正的转折点：先给刘邦戴高帽，再给项羽扣上"跟秦王没什么两样"的大帽子，然后轻描淡写地说"我觉得您肯定不是那种人"。粗野武夫说出来的话竟无懈可击。
+      </p>
+      <p style="margin:0;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        最终，刘邦借口上厕所，溜之大吉。范增气得牙痒痒："你看吧，夺天下的一定是刘邦了，咱们这些人都要成为他的俘虏啦！"
+      </p>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+      <span style="color:#c8823a;font-size:16px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+    </div>
+
+    <!-- 章节五：楚汉之争 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:16px;font-weight:700;">伍</span>
+        </div>
+        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">韩信出山，楚汉争霸</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        就在刘邦愁着如何翻盘时，一个人才跳槽来投——韩信。此前，韩信在项羽手下是个保安队长，因为太爱给领导提建议，项羽烦了，韩信就跳槽去了刘邦这个偏远小公司，直接被封为大将军。
+      </p>
+
+      <div style="background:linear-gradient(135deg,#f5f9ff,#eef4ff);border:1px solid #c0d0f0;border-radius:10px;padding:18px 20px;margin:16px 0;">
+        <div style="color:#3a4c8b;font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:10px;">🔥 韩信的妙计：明修栈道，暗度陈仓</div>
+        <p style="margin:0;color:#2a3a7b;font-size:14px;line-height:1.8;">表面上让你看到我不争不抢，实际上暗中行动达成目标。仅仅一年，韩信合并五路诸侯，率56万大军攻下项羽老巢彭城。</p>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        然而项羽毕竟是项羽。一听家被偷了，果断掉头，仅率3万轻骑兵就将刘邦56万大军杀得分崩离析。刘邦疯狂逃窜，逃跑路上甚至把自己的儿女踹下车……连裤衩都赔掉了。
+      </p>
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        但刘邦不愧是刘邦——在家用离间计把项羽手下唯一拿得出手的谋士范增给离间走了。公元前203年，项羽兵疲粮尽，被迫签下楚河汉界协议。
+      </p>
+      <p style="margin:0;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        等项羽转身回家，刘邦撕毁协议，率军追击，在垓下将项羽十面埋伏。项羽吃了人生中第一次败仗。
+      </p>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+      <span style="color:#c8823a;font-size:16px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+    </div>
+
+    <!-- 章节六：霸王别姬 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#2a3a7b,#3a4c9b);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:16px;font-weight:700;">陆</span>
+        </div>
+        <h3 style="margin:0;color:#1a2050;font-size:19px;font-weight:700;letter-spacing:1px;">霸王别姬，乌江自刎</h3>
+      </div>
+
+      <!-- 悲情描写区域 -->
+      <div style="background:linear-gradient(160deg,#0d0820,#1a1040,#0a0d2a);border-radius:12px;padding:28px 24px;margin-bottom:20px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;right:0;width:100px;height:100px;background:radial-gradient(circle,rgba(100,80,200,0.15),transparent);border-radius:0 12px 0 100%;"></div>
+        <p style="margin:0 0 16px;color:#c0b8e8;font-size:15px;line-height:2;position:relative;z-index:1;">
+          这天夜里，黑暗中突然从四面八方传来楚国的歌声——四面楚歌。
+        </p>
+        <p style="margin:0 0 16px;color:#c0b8e8;font-size:15px;line-height:2;position:relative;z-index:1;">
+          此时的项羽睡不着，在大帐中喝着闷酒，看着身边虞姬美丽的脸庞，又看看自己穷途末路的处境，放声悲歌——
+        </p>
+        <div style="background:rgba(255,255,255,0.05);border-left:3px solid rgba(180,160,240,0.5);border-radius:0 8px 8px 0;padding:14px 16px;margin:16px 0;">
+          <p style="margin:0;color:#e8e0ff;font-size:15.5px;line-height:1.9;font-style:italic;">
+            "力拔山兮气盖世，时不利兮骓不逝。<br/>骓不逝兮可奈何，虞兮虞兮奈若何！"
+          </p>
+        </div>
+        <p style="margin:0;color:#c0b8e8;font-size:15px;line-height:2;position:relative;z-index:1;">
+          虞姬泪流满面，举剑自刎。
+        </p>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        随后，项羽翻身上马，带着800骑兵杀出重围。逃到乌江时，身边仅剩28骑。乌江亭长划着小船等候，说"大王，回江东还有机会"。
+      </p>
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        项羽摇头说："当年我带着八千子弟出来打天下，现在只剩我一人，还有何颜面见江东父老？"
+      </p>
+      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        他笑着拒绝了渡江，转身面对追兵，拔剑自刎于乌江江畔。年仅31岁。
+      </p>
+      <p style="margin:0;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        整本《史记》中，这是项羽第一次，也是最后一次笑。八千子弟兵无一生还，他做不到，也没法交代。宁可站着死，绝不跪着生。
+      </p>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+      <span style="color:#c8823a;font-size:16px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+    </div>
+
+    <!-- 章节七：刘邦的团队 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:16px;font-weight:700;">柒</span>
+        </div>
+        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">刘邦最大的本事：用人</h3>
+      </div>
+
+      <p style="margin:0 0 20px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
+        称帝后，刘邦环顾手下的兄弟们，不禁感慨——这是一支多么草根的创业团队啊：
+      </p>
+
+      <!-- 人才名片 -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
+        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
+          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">樊哙 · 武阳侯</div>
+          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">老家卖狗肉的<br/>→ 最勇猛的先锋</div>
+        </div>
+        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
+          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">夏侯婴 · 汝阴侯</div>
+          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">县长的车夫<br/>→ 多次救主的司机</div>
+        </div>
+        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
+          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">萧何 · 赞侯</div>
+          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">老家同事<br/>→ 最强后勤HR</div>
+        </div>
+        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
+          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">曹参 · 平阳侯</div>
+          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">老家监狱长<br/>→ 开国功臣</div>
+        </div>
+        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
+          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">韩信 · 楚王</div>
+          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">项羽的保安队长<br/>→ 兵仙，战神</div>
+        </div>
+        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
+          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">张良 · 留侯</div>
+          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">韩国落魄贵族<br/>→ 最信任的谋士</div>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#fff8f0,#fef5e8);border-radius:10px;padding:18px 20px;border:1px solid #e8c898;">
+        <p style="margin:0;color:#5c3d1e;font-size:14.5px;line-height:1.9;">
+          这是时势造英雄，更是<strong style="color:#8b4513;">刘邦有容人之量，用人不疑</strong>。一个卖狗肉的、一个车夫、一个监狱长、一个吹唢呐的……他把这些人用成了开国功勋。
+        </p>
+      </div>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+      <span style="color:#c8823a;font-size:16px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
+    </div>
+
+    <!-- 结语 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:16px;font-weight:700;">终</span>
+        </div>
+        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">人生，从来没有太晚的开始</h3>
+      </div>
+
+      <!-- 项羽评价 -->
+      <div style="background:linear-gradient(135deg,#0d0820,#1a1040);border-radius:12px;padding:22px 22px;margin-bottom:16px;">
+        <div style="color:#a090e0;font-size:12px;font-weight:600;letter-spacing:2px;margin-bottom:12px;">关于 项羽</div>
+        <p style="margin:0 0 12px;color:#d0c8f8;font-size:14.5px;line-height:1.9;">
+          你是史记中唯一一个不是帝王却被写入本纪的人。巨鹿之战，5万对40万，胜；彭城之战，3万对56万，胜。垓下一战，他们集结全明星阵容对你十面埋伏，还不敢硬上，只能用四面楚歌攻心。
+        </p>
+        <p style="margin:0;color:#d0c8f8;font-size:14.5px;line-height:1.9;">
+          有人说你要面子——可面对从小长大的地方，面对父老乡亲，又有几个人不想有个体面？你只是不想再连累江东的父兄了。宁可站着死，绝不跪着生。
+        </p>
+      </div>
+
+      <!-- 李清照的诗 -->
+      <div style="background:linear-gradient(135deg,#1a0a00,#2d1205);border-radius:12px;padding:20px 22px;margin-bottom:20px;text-align:center;">
+        <p style="margin:0 0 6px;color:#d4aa5a;font-size:16px;line-height:2;font-style:italic;letter-spacing:4px;">
+          生当作人杰，<br/>死亦为鬼雄。
+        </p>
+        <p style="margin:0;color:#a87040;font-size:12px;letter-spacing:1px;">—— 李清照</p>
+      </div>
+
+      <!-- 刘邦评价 -->
+      <div style="background:linear-gradient(135deg,#fdf8f0,#fef5e8);border-radius:12px;padding:22px 22px;margin-bottom:20px;border:1px solid #e8c898;">
+        <div style="color:#8b4513;font-size:12px;font-weight:600;letter-spacing:2px;margin-bottom:12px;">关于 刘邦</div>
+        <p style="margin:0 0 12px;color:#5c3d1e;font-size:14.5px;line-height:1.9;">
+          一般人40岁就信命了，而你40岁骗吃骗喝娶了老婆，48岁开始创业，7年时间先灭强秦，再灭项羽，54岁称帝。
+        </p>
+        <p style="margin:0;color:#5c3d1e;font-size:14.5px;line-height:1.9;">
+          你是历史上从平民到帝王的第一人，王侯将相宁有种乎的真正践行者。就连后世都说：<strong style="color:#8b4513;">大丈夫当如是。</strong>
+        </p>
+      </div>
+
+      <!-- 最终寄语 -->
+      <div style="background:linear-gradient(135deg,#3d1a05,#6b2e0a,#8b4513);border-radius:12px;padding:28px 24px;text-align:center;">
+        <p style="margin:0 0 16px;color:#f5e8cc;font-size:16px;line-height:1.9;letter-spacing:1px;">
+          历史或许不会重复，但人性的规律永存。
+        </p>
+        <p style="margin:0 0 16px;color:#f5e8cc;font-size:16px;line-height:1.9;letter-spacing:1px;">
+          有人少年得志，有人大器晚成，<br/>人生从来没有太晚的开始。
+        </p>
+        <div style="display:inline-block;background:rgba(212,170,90,0.2);border:1px solid rgba(212,170,90,0.5);border-radius:6px;padding:8px 20px;margin-top:8px;">
+          <span style="color:#d4aa5a;font-size:14px;letter-spacing:2px;">年龄，又能说明什么呢？</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end 正文 -->
+
+  <!-- ===== 底部版权 ===== -->
+  <div style="background:#1a0a00;padding:24px 28px;text-align:center;">
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px;">
+      <div style="flex:1;max-width:60px;height:1px;background:rgba(212,170,90,0.3);"></div>
+      <span style="color:#d4aa5a;font-size:14px;letter-spacing:2px;">中国历史文化人物</span>
+      <div style="flex:1;max-width:60px;height:1px;background:rgba(212,170,90,0.3);"></div>
+    </div>
+    <p style="margin:0;color:rgba(245,232,204,0.4);font-size:12px;line-height:1.8;">在历史中寻找力量，在人物中看见自己</p>
+  </div>
+
+</div><!-- end 外层容器 -->
+
+</body>
+</html>
+]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>汉朝</tag>
+      </tags>
   </entry>
   <entry>
     <title>张居正：一根燃烧自己的脊梁</title>
@@ -349,6 +880,24 @@ utterances:
 
 </body>
 </html>]]></content>
+  </entry>
+  <entry>
+    <title>开启评论</title>
+    <url>/com/2026/04/30/%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA/</url>
+    <content><![CDATA[<h1 id="开启评论"><a href="#开启评论" class="headerlink" title="开启评论"></a>开启评论</h1><p>下面我们来给博客添加一个评论功能，这里我们使用这个 <a href="https://github.com/apps/utterances" title="utterances">utterances</a>插件，它是一个基于 GitHub Issue 的，开源评论插件。</p>
+<p>我们点击安装它，然后选择对应的仓库给它授权。然后在 GitHub 仓库，点击设置，找到 features 下面这个 Discussion 选项，然后点击勾选上这个选项。</p>
+<p>接着我们需要修改 _config.fluid.yml 配置文件，在文件中填入下面的内容，保存就可以了。</p>
+<pre><code>comments:
+  use: utterances
+utterances:
+  repo: your_github_username/your_repo_name # 替换为你的 GitHub 用户名和仓库名
+  issue_term: title
+  label: utterances
+  theme: github-light
+  theme_dark: github-dark
+  crossorigin: anonymous      
+</code></pre>
+]]></content>
   </entry>
   <entry>
     <title>64岁抬棺西征，保全166万国土——晚清对外唯一胜仗</title>
@@ -2150,1278 +2699,6 @@ utterances:
 ]]></content>
   </entry>
   <entry>
-    <title>刘邦与项羽：一个实用帝王与一个悲剧英雄的千年对决</title>
-    <url>/com/2026/04/18/%E5%88%98%E9%82%A6%E4%B8%8E%E9%A1%B9%E7%BE%BD_%E5%85%AC%E4%BC%97%E5%8F%B7/</url>
-    <content><![CDATA[
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>刘邦与项羽：一个实用帝王与一个悲剧英雄的千年对决</title>
-</head>
-<body style="margin:0;padding:0;background:#f5f0e8;font-family:'PingFang SC','Helvetica Neue',Arial,sans-serif;">
-
-<!-- 外层容器 -->
-<div style="max-width:680px;margin:0 auto;background:#fff;">
-
-  <!-- ===== 封面区域 ===== -->
-  <div style="position:relative;background:linear-gradient(160deg,#1a0a00 0%,#3d1a05 40%,#6b2e0a 70%,#8b4513 100%);padding:60px 32px 50px;text-align:center;overflow:hidden;">
-    <!-- 装饰性印章纹样 -->
-    <div style="position:absolute;top:20px;right:24px;width:72px;height:72px;border:2px solid rgba(212,170,90,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-      <div style="width:54px;height:54px;border:1px solid rgba(212,170,90,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;">
-        <span style="color:rgba(212,170,90,0.6);font-size:18px;letter-spacing:2px;">漢</span>
-      </div>
-    </div>
-    <!-- 小标签 -->
-    <div style="display:inline-block;background:rgba(212,170,90,0.15);border:1px solid rgba(212,170,90,0.4);border-radius:2px;padding:4px 14px;margin-bottom:22px;">
-      <span style="color:#d4aa5a;font-size:12px;letter-spacing:4px;font-weight:500;">中国历史人物</span>
-    </div>
-    <!-- 主标题 -->
-    <h1 style="margin:0 0 12px;color:#f5e8cc;font-size:30px;font-weight:700;line-height:1.35;letter-spacing:2px;text-shadow:0 2px 8px rgba(0,0,0,0.5);">
-      刘邦 <span style="color:#d4aa5a;">vs</span> 项羽
-    </h1>
-    <h2 style="margin:0 0 24px;color:#c8a87a;font-size:15px;font-weight:400;letter-spacing:3px;line-height:1.6;">
-      一个实用帝王 · 一个悲剧英雄
-    </h2>
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px;">
-      <div style="flex:1;max-width:80px;height:1px;background:linear-gradient(to right,transparent,rgba(212,170,90,0.6));"></div>
-      <div style="width:6px;height:6px;background:#d4aa5a;transform:rotate(45deg);"></div>
-      <div style="flex:1;max-width:80px;height:1px;background:linear-gradient(to left,transparent,rgba(212,170,90,0.6));"></div>
-    </div>
-    <!-- 副题 -->
-    <p style="margin:0;color:rgba(245,232,204,0.75);font-size:13px;line-height:1.8;letter-spacing:1px;">
-      从泗水亭长到汉朝开国皇帝<br/>从西楚霸王到乌江自刎——
-    </p>
-  </div>
-
-  <!-- ===== 导语 ===== -->
-  <div style="padding:32px 28px 0;">
-    <div style="background:#fdf8f0;border-left:4px solid #c8823a;border-radius:0 8px 8px 0;padding:18px 20px;margin-bottom:8px;">
-      <p style="margin:0;color:#5c3d1e;font-size:15px;line-height:1.9;font-style:italic;">
-        一个是含着金汤匙出生的贵族才俊，力拔山河气盖世；一个是喝酒打架没正事儿的中年农民老流氓，好吃懒做的混子。然而最终，前者成了千年传诵的悲剧英雄，后者成了缔造四百年汉朝的实用帝王。
-      </p>
-    </div>
-  </div>
-
-  <!-- ===== 正文开始 ===== -->
-  <div style="padding:24px 28px;">
-
-    <!-- 章节一：出身对比 -->
-    <div style="margin-bottom:36px;">
-      <!-- 章节标题 -->
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:16px;font-weight:700;">壹</span>
-        </div>
-        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">草根混子 vs 贵族才俊</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        刘邦出生在江苏沛县的一个小村庄，爸妈没什么文化，连个正经名字都没给起。兄弟四个，他排行老三，干脆叫"刘季"——有排行最小的意思。打小就跟别人不一样，不爱种地干活，一天到晚斗鸡走犬，广交狐朋狗友，十里八乡谁都能跟他玩到一块儿。
-      </p>
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        连亲爹都瞧不上他，说他不如哥哥。嫂子也烦他，因为他经常把朋友叫到家里吃喝吹牛。可刘邦不在乎，反正在家也不受待见，拍拍屁股就跑去偶像张耳家里混吃混喝，脸皮厚，一住就是小半年。
-      </p>
-
-      <!-- 对比卡片 -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0;">
-        <!-- 刘邦卡片 -->
-        <div style="background:linear-gradient(160deg,#fff8f0,#fef0e0);border:1px solid #e8c898;border-radius:10px;padding:16px 14px;">
-          <div style="text-align:center;margin-bottom:10px;">
-            <div style="display:inline-block;background:#c8823a;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;letter-spacing:1px;">刘邦</div>
-          </div>
-          <ul style="margin:0;padding:0;list-style:none;">
-            <li style="color:#5c3d1e;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #e8c898;">📍 沛县草根农民</li>
-            <li style="color:#5c3d1e;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #e8c898;">🎂 48岁才开始创业</li>
-            <li style="color:#5c3d1e;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #e8c898;">🍖 好吃懒做的混子</li>
-            <li style="color:#5c3d1e;font-size:13px;line-height:1.8;padding:4px 0;">💡 能屈能伸 实用为王</li>
-          </ul>
-        </div>
-        <!-- 项羽卡片 -->
-        <div style="background:linear-gradient(160deg,#f0f4ff,#e8eeff);border:1px solid #a8b8e8;border-radius:10px;padding:16px 14px;">
-          <div style="text-align:center;margin-bottom:10px;">
-            <div style="display:inline-block;background:#3a4c8b;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;letter-spacing:1px;">项羽</div>
-          </div>
-          <ul style="margin:0;padding:0;list-style:none;">
-            <li style="color:#1e2a5c;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #a8b8e8;">📍 楚国名将世家后代</li>
-            <li style="color:#1e2a5c;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #a8b8e8;">💪 身高184，力能举鼎</li>
-            <li style="color:#1e2a5c;font-size:13px;line-height:1.8;padding:4px 0;border-bottom:1px dashed #a8b8e8;">⚔️ 23岁登上历史舞台</li>
-            <li style="color:#1e2a5c;font-size:13px;line-height:1.8;padding:4px 0;">🏆 百战百胜 天纵奇才</li>
-          </ul>
-        </div>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        项羽则截然不同，他是含着金汤匙出生的，项家是楚国名将世家。即使后来秦国把楚国灭了，家道中落，他依然游走在上层圈子里——身高184，力能举鼎，才气过人。
-      </p>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-      <span style="color:#c8823a;font-size:16px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-    </div>
-
-    <!-- 章节二：见秦始皇的反应 -->
-    <div style="margin-bottom:36px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:16px;font-weight:700;">贰</span>
-        </div>
-        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">同一个始皇帝，两种不同的心</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        31岁的刘邦备考两年后考上公务员，当上了泗水亭长，相当于乡镇派出所所长。有一次去咸阳出差，正巧赶上秦始皇出巡的队伍。所有百姓官员都跪在地上，山呼万岁，刘邦也跪于其中，远远地看着那豪华威严的仪仗，不禁感慨：
-      </p>
-
-      <!-- 引用块 -->
-      <div style="background:linear-gradient(135deg,#fdf8ee,#fff8e8);border-radius:10px;padding:20px 22px;margin:20px 0;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-10px;left:14px;font-size:80px;color:rgba(200,130,58,0.1);font-family:serif;line-height:1;">"</div>
-        <p style="margin:0;color:#6b3a1e;font-size:16px;line-height:1.9;font-weight:500;position:relative;z-index:1;">
-          大丈夫就应该是这样的！
-        </p>
-        <div style="margin-top:10px;color:#a87040;font-size:12px;">—— 刘邦，向往</div>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        而远在会稽的项羽，同样也看着秦始皇庞大的船队和仪仗，却对叔叔说了完全不同的话：
-      </p>
-
-      <div style="background:linear-gradient(135deg,#eef0ff,#e8ebff);border-radius:10px;padding:20px 22px;margin:20px 0;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-10px;left:14px;font-size:80px;color:rgba(58,76,139,0.1);font-family:serif;line-height:1;">"</div>
-        <p style="margin:0;color:#1e2a6b;font-size:16px;line-height:1.9;font-weight:500;position:relative;z-index:1;">
-          以后我必定取而代之！
-        </p>
-        <div style="margin-top:10px;color:#4050a0;font-size:12px;">—— 项羽，复仇</div>
-      </div>
-
-      <p style="margin:0;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        一个是草根老百姓的向往羡慕，一个是秦朝让家族没落的气愤复仇。同一个背景，两种截然不同的心理，也预示着两人截然不同的命运走向。
-      </p>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-      <span style="color:#c8823a;font-size:16px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-    </div>
-
-    <!-- 章节三：刘邦的发迹史 -->
-    <div style="margin-bottom:36px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:16px;font-weight:700;">叁</span>
-        </div>
-        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">40岁娶妻，48岁造反创业</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        刘邦人生的转折点，是在一场饭局上。当地来了个姓吕的老头儿，附近有头有脸的人都来拜访。宴会主持人萧何通知说，凡是贺礼不到一千钱的，只能在大堂，进不了包间。刘邦心想，来都来了，肯定要近距离接触。当即大声说：
-      </p>
-
-      <div style="background:linear-gradient(135deg,#fdf8ee,#fff8e8);border-radius:10px;padding:16px 20px;margin:16px 0;border-left:3px solid #c8823a;">
-        <p style="margin:0;color:#6b3a1e;font-size:15px;line-height:1.8;">"我刘季给吕公送礼一万钱！"——实际上兜里比脸还干净，一个字儿都没有，说起谎来脸不红心不跳。</p>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        没想到吕老头会看面相，一见刘邦就觉得此人前途不可限量，宴会一结束就拉着他的手说："我擅长面相，见过了那么多人，没有一个面相比得上您，我有个女儿，您要是还没娶媳妇儿，就让她嫁给您吧。"
-      </p>
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        40岁的刘邦以为自己听错了。这位吕老头的女儿，正是日后与武则天、慈禧并称"中国历史三大女主"的吕雉。
-      </p>
-
-      <!-- 时间线 -->
-      <div style="background:#fafafa;border-radius:10px;padding:20px;margin:20px 0;">
-        <div style="color:#8b4513;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:14px;">📅 刘邦的人生时间线</div>
-        <div style="position:relative;padding-left:20px;">
-          <div style="position:absolute;left:6px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#c8823a,#d4aa5a);border-radius:2px;"></div>
-          <!-- 节点们 -->
-          <div style="position:relative;margin-bottom:12px;">
-            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#c8823a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #c8823a;"></div>
-            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">31岁</span> — 考上泗水亭长（相当于乡镇所长）</div>
-          </div>
-          <div style="position:relative;margin-bottom:12px;">
-            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#c8823a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #c8823a;"></div>
-            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">40岁</span> — 骗吃骗喝，娶了年轻貌美的媳妇吕雉</div>
-          </div>
-          <div style="position:relative;margin-bottom:12px;">
-            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#c8823a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #c8823a;"></div>
-            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">约42岁</span> — 押送犯人，被逼上梁山，躲进芒砀山造反</div>
-          </div>
-          <div style="position:relative;margin-bottom:12px;">
-            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#c8823a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #c8823a;"></div>
-            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">48岁</span> — 趁乱起兵，开启真正的创业之路</div>
-          </div>
-          <div style="position:relative;">
-            <div style="position:absolute;left:-17px;top:4px;width:10px;height:10px;background:#d4aa5a;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px #d4aa5a;"></div>
-            <div style="color:#5c3d1e;font-size:13.5px;line-height:1.7;"><span style="font-weight:600;color:#8b4513;">54岁</span> — 称帝，建立大汉王朝</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-      <span style="color:#c8823a;font-size:16px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-    </div>
-
-    <!-- 章节四：鸿门宴 -->
-    <div style="margin-bottom:36px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:16px;font-weight:700;">肆</span>
-        </div>
-        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">史上最惊险的饭局——鸿门宴</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        先入关中的是刘邦，而不是项羽。这让项羽大怒。谋士范增说："这个姓刘的不能留，必成心腹大患，找机会弄死他。"两人达成一致。
-      </p>
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        消息传到刘邦耳中，他第二天一早带着100号人赶到鸿门给项羽请罪，还没走近，远远就行礼，说自己无意争风，退出咸阳就是等着项大将军来当主人。项羽是个顺毛驴，果不其然，一听这话，反而觉得对不住刘邦了，当场摆下酒宴给刘邦压惊。
-      </p>
-
-      <!-- 鸿门宴人物关系 -->
-      <div style="background:linear-gradient(135deg,#1a0a00,#2d1205);border-radius:12px;padding:24px 20px;margin:20px 0;">
-        <div style="color:#d4aa5a;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:16px;text-align:center;">⚔ 鸿门宴局中局 ⚔</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-          <div style="background:rgba(58,76,139,0.3);border:1px solid rgba(100,120,200,0.3);border-radius:8px;padding:12px;">
-            <div style="color:#8898e8;font-size:12px;font-weight:600;margin-bottom:8px;letter-spacing:1px;">项羽阵营</div>
-            <div style="color:#c8d0f0;font-size:12.5px;line-height:1.8;">
-              <div>项羽 — 主帅（不想杀）</div>
-              <div>范增 — 谋士（要杀刘邦）</div>
-              <div>项伯 — 叔叔（暗中保护）</div>
-              <div>项庄 — 舞剑刺客（未果）</div>
-            </div>
-          </div>
-          <div style="background:rgba(139,69,19,0.3);border:1px solid rgba(200,130,58,0.3);border-radius:8px;padding:12px;">
-            <div style="color:#e8a870;font-size:12px;font-weight:600;margin-bottom:8px;letter-spacing:1px;">刘邦阵营</div>
-            <div style="color:#f0d0a8;font-size:12.5px;line-height:1.8;">
-              <div>刘邦 — 主角（能屈能伸）</div>
-              <div>张良 — 谋士（运筹帷幄）</div>
-              <div>樊哙 — 武将（闯帐解围）</div>
-              <div>刘邦 — 借口上厕所逃走</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        范增精心策划的暗杀在项伯和樊哙的干扰下彻底失败。樊哙闯入大帐后说的话才是真正的转折点：先给刘邦戴高帽，再给项羽扣上"跟秦王没什么两样"的大帽子，然后轻描淡写地说"我觉得您肯定不是那种人"。粗野武夫说出来的话竟无懈可击。
-      </p>
-      <p style="margin:0;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        最终，刘邦借口上厕所，溜之大吉。范增气得牙痒痒："你看吧，夺天下的一定是刘邦了，咱们这些人都要成为他的俘虏啦！"
-      </p>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-      <span style="color:#c8823a;font-size:16px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-    </div>
-
-    <!-- 章节五：楚汉之争 -->
-    <div style="margin-bottom:36px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:16px;font-weight:700;">伍</span>
-        </div>
-        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">韩信出山，楚汉争霸</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        就在刘邦愁着如何翻盘时，一个人才跳槽来投——韩信。此前，韩信在项羽手下是个保安队长，因为太爱给领导提建议，项羽烦了，韩信就跳槽去了刘邦这个偏远小公司，直接被封为大将军。
-      </p>
-
-      <div style="background:linear-gradient(135deg,#f5f9ff,#eef4ff);border:1px solid #c0d0f0;border-radius:10px;padding:18px 20px;margin:16px 0;">
-        <div style="color:#3a4c8b;font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:10px;">🔥 韩信的妙计：明修栈道，暗度陈仓</div>
-        <p style="margin:0;color:#2a3a7b;font-size:14px;line-height:1.8;">表面上让你看到我不争不抢，实际上暗中行动达成目标。仅仅一年，韩信合并五路诸侯，率56万大军攻下项羽老巢彭城。</p>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        然而项羽毕竟是项羽。一听家被偷了，果断掉头，仅率3万轻骑兵就将刘邦56万大军杀得分崩离析。刘邦疯狂逃窜，逃跑路上甚至把自己的儿女踹下车……连裤衩都赔掉了。
-      </p>
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        但刘邦不愧是刘邦——在家用离间计把项羽手下唯一拿得出手的谋士范增给离间走了。公元前203年，项羽兵疲粮尽，被迫签下楚河汉界协议。
-      </p>
-      <p style="margin:0;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        等项羽转身回家，刘邦撕毁协议，率军追击，在垓下将项羽十面埋伏。项羽吃了人生中第一次败仗。
-      </p>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-      <span style="color:#c8823a;font-size:16px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-    </div>
-
-    <!-- 章节六：霸王别姬 -->
-    <div style="margin-bottom:36px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#2a3a7b,#3a4c9b);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:16px;font-weight:700;">陆</span>
-        </div>
-        <h3 style="margin:0;color:#1a2050;font-size:19px;font-weight:700;letter-spacing:1px;">霸王别姬，乌江自刎</h3>
-      </div>
-
-      <!-- 悲情描写区域 -->
-      <div style="background:linear-gradient(160deg,#0d0820,#1a1040,#0a0d2a);border-radius:12px;padding:28px 24px;margin-bottom:20px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;right:0;width:100px;height:100px;background:radial-gradient(circle,rgba(100,80,200,0.15),transparent);border-radius:0 12px 0 100%;"></div>
-        <p style="margin:0 0 16px;color:#c0b8e8;font-size:15px;line-height:2;position:relative;z-index:1;">
-          这天夜里，黑暗中突然从四面八方传来楚国的歌声——四面楚歌。
-        </p>
-        <p style="margin:0 0 16px;color:#c0b8e8;font-size:15px;line-height:2;position:relative;z-index:1;">
-          此时的项羽睡不着，在大帐中喝着闷酒，看着身边虞姬美丽的脸庞，又看看自己穷途末路的处境，放声悲歌——
-        </p>
-        <div style="background:rgba(255,255,255,0.05);border-left:3px solid rgba(180,160,240,0.5);border-radius:0 8px 8px 0;padding:14px 16px;margin:16px 0;">
-          <p style="margin:0;color:#e8e0ff;font-size:15.5px;line-height:1.9;font-style:italic;">
-            "力拔山兮气盖世，时不利兮骓不逝。<br/>骓不逝兮可奈何，虞兮虞兮奈若何！"
-          </p>
-        </div>
-        <p style="margin:0;color:#c0b8e8;font-size:15px;line-height:2;position:relative;z-index:1;">
-          虞姬泪流满面，举剑自刎。
-        </p>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        随后，项羽翻身上马，带着800骑兵杀出重围。逃到乌江时，身边仅剩28骑。乌江亭长划着小船等候，说"大王，回江东还有机会"。
-      </p>
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        项羽摇头说："当年我带着八千子弟出来打天下，现在只剩我一人，还有何颜面见江东父老？"
-      </p>
-      <p style="margin:0 0 16px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        他笑着拒绝了渡江，转身面对追兵，拔剑自刎于乌江江畔。年仅31岁。
-      </p>
-      <p style="margin:0;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        整本《史记》中，这是项羽第一次，也是最后一次笑。八千子弟兵无一生还，他做不到，也没法交代。宁可站着死，绝不跪着生。
-      </p>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-      <span style="color:#c8823a;font-size:16px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-    </div>
-
-    <!-- 章节七：刘邦的团队 -->
-    <div style="margin-bottom:36px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:16px;font-weight:700;">柒</span>
-        </div>
-        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">刘邦最大的本事：用人</h3>
-      </div>
-
-      <p style="margin:0 0 20px;color:#3d2010;font-size:15px;line-height:1.95;text-indent:2em;">
-        称帝后，刘邦环顾手下的兄弟们，不禁感慨——这是一支多么草根的创业团队啊：
-      </p>
-
-      <!-- 人才名片 -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
-        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
-          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">樊哙 · 武阳侯</div>
-          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">老家卖狗肉的<br/>→ 最勇猛的先锋</div>
-        </div>
-        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
-          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">夏侯婴 · 汝阴侯</div>
-          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">县长的车夫<br/>→ 多次救主的司机</div>
-        </div>
-        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
-          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">萧何 · 赞侯</div>
-          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">老家同事<br/>→ 最强后勤HR</div>
-        </div>
-        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
-          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">曹参 · 平阳侯</div>
-          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">老家监狱长<br/>→ 开国功臣</div>
-        </div>
-        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
-          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">韩信 · 楚王</div>
-          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">项羽的保安队长<br/>→ 兵仙，战神</div>
-        </div>
-        <div style="background:#fdf8f0;border:1px solid #e8c898;border-radius:8px;padding:12px 14px;">
-          <div style="color:#8b4513;font-size:12px;font-weight:600;margin-bottom:6px;">张良 · 留侯</div>
-          <div style="color:#5c3d1e;font-size:12.5px;line-height:1.7;">韩国落魄贵族<br/>→ 最信任的谋士</div>
-        </div>
-      </div>
-
-      <div style="background:linear-gradient(135deg,#fff8f0,#fef5e8);border-radius:10px;padding:18px 20px;border:1px solid #e8c898;">
-        <p style="margin:0;color:#5c3d1e;font-size:14.5px;line-height:1.9;">
-          这是时势造英雄，更是<strong style="color:#8b4513;">刘邦有容人之量，用人不疑</strong>。一个卖狗肉的、一个车夫、一个监狱长、一个吹唢呐的……他把这些人用成了开国功勋。
-        </p>
-      </div>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:28px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-      <span style="color:#c8823a;font-size:16px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#d4aa5a,transparent);"></div>
-    </div>
-
-    <!-- 结语 -->
-    <div style="margin-bottom:36px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:36px;height:36px;background:linear-gradient(135deg,#8b4513,#c8823a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:16px;font-weight:700;">终</span>
-        </div>
-        <h3 style="margin:0;color:#3d1a05;font-size:19px;font-weight:700;letter-spacing:1px;">人生，从来没有太晚的开始</h3>
-      </div>
-
-      <!-- 项羽评价 -->
-      <div style="background:linear-gradient(135deg,#0d0820,#1a1040);border-radius:12px;padding:22px 22px;margin-bottom:16px;">
-        <div style="color:#a090e0;font-size:12px;font-weight:600;letter-spacing:2px;margin-bottom:12px;">关于 项羽</div>
-        <p style="margin:0 0 12px;color:#d0c8f8;font-size:14.5px;line-height:1.9;">
-          你是史记中唯一一个不是帝王却被写入本纪的人。巨鹿之战，5万对40万，胜；彭城之战，3万对56万，胜。垓下一战，他们集结全明星阵容对你十面埋伏，还不敢硬上，只能用四面楚歌攻心。
-        </p>
-        <p style="margin:0;color:#d0c8f8;font-size:14.5px;line-height:1.9;">
-          有人说你要面子——可面对从小长大的地方，面对父老乡亲，又有几个人不想有个体面？你只是不想再连累江东的父兄了。宁可站着死，绝不跪着生。
-        </p>
-      </div>
-
-      <!-- 李清照的诗 -->
-      <div style="background:linear-gradient(135deg,#1a0a00,#2d1205);border-radius:12px;padding:20px 22px;margin-bottom:20px;text-align:center;">
-        <p style="margin:0 0 6px;color:#d4aa5a;font-size:16px;line-height:2;font-style:italic;letter-spacing:4px;">
-          生当作人杰，<br/>死亦为鬼雄。
-        </p>
-        <p style="margin:0;color:#a87040;font-size:12px;letter-spacing:1px;">—— 李清照</p>
-      </div>
-
-      <!-- 刘邦评价 -->
-      <div style="background:linear-gradient(135deg,#fdf8f0,#fef5e8);border-radius:12px;padding:22px 22px;margin-bottom:20px;border:1px solid #e8c898;">
-        <div style="color:#8b4513;font-size:12px;font-weight:600;letter-spacing:2px;margin-bottom:12px;">关于 刘邦</div>
-        <p style="margin:0 0 12px;color:#5c3d1e;font-size:14.5px;line-height:1.9;">
-          一般人40岁就信命了，而你40岁骗吃骗喝娶了老婆，48岁开始创业，7年时间先灭强秦，再灭项羽，54岁称帝。
-        </p>
-        <p style="margin:0;color:#5c3d1e;font-size:14.5px;line-height:1.9;">
-          你是历史上从平民到帝王的第一人，王侯将相宁有种乎的真正践行者。就连后世都说：<strong style="color:#8b4513;">大丈夫当如是。</strong>
-        </p>
-      </div>
-
-      <!-- 最终寄语 -->
-      <div style="background:linear-gradient(135deg,#3d1a05,#6b2e0a,#8b4513);border-radius:12px;padding:28px 24px;text-align:center;">
-        <p style="margin:0 0 16px;color:#f5e8cc;font-size:16px;line-height:1.9;letter-spacing:1px;">
-          历史或许不会重复，但人性的规律永存。
-        </p>
-        <p style="margin:0 0 16px;color:#f5e8cc;font-size:16px;line-height:1.9;letter-spacing:1px;">
-          有人少年得志，有人大器晚成，<br/>人生从来没有太晚的开始。
-        </p>
-        <div style="display:inline-block;background:rgba(212,170,90,0.2);border:1px solid rgba(212,170,90,0.5);border-radius:6px;padding:8px 20px;margin-top:8px;">
-          <span style="color:#d4aa5a;font-size:14px;letter-spacing:2px;">年龄，又能说明什么呢？</span>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- end 正文 -->
-
-  <!-- ===== 底部版权 ===== -->
-  <div style="background:#1a0a00;padding:24px 28px;text-align:center;">
-    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px;">
-      <div style="flex:1;max-width:60px;height:1px;background:rgba(212,170,90,0.3);"></div>
-      <span style="color:#d4aa5a;font-size:14px;letter-spacing:2px;">中国历史文化人物</span>
-      <div style="flex:1;max-width:60px;height:1px;background:rgba(212,170,90,0.3);"></div>
-    </div>
-    <p style="margin:0;color:rgba(245,232,204,0.4);font-size:12px;line-height:1.8;">在历史中寻找力量，在人物中看见自己</p>
-  </div>
-
-</div><!-- end 外层容器 -->
-
-</body>
-</html>
-]]></content>
-      <categories>
-        <category>Diary</category>
-      </categories>
-      <tags>
-        <tag>汉朝</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>千古第一意难平-陆游与唐婉的爱情故事</title>
-    <url>/com/2026/04/27/%E9%99%86%E6%B8%B8%E4%B8%8E%E5%94%90%E5%A9%89%E7%9A%84%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B/</url>
-    <content><![CDATA[<section style="background:linear-gradient(170deg, #2c1810 0%, #4a2c1a 40%, #6b3d22 70%, #8b5e3c 100%); padding:60px 20px; text-align:center; position:relative; overflow:hidden; margin:0 -16px;box-sizing:border-box;" class="">
-	<section style="position:relative; z-index:1; font-size:28px; color:#c4956a; opacity:0.6; letter-spacing:16px; margin-bottom:30px;" class="" >
-		◆ ◇ ◆
-	</section>
-	<h1 style="position:relative; z-index:1; font-size:36px; color:#f5efe6; letter-spacing:6px; line-height:1.6; margin-bottom:24px;font-family:&#39;Noto Serif SC&#39;,serif;">
-		<strong>&nbsp; 千古第一意难平 &nbsp; </strong><span style="display:block; font-size:18px; font-weight:300; color:#c4956a; letter-spacing:4px; margin-top:12px;">陆游与唐婉的爱情故事</span>
-	</h1>
-	<section style="position:relative; z-index:1; width:60px; height:1px; background:#c4956a; opacity:0.5; margin:28px auto;box-sizing:border-box;"></section>
-	<p style="position:relative; z-index:1; font-size:15px; color:rgba(245,239,230,0.65); font-weight:300; letter-spacing:2px; line-height:2.2; max-width:500px; margin:0 auto;">
-		有些爱，赢了时光，却输了世俗<br/>
- &nbsp; &nbsp;有些成全，暖了岁月，却敌不过一句故人难忘
-	</p>
-</section>
-<section style="margin:0 auto; padding:0 16px; line-height:2.2; color:#2c1810;box-sizing:border-box;font-family:&#39;Noto Serif SC&#39;,&#39;SimSun&#39;,serif;" class="">
-	<section style="margin:50px auto 40px; padding:24px 20px; background:#f5efe6; border-left:3px solid #c4956a; border-radius:0 8px 8px 0;box-sizing:border-box;" class="">
-		<p style="font-size:15px; color:#5c4033; margin:0 0 8px 0;">
-			世人皆知钗头凤，少有人怜赵士诚。
-		</p>
-		<p style="font-size:15px; color:#5c4033; margin:0 0 8px 0;">
-			我们总说爱能抵万难，可读完这两首词以及三个人的故事，才懂——<strong style="color:#b5453a;">有些爱，赢了时光，却输了世俗；有些成全，暖了岁月，却敌不过一句故人难忘。</strong>
-		</p>
-		<p style="font-size:15px; color:#5c4033; margin:0;">
-			为什么陆游的一句&quot;错错错&quot;能让唐婉抑郁而终？赵士诚的极致深情又为何鲜少被人提及？
-		</p>
-	</section>
-	<section style="margin:50px 0;">
-		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
-			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-				<strong>壹</strong>
-			</section>
-			<section>
-				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
-					<strong>凤钗定情</strong>
-				</section>
-				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
-					那年春风恰好
-				</section>
-			</section>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				南宋绍兴年间，越州山阴（今浙江绍兴），有一对璧人。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆游，字务观，出身书香门第，少年便负才名；唐婉，字蕙仙，自幼聪慧灵秀，精通诗词文墨。两家本为世交，二人自幼便在彼此的视线里长大——<strong style="color:#2c1810;">她是他的青梅，他是她的竹马。</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				那一年，陆家以一只祖传凤钗为聘，将唐婉迎娶过门。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				凤钗映烛光，红烛照新人。婚礼那夜，满堂宾客都说，这分明是天作之合。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				婚后的小日子，甜得像浸了蜜。陆游与唐婉不是寻常夫妻，更是知音。他写诗，她续句；他抚琴，她低唱。两个人常常秉烛夜谈，从诗词歌赋聊到人生哲学，从晨光熹微聊到月落乌啼。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆游曾以为，此生最好的光景，不过是眼前人与枕边书。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				可他不知道，这份让世人艳羡的甜蜜，在另一个人眼里，却是刺目的祸水。
-			</p>
-			<p style="margin:0;">
-				那个人，是他的母亲。
-			</p>
-		</section>
-	</section>
-	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
-		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
-	</section>
-	<section style="margin:50px 0;">
-		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
-			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-				<strong>贰</strong>
-			</section>
-			<section>
-				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
-					<strong>东风恶</strong>
-				</section>
-				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
-					母命如山，情薄如纸
-				</section>
-			</section>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				陆母是个传统的大家闺秀，在她看来，男儿当以功名为重，岂能沉溺于儿女情长？
-			</p>
-			<p style="margin:0 0 18px 0;">
-				她看着儿子日日与妻子诗词唱和、耳鬓厮磨，心里的不满像野草一样疯长。更要命的是——<strong style="color:#2c1810;">唐婉嫁入陆家数年，膝下无子。</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				在那个&quot;不孝有三，无后为大&quot;的年代，这几乎是最致命的罪名。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆母多次旁敲侧击，唐婉心中委屈却不敢辩驳。她何尝不想为陆家开枝散叶？只是这世间事，从来不是想就能成的。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				终于有一天，陆母下了最后通牒：<strong style="color:#b5453a;">休了她。</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆游跪在母亲房前，长跪不起。他哀求，他痛哭，他甚至悄悄在外面租了宅院将唐婉藏起来——可纸终究包不住火，陆母发现后勃然大怒，以死相逼。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				一边是生养之恩，一边是挚爱之人。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆游选择了母亲。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他在休书上落笔的那一刻，手是抖的。他不敢看唐婉的眼睛，不敢看她鬓边那支凤钗——那是他给她的承诺，如今却成了最讽刺的笑话。
-			</p>
-			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
-				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
-					<strong>唐婉被休了。</strong>
-				</p>
-			</section>
-			<p style="margin:0 0 18px 0;">
-				在南宋，被休的女子几乎等同于不祥之人。流言蜚语像刀子一样追着她——&quot;克夫&quot;&quot;无后&quot;&quot;命硬&quot;……每一句都往骨头缝里扎。
-			</p>
-			<p style="margin:0;">
-				曾经满腹诗书的才女，一夜之间成了人人避之不及的弃妇。她日渐憔悴，像一株被连根拔起的花，在风中摇摇欲坠。
-			</p>
-		</section>
-	</section>
-	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
-		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
-	</section>
-	<section style="margin:50px 0;">
-		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
-			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-				<strong>叁</strong>
-			</section>
-			<section>
-				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
-					<strong>一诺千金</strong>
-				</section>
-				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
-					赵士诚的极致深情
-				</section>
-			</section>
-		</section>
-		<section style="margin:30px 0; padding:28px; background:#fff; border-radius:16px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08);box-sizing:border-box;">
-			<section style="font-size:20px; color:#2c1810; letter-spacing:4px; margin-bottom:4px;">
-				<strong>赵士诚</strong>
-			</section><span style="display:inline-block; font-size:12px; padding:2px 12px; border-radius:20px; margin-bottom:16px; background:rgba(196,149,106,0.15); color:#9a7b55;">永嘉郡王 · 宋太宗玄孙</span>
-			<p style="font-size:15px; color:#5c4033; line-height:2.2; margin:0 0 10px 0;">
-				身份显赫，家世煊赫，要什么样的女子没有？可他偏偏看上了唐婉——一个被休的弃妇，一个世人眼中的不祥之人。
-			</p>
-		</section>
-		<section style="margin-top:24px; font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				消息传出，整个赵氏宗族炸了锅。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				长辈们轮番劝阻，族中长老拍案而起，连皇族宗亲都出面施压——堂堂郡王，娶一个弃妇，皇家颜面何在？
-			</p>
-			<p style="margin:0 0 18px 0;">
-				可赵士诚铁了心。
-			</p>
-			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
-				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
-					<strong>&quot;高官厚禄、名声地位，都不及她半分。&quot;</strong>
-				</p>
-			</section>
-			<p style="margin:0 0 18px 0;">
-				他不只是嘴上说说。他用一场最隆重的婚礼，给了唐婉这个世间最体面的救赎。十里红妆，八抬大轿，他要让所有人知道——<strong style="color:#2c1810;">他娶的不是一个弃妇，是他此生唯一想要守护的人。</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				新婚之夜，他对唐婉说：
-			</p>
-			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
-				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
-					<strong>&quot;此生只护你一人。&quot;</strong>
-				</p>
-			</section>
-			<p style="margin:0 0 18px 0;">
-				在那个三妻四妾再寻常不过的年代，这句话的分量，比任何山盟海誓都重。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				赵士诚说到做到。他待唐婉极好——春天陪她赏花，夏夜陪她纳凉，秋天给她添衣，冬天为她暖汤。他不催她忘掉过去，不逼她笑脸相迎，只是默默地在她身边，像一把伞，替她挡住世间的风雨。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				慢慢地，唐婉脸上又有了笑容。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				她偶尔也会写写诗词，虽然笔下的风月多了几分沧桑，但至少，她重新活了过来。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				赵士诚看着妻子的笑容，觉得这些年所有的压力都值了。
-			</p>
-			<p style="margin:0;">
-				可命运偏偏要开一场最残忍的玩笑。
-			</p>
-		</section>
-	</section>
-	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
-		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
-	</section>
-	<section style="margin:50px 0;">
-		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
-			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-				<strong>肆</strong>
-			</section>
-			<section>
-				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
-					<strong>沈园重逢</strong>
-				</section>
-				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
-					一首杀人的词
-				</section>
-			</section>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				<strong style="color:#c4956a;">绍兴二十五年，春。</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				赵士诚陪唐婉游沈园，满园春色，柳絮纷飞。唐婉的心情难得地好，甚至主动提议走走当年常走的石径。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				谁也没想到，就在那条小径的尽头，他们撞见了陆游。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				十年未见。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他老了，她也瘦了。可四目相对的刹那，时光仿佛倒流，回到了当年凤钗定情的那一夜。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				空气凝固了。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				唐婉愣在原地，一时不知该进还是该退。赵士诚看在眼里，心中五味杂陈，可他到底是那个温润如玉的君子——他轻轻点了点头，示意唐婉不必顾忌。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				征得丈夫的同意，唐婉命人给陆游送去一杯黄縢酒，几碟小菜。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				<strong style="color:#2c1810;">这杯酒，是旧情的最后一丝体面，也是故人的最后一次温柔。</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆游接过酒，手在抖。他望着唐婉离去的背影，想起当年花前月下的誓言，想起自己亲手签下的休书，想起这十年来每一个辗转难眠的夜晚——
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他崩溃了。
-			</p>
-			<p style="margin:0;">
-				借着酒劲，陆游踉跄着走到沈园的粉壁前，提笔写下了那首流传千古的词——
-			</p>
-		</section>
-	</section>
-	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
-		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
-	</section>
-	<section style="margin:50px 0;">
-		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
-			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-				<strong>伍</strong>
-			</section>
-			<section>
-				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
-					<strong>钗头凤 · 陆游</strong>
-				</section>
-				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
-					错错错，一错再错
-				</section>
-			</section>
-		</section>
-		<section style="margin:36px 0; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(44,24,16,0.08);box-sizing:border-box;">
-			<section style="padding:20px 32px; background:linear-gradient(135deg, #3a2a1a 0%, #5c3d24 100%); color:#f5efe6; display:flex; align-items:center; gap:12px;box-sizing:border-box;">
-				<span style="font-size:22px; opacity:0.8;">📜</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:18px; letter-spacing:4px;"><strong>钗头凤 · 红酥手</strong></span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px; opacity:0.7; margin-left:auto; letter-spacing:2px;">陆游</span>
-			</section>
-			<section style="padding:32px;box-sizing:border-box;">
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<strong>红酥手，黄縢酒，满城春色宫墙柳。</strong>
-				</p>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<strong>东风恶，欢情薄，一怀愁绪，几年离索。</strong>
-				</p>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<span style="color:#b5453a; font-size:22px;"><strong>错！错！错！</strong></span>
-				</p>
-				<section style="width:40px; height:1px; background:#d4c4b0; margin:16px auto;box-sizing:border-box;"></section>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<strong>春如旧，人空瘦，泪痕红浥鲛绡透。</strong>
-				</p>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<strong>桃花落，闲池阁，山盟虽在，锦书难托。</strong>
-				</p>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0;text-align:center;" align="center">
-					<span style="color:#b5453a; font-size:22px;"><strong>莫！莫！莫！</strong></span>
-				</p>
-			</section>
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>起笔：美得心碎</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				&quot;红酥手，黄縢酒，满城春色宫墙柳。&quot;
-			</p>
-			<p style="margin:0 0 18px 0;">
-				你红润酥腻的手捧着黄縢酒，满城春花开，宫墙旁的柳枝随风摇曳——一如当年我们共度的时光。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				可如今，这眼前景，全是我当年亲手推开的。
-			</p>
-			<p style="margin:0;">
-				<strong style="color:#2c1810;">物是人非的对比，比刀割还疼。</strong>
-			</p>
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>转折：恨入骨髓</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				&quot;东风恶，欢情薄，一怀愁绪，几年离索。&quot;
-			</p>
-			<p style="margin:0 0 18px 0;">
-				东风太恶毒了，把我们的欢情吹得那么稀薄。这几年，我满怀愁绪，我们各自飘零——明明相爱，却只能相望。
-			</p>
-			<p style="margin:0;">
-				这里的&quot;东风&quot;不是春风，是陆母的苛责，是封建礼教的条条框框，是那座压得他喘不过气来的伦理之山。
-			</p>
-			<p style="margin:0;">
-				这是陆游的自责，也是他的无奈。他恨自己护不住爱人，恨世俗拆散了彼此，他什么也做不了，只能任由愁绪填满心底。
-			</p>
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>爆发：三个&quot;错&quot;字</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				<strong style="color:#b5453a;">&quot;错！错！错！&quot;</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				错在不敢违逆母亲，错在当初放手，错在十年未忘，再见仍乱了心神。
-			</p>
-			<p style="margin:0;">
-				三个&quot;错&quot;字，没有任何修饰，却比千言万语更有力量。就像一个人被逼到绝境，只能用最简单的字宣泄最极致的痛苦。
-			</p>
-			<p style="margin:0;">
-				陆游在这里扇的是自己的耳光。他知道一切都晚了，所有的错误都无法挽回。
-			</p>
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>凝望：你瘦了</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				&quot;春如旧，人空瘦，泪痕红浥鲛绡透。&quot;
-			</p>
-			<p style="margin:0 0 18px 0;">
-				春天还像以前一样，可你怎么瘦成了这样？你的手帕都被带着胭脂的眼泪湿透了。
-			</p>
-			<p style="margin:0;">
-				他心疼了。可他不知道——<strong style="color:#2c1810;">唐婉肩上披着的，是赵士诚送的暖裘；绣囊里藏着的，是赵士诚写的平安信。</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他以为她过得不好，却不知道，是另一个人替他完成了他没能做到的事。
-			</p>			
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>绝笔：三个&quot;莫&quot;字</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				&quot;山盟虽在，锦书难托。&quot;
-			</p>
-			<p style="margin:0 0 18px 0;">
-				我们当年的海誓山盟还在，可现在就算写了信，也没法寄给你了——你已经是赵家人了，而我只是个路人甲。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他的任何念想，都是对唐婉现有幸福的冒犯。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				<strong style="color:#b5453a;">&quot;莫！莫！莫！&quot;</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				罢了罢了。莫再想，莫再念，莫再扰。
-			</p>
-			<p style="margin:0;">
-				这三个&quot;莫&quot;字，是绝望，是放手，是明知不可为而为之后的彻底放弃。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆游写完，哭着走了。
-			</p>
-		</section>
-		<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
-			<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
-				<strong>他不知道，这首词，成了一把插进唐婉心里的刀。</strong>
-			</p>
-		</section>
-	</section>
-	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
-		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
-	</section>
-	<section style="margin:50px 0;">
-		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
-			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-				<strong>陆</strong>
-			</section>
-			<section>
-				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
-					<strong>钗头凤 · 唐婉</strong>
-				</section>
-				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
-					难难难，无路可退
-				</section>
-			</section>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				第二年春天，唐婉重游沈园。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				她看到了墙上那首词——墨迹斑斑，全是前夫的血泪。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				那一刻，她心里筑了十年的防线，轰然崩塌。
-			</p>
-			<p style="margin:0;">
-				于是她提笔，在陆游的词旁，写下了自己的回答——
-			</p>
-		</section>
-		<section style="margin:36px 0; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(44,24,16,0.08);box-sizing:border-box;">
-			<section style="padding:20px 32px; background:linear-gradient(135deg, #4a3a2a 0%, #6b5a48 100%); color:#f5efe6; display:flex; align-items:center; gap:12px;box-sizing:border-box;">
-				<span style="font-size:22px; opacity:0.8;">📜</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:18px; letter-spacing:4px;"><strong>钗头凤 · 世情薄</strong></span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px; opacity:0.7; margin-left:auto; letter-spacing:2px;">唐婉</span>
-			</section>
-			<section style="padding:32px;box-sizing:border-box;">
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<strong>世情薄，人情恶，雨送黄昏花易落。</strong>
-				</p>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<strong>晓风干，泪痕残，欲笺心事，独语斜阑。</strong>
-				</p>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<span style="color:#b5453a; font-size:22px;"><strong>难！难！难！</strong></span>
-				</p>
-				<section style="width:40px; height:1px; background:#d4c4b0; margin:16px auto;box-sizing:border-box;"></section>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<strong>人成各，今非昨，病魂常似秋千索。</strong>
-				</p>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
-					<strong>角声寒，夜阑珊，怕人寻问，咽泪装欢。</strong>
-				</p>
-				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0;text-align:center;" align="center">
-					<span style="color:#b5453a; font-size:22px;"><strong>瞒！瞒！瞒！</strong></span>
-				</p>
-			</section>
-		</section>
-		<p style="margin:24px 0; color:#b5453a; font-size:15px; letter-spacing:2px;text-align:center;" align="center">
-			<strong>写完这首词不久，唐婉抑郁而终，香消玉殒。</strong>
-		</p>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>世情薄：人心比夜更凉</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				&quot;世情薄，人情恶，雨送黄昏花易落。&quot;
-			</p>
-			<p style="margin:0 0 18px 0;">
-				如果说陆游的词是悔，那唐婉的词就是疼。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆游骂东风，唐婉叹世情。这个世道太凉薄，人心太险恶，我就像那黄昏雨中的花——哪怕再美，也注定要凋落。
-			</p>
-			<p style="margin:0;">
-				这是她的亲身感受。被休之后，她成了别人口中的弃妇，流言蜚语、冷眼相待，唯有赵士诚将她护在伞下。
-			</p>
-			<p style="margin:0;">
-				可陆游的词一出来，那把伞就破了。风雨全往旧伤口里钻。
-			</p>
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>独语斜阑：连倾诉的资格都没有</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				&quot;晓风干，泪痕残，欲笺心事，独语斜阑。&quot;
-			</p>
-			<p style="margin:0 0 18px 0;">
-				早晨的风吹干了泪痕，我想把心事写下来——可写给谁？
-			</p>
-			<p style="margin:0 0 18px 0;">
-				写给陆游，是对赵士诚的辜负；写给赵士诚，是让他十年的温柔都成了笑话；写给自己，又怕眼泪晕开了墨迹。
-			</p>
-			<p style="margin:0;">
-				只能独自靠在栏杆上，对着空庭自言自语。
-			</p>
-			<p style="margin:0;">
-				<strong style="color:#2c1810;">这份孤独，比分离更让人绝望。</strong>陆游至少还能把愁绪写在墙上，可唐婉连倾诉的资格都没有，只能把心事一层一层地压在心底。
-			</p>
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>三个&quot;难&quot;字：无路可走</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				<strong style="color:#b5453a;">&quot;难！难！难！&quot;</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				陆游说&quot;错&quot;，是悔恨；唐婉说&quot;难&quot;，是无路可走。
-			</p>
-			<p style="margin:0;">
-				相见难，倾诉难，放下难——旧爱新欢缠成死结。
-			</p>
-			<p style="margin:0;">
-				她不像陆游，还能有一丝悔恨的余地。她的处境只有无尽的艰难，没有任何出路，这份痛苦永远也解脱不了。
-			</p>
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>病魂秋千：身体与精神的双重崩塌</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				&quot;人成各，今非昨，病魂常似秋千索。&quot;
-			</p>
-			<p style="margin:0 0 18px 0;">
-				如今我们各自安好，再也不是当年的模样。<strong style="color:#2c1810;">病魂常似秋千索</strong>——这是最让人心疼的一句。
-			</p>
-			<p style="margin:0;">
-				唐婉因为长期的悲伤，身体早已垮了。被休时病过一次，被陆游的词又勾病了。就像秋千上的绳索，晃晃悠悠，找不到安稳。
-			</p>
-		</section>
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>咽泪装欢：最扎心的一幕</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				&quot;角声寒，夜阑珊，怕人寻问，咽泪装欢。&quot;
-			</p>
-			<p style="margin:0 0 18px 0;">
-				深夜，角声传来，寒意刺骨，她独自落泪。赵士诚给她暖汤盖被，她却不敢说——不是天冷，<strong style="color:#b5453a;">是心冷。</strong>
-			</p>
-			<p style="margin:0;">
-				陆游可以发泄，可以写词骂东风；可唐婉不行。她夹在中间，不能负了旧情，又不敢伤了新人，所以连痛苦都要藏着掖着。
-			</p>
-		</section>
-		<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
-				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
-					<strong>&quot;她的装欢，比痛哭更让人心疼。&quot;</strong>
-				</p>
-				<p style="font-size:13px; color:#8b6f5e; margin-top:12px; font-weight:400; letter-spacing:2px;text-align:right;" align="right">
-					就像我们受了委屈，却要在家人面前强颜欢笑
-				</p>
-				<p style="font-size:13px; color:#8b6f5e; margin-top:2px; font-weight:400; letter-spacing:2px;text-align:right;" align="right">
-					就像我们心里难过，却要在朋友面前假装没事
-				</p>
-			</section>
-		
-		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
-			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>三个&quot;瞒&quot;字：耗尽了一生</strong>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				<strong style="color:#b5453a;">&quot;瞒！瞒！瞒！&quot;</strong>
-			</p>
-			<p style="margin:0 0 18px 0;">
-				瞒住对陆游的念想，瞒住心里的伤痛，瞒住所有人——假装幸福。
-			</p>
-			<p style="margin:0;">
-				可惜她瞒过了所有人，却瞒不过自己的身体。
-			</p>
-			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
-				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
-					<strong>三个&quot;瞒&quot;字，耗尽了她的生命。</strong>
-				</p>
-			</section>
-		</section>
-	</section>
-	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
-		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
-	</section>
-	<section style="margin:50px 0;">
-		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
-			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-				<strong>柒</strong>
-			</section>
-			<section>
-				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
-					<strong>赵士诚</strong>
-				</section>
-				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
-					被历史遗忘的深情
-				</section>
-			</section>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				唐婉死后，赵士诚的世界也塌了。
-			</p>
-			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
-				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
-					<strong>他终身没有再娶，没有纳妾。</strong>
-				</p>
-			</section>
-			<p style="margin:0 0 18px 0;">
-				在那个三妻四妾再寻常不过的年代，这几乎是个奇迹。堂堂郡王，皇族之后，却为一个人守了一辈子的寡。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				后来，赵士诚主动请缨，奔赴沙场。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他不是好战，他是找不到活着的理由了。战场上刀剑无眼，他不在乎。他要用最决绝的方式，去陪他的爱人——
-			</p>
-			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
-				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
-					<strong>生不同衾，死同穴。</strong>
-				</p>
-			</section>
-			<p style="margin:0 0 18px 0;">
-				那天在沈园，是他大度地让妻子给前夫送酒。他以为这能解开妻子的心结，以为自己的十年温柔终能抚平她的伤疤。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				可他万万没想到，陆游的一首词，摧毁了他十年的全部努力。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他的温柔，他的守护，他的不离不弃——在陆游那面墙的墨迹面前，轻得像一缕风。
-			</p>
-			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
-				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
-					<strong>可这缕风，暖了唐婉整整十年。</strong>
-				</p>
-			</section>
-		</section>
-	</section>
-	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
-		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
-	</section>
-	<section style="margin:50px 0;">
-		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
-			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-				<strong>捌</strong>
-			</section>
-			<section>
-				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
-					<strong>陆游的余生</strong>
-				</section>
-				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
-					一辈子没走出沈园
-				</section>
-			</section>
-		</section>
-		<section style="font-size:16px; color:#5c4033; text-align:justify;">
-			<p style="margin:0 0 18px 0;">
-				反观陆游，虽然活到了八十五岁，但他这辈子都没走出那个沈园。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他晚年写了无数首诗怀念唐婉——
-			</p>
-			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
-				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
-					<strong>城上斜阳画角哀，沈园非复旧池台。</strong><br/><strong>伤心桥下春波绿，曾是惊鸿照影来。</strong>
-				</p>
-				<p style="font-size:13px; color:#8b6f5e; margin-top:12px; font-weight:400; letter-spacing:2px;text-align:right;" align="right">
-					陆游《沈园二首 · 其一》
-				</p>
-			</section>
-			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
-				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
-					<strong>梦断香消四十年，沈园柳老不吹绵。</strong><br/><strong>此身行作稽山土，犹吊遗踪一泫然。</strong>
-				</p>
-				<p style="font-size:13px; color:#8b6f5e; margin-top:12px; font-weight:400; letter-spacing:2px;text-align:right;" align="right">
-					陆游《沈园二首 · 其二》
-				</p>
-			</section>
-			<p style="margin:0 0 18px 0;">
-				临死前一年，八十四岁的陆游还挣扎着去了一趟沈园。
-			</p>
-			<p style="margin:0 0 18px 0;">
-				他站在那面墙前，墙上的字迹早已斑驳，可他的眼泪还是止不住地流。
-			</p>
-			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
-				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
-					<strong>那是他对唐婉最后的告白。</strong>
-				</p>
-			</section>
-			<p style="margin:0;">
-				五十年了，他还是没有放下。
-			</p>
-		</section>
-		<p style="font-size:13px; color:#8b6f5e; margin-top:2px; font-weight:400; letter-spacing:2px;text-align:center;" align="center">
-					今浙江绍兴沈园
-		</p>
-	</section>
-	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
-		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
-	</section>
-	<section style="margin:60px 0 40px; padding:40px 32px; background:linear-gradient(135deg, #2c1810, #4a2c1a); border-radius:16px; text-align:center;box-sizing:border-box;">
-		<h2 style="font-size:20px; color:#c4956a; letter-spacing:4px; margin-bottom:24px;font-family:&#39;Noto Serif SC&#39;,serif;">
-			<strong>尾声 · 爱情最狠的真相</strong>
-		</h2>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			有人说，唐婉是虚构的，钗头凤是后人附会的，赵士诚的深情也是假的。
-		</p>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			但真假已经不重要了。
-		</p>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			因为这个故事记录的那种痛，是真实的。<br/>它代表了千百年来那些被封建礼教拆散的、爱而不得的灵魂。
-		</p>
-		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			我们总为陆游的&quot;错&quot;叹息，为唐婉的&quot;苦&quot;流泪，<br/>却忘了问一句——
-		</p>
-		<p style="font-size:18px; color:#c4956a; letter-spacing:2px; margin:0 0 12px 0;">
-			<strong>赵士诚的十年温柔，到底算什么？</strong>
-		</p>
-		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			两首钗头凤，一首是男人的懦弱与悔恨，<br/>一首是女人的隐忍与绝望。
-		</p>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			字里行间全是对旧爱的执念，<br/>却唯独欠了赵士诚一句——
-		</p>
-		<p style="font-size:18px; color:#c4956a; letter-spacing:2px; margin:0 0 12px 0;">
-			<strong>谢谢你。</strong>
-		</p>
-		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			这才是爱情最狠的真相：<br/>有些人，一旦错过，就是一辈子。<br/>有些爱，一旦回头，就是万丈深渊。
-		</p>
-		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			如果你身边有一个赵士诚这样的人，<br/>请千万千万要珍惜。<br/>别为了那个已经错过的陆游，伤了眼前人的心。
-		</p>
-		<p style="margin-top:20px; font-size:18px; letter-spacing:3px; color:#c4956a;">
-			<strong>满目山河空念远</strong><br/><strong>不如怜取眼前人</strong>
-		</p>
-		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
-		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
-			但愿这世间<br/>少一些&quot;错错错&quot;的遗憾<br/>少一些&quot;瞒瞒瞒&quot;的悲凉
-		</p>
-		<p style="font-size:18px; color:#c4956a; letter-spacing:2px; margin:0;">
-			<strong>若爱，请深爱。</strong><br/><strong>莫待锦书难托，人空瘦。</strong>
-		</p>
-	</section>
-	<section style="margin:40px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px dashed #c4956a; text-align:center;box-sizing:border-box;">
-		<section style="font-size:13px; color:#c4956a; letter-spacing:4px; margin-bottom:14px;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
-			💬 评论区
-		</section>
-		<p style="font-size:15px; color:#5c4033; line-height:2; margin:0;">
-			读完陆游与唐婉的故事，你更心疼谁？<br/>是爱而不得的陆游，隐忍成疾的唐婉，还是深情不被看见的赵士诚？<br/>欢迎在评论区分享你的感受 ✍️
-		</p>
-	</section>
-	<section style="margin:40px 0 60px; padding:32px; background:#f5efe6; border-radius:12px;box-sizing:border-box;" class="">
-		<h3 style="font-size:16px; color:#2c1810; letter-spacing:3px; margin-bottom:20px; text-align:center;">
-			<strong>— 附录 · 钗头凤二首 —</strong>
-		</h3>
-		<section style="margin-bottom:24px;" class="">
-			<p style="font-size:15px; color:#b5453a; letter-spacing:2px; margin-bottom:12px;text-align:center;" align="center">
-				<strong>《钗头凤 · 红酥手》— 陆游</strong>
-			</p>
-			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
-				红酥手，黄縢酒，满城春色宫墙柳。
-			</p>
-			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
-				东风恶，欢情薄，一怀愁绪，几年离索。
-			</p>
-			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
-				错！错！错！
-			</p>
-			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
-				春如旧，人空瘦，泪痕红浥鲛绡透。
-			</p>
-			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
-				桃花落，闲池阁，山盟虽在，锦书难托。
-			</p>
-		</section>
-	</section>
-</section>]]></content>
-  </entry>
-  <entry>
     <title>封狼居胥霍去病——那个用一生燃烧大汉荣耀的少年</title>
     <url>/com/2026/04/19/%E9%9C%8D%E5%8E%BB%E7%97%85_%E5%85%AC%E4%BC%97%E5%8F%B7/</url>
     <content><![CDATA[
@@ -4492,56 +3769,779 @@ utterances:
       </tags>
   </entry>
   <entry>
-    <title>免费图床</title>
-    <url>/com/2026/05/03/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><ol>
-<li>这部分免费图床就太多了，我会把我目前发现的可以免费白嫖一定额度的图床做一个总结列在下面</li>
-<li>这部分图床的搭建门槛较低，所以速度和稳定性良莠不齐，大家自行选择使用哪个</li>
-<li>我这里只给大家演示一种的使用方法，其他图床使用方法也类似</li>
-<li>大家可以看看哪个比较好用的或者自己知道的好用的这里没有，可以留言我会进行补充</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center">🍕</th>
-<th align="center">🥗</th>
-<th align="center">🍤</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://smms.app/">SMMS</a></td>
-<td align="center"><a href="https://www.superbed.cn/">聚合图床</a></td>
-<td align="center"><a href="https://www.hualigs.cn/">遇见图床</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://postimages.org/">PostImage</a></td>
-<td align="center"><a href="https://imgse.com/">路过图床</a></td>
-<td align="center"><a href="https://www.imgurl.org/">imgURL</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://imgbox.com/">imgbox</a></td>
-<td align="center"><a href="https://pic.iqy.ink/upload">Lsky Pro</a></td>
-<td align="center"><a href="https://upload.cc/">Upload.cc</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://imagelol.com/">imagelol</a></td>
-<td align="center"><a href="https://imgtp.com/">imgtp</a></td>
-<td align="center"><a href="https://cloudimge.com/">云图床</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://mcecy.com/">载涂图床</a></td>
-<td align="center"><a href="https://tuchuang.voooe.cn/">Sky Chart Bed</a></td>
-<td align="center"><a href="https://www.imgbed.link/">风筝图床</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://pz.al/">喷子图床</a></td>
-<td align="center"><a href="https://imgkb.com/">imgkb</a></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<ul>
-<li>使用方法：直接进入官网，上传图片然后粘贴地址即可，地址的样式有多样，自行选择</li>
-</ul>
-]]></content>
+    <title>千古第一意难平-陆游与唐婉的爱情故事</title>
+    <url>/com/2026/04/27/%E9%99%86%E6%B8%B8%E4%B8%8E%E5%94%90%E5%A9%89%E7%9A%84%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B/</url>
+    <content><![CDATA[<section style="background:linear-gradient(170deg, #2c1810 0%, #4a2c1a 40%, #6b3d22 70%, #8b5e3c 100%); padding:60px 20px; text-align:center; position:relative; overflow:hidden; margin:0 -16px;box-sizing:border-box;" class="">
+	<section style="position:relative; z-index:1; font-size:28px; color:#c4956a; opacity:0.6; letter-spacing:16px; margin-bottom:30px;" class="" >
+		◆ ◇ ◆
+	</section>
+	<h1 style="position:relative; z-index:1; font-size:36px; color:#f5efe6; letter-spacing:6px; line-height:1.6; margin-bottom:24px;font-family:&#39;Noto Serif SC&#39;,serif;">
+		<strong>&nbsp; 千古第一意难平 &nbsp; </strong><span style="display:block; font-size:18px; font-weight:300; color:#c4956a; letter-spacing:4px; margin-top:12px;">陆游与唐婉的爱情故事</span>
+	</h1>
+	<section style="position:relative; z-index:1; width:60px; height:1px; background:#c4956a; opacity:0.5; margin:28px auto;box-sizing:border-box;"></section>
+	<p style="position:relative; z-index:1; font-size:15px; color:rgba(245,239,230,0.65); font-weight:300; letter-spacing:2px; line-height:2.2; max-width:500px; margin:0 auto;">
+		有些爱，赢了时光，却输了世俗<br/>
+ &nbsp; &nbsp;有些成全，暖了岁月，却敌不过一句故人难忘
+	</p>
+</section>
+<section style="margin:0 auto; padding:0 16px; line-height:2.2; color:#2c1810;box-sizing:border-box;font-family:&#39;Noto Serif SC&#39;,&#39;SimSun&#39;,serif;" class="">
+	<section style="margin:50px auto 40px; padding:24px 20px; background:#f5efe6; border-left:3px solid #c4956a; border-radius:0 8px 8px 0;box-sizing:border-box;" class="">
+		<p style="font-size:15px; color:#5c4033; margin:0 0 8px 0;">
+			世人皆知钗头凤，少有人怜赵士诚。
+		</p>
+		<p style="font-size:15px; color:#5c4033; margin:0 0 8px 0;">
+			我们总说爱能抵万难，可读完这两首词以及三个人的故事，才懂——<strong style="color:#b5453a;">有些爱，赢了时光，却输了世俗；有些成全，暖了岁月，却敌不过一句故人难忘。</strong>
+		</p>
+		<p style="font-size:15px; color:#5c4033; margin:0;">
+			为什么陆游的一句&quot;错错错&quot;能让唐婉抑郁而终？赵士诚的极致深情又为何鲜少被人提及？
+		</p>
+	</section>
+	<section style="margin:50px 0;">
+		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
+			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+				<strong>壹</strong>
+			</section>
+			<section>
+				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
+					<strong>凤钗定情</strong>
+				</section>
+				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
+					那年春风恰好
+				</section>
+			</section>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				南宋绍兴年间，越州山阴（今浙江绍兴），有一对璧人。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆游，字务观，出身书香门第，少年便负才名；唐婉，字蕙仙，自幼聪慧灵秀，精通诗词文墨。两家本为世交，二人自幼便在彼此的视线里长大——<strong style="color:#2c1810;">她是他的青梅，他是她的竹马。</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				那一年，陆家以一只祖传凤钗为聘，将唐婉迎娶过门。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				凤钗映烛光，红烛照新人。婚礼那夜，满堂宾客都说，这分明是天作之合。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				婚后的小日子，甜得像浸了蜜。陆游与唐婉不是寻常夫妻，更是知音。他写诗，她续句；他抚琴，她低唱。两个人常常秉烛夜谈，从诗词歌赋聊到人生哲学，从晨光熹微聊到月落乌啼。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆游曾以为，此生最好的光景，不过是眼前人与枕边书。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				可他不知道，这份让世人艳羡的甜蜜，在另一个人眼里，却是刺目的祸水。
+			</p>
+			<p style="margin:0;">
+				那个人，是他的母亲。
+			</p>
+		</section>
+	</section>
+	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
+		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
+	</section>
+	<section style="margin:50px 0;">
+		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
+			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+				<strong>贰</strong>
+			</section>
+			<section>
+				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
+					<strong>东风恶</strong>
+				</section>
+				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
+					母命如山，情薄如纸
+				</section>
+			</section>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				陆母是个传统的大家闺秀，在她看来，男儿当以功名为重，岂能沉溺于儿女情长？
+			</p>
+			<p style="margin:0 0 18px 0;">
+				她看着儿子日日与妻子诗词唱和、耳鬓厮磨，心里的不满像野草一样疯长。更要命的是——<strong style="color:#2c1810;">唐婉嫁入陆家数年，膝下无子。</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				在那个&quot;不孝有三，无后为大&quot;的年代，这几乎是最致命的罪名。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆母多次旁敲侧击，唐婉心中委屈却不敢辩驳。她何尝不想为陆家开枝散叶？只是这世间事，从来不是想就能成的。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				终于有一天，陆母下了最后通牒：<strong style="color:#b5453a;">休了她。</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆游跪在母亲房前，长跪不起。他哀求，他痛哭，他甚至悄悄在外面租了宅院将唐婉藏起来——可纸终究包不住火，陆母发现后勃然大怒，以死相逼。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				一边是生养之恩，一边是挚爱之人。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆游选择了母亲。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他在休书上落笔的那一刻，手是抖的。他不敢看唐婉的眼睛，不敢看她鬓边那支凤钗——那是他给她的承诺，如今却成了最讽刺的笑话。
+			</p>
+			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
+				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
+					<strong>唐婉被休了。</strong>
+				</p>
+			</section>
+			<p style="margin:0 0 18px 0;">
+				在南宋，被休的女子几乎等同于不祥之人。流言蜚语像刀子一样追着她——&quot;克夫&quot;&quot;无后&quot;&quot;命硬&quot;……每一句都往骨头缝里扎。
+			</p>
+			<p style="margin:0;">
+				曾经满腹诗书的才女，一夜之间成了人人避之不及的弃妇。她日渐憔悴，像一株被连根拔起的花，在风中摇摇欲坠。
+			</p>
+		</section>
+	</section>
+	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
+		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
+	</section>
+	<section style="margin:50px 0;">
+		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
+			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+				<strong>叁</strong>
+			</section>
+			<section>
+				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
+					<strong>一诺千金</strong>
+				</section>
+				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
+					赵士诚的极致深情
+				</section>
+			</section>
+		</section>
+		<section style="margin:30px 0; padding:28px; background:#fff; border-radius:16px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08);box-sizing:border-box;">
+			<section style="font-size:20px; color:#2c1810; letter-spacing:4px; margin-bottom:4px;">
+				<strong>赵士诚</strong>
+			</section><span style="display:inline-block; font-size:12px; padding:2px 12px; border-radius:20px; margin-bottom:16px; background:rgba(196,149,106,0.15); color:#9a7b55;">永嘉郡王 · 宋太宗玄孙</span>
+			<p style="font-size:15px; color:#5c4033; line-height:2.2; margin:0 0 10px 0;">
+				身份显赫，家世煊赫，要什么样的女子没有？可他偏偏看上了唐婉——一个被休的弃妇，一个世人眼中的不祥之人。
+			</p>
+		</section>
+		<section style="margin-top:24px; font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				消息传出，整个赵氏宗族炸了锅。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				长辈们轮番劝阻，族中长老拍案而起，连皇族宗亲都出面施压——堂堂郡王，娶一个弃妇，皇家颜面何在？
+			</p>
+			<p style="margin:0 0 18px 0;">
+				可赵士诚铁了心。
+			</p>
+			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
+				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
+					<strong>&quot;高官厚禄、名声地位，都不及她半分。&quot;</strong>
+				</p>
+			</section>
+			<p style="margin:0 0 18px 0;">
+				他不只是嘴上说说。他用一场最隆重的婚礼，给了唐婉这个世间最体面的救赎。十里红妆，八抬大轿，他要让所有人知道——<strong style="color:#2c1810;">他娶的不是一个弃妇，是他此生唯一想要守护的人。</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				新婚之夜，他对唐婉说：
+			</p>
+			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
+				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
+					<strong>&quot;此生只护你一人。&quot;</strong>
+				</p>
+			</section>
+			<p style="margin:0 0 18px 0;">
+				在那个三妻四妾再寻常不过的年代，这句话的分量，比任何山盟海誓都重。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				赵士诚说到做到。他待唐婉极好——春天陪她赏花，夏夜陪她纳凉，秋天给她添衣，冬天为她暖汤。他不催她忘掉过去，不逼她笑脸相迎，只是默默地在她身边，像一把伞，替她挡住世间的风雨。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				慢慢地，唐婉脸上又有了笑容。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				她偶尔也会写写诗词，虽然笔下的风月多了几分沧桑，但至少，她重新活了过来。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				赵士诚看着妻子的笑容，觉得这些年所有的压力都值了。
+			</p>
+			<p style="margin:0;">
+				可命运偏偏要开一场最残忍的玩笑。
+			</p>
+		</section>
+	</section>
+	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
+		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
+	</section>
+	<section style="margin:50px 0;">
+		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
+			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+				<strong>肆</strong>
+			</section>
+			<section>
+				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
+					<strong>沈园重逢</strong>
+				</section>
+				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
+					一首杀人的词
+				</section>
+			</section>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				<strong style="color:#c4956a;">绍兴二十五年，春。</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				赵士诚陪唐婉游沈园，满园春色，柳絮纷飞。唐婉的心情难得地好，甚至主动提议走走当年常走的石径。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				谁也没想到，就在那条小径的尽头，他们撞见了陆游。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				十年未见。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他老了，她也瘦了。可四目相对的刹那，时光仿佛倒流，回到了当年凤钗定情的那一夜。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				空气凝固了。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				唐婉愣在原地，一时不知该进还是该退。赵士诚看在眼里，心中五味杂陈，可他到底是那个温润如玉的君子——他轻轻点了点头，示意唐婉不必顾忌。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				征得丈夫的同意，唐婉命人给陆游送去一杯黄縢酒，几碟小菜。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				<strong style="color:#2c1810;">这杯酒，是旧情的最后一丝体面，也是故人的最后一次温柔。</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆游接过酒，手在抖。他望着唐婉离去的背影，想起当年花前月下的誓言，想起自己亲手签下的休书，想起这十年来每一个辗转难眠的夜晚——
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他崩溃了。
+			</p>
+			<p style="margin:0;">
+				借着酒劲，陆游踉跄着走到沈园的粉壁前，提笔写下了那首流传千古的词——
+			</p>
+		</section>
+	</section>
+	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
+		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
+	</section>
+	<section style="margin:50px 0;">
+		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
+			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+				<strong>伍</strong>
+			</section>
+			<section>
+				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
+					<strong>钗头凤 · 陆游</strong>
+				</section>
+				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
+					错错错，一错再错
+				</section>
+			</section>
+		</section>
+		<section style="margin:36px 0; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(44,24,16,0.08);box-sizing:border-box;">
+			<section style="padding:20px 32px; background:linear-gradient(135deg, #3a2a1a 0%, #5c3d24 100%); color:#f5efe6; display:flex; align-items:center; gap:12px;box-sizing:border-box;">
+				<span style="font-size:22px; opacity:0.8;">📜</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:18px; letter-spacing:4px;"><strong>钗头凤 · 红酥手</strong></span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px; opacity:0.7; margin-left:auto; letter-spacing:2px;">陆游</span>
+			</section>
+			<section style="padding:32px;box-sizing:border-box;">
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<strong>红酥手，黄縢酒，满城春色宫墙柳。</strong>
+				</p>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<strong>东风恶，欢情薄，一怀愁绪，几年离索。</strong>
+				</p>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<span style="color:#b5453a; font-size:22px;"><strong>错！错！错！</strong></span>
+				</p>
+				<section style="width:40px; height:1px; background:#d4c4b0; margin:16px auto;box-sizing:border-box;"></section>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<strong>春如旧，人空瘦，泪痕红浥鲛绡透。</strong>
+				</p>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<strong>桃花落，闲池阁，山盟虽在，锦书难托。</strong>
+				</p>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0;text-align:center;" align="center">
+					<span style="color:#b5453a; font-size:22px;"><strong>莫！莫！莫！</strong></span>
+				</p>
+			</section>
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>起笔：美得心碎</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				&quot;红酥手，黄縢酒，满城春色宫墙柳。&quot;
+			</p>
+			<p style="margin:0 0 18px 0;">
+				你红润酥腻的手捧着黄縢酒，满城春花开，宫墙旁的柳枝随风摇曳——一如当年我们共度的时光。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				可如今，这眼前景，全是我当年亲手推开的。
+			</p>
+			<p style="margin:0;">
+				<strong style="color:#2c1810;">物是人非的对比，比刀割还疼。</strong>
+			</p>
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>转折：恨入骨髓</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				&quot;东风恶，欢情薄，一怀愁绪，几年离索。&quot;
+			</p>
+			<p style="margin:0 0 18px 0;">
+				东风太恶毒了，把我们的欢情吹得那么稀薄。这几年，我满怀愁绪，我们各自飘零——明明相爱，却只能相望。
+			</p>
+			<p style="margin:0;">
+				这里的&quot;东风&quot;不是春风，是陆母的苛责，是封建礼教的条条框框，是那座压得他喘不过气来的伦理之山。
+			</p>
+			<p style="margin:0;">
+				这是陆游的自责，也是他的无奈。他恨自己护不住爱人，恨世俗拆散了彼此，他什么也做不了，只能任由愁绪填满心底。
+			</p>
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>爆发：三个&quot;错&quot;字</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				<strong style="color:#b5453a;">&quot;错！错！错！&quot;</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				错在不敢违逆母亲，错在当初放手，错在十年未忘，再见仍乱了心神。
+			</p>
+			<p style="margin:0;">
+				三个&quot;错&quot;字，没有任何修饰，却比千言万语更有力量。就像一个人被逼到绝境，只能用最简单的字宣泄最极致的痛苦。
+			</p>
+			<p style="margin:0;">
+				陆游在这里扇的是自己的耳光。他知道一切都晚了，所有的错误都无法挽回。
+			</p>
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>凝望：你瘦了</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				&quot;春如旧，人空瘦，泪痕红浥鲛绡透。&quot;
+			</p>
+			<p style="margin:0 0 18px 0;">
+				春天还像以前一样，可你怎么瘦成了这样？你的手帕都被带着胭脂的眼泪湿透了。
+			</p>
+			<p style="margin:0;">
+				他心疼了。可他不知道——<strong style="color:#2c1810;">唐婉肩上披着的，是赵士诚送的暖裘；绣囊里藏着的，是赵士诚写的平安信。</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他以为她过得不好，却不知道，是另一个人替他完成了他没能做到的事。
+			</p>			
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>绝笔：三个&quot;莫&quot;字</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				&quot;山盟虽在，锦书难托。&quot;
+			</p>
+			<p style="margin:0 0 18px 0;">
+				我们当年的海誓山盟还在，可现在就算写了信，也没法寄给你了——你已经是赵家人了，而我只是个路人甲。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他的任何念想，都是对唐婉现有幸福的冒犯。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				<strong style="color:#b5453a;">&quot;莫！莫！莫！&quot;</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				罢了罢了。莫再想，莫再念，莫再扰。
+			</p>
+			<p style="margin:0;">
+				这三个&quot;莫&quot;字，是绝望，是放手，是明知不可为而为之后的彻底放弃。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆游写完，哭着走了。
+			</p>
+		</section>
+		<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
+			<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
+				<strong>他不知道，这首词，成了一把插进唐婉心里的刀。</strong>
+			</p>
+		</section>
+	</section>
+	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
+		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
+	</section>
+	<section style="margin:50px 0;">
+		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
+			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+				<strong>陆</strong>
+			</section>
+			<section>
+				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
+					<strong>钗头凤 · 唐婉</strong>
+				</section>
+				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
+					难难难，无路可退
+				</section>
+			</section>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				第二年春天，唐婉重游沈园。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				她看到了墙上那首词——墨迹斑斑，全是前夫的血泪。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				那一刻，她心里筑了十年的防线，轰然崩塌。
+			</p>
+			<p style="margin:0;">
+				于是她提笔，在陆游的词旁，写下了自己的回答——
+			</p>
+		</section>
+		<section style="margin:36px 0; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 24px rgba(44,24,16,0.08);box-sizing:border-box;">
+			<section style="padding:20px 32px; background:linear-gradient(135deg, #4a3a2a 0%, #6b5a48 100%); color:#f5efe6; display:flex; align-items:center; gap:12px;box-sizing:border-box;">
+				<span style="font-size:22px; opacity:0.8;">📜</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:18px; letter-spacing:4px;"><strong>钗头凤 · 世情薄</strong></span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px; opacity:0.7; margin-left:auto; letter-spacing:2px;">唐婉</span>
+			</section>
+			<section style="padding:32px;box-sizing:border-box;">
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<strong>世情薄，人情恶，雨送黄昏花易落。</strong>
+				</p>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<strong>晓风干，泪痕残，欲笺心事，独语斜阑。</strong>
+				</p>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<span style="color:#b5453a; font-size:22px;"><strong>难！难！难！</strong></span>
+				</p>
+				<section style="width:40px; height:1px; background:#d4c4b0; margin:16px auto;box-sizing:border-box;"></section>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<strong>人成各，今非昨，病魂常似秋千索。</strong>
+				</p>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0 0 16px 0;text-align:center;" align="center">
+					<strong>角声寒，夜阑珊，怕人寻问，咽泪装欢。</strong>
+				</p>
+				<p style="font-size:18px; color:#3a3a4a; line-height:2.6; letter-spacing:3px; margin:0;text-align:center;" align="center">
+					<span style="color:#b5453a; font-size:22px;"><strong>瞒！瞒！瞒！</strong></span>
+				</p>
+			</section>
+		</section>
+		<p style="margin:24px 0; color:#b5453a; font-size:15px; letter-spacing:2px;text-align:center;" align="center">
+			<strong>写完这首词不久，唐婉抑郁而终，香消玉殒。</strong>
+		</p>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>世情薄：人心比夜更凉</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				&quot;世情薄，人情恶，雨送黄昏花易落。&quot;
+			</p>
+			<p style="margin:0 0 18px 0;">
+				如果说陆游的词是悔，那唐婉的词就是疼。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆游骂东风，唐婉叹世情。这个世道太凉薄，人心太险恶，我就像那黄昏雨中的花——哪怕再美，也注定要凋落。
+			</p>
+			<p style="margin:0;">
+				这是她的亲身感受。被休之后，她成了别人口中的弃妇，流言蜚语、冷眼相待，唯有赵士诚将她护在伞下。
+			</p>
+			<p style="margin:0;">
+				可陆游的词一出来，那把伞就破了。风雨全往旧伤口里钻。
+			</p>
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>独语斜阑：连倾诉的资格都没有</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				&quot;晓风干，泪痕残，欲笺心事，独语斜阑。&quot;
+			</p>
+			<p style="margin:0 0 18px 0;">
+				早晨的风吹干了泪痕，我想把心事写下来——可写给谁？
+			</p>
+			<p style="margin:0 0 18px 0;">
+				写给陆游，是对赵士诚的辜负；写给赵士诚，是让他十年的温柔都成了笑话；写给自己，又怕眼泪晕开了墨迹。
+			</p>
+			<p style="margin:0;">
+				只能独自靠在栏杆上，对着空庭自言自语。
+			</p>
+			<p style="margin:0;">
+				<strong style="color:#2c1810;">这份孤独，比分离更让人绝望。</strong>陆游至少还能把愁绪写在墙上，可唐婉连倾诉的资格都没有，只能把心事一层一层地压在心底。
+			</p>
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>三个&quot;难&quot;字：无路可走</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				<strong style="color:#b5453a;">&quot;难！难！难！&quot;</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				陆游说&quot;错&quot;，是悔恨；唐婉说&quot;难&quot;，是无路可走。
+			</p>
+			<p style="margin:0;">
+				相见难，倾诉难，放下难——旧爱新欢缠成死结。
+			</p>
+			<p style="margin:0;">
+				她不像陆游，还能有一丝悔恨的余地。她的处境只有无尽的艰难，没有任何出路，这份痛苦永远也解脱不了。
+			</p>
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>病魂秋千：身体与精神的双重崩塌</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				&quot;人成各，今非昨，病魂常似秋千索。&quot;
+			</p>
+			<p style="margin:0 0 18px 0;">
+				如今我们各自安好，再也不是当年的模样。<strong style="color:#2c1810;">病魂常似秋千索</strong>——这是最让人心疼的一句。
+			</p>
+			<p style="margin:0;">
+				唐婉因为长期的悲伤，身体早已垮了。被休时病过一次，被陆游的词又勾病了。就像秋千上的绳索，晃晃悠悠，找不到安稳。
+			</p>
+		</section>
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>咽泪装欢：最扎心的一幕</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				&quot;角声寒，夜阑珊，怕人寻问，咽泪装欢。&quot;
+			</p>
+			<p style="margin:0 0 18px 0;">
+				深夜，角声传来，寒意刺骨，她独自落泪。赵士诚给她暖汤盖被，她却不敢说——不是天冷，<strong style="color:#b5453a;">是心冷。</strong>
+			</p>
+			<p style="margin:0;">
+				陆游可以发泄，可以写词骂东风；可唐婉不行。她夹在中间，不能负了旧情，又不敢伤了新人，所以连痛苦都要藏着掖着。
+			</p>
+		</section>
+		<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
+				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
+					<strong>&quot;她的装欢，比痛哭更让人心疼。&quot;</strong>
+				</p>
+				<p style="font-size:13px; color:#8b6f5e; margin-top:12px; font-weight:400; letter-spacing:2px;text-align:right;" align="right">
+					就像我们受了委屈，却要在家人面前强颜欢笑
+				</p>
+				<p style="font-size:13px; color:#8b6f5e; margin-top:2px; font-weight:400; letter-spacing:2px;text-align:right;" align="right">
+					就像我们心里难过，却要在朋友面前假装没事
+				</p>
+			</section>
+		
+		<section style="display:flex; align-items:center; gap:10px; margin:32px 0 16px; font-size:17px; color:#b5453a; letter-spacing:2px;">
+			<span style="width:4px; height:20px; background:linear-gradient(180deg, #b5453a, #c4956a); border-radius:2px;box-sizing:border-box;"></span><strong>三个&quot;瞒&quot;字：耗尽了一生</strong>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				<strong style="color:#b5453a;">&quot;瞒！瞒！瞒！&quot;</strong>
+			</p>
+			<p style="margin:0 0 18px 0;">
+				瞒住对陆游的念想，瞒住心里的伤痛，瞒住所有人——假装幸福。
+			</p>
+			<p style="margin:0;">
+				可惜她瞒过了所有人，却瞒不过自己的身体。
+			</p>
+			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
+				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
+					<strong>三个&quot;瞒&quot;字，耗尽了她的生命。</strong>
+				</p>
+			</section>
+		</section>
+	</section>
+	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
+		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
+	</section>
+	<section style="margin:50px 0;">
+		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
+			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+				<strong>柒</strong>
+			</section>
+			<section>
+				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
+					<strong>赵士诚</strong>
+				</section>
+				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
+					被历史遗忘的深情
+				</section>
+			</section>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				唐婉死后，赵士诚的世界也塌了。
+			</p>
+			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
+				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
+					<strong>他终身没有再娶，没有纳妾。</strong>
+				</p>
+			</section>
+			<p style="margin:0 0 18px 0;">
+				在那个三妻四妾再寻常不过的年代，这几乎是个奇迹。堂堂郡王，皇族之后，却为一个人守了一辈子的寡。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				后来，赵士诚主动请缨，奔赴沙场。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他不是好战，他是找不到活着的理由了。战场上刀剑无眼，他不在乎。他要用最决绝的方式，去陪他的爱人——
+			</p>
+			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
+				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
+					<strong>生不同衾，死同穴。</strong>
+				</p>
+			</section>
+			<p style="margin:0 0 18px 0;">
+				那天在沈园，是他大度地让妻子给前夫送酒。他以为这能解开妻子的心结，以为自己的十年温柔终能抚平她的伤疤。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				可他万万没想到，陆游的一首词，摧毁了他十年的全部努力。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他的温柔，他的守护，他的不离不弃——在陆游那面墙的墨迹面前，轻得像一缕风。
+			</p>
+			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
+				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
+					<strong>可这缕风，暖了唐婉整整十年。</strong>
+				</p>
+			</section>
+		</section>
+	</section>
+	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
+		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
+	</section>
+	<section style="margin:50px 0;">
+		<section style="display:flex; align-items:center; gap:16px; margin-bottom:30px;">
+			<section style="width:48px; height:48px; background:linear-gradient(135deg, #b5453a, #c96b5a); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:50%; flex-shrink:0; box-shadow:0 4px 12px rgba(181,69,58,0.25);box-sizing:border-box;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+				<strong>捌</strong>
+			</section>
+			<section>
+				<section style="font-size:22px; color:#2c1810; letter-spacing:2px;">
+					<strong>陆游的余生</strong>
+				</section>
+				<section style="font-size:13px; color:#8b6f5e; margin-top:4px; letter-spacing:1px;">
+					一辈子没走出沈园
+				</section>
+			</section>
+		</section>
+		<section style="font-size:16px; color:#5c4033; text-align:justify;">
+			<p style="margin:0 0 18px 0;">
+				反观陆游，虽然活到了八十五岁，但他这辈子都没走出那个沈园。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他晚年写了无数首诗怀念唐婉——
+			</p>
+			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
+				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
+					<strong>城上斜阳画角哀，沈园非复旧池台。</strong><br/><strong>伤心桥下春波绿，曾是惊鸿照影来。</strong>
+				</p>
+				<p style="font-size:13px; color:#8b6f5e; margin-top:12px; font-weight:400; letter-spacing:2px;text-align:right;" align="right">
+					陆游《沈园二首 · 其一》
+				</p>
+			</section>
+			<section style="margin:30px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px solid #e8ddd0; box-shadow:0 2px 16px rgba(44,24,16,0.08); position:relative;box-sizing:border-box;">
+				<p style="font-size:16px; color:#3a3a4a; line-height:2.4; padding-left:20px; margin:0;text-align:center;" align="center">
+					<strong>梦断香消四十年，沈园柳老不吹绵。</strong><br/><strong>此身行作稽山土，犹吊遗踪一泫然。</strong>
+				</p>
+				<p style="font-size:13px; color:#8b6f5e; margin-top:12px; font-weight:400; letter-spacing:2px;text-align:right;" align="right">
+					陆游《沈园二首 · 其二》
+				</p>
+			</section>
+			<p style="margin:0 0 18px 0;">
+				临死前一年，八十四岁的陆游还挣扎着去了一趟沈园。
+			</p>
+			<p style="margin:0 0 18px 0;">
+				他站在那面墙前，墙上的字迹早已斑驳，可他的眼泪还是止不住地流。
+			</p>
+			<section style="margin:30px 0; padding:24px 28px; background:linear-gradient(135deg, #faf6f0, #f5efe6); border-radius:12px; border:1px solid #e8ddd0; text-align:center;box-sizing:border-box;">
+				<p style="margin:0; font-size:17px; color:#3a3a4a; line-height:2.2; letter-spacing:2px;">
+					<strong>那是他对唐婉最后的告白。</strong>
+				</p>
+			</section>
+			<p style="margin:0;">
+				五十年了，他还是没有放下。
+			</p>
+		</section>
+		<p style="font-size:13px; color:#8b6f5e; margin-top:2px; font-weight:400; letter-spacing:2px;text-align:center;" align="center">
+					今浙江绍兴沈园
+		</p>
+	</section>
+	<section style="display:flex; align-items:center; justify-content:center; gap:16px; margin:50px auto;">
+		<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span> &nbsp; &nbsp;<span style="font-size:14px; color:#c4956a; letter-spacing:8px; opacity:0.6;">◆◆◆</span> &nbsp; &nbsp;<span style="flex:1; height:1px; background:linear-gradient(90deg, transparent, #d4c4b0, transparent);"></span>
+	</section>
+	<section style="margin:60px 0 40px; padding:40px 32px; background:linear-gradient(135deg, #2c1810, #4a2c1a); border-radius:16px; text-align:center;box-sizing:border-box;">
+		<h2 style="font-size:20px; color:#c4956a; letter-spacing:4px; margin-bottom:24px;font-family:&#39;Noto Serif SC&#39;,serif;">
+			<strong>尾声 · 爱情最狠的真相</strong>
+		</h2>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			有人说，唐婉是虚构的，钗头凤是后人附会的，赵士诚的深情也是假的。
+		</p>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			但真假已经不重要了。
+		</p>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			因为这个故事记录的那种痛，是真实的。<br/>它代表了千百年来那些被封建礼教拆散的、爱而不得的灵魂。
+		</p>
+		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			我们总为陆游的&quot;错&quot;叹息，为唐婉的&quot;苦&quot;流泪，<br/>却忘了问一句——
+		</p>
+		<p style="font-size:18px; color:#c4956a; letter-spacing:2px; margin:0 0 12px 0;">
+			<strong>赵士诚的十年温柔，到底算什么？</strong>
+		</p>
+		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			两首钗头凤，一首是男人的懦弱与悔恨，<br/>一首是女人的隐忍与绝望。
+		</p>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			字里行间全是对旧爱的执念，<br/>却唯独欠了赵士诚一句——
+		</p>
+		<p style="font-size:18px; color:#c4956a; letter-spacing:2px; margin:0 0 12px 0;">
+			<strong>谢谢你。</strong>
+		</p>
+		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			这才是爱情最狠的真相：<br/>有些人，一旦错过，就是一辈子。<br/>有些爱，一旦回头，就是万丈深渊。
+		</p>
+		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			如果你身边有一个赵士诚这样的人，<br/>请千万千万要珍惜。<br/>别为了那个已经错过的陆游，伤了眼前人的心。
+		</p>
+		<p style="margin-top:20px; font-size:18px; letter-spacing:3px; color:#c4956a;">
+			<strong>满目山河空念远</strong><br/><strong>不如怜取眼前人</strong>
+		</p>
+		<section style="width:60px; height:1px; background:#c4956a; opacity:0.4; margin:24px auto;box-sizing:border-box;"></section>
+		<p style="font-size:16px; color:rgba(245,239,230,0.85); line-height:2.4; margin:0 0 12px 0; letter-spacing:1px;">
+			但愿这世间<br/>少一些&quot;错错错&quot;的遗憾<br/>少一些&quot;瞒瞒瞒&quot;的悲凉
+		</p>
+		<p style="font-size:18px; color:#c4956a; letter-spacing:2px; margin:0;">
+			<strong>若爱，请深爱。</strong><br/><strong>莫待锦书难托，人空瘦。</strong>
+		</p>
+	</section>
+	<section style="margin:40px 0; padding:28px 32px; background:#fff; border-radius:12px; border:1px dashed #c4956a; text-align:center;box-sizing:border-box;">
+		<section style="font-size:13px; color:#c4956a; letter-spacing:4px; margin-bottom:14px;font-family:&#39;Noto Sans SC&#39;,sans-serif;">
+			💬 评论区
+		</section>
+		<p style="font-size:15px; color:#5c4033; line-height:2; margin:0;">
+			读完陆游与唐婉的故事，你更心疼谁？<br/>是爱而不得的陆游，隐忍成疾的唐婉，还是深情不被看见的赵士诚？<br/>欢迎在评论区分享你的感受 ✍️
+		</p>
+	</section>
+	<section style="margin:40px 0 60px; padding:32px; background:#f5efe6; border-radius:12px;box-sizing:border-box;" class="">
+		<h3 style="font-size:16px; color:#2c1810; letter-spacing:3px; margin-bottom:20px; text-align:center;">
+			<strong>— 附录 · 钗头凤二首 —</strong>
+		</h3>
+		<section style="margin-bottom:24px;" class="">
+			<p style="font-size:15px; color:#b5453a; letter-spacing:2px; margin-bottom:12px;text-align:center;" align="center">
+				<strong>《钗头凤 · 红酥手》— 陆游</strong>
+			</p>
+			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
+				红酥手，黄縢酒，满城春色宫墙柳。
+			</p>
+			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
+				东风恶，欢情薄，一怀愁绪，几年离索。
+			</p>
+			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
+				错！错！错！
+			</p>
+			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
+				春如旧，人空瘦，泪痕红浥鲛绡透。
+			</p>
+			<p style="font-size:15px; color:#5c4033; line-height:2.4; letter-spacing:2px; margin:0 0 8px 0;text-align:center;" align="center">
+				桃花落，闲池阁，山盟虽在，锦书难托。
+			</p>
+		</section>
+	</section>
+</section>]]></content>
   </entry>
 </search>
