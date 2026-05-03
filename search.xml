@@ -3,20 +3,24 @@
   <entry>
     <title>文章发布指令</title>
     <url>/com/2026/04/27/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成搜索"><a href="#生成搜索" class="headerlink" title="生成搜索"></a>生成搜索</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo algolia</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
   </entry>
   <entry>
     <title>免费图床</title>
@@ -887,17 +891,11 @@
     <content><![CDATA[<h1 id="开启评论"><a href="#开启评论" class="headerlink" title="开启评论"></a>开启评论</h1><p>下面我们来给博客添加一个评论功能，这里我们使用这个 <a href="https://github.com/apps/utterances" title="utterances">utterances</a>插件，它是一个基于 GitHub Issue 的，开源评论插件。</p>
 <p>我们点击安装它，然后选择对应的仓库给它授权。然后在 GitHub 仓库，点击设置，找到 features 下面这个 Discussion 选项，然后点击勾选上这个选项。</p>
 <p>接着我们需要修改 _config.fluid.yml 配置文件，在文件中填入下面的内容，保存就可以了。</p>
-<pre><code>comments:
-  use: utterances
-utterances:
-  repo: your_github_username/your_repo_name # 替换为你的 GitHub 用户名和仓库名
-  issue_term: title
-  label: utterances
-  theme: github-light
-  theme_dark: github-dark
-  crossorigin: anonymous      
-</code></pre>
+<p>​<br>​<br>​<br>    comments:<br>      use: utterances<br>    utterances:<br>      repo: your_github_username&#x2F;your_repo_name # 替换为你的 GitHub 用户名和仓库名<br>      issue_term: title<br>      label: utterances<br>      theme: github-light<br>      theme_dark: github-dark<br>      crossorigin: anonymous      </p>
 ]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
   </entry>
   <entry>
     <title>64岁抬棺西征，保全166万国土——晚清对外唯一胜仗</title>
@@ -4566,5 +4564,8 @@ utterances:
 <p>虽然有很多博客已经写过如何添加这个插件，如何使用，但是我在实际过程中还是遇到了很多奇怪的问题</p>
 </blockquote>
 ]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
   </entry>
 </search>
