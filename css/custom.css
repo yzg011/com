@@ -1,4 +1,12 @@
+/* 全局背景强制固定 */
 #web_bg {
-  background-attachment: fixed !important; /* 背景固定 */
-  position: fixed !important; /* 固定定位 */
+  position: fixed !important;
+  background-attachment: fixed !important;
+}
+
+/* 强制文章页 top_img 也固定（解决“有的滚”） */
+.page-post .top-img {
+  position: fixed !important;
+  background-attachment: fixed !important;
+  z-index: -1 !important;
 }
