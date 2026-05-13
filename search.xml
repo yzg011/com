@@ -254,18 +254,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo 框架更新</title>
-    <url>/2026/05/11/hexo%20%E6%A1%86%E6%9E%B6%E6%9B%B4%E6%96%B0/</url>
-    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>安装</p>
-<p>$ npm install -g hexo-cli</p>
-<p>运行</p>
-<p>$ npm install hexo</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>上传指令</title>
     <url>/2026/05/11/%E4%B8%8A%E4%BC%A0%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="💡-建议操作流"><a href="#💡-建议操作流" class="headerlink" title="💡 建议操作流"></a>💡 建议操作流</h3><p>对于 Astro 项目首次上传，标准流程如下：</p>
@@ -275,59 +263,6 @@
       <tags>
         <tag>技术</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>免费图床</title>
-    <url>/2026/05/03/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><ol>
-<li>这部分免费图床就太多了，我会把我目前发现的可以免费白嫖一定额度的图床做一个总结列在下面</li>
-<li>这部分图床的搭建门槛较低，所以速度和稳定性良莠不齐，大家自行选择使用哪个</li>
-<li>我这里只给大家演示一种的使用方法，其他图床使用方法也类似</li>
-<li>大家可以看看哪个比较好用的或者自己知道的好用的这里没有，可以留言我会进行补充</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center">🍕</th>
-<th align="center">🥗</th>
-<th align="center">🍤</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://smms.app/">SMMS</a></td>
-<td align="center"><a href="https://www.superbed.cn/">聚合图床</a></td>
-<td align="center"><a href="https://www.hualigs.cn/">遇见图床</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://postimages.org/">PostImage</a></td>
-<td align="center"><a href="https://imgse.com/">路过图床</a></td>
-<td align="center"><a href="https://www.imgurl.org/">imgURL</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://imgbox.com/">imgbox</a></td>
-<td align="center"><a href="https://pic.iqy.ink/upload">Lsky Pro</a></td>
-<td align="center"><a href="https://upload.cc/">Upload.cc</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://imagelol.com/">imagelol</a></td>
-<td align="center"><a href="https://imgtp.com/">imgtp</a></td>
-<td align="center"><a href="https://cloudimge.com/">云图床</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://mcecy.com/">载涂图床</a></td>
-<td align="center"><a href="https://tuchuang.voooe.cn/">Sky Chart Bed</a></td>
-<td align="center"><a href="https://www.imgbed.link/">风筝图床</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://pz.al/">喷子图床</a></td>
-<td align="center"><a href="https://imgkb.com/">imgkb</a></td>
-<td align="center"><a href="https://imgloc.com/#google_vignette">imgloc</a></td>
-</tr>
-</tbody></table>
-<ul>
-<li>使用方法：直接进入官网，上传图片然后粘贴地址即可，地址的样式有多样，自行选择</li>
-</ul>
-]]></content>
   </entry>
   <entry>
     <title>于谦：一个扶大厦之将倾的功臣，最后的结局令人唏嘘</title>
@@ -342,6 +277,18 @@
       </categories>
       <tags>
         <tag>明朝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 框架更新</title>
+    <url>/2026/05/11/hexo%20%E6%A1%86%E6%9E%B6%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>安装</p>
+<p>$ npm install -g hexo-cli</p>
+<p>运行</p>
+<p>$ npm install hexo</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -841,14 +788,57 @@
       </tags>
   </entry>
   <entry>
-    <title>印度STQC 流程和批准要求</title>
-    <url>/2026/05/13/%E5%8D%B0%E5%BA%A6STQC%20%E6%B5%81%E7%A8%8B%E5%92%8C%E6%89%B9%E5%87%86%E8%A6%81%E6%B1%82/</url>
-    <content><![CDATA[<h1 id="STQC-process-and-approval-requirements"><a href="#STQC-process-and-approval-requirements" class="headerlink" title="STQC process and approval requirements"></a>STQC process and approval requirements</h1><p>List of documents and explanations required-<br>1.Datasheet of the SoC.<br>2.Design and architecture documents till the PCBA and SoC level.<br>3.Documentation related to ports&#x2F;interfaces and protection mechanism for the same.<br>4.Process flow of the Manufacturing&#x2F;Provisioning.<br>5.All keys and certificates being used in the device ecosystem.<br>6.Key management life cycle.<br>7.User manual&#x2F; Technical specifications of the device.<br>8.Code snippets of the TEE API call, wherever applicable.<br>9.List of all the sensitive data with their intended usage and secure storage mechanism.<br>10.Measures available in the device to prevent software tampering.<br>11.Measures available in the device to prevent hardware tampering.<br>12.Documentation regarding the Intellectual Property protection technologies provided by the chip manufacturer which have been enabled.<br>13.In case, no Intellectual Property protection technologies are being provided by the chip manufacturer, then a declaration stating the same.<br>14.Technical specifications of the device regarding random generators, in case, software based random number generators are being used, vendors shall provide the libraries being used for the same.<br>15.Declaration of the memory protection controls available and enabled in the device.<br>16.Document mentioning the use-cases when the device establishes server connections with the external world, with detailed information about the security measures in place while validating the digital signatures of the server connections.<br>17.Firmware binaries for code review.<br>18.Internal code review reports.<br>19.software bill of materials, including third party components and versions.<br>20.documentation regarding the security controls in place to hinder firmware reverse engineering.<br>21.Process of achieving secure firmware upgrade which should consist of keys involved and their management life cycle, signature validation process and any other secure mechanisms if implemented.<br>22.Modes of updates available i.e. automatic, manual or both.<br>23.Organizational process and policies regarding the issuing of updates to the devices.<br>24.Process of mutual authentication as implemented in the device when wireless communications are initiated.<br>25.Bill of materials for critical hardware components (related to security functions like SoC).<br>26.Supply chain risk identification, assessment, prioritization, and mitigation documents.<br>27.Document for Network protocols used in the device.<br>28.Supply chain risk&#x2F;business continuity planning policy documents, playbooks reflecting how to handle supply chain disruption, post-incident summary documents need to be submitted and demonstrate the same.</p>
-<h1 id="STQC-流程和批准要求"><a href="#STQC-流程和批准要求" class="headerlink" title="STQC 流程和批准要求"></a>STQC 流程和批准要求</h1><p>所需文件及说明清单-<br>1.SoC 的数据表。<br>2.直至 PCBA 和 SoC 级别的设计和架构文档。<br>3.与端口&#x2F;接口及其保护机制相关的文档。<br>4.制造&#x2F;供应的流程。<br>5.设备生态系统中使用的所有密钥和证书。<br>6.密钥管理生命周期。<br>7.设备的用户手册&#x2F;技术规格。<br>8.TEE API 调用的代码片段（如果适用）。<br>9.列出所有敏感数据及其预期用途和安全存储机制。<br>10.设备中可用的措施可防止软件被篡改。<br>11.设备中可用的措施可防止硬件篡改。<br>12.芯片制造商提供的已启用的知识产权保护技术文档。<br>13.如果芯片制造商未提供任何知识产权保护技术，则需要提供一份声明来说明。<br>14.设备有关随机数生成器的技术规格，如果使用基于软件的随机数生成器，则供应商应提供用于该生成器的库。<br>15.声明设备中可用且启用的内存保护控制。<br>16.该文档提及了设备与外部世界建立服务器连接时的用例，并提供了有关验证服务器连接的数字签名时所采取的安全措施的详细信息。<br>17.用于代码审查的固件二进制文件。<br>18.内部代码审查报告。<br>19.软件物料清单，包括第三方组件和版本。<br>20.有关阻止固件逆向工程的安全控制的文档。<br>21.实现安全固件升级的过程应包括所涉及的密钥及其管理生命周期、签名验证过程以及任何其他安全机制（如果实施）。<br>22.可用的更新模式包括自动、手动或两者。<br>23.有关发布设备更新的组织流程和政策。<br>24.启动无线通信时在设备中实施的相互认证过程。<br>25.关键硬件组件的物料清单（与 SoC 等安全功能相关）。<br>26.供应链风险识别、评估、优先排序和缓解文件。<br>27.设备中使用的网络协议的文档。<br>28.需要提交并证明供应链风险&#x2F;业务连续性计划政策文件、反映如何处理供应链中断的剧本、事件后摘要文件。</p>
+    <title>免费图床</title>
+    <url>/2026/05/03/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><ol>
+<li>这部分免费图床就太多了，我会把我目前发现的可以免费白嫖一定额度的图床做一个总结列在下面</li>
+<li>这部分图床的搭建门槛较低，所以速度和稳定性良莠不齐，大家自行选择使用哪个</li>
+<li>我这里只给大家演示一种的使用方法，其他图床使用方法也类似</li>
+<li>大家可以看看哪个比较好用的或者自己知道的好用的这里没有，可以留言我会进行补充</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">🍕</th>
+<th align="center">🥗</th>
+<th align="center">🍤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://smms.app/">SMMS</a></td>
+<td align="center"><a href="https://www.superbed.cn/">聚合图床</a></td>
+<td align="center"><a href="https://www.hualigs.cn/">遇见图床</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://postimages.org/">PostImage</a></td>
+<td align="center"><a href="https://imgse.com/">路过图床</a></td>
+<td align="center"><a href="https://www.imgurl.org/">imgURL</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://imgbox.com/">imgbox</a></td>
+<td align="center"><a href="https://pic.iqy.ink/upload">Lsky Pro</a></td>
+<td align="center"><a href="https://upload.cc/">Upload.cc</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://imagelol.com/">imagelol</a></td>
+<td align="center"><a href="https://imgtp.com/">imgtp</a></td>
+<td align="center"><a href="https://cloudimge.com/">云图床</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://mcecy.com/">载涂图床</a></td>
+<td align="center"><a href="https://tuchuang.voooe.cn/">Sky Chart Bed</a></td>
+<td align="center"><a href="https://www.imgbed.link/">风筝图床</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://pz.al/">喷子图床</a></td>
+<td align="center"><a href="https://imgkb.com/">imgkb</a></td>
+<td align="center"><a href="https://imgloc.com/#google_vignette">imgloc</a></td>
+</tr>
+</tbody></table>
+<ul>
+<li>使用方法：直接进入官网，上传图片然后粘贴地址即可，地址的样式有多样，自行选择</li>
+</ul>
 ]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
   </entry>
   <entry>
     <title>千古第一骈文：滕王阁序</title>
@@ -1176,71 +1166,10 @@
       </tags>
   </entry>
   <entry>
-    <title>印度STQC认证所需文件</title>
-    <url>/2026/05/13/%E5%8D%B0%E5%BA%A6STQC%E8%AE%A4%E8%AF%81%E6%89%80%E9%9C%80%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="Documents-Requirements-Listed-in-the-Guidelines"><a href="#Documents-Requirements-Listed-in-the-Guidelines" class="headerlink" title="Documents &#x2F; Requirements Listed in the Guidelines:"></a>Documents &#x2F; Requirements Listed in the Guidelines:</h1><p>Hardware-Level Documentation</p>
-<h3 id="1-SoC-Datasheet"><a href="#1-SoC-Datasheet" class="headerlink" title="1.SoC Datasheet"></a>1.SoC Datasheet</h3><p>oDetails on debugging interfaces (USB, UART, JTAG, SWD).<br>oTEE&#x2F;TPM&#x2F;SE availability.<br>oRNG capability (hardware-based).</p>
-<h3 id="2-Device-Technical-Specifications"><a href="#2-Device-Technical-Specifications" class="headerlink" title="2.Device Technical Specifications"></a>2.Device Technical Specifications</h3><p>oIncludes secure boot architecture, communication protocols, and memory protection.</p>
-<h3 id="3-Block-Connection-Diagrams"><a href="#3-Block-Connection-Diagrams" class="headerlink" title="3.Block Connection Diagrams"></a>3.Block Connection Diagrams</h3><p>oShowing microcontroller and peripheral interactions.</p>
-<h3 id="4-Access-Control-Mechanism-Documents"><a href="#4-Access-Control-Mechanism-Documents" class="headerlink" title="4.Access Control Mechanism Documents"></a>4.Access Control Mechanism Documents</h3><p>oDocumentation on enabled&#x2F;disabled ports and protection schemes.</p>
-<h3 id="5-Manufacturing-Provisioning-Process-Flow"><a href="#5-Manufacturing-Provisioning-Process-Flow" class="headerlink" title="5.Manufacturing&#x2F;Provisioning Process Flow"></a>5.Manufacturing&#x2F;Provisioning Process Flow</h3><p>oEspecially for disabling debugging interfaces and secure boot provisioning.</p>
-<h3 id="6-Key-and-Certificate-List"><a href="#6-Key-and-Certificate-List" class="headerlink" title="6.Key and Certificate List"></a>6.Key and Certificate List</h3><p>oAll keys and certs used in the device ecosystem.</p>
-<h3 id="7-Key-Management-Lifecycle-Document"><a href="#7-Key-Management-Lifecycle-Document" class="headerlink" title="7.Key Management Lifecycle Document"></a>7.Key Management Lifecycle Document</h3><p>oPurpose, generation, storage, destruction, validity, rotation.</p>
-<h3 id="8-Secure-Storage-Configuration"><a href="#8-Secure-Storage-Configuration" class="headerlink" title="8.Secure Storage Configuration"></a>8.Secure Storage Configuration</h3><p>oStorage mechanism and configuration of sensitive data (keys, certificates).</p>
-<h3 id="9-Tamper-Protection-Documentation"><a href="#9-Tamper-Protection-Documentation" class="headerlink" title="9.Tamper Protection Documentation"></a>9.Tamper Protection Documentation</h3><p>oSoftware and hardware anti-tamper measures.</p>
-<h3 id="10-IP-Protection-Documentation"><a href="#10-IP-Protection-Documentation" class="headerlink" title="10.IP Protection Documentation"></a>10.IP Protection Documentation</h3><p>From chip manufacturer, or declaration if unavailable.</p>
-<h3 id="11-Boot-Image-Validation-Report"><a href="#11-Boot-Image-Validation-Report" class="headerlink" title="11.Boot Image Validation Report"></a>11.Boot Image Validation Report</h3><p>Secure boot process validation (pass&#x2F;fail cases).</p>
-<h3 id="12-Random-Number-Generator-Usage"><a href="#12-Random-Number-Generator-Usage" class="headerlink" title="12.Random Number Generator Usage"></a>12.Random Number Generator Usage</h3><p>Description of RNG used (hardware or software) and supporting libraries.</p>
-<h2 id="🖥️-Software-Firmware-Documentation"><a href="#🖥️-Software-Firmware-Documentation" class="headerlink" title="🖥️ Software &amp; Firmware Documentation"></a>🖥️ Software &amp; Firmware Documentation</h2><h3 id="13-Firmware-Code-Snippets"><a href="#13-Firmware-Code-Snippets" class="headerlink" title="13.Firmware Code Snippets"></a>13.Firmware Code Snippets</h3><p>Related to TEE APIs, secure boot, RNG, TLS, etc.</p>
-<h3 id="14-Memory-Protection-Declaration"><a href="#14-Memory-Protection-Declaration" class="headerlink" title="14.Memory Protection Declaration"></a>14.Memory Protection Declaration</h3><p>Statement showing ASLR, DEP enabled if applicable.</p>
-<h3 id="15-TLS-Communication-Documentation"><a href="#15-TLS-Communication-Documentation" class="headerlink" title="15.TLS Communication Documentation"></a>15.TLS Communication Documentation</h3><p>Details on TLS configuration, cipher suites, certificate validation.</p>
-<h3 id="16-Digital-Signature-Verification-Use-Cases"><a href="#16-Digital-Signature-Verification-Use-Cases" class="headerlink" title="16.Digital Signature Verification Use-Cases"></a>16.Digital Signature Verification Use-Cases</h3><p>When and how signatures are validated for server communication.</p>
-<h3 id="17-SBOM-Software-Bill-of-Materials"><a href="#17-SBOM-Software-Bill-of-Materials" class="headerlink" title="17.SBOM (Software Bill of Materials)"></a>17.SBOM (Software Bill of Materials)</h3><p>Third-party components, versions, and known vulnerabilities.</p>
-<h3 id="18-Static-Code-Analysis-Report"><a href="#18-Static-Code-Analysis-Report" class="headerlink" title="18.Static Code Analysis Report"></a>18.Static Code Analysis Report</h3><p>Proving banned C functions are replaced.</p>
-<h3 id="19-Hardcoded-Credential-Audit-Report"><a href="#19-Hardcoded-Credential-Audit-Report" class="headerlink" title="19.Hardcoded Credential Audit Report"></a>19.Hardcoded Credential Audit Report</h3><p>From secure code review (manual&#x2F;automated).</p>
-<h3 id="20-Secure-Firmware-Update-Procedure"><a href="#20-Secure-Firmware-Update-Procedure" class="headerlink" title="20.Secure Firmware Update Procedure"></a>20.Secure Firmware Update Procedure</h3><p>Process for secure OTA&#x2F;manual updates with rollback prevention.</p>
-<h3 id="21-Anti-Downgrade-Declaration"><a href="#21-Anti-Downgrade-Declaration" class="headerlink" title="21.Anti-Downgrade Declaration"></a>21.Anti-Downgrade Declaration</h3><p>Proof device doesn’t allow rollback to older firmware.</p>
-<h3 id="22-Scheduled-Update-Policy"><a href="#22-Scheduled-Update-Policy" class="headerlink" title="22.Scheduled Update Policy"></a>22.Scheduled Update Policy</h3><p>Procedure for OTA or manual firmware update schedule.</p>
-<h2 id="📡-Wireless-Communication-Security-If-Applicable"><a href="#📡-Wireless-Communication-Security-If-Applicable" class="headerlink" title="📡 Wireless &amp; Communication Security (If Applicable)"></a>📡 Wireless &amp; Communication Security (If Applicable)</h2><h3 id="23-Mutual-Authentication-Process-Document"><a href="#23-Mutual-Authentication-Process-Document" class="headerlink" title="23.Mutual Authentication Process Document"></a>23.Mutual Authentication Process Document</h3><p>For wireless communication initiation.</p>
-<h3 id="24-Wireless-Encryption-Mechanism"><a href="#24-Wireless-Encryption-Mechanism" class="headerlink" title="24.Wireless Encryption Mechanism"></a>24.Wireless Encryption Mechanism</h3><p>Data-in-transit protection via encryption.</p>
-<h3 id="25-Wireless-Capability-Declaration"><a href="#25-Wireless-Capability-Declaration" class="headerlink" title="25.Wireless Capability Declaration"></a>25.Wireless Capability Declaration</h3><p>If wireless not supported, submit a signed declaration.</p>
-<h2 id="🔗-Supply-Chain-Risk-Management"><a href="#🔗-Supply-Chain-Risk-Management" class="headerlink" title="🔗 Supply Chain &amp; Risk Management"></a>🔗 Supply Chain &amp; Risk Management</h2><p>26.Component BOM with Source Traceability<br>For SoC and other critical security components.</p>
-<h3 id="27-Supply-Chain-Risk-Management-Plan"><a href="#27-Supply-Chain-Risk-Management-Plan" class="headerlink" title="27.Supply Chain Risk Management Plan"></a>27.Supply Chain Risk Management Plan</h3><p>Risk identification, assessment, prioritization, and mitigation.</p>
-<h3 id="28-Business-Continuity-Plan"><a href="#28-Business-Continuity-Plan" class="headerlink" title="28.Business Continuity Plan"></a>28.Business Continuity Plan</h3><p>Post-incident reports, playbooks, continuity strategies.</p>
-<h2 id="✅-Submission-Requirements"><a href="#✅-Submission-Requirements" class="headerlink" title="✅ Submission Requirements"></a>✅ Submission Requirements</h2><h3 id="29-Test-Reports-from-BIS-Recognized-Labs"><a href="#29-Test-Reports-from-BIS-Recognized-Labs" class="headerlink" title="29.Test Reports from BIS Recognized Labs"></a>29.Test Reports from BIS Recognized Labs</h3><p>As per Scheme II of BIS Conformity Assessment Regulations, 2018.</p>
-<h3 id="30-Compliance-Checklist"><a href="#30-Compliance-Checklist" class="headerlink" title="30.Compliance Checklist"></a>30.Compliance Checklist</h3><p>Summary showing each requirement met and corresponding document reference.</p>
-<h2 id="Essential-Testing-Procedures-for-CCTV-Cameras"><a href="#Essential-Testing-Procedures-for-CCTV-Cameras" class="headerlink" title="Essential Testing Procedures for CCTV Cameras"></a>Essential Testing Procedures for CCTV Cameras</h2><h3 id="1-Hardware-Level-Security"><a href="#1-Hardware-Level-Security" class="headerlink" title="1. Hardware-Level Security"></a>1. Hardware-Level Security</h3><p>Debugging Interface Protection: Verify USB, UART, JTAG, SWD are disabled or protected (e.g., password-protected).<br>Unique Keys and Certificates: Confirm each device has unique cryptographic keys and certificates.<br>Trusted Execution Environment (TEE): Verify availability and use of TEE&#x2F;TPM&#x2F;SE for crypto operations.<br>Secure Storage: Ensure sensitive data, private keys, and certificates are stored securely.<br>Tamper Resistance: Test tamper detection and resistance features (software&#x2F;hardware).<br>Intellectual Property Protection: Check IP protection tech from SoC vendor is enabled (if available).<br>Secure Boot: Validate boot image signature before loading.<br>Random Number Generation: Use cryptographically secure pseudo-random number generators.</p>
-<h3 id="2-Software-Firmware-Security"><a href="#2-Software-Firmware-Security" class="headerlink" title="2. Software&#x2F;Firmware Security"></a>2. Software&#x2F;Firmware Security</h3><p>Memory Protection: Verify ASLR and DEP are enabled.<br>Transport Layer Security (TLS): Confirm data in transit is encrypted using secure TLS protocols.<br>Digital Signature Validation: Validate server connection signatures and certificates.<br>Use of Safe C Functions: Replace banned C functions with secure equivalents (via static analysis).<br>Component Disclosure (SBOM): Maintain Software Bill of Materials (third-party libraries, versions).<br>No Hardcoded Credentials: Ensure no hardcoded usernames&#x2F;passwords&#x2F;backdoors.<br>Secure Firmware Update: Use secure bootloader and prevent downgrade attacks.<br>Scheduled Updates: Device must support scheduled OTA or manual secure updates.</p>
-<p>Step-by-Step Testing Procedure for CCTV Cameras (BIS-CRS Compliance)</p>
-<p>Phase 1: Preparation &amp; Documentation<br>Phase 2: Hardware-Level Security Testing<br>Phase 3: Software &amp; Firmware Security Testing<br>Phase 4: Communication &amp; Supply Chain Assurance<br>Phase 5: Final Documentation &amp; Compliance</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文章发布指令</title>
-    <url>/2026/05/07/%E5%8F%91%E5%B8%83%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-
-<h3 id="生成搜索"><a href="#生成搜索" class="headerlink" title="生成搜索"></a>生成搜索</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo algolia</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h3 id="三个命令依次执行"><a href="#三个命令依次执行" class="headerlink" title="三个命令依次执行"></a>三个命令依次执行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node pic.js; hexo cl; hexo g; hexo s</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<p>VSCODE 终端首次执行报错</p>
-<p>使用管理员身份打开 powershell ,输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+    <title>印度STQC 流程和批准要求</title>
+    <url>/2026/05/13/%E5%8D%B0%E5%BA%A6STQC%20%E6%B5%81%E7%A8%8B%E5%92%8C%E6%89%B9%E5%87%86%E8%A6%81%E6%B1%82/</url>
+    <content><![CDATA[<h1 id="STQC-process-and-approval-requirements"><a href="#STQC-process-and-approval-requirements" class="headerlink" title="STQC process and approval requirements"></a>STQC process and approval requirements</h1><p>List of documents and explanations required-<br>1.Datasheet of the SoC.<br>2.Design and architecture documents till the PCBA and SoC level.<br>3.Documentation related to ports&#x2F;interfaces and protection mechanism for the same.<br>4.Process flow of the Manufacturing&#x2F;Provisioning.<br>5.All keys and certificates being used in the device ecosystem.<br>6.Key management life cycle.<br>7.User manual&#x2F; Technical specifications of the device.<br>8.Code snippets of the TEE API call, wherever applicable.<br>9.List of all the sensitive data with their intended usage and secure storage mechanism.<br>10.Measures available in the device to prevent software tampering.<br>11.Measures available in the device to prevent hardware tampering.<br>12.Documentation regarding the Intellectual Property protection technologies provided by the chip manufacturer which have been enabled.<br>13.In case, no Intellectual Property protection technologies are being provided by the chip manufacturer, then a declaration stating the same.<br>14.Technical specifications of the device regarding random generators, in case, software based random number generators are being used, vendors shall provide the libraries being used for the same.<br>15.Declaration of the memory protection controls available and enabled in the device.<br>16.Document mentioning the use-cases when the device establishes server connections with the external world, with detailed information about the security measures in place while validating the digital signatures of the server connections.<br>17.Firmware binaries for code review.<br>18.Internal code review reports.<br>19.software bill of materials, including third party components and versions.<br>20.documentation regarding the security controls in place to hinder firmware reverse engineering.<br>21.Process of achieving secure firmware upgrade which should consist of keys involved and their management life cycle, signature validation process and any other secure mechanisms if implemented.<br>22.Modes of updates available i.e. automatic, manual or both.<br>23.Organizational process and policies regarding the issuing of updates to the devices.<br>24.Process of mutual authentication as implemented in the device when wireless communications are initiated.<br>25.Bill of materials for critical hardware components (related to security functions like SoC).<br>26.Supply chain risk identification, assessment, prioritization, and mitigation documents.<br>27.Document for Network protocols used in the device.<br>28.Supply chain risk&#x2F;business continuity planning policy documents, playbooks reflecting how to handle supply chain disruption, post-incident summary documents need to be submitted and demonstrate the same.</p>
+<h1 id="STQC-流程和批准要求"><a href="#STQC-流程和批准要求" class="headerlink" title="STQC 流程和批准要求"></a>STQC 流程和批准要求</h1><p>所需文件及说明清单-<br>1.SoC 的数据表。<br>2.直至 PCBA 和 SoC 级别的设计和架构文档。<br>3.与端口&#x2F;接口及其保护机制相关的文档。<br>4.制造&#x2F;供应的流程。<br>5.设备生态系统中使用的所有密钥和证书。<br>6.密钥管理生命周期。<br>7.设备的用户手册&#x2F;技术规格。<br>8.TEE API 调用的代码片段（如果适用）。<br>9.列出所有敏感数据及其预期用途和安全存储机制。<br>10.设备中可用的措施可防止软件被篡改。<br>11.设备中可用的措施可防止硬件篡改。<br>12.芯片制造商提供的已启用的知识产权保护技术文档。<br>13.如果芯片制造商未提供任何知识产权保护技术，则需要提供一份声明来说明。<br>14.设备有关随机数生成器的技术规格，如果使用基于软件的随机数生成器，则供应商应提供用于该生成器的库。<br>15.声明设备中可用且启用的内存保护控制。<br>16.该文档提及了设备与外部世界建立服务器连接时的用例，并提供了有关验证服务器连接的数字签名时所采取的安全措施的详细信息。<br>17.用于代码审查的固件二进制文件。<br>18.内部代码审查报告。<br>19.软件物料清单，包括第三方组件和版本。<br>20.有关阻止固件逆向工程的安全控制的文档。<br>21.实现安全固件升级的过程应包括所涉及的密钥及其管理生命周期、签名验证过程以及任何其他安全机制（如果实施）。<br>22.可用的更新模式包括自动、手动或两者。<br>23.有关发布设备更新的组织流程和政策。<br>24.启动无线通信时在设备中实施的相互认证过程。<br>25.关键硬件组件的物料清单（与 SoC 等安全功能相关）。<br>26.供应链风险识别、评估、优先排序和缓解文件。<br>27.设备中使用的网络协议的文档。<br>28.需要提交并证明供应链风险&#x2F;业务连续性计划政策文件、反映如何处理供应链中断的剧本、事件后摘要文件。</p>
 ]]></content>
       <tags>
         <tag>技术</tag>
@@ -1488,6 +1417,77 @@
 ]]></content>
       <tags>
         <tag>宋朝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章发布指令</title>
+    <url>/2026/05/07/%E5%8F%91%E5%B8%83%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成搜索"><a href="#生成搜索" class="headerlink" title="生成搜索"></a>生成搜索</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo algolia</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="三个命令依次执行"><a href="#三个命令依次执行" class="headerlink" title="三个命令依次执行"></a>三个命令依次执行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node pic.js; hexo cl; hexo g; hexo s</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>VSCODE 终端首次执行报错</p>
+<p>使用管理员身份打开 powershell ,输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>印度STQC认证所需文件</title>
+    <url>/2026/05/13/%E5%8D%B0%E5%BA%A6STQC%E8%AE%A4%E8%AF%81%E6%89%80%E9%9C%80%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="Documents-Requirements-Listed-in-the-Guidelines"><a href="#Documents-Requirements-Listed-in-the-Guidelines" class="headerlink" title="Documents &#x2F; Requirements Listed in the Guidelines:"></a>Documents &#x2F; Requirements Listed in the Guidelines:</h1><p>Hardware-Level Documentation</p>
+<h3 id="1-SoC-Datasheet"><a href="#1-SoC-Datasheet" class="headerlink" title="1.SoC Datasheet"></a>1.SoC Datasheet</h3><p>oDetails on debugging interfaces (USB, UART, JTAG, SWD).<br>oTEE&#x2F;TPM&#x2F;SE availability.<br>oRNG capability (hardware-based).</p>
+<h3 id="2-Device-Technical-Specifications"><a href="#2-Device-Technical-Specifications" class="headerlink" title="2.Device Technical Specifications"></a>2.Device Technical Specifications</h3><p>oIncludes secure boot architecture, communication protocols, and memory protection.</p>
+<h3 id="3-Block-Connection-Diagrams"><a href="#3-Block-Connection-Diagrams" class="headerlink" title="3.Block Connection Diagrams"></a>3.Block Connection Diagrams</h3><p>oShowing microcontroller and peripheral interactions.</p>
+<h3 id="4-Access-Control-Mechanism-Documents"><a href="#4-Access-Control-Mechanism-Documents" class="headerlink" title="4.Access Control Mechanism Documents"></a>4.Access Control Mechanism Documents</h3><p>oDocumentation on enabled&#x2F;disabled ports and protection schemes.</p>
+<h3 id="5-Manufacturing-Provisioning-Process-Flow"><a href="#5-Manufacturing-Provisioning-Process-Flow" class="headerlink" title="5.Manufacturing&#x2F;Provisioning Process Flow"></a>5.Manufacturing&#x2F;Provisioning Process Flow</h3><p>oEspecially for disabling debugging interfaces and secure boot provisioning.</p>
+<h3 id="6-Key-and-Certificate-List"><a href="#6-Key-and-Certificate-List" class="headerlink" title="6.Key and Certificate List"></a>6.Key and Certificate List</h3><p>oAll keys and certs used in the device ecosystem.</p>
+<h3 id="7-Key-Management-Lifecycle-Document"><a href="#7-Key-Management-Lifecycle-Document" class="headerlink" title="7.Key Management Lifecycle Document"></a>7.Key Management Lifecycle Document</h3><p>oPurpose, generation, storage, destruction, validity, rotation.</p>
+<h3 id="8-Secure-Storage-Configuration"><a href="#8-Secure-Storage-Configuration" class="headerlink" title="8.Secure Storage Configuration"></a>8.Secure Storage Configuration</h3><p>oStorage mechanism and configuration of sensitive data (keys, certificates).</p>
+<h3 id="9-Tamper-Protection-Documentation"><a href="#9-Tamper-Protection-Documentation" class="headerlink" title="9.Tamper Protection Documentation"></a>9.Tamper Protection Documentation</h3><p>oSoftware and hardware anti-tamper measures.</p>
+<h3 id="10-IP-Protection-Documentation"><a href="#10-IP-Protection-Documentation" class="headerlink" title="10.IP Protection Documentation"></a>10.IP Protection Documentation</h3><p>From chip manufacturer, or declaration if unavailable.</p>
+<h3 id="11-Boot-Image-Validation-Report"><a href="#11-Boot-Image-Validation-Report" class="headerlink" title="11.Boot Image Validation Report"></a>11.Boot Image Validation Report</h3><p>Secure boot process validation (pass&#x2F;fail cases).</p>
+<h3 id="12-Random-Number-Generator-Usage"><a href="#12-Random-Number-Generator-Usage" class="headerlink" title="12.Random Number Generator Usage"></a>12.Random Number Generator Usage</h3><p>Description of RNG used (hardware or software) and supporting libraries.</p>
+<h2 id="🖥️-Software-Firmware-Documentation"><a href="#🖥️-Software-Firmware-Documentation" class="headerlink" title="🖥️ Software &amp; Firmware Documentation"></a>🖥️ Software &amp; Firmware Documentation</h2><h3 id="13-Firmware-Code-Snippets"><a href="#13-Firmware-Code-Snippets" class="headerlink" title="13.Firmware Code Snippets"></a>13.Firmware Code Snippets</h3><p>Related to TEE APIs, secure boot, RNG, TLS, etc.</p>
+<h3 id="14-Memory-Protection-Declaration"><a href="#14-Memory-Protection-Declaration" class="headerlink" title="14.Memory Protection Declaration"></a>14.Memory Protection Declaration</h3><p>Statement showing ASLR, DEP enabled if applicable.</p>
+<h3 id="15-TLS-Communication-Documentation"><a href="#15-TLS-Communication-Documentation" class="headerlink" title="15.TLS Communication Documentation"></a>15.TLS Communication Documentation</h3><p>Details on TLS configuration, cipher suites, certificate validation.</p>
+<h3 id="16-Digital-Signature-Verification-Use-Cases"><a href="#16-Digital-Signature-Verification-Use-Cases" class="headerlink" title="16.Digital Signature Verification Use-Cases"></a>16.Digital Signature Verification Use-Cases</h3><p>When and how signatures are validated for server communication.</p>
+<h3 id="17-SBOM-Software-Bill-of-Materials"><a href="#17-SBOM-Software-Bill-of-Materials" class="headerlink" title="17.SBOM (Software Bill of Materials)"></a>17.SBOM (Software Bill of Materials)</h3><p>Third-party components, versions, and known vulnerabilities.</p>
+<h3 id="18-Static-Code-Analysis-Report"><a href="#18-Static-Code-Analysis-Report" class="headerlink" title="18.Static Code Analysis Report"></a>18.Static Code Analysis Report</h3><p>Proving banned C functions are replaced.</p>
+<h3 id="19-Hardcoded-Credential-Audit-Report"><a href="#19-Hardcoded-Credential-Audit-Report" class="headerlink" title="19.Hardcoded Credential Audit Report"></a>19.Hardcoded Credential Audit Report</h3><p>From secure code review (manual&#x2F;automated).</p>
+<h3 id="20-Secure-Firmware-Update-Procedure"><a href="#20-Secure-Firmware-Update-Procedure" class="headerlink" title="20.Secure Firmware Update Procedure"></a>20.Secure Firmware Update Procedure</h3><p>Process for secure OTA&#x2F;manual updates with rollback prevention.</p>
+<h3 id="21-Anti-Downgrade-Declaration"><a href="#21-Anti-Downgrade-Declaration" class="headerlink" title="21.Anti-Downgrade Declaration"></a>21.Anti-Downgrade Declaration</h3><p>Proof device doesn’t allow rollback to older firmware.</p>
+<h3 id="22-Scheduled-Update-Policy"><a href="#22-Scheduled-Update-Policy" class="headerlink" title="22.Scheduled Update Policy"></a>22.Scheduled Update Policy</h3><p>Procedure for OTA or manual firmware update schedule.</p>
+<h2 id="📡-Wireless-Communication-Security-If-Applicable"><a href="#📡-Wireless-Communication-Security-If-Applicable" class="headerlink" title="📡 Wireless &amp; Communication Security (If Applicable)"></a>📡 Wireless &amp; Communication Security (If Applicable)</h2><h3 id="23-Mutual-Authentication-Process-Document"><a href="#23-Mutual-Authentication-Process-Document" class="headerlink" title="23.Mutual Authentication Process Document"></a>23.Mutual Authentication Process Document</h3><p>For wireless communication initiation.</p>
+<h3 id="24-Wireless-Encryption-Mechanism"><a href="#24-Wireless-Encryption-Mechanism" class="headerlink" title="24.Wireless Encryption Mechanism"></a>24.Wireless Encryption Mechanism</h3><p>Data-in-transit protection via encryption.</p>
+<h3 id="25-Wireless-Capability-Declaration"><a href="#25-Wireless-Capability-Declaration" class="headerlink" title="25.Wireless Capability Declaration"></a>25.Wireless Capability Declaration</h3><p>If wireless not supported, submit a signed declaration.</p>
+<h2 id="🔗-Supply-Chain-Risk-Management"><a href="#🔗-Supply-Chain-Risk-Management" class="headerlink" title="🔗 Supply Chain &amp; Risk Management"></a>🔗 Supply Chain &amp; Risk Management</h2><p>26.Component BOM with Source Traceability<br>For SoC and other critical security components.</p>
+<h3 id="27-Supply-Chain-Risk-Management-Plan"><a href="#27-Supply-Chain-Risk-Management-Plan" class="headerlink" title="27.Supply Chain Risk Management Plan"></a>27.Supply Chain Risk Management Plan</h3><p>Risk identification, assessment, prioritization, and mitigation.</p>
+<h3 id="28-Business-Continuity-Plan"><a href="#28-Business-Continuity-Plan" class="headerlink" title="28.Business Continuity Plan"></a>28.Business Continuity Plan</h3><p>Post-incident reports, playbooks, continuity strategies.</p>
+<h2 id="✅-Submission-Requirements"><a href="#✅-Submission-Requirements" class="headerlink" title="✅ Submission Requirements"></a>✅ Submission Requirements</h2><h3 id="29-Test-Reports-from-BIS-Recognized-Labs"><a href="#29-Test-Reports-from-BIS-Recognized-Labs" class="headerlink" title="29.Test Reports from BIS Recognized Labs"></a>29.Test Reports from BIS Recognized Labs</h3><p>As per Scheme II of BIS Conformity Assessment Regulations, 2018.</p>
+<h3 id="30-Compliance-Checklist"><a href="#30-Compliance-Checklist" class="headerlink" title="30.Compliance Checklist"></a>30.Compliance Checklist</h3><p>Summary showing each requirement met and corresponding document reference.</p>
+<h2 id="Essential-Testing-Procedures-for-CCTV-Cameras"><a href="#Essential-Testing-Procedures-for-CCTV-Cameras" class="headerlink" title="Essential Testing Procedures for CCTV Cameras"></a>Essential Testing Procedures for CCTV Cameras</h2><h3 id="1-Hardware-Level-Security"><a href="#1-Hardware-Level-Security" class="headerlink" title="1. Hardware-Level Security"></a>1. Hardware-Level Security</h3><p>Debugging Interface Protection: Verify USB, UART, JTAG, SWD are disabled or protected (e.g., password-protected).<br>Unique Keys and Certificates: Confirm each device has unique cryptographic keys and certificates.<br>Trusted Execution Environment (TEE): Verify availability and use of TEE&#x2F;TPM&#x2F;SE for crypto operations.<br>Secure Storage: Ensure sensitive data, private keys, and certificates are stored securely.<br>Tamper Resistance: Test tamper detection and resistance features (software&#x2F;hardware).<br>Intellectual Property Protection: Check IP protection tech from SoC vendor is enabled (if available).<br>Secure Boot: Validate boot image signature before loading.<br>Random Number Generation: Use cryptographically secure pseudo-random number generators.</p>
+<h3 id="2-Software-Firmware-Security"><a href="#2-Software-Firmware-Security" class="headerlink" title="2. Software&#x2F;Firmware Security"></a>2. Software&#x2F;Firmware Security</h3><p>Memory Protection: Verify ASLR and DEP are enabled.<br>Transport Layer Security (TLS): Confirm data in transit is encrypted using secure TLS protocols.<br>Digital Signature Validation: Validate server connection signatures and certificates.<br>Use of Safe C Functions: Replace banned C functions with secure equivalents (via static analysis).<br>Component Disclosure (SBOM): Maintain Software Bill of Materials (third-party libraries, versions).<br>No Hardcoded Credentials: Ensure no hardcoded usernames&#x2F;passwords&#x2F;backdoors.<br>Secure Firmware Update: Use secure bootloader and prevent downgrade attacks.<br>Scheduled Updates: Device must support scheduled OTA or manual secure updates.</p>
+<p>Step-by-Step Testing Procedure for CCTV Cameras (BIS-CRS Compliance)</p>
+<p>Phase 1: Preparation &amp; Documentation<br>Phase 2: Hardware-Level Security Testing<br>Phase 3: Software &amp; Firmware Security Testing<br>Phase 4: Communication &amp; Supply Chain Assurance<br>Phase 5: Final Documentation &amp; Compliance</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -3493,26 +3493,6 @@ utterances:
 ]]></content>
   </entry>
   <entry>
-    <title>自动生成相册</title>
-    <url>/2026/05/13/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%B8%E5%86%8C/</url>
-    <content><![CDATA[<h1 id="自动生成相册文件"><a href="#自动生成相册文件" class="headerlink" title="自动生成相册文件"></a>自动生成相册文件</h1><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ul>
-<li><strong>新建相册文件</strong>: 在博客根目录新建相册文件夹blog\source\album</li>
-<li><strong>新建相册文件夹名称</strong>: 如旅行&#x2F;工作等</li>
-<li><strong>在对应的文件夹下建相册简介文件</strong>: 新建desc.txt文件<br>第一行写相册名称<br>第二行写相册简介</li>
-<li><strong>保存相片</strong>: 把相片保存在相应的文件夹</li>
-<li><strong>生成博客代码</strong>: 执行命令自动生成博客识别的相册代码</li>
-</ul>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p>执行下列代码自动生成</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node pic.js</span><br></pre></td></tr></table></figure>
-<p>下次增加完相片，执行下上述代码就可以啦！</p>
-<p>看看我的相册就知道啦</p>
-<p><strong>祝您使用愉快！</strong></p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>晚清首富胡雪岩的江南第一豪宅</title>
     <url>/2026/05/09/%E8%83%A1%E9%9B%AA%E5%B2%A9%E6%97%A7%E5%B1%85%E6%8E%A2%E8%AE%BF/</url>
     <content><![CDATA[
@@ -3756,6 +3736,26 @@ utterances:
 ]]></content>
       <tags>
         <tag>清朝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自动生成相册</title>
+    <url>/2026/05/13/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%B8%E5%86%8C/</url>
+    <content><![CDATA[<h1 id="自动生成相册文件"><a href="#自动生成相册文件" class="headerlink" title="自动生成相册文件"></a>自动生成相册文件</h1><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ul>
+<li><strong>新建相册文件</strong>: 在博客根目录新建相册文件夹blog\source\album</li>
+<li><strong>新建相册文件夹名称</strong>: 如旅行&#x2F;工作等</li>
+<li><strong>在对应的文件夹下建相册简介文件</strong>: 新建desc.txt文件<br>第一行写相册名称<br>第二行写相册简介</li>
+<li><strong>保存相片</strong>: 把相片保存在相应的文件夹</li>
+<li><strong>生成博客代码</strong>: 执行命令自动生成博客识别的相册代码</li>
+</ul>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p>执行下列代码自动生成</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node pic.js</span><br></pre></td></tr></table></figure>
+<p>下次增加完相片，执行下上述代码就可以啦！</p>
+<p>看看我的相册就知道啦</p>
+<p><strong>祝您使用愉快！</strong></p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -4485,6 +4485,495 @@ utterances:
     </div>
 </body>
 </html>]]></content>
+  </entry>
+  <entry>
+    <title>封狼居胥霍去病——那个用一生燃烧大汉荣耀的少年</title>
+    <url>/2026/05/05/%E9%9C%8D%E5%8E%BB%E7%97%85_%E5%85%AC%E4%BC%97%E5%8F%B7/</url>
+    <content><![CDATA[
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>封狼居胥——那个用一生燃烧大汉荣耀的少年</title>
+</head>
+<body style="margin:0;padding:0;background:#f0ece2;font-family:'PingFang SC','Helvetica Neue',Arial,sans-serif;">
+
+<!-- 外层容器 -->
+<div style="max-width:680px;margin:0 auto;background:#fff;">
+
+  <!-- ===== 封面 ===== -->
+  <div style="position:relative;background:linear-gradient(170deg,#0d0800 0%,#1e1200 25%,#3a2000 55%,#6b4500 80%,#8b6914 100%);padding:64px 32px 56px;text-align:center;overflow:hidden;">
+    <!-- 背景装饰：沙纹圆环 -->
+    <div style="position:absolute;top:-40px;right:-40px;width:220px;height:220px;border:1px solid rgba(210,160,30,0.12);border-radius:50%;"></div>
+    <div style="position:absolute;top:-20px;right:-20px;width:180px;height:180px;border:1px solid rgba(210,160,30,0.08);border-radius:50%;"></div>
+    <!-- 印章 -->
+    <div style="position:absolute;bottom:28px;left:26px;width:56px;height:56px;border:2px solid rgba(210,160,30,0.35);border-radius:4px;display:flex;align-items:center;justify-content:center;transform:rotate(-8deg);">
+      <span style="color:rgba(210,160,30,0.55);font-size:22px;font-weight:700;letter-spacing:0;">漢</span>
+    </div>
+    <!-- 小标签 -->
+    <div style="display:inline-block;background:rgba(210,160,30,0.12);border:1px solid rgba(210,160,30,0.4);border-radius:2px;padding:4px 16px;margin-bottom:24px;">
+      <span style="color:#d2a01e;font-size:12px;letter-spacing:4px;font-weight:500;">大汉战神 · 霍去病</span>
+    </div>
+    <!-- 主标题 -->
+    <h1 style="margin:0 0 14px;color:#f5edcc;font-size:34px;font-weight:800;line-height:1.3;letter-spacing:3px;text-shadow:0 3px 12px rgba(0,0,0,0.6);">
+      封狼居胥
+    </h1>
+    <p style="margin:0 0 26px;color:#c8a040;font-size:15px;letter-spacing:5px;font-weight:400;">那个用一生燃烧大汉荣耀的少年</p>
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:22px;">
+      <div style="flex:1;max-width:90px;height:1px;background:linear-gradient(to right,transparent,rgba(210,160,30,0.7));"></div>
+      <div style="width:5px;height:5px;background:#d2a01e;transform:rotate(45deg);"></div>
+      <div style="width:32px;height:1px;background:rgba(210,160,30,0.7);"></div>
+      <div style="width:5px;height:5px;background:#d2a01e;transform:rotate(45deg);"></div>
+      <div style="flex:1;max-width:90px;height:1px;background:linear-gradient(to left,transparent,rgba(210,160,30,0.7));"></div>
+    </div>
+    <!-- 数字亮点 -->
+    <div style="display:flex;justify-content:center;gap:28px;">
+      <div style="text-align:center;">
+        <div style="color:#d2a01e;font-size:24px;font-weight:800;line-height:1;">23</div>
+        <div style="color:rgba(245,237,204,0.6);font-size:11px;margin-top:4px;letter-spacing:1px;">岁辞世</div>
+      </div>
+      <div style="width:1px;background:rgba(210,160,30,0.25);"></div>
+      <div style="text-align:center;">
+        <div style="color:#d2a01e;font-size:24px;font-weight:800;line-height:1;">6</div>
+        <div style="color:rgba(245,237,204,0.6);font-size:11px;margin-top:4px;letter-spacing:1px;">次出征</div>
+      </div>
+      <div style="width:1px;background:rgba(210,160,30,0.25);"></div>
+      <div style="text-align:center;">
+        <div style="color:#d2a01e;font-size:24px;font-weight:800;line-height:1;">11万+</div>
+        <div style="color:rgba(245,237,204,0.6);font-size:11px;margin-top:4px;letter-spacing:1px;">斩首俘获</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 导语 ===== -->
+  <div style="padding:32px 28px 0;">
+    <div style="background:linear-gradient(135deg,#fdf8ec,#fff9e8);border-left:4px solid #c8900a;border-radius:0 8px 8px 0;padding:18px 20px;">
+      <p style="margin:0;color:#4a2e00;font-size:15px;line-height:2;font-style:italic;">
+        公元前119年，狼居胥山上站着一个21岁的青年。他在匈奴人的神山之上，祭拜了汉人的天地。这是华夏历史上，唯一一个非帝王身份的男人完成的封禅，也是第一个在敌人领土上进行的封禅。<br>
+        <span style="color:#8b5e08;font-weight:600;">他叫霍去病。</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== 正文 ===== -->
+  <div style="padding:28px 28px;">
+
+    <!-- 壹：大汉的屈辱与愤怒 -->
+    <div style="margin-bottom:38px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
+          <span style="color:#fff;font-size:17px;font-weight:700;">壹</span>
+        </div>
+        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">七十年的屈辱，一朝清算</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        公元前200年，刘邦一时头脑发热，亲率几千人追着几万匈奴猛砍，结果被匈奴单于冒顿来了个"回首掏"，被困白登山七天七夜。这场白登之围，让大汉丢尽了脸面，此后七十余年，汉朝只能靠送公主、送财物换来表面的和平。
+      </p>
+      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        然而匈奴依然年年南下劫掠，杀人放火，如入无人之境。这种屈辱，一直压到一个叫刘彻的皇帝登基。
+      </p>
+
+      <!-- 高亮框 -->
+      <div style="background:linear-gradient(135deg,#1a0e00,#2e1a00);border-radius:10px;padding:20px 22px;margin:20px 0;">
+        <p style="margin:0;color:#f0d080;font-size:15px;line-height:1.9;text-align:center;letter-spacing:1px;">
+          汉武帝刘彻恨透了靠女人和亲换来的和平。<br>
+          <span style="color:#d2a01e;font-weight:600;font-size:16px;">他要彻底扭转——汉守匈攻的局面。</span>
+        </p>
+      </div>
+
+      <p style="margin:0;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        于是，这位野心极大的皇帝在走访姐姐平阳公主府时，随手就从一个舞女身上，给大汉抽到了三张SSR——卫青、霍去病、霍光。
+      </p>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+      <span style="color:#c8900a;font-size:15px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+    </div>
+
+    <!-- 贰：霍去病的出身 -->
+    <div style="margin-bottom:38px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
+          <span style="color:#fff;font-size:17px;font-weight:700;">贰</span>
+        </div>
+        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">私生子出道，天子亲自调教</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        公元前140年，平阳侯府的女奴魏少儿为一个小吏生下了一个私生子，那个渣男叫霍仲儒，提上裤子就跑，从此断了联系。
+      </p>
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        但霍仲儒可能做梦也没想到，魏少儿的妹妹卫子夫后来上了刘彻的龙床，老魏家瞬间草鸡变凤凰，成了皇家外戚。而这个叫霍去病的私生子，因为极强的骑射天赋被刘彻看中，提拔为近臣侍中——天子亲信。
+      </p>
+      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        刘彻太喜欢这个孩子了，准备亲自传授他孙吴兵法。然而霍去病直接婉拒了：
+      </p>
+
+      <!-- 名言引用 -->
+      <div style="background:linear-gradient(135deg,#fdf8ec,#fff6e0);border-radius:10px;padding:22px 24px;margin:0 0 20px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-8px;left:12px;font-size:88px;color:rgba(200,144,10,0.08);font-family:serif;line-height:1;">"</div>
+        <p style="margin:0 0 10px;color:#5a3500;font-size:16px;line-height:1.9;font-weight:500;position:relative;z-index:1;">
+          顾方略何如耳，不至学古兵法。
+        </p>
+        <p style="margin:0;color:#6b4010;font-size:13.5px;line-height:1.7;position:relative;z-index:1;">
+          打仗只需要看准方针策略，不需要学古人那些用不着的东西。
+        </p>
+        <div style="margin-top:12px;color:#a87020;font-size:12px;">—— 霍去病，拒绝天子教授兵法</div>
+      </div>
+
+      <p style="margin:0;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        刘彻没有生气，反而更爱了。因为这个孩子身上有一种让他着迷的东西——纯粹的、不可遏制的战场直觉。
+      </p>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+      <span style="color:#c8900a;font-size:15px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+    </div>
+
+    <!-- 叁：初出茅庐，八百破两千 -->
+    <div style="margin-bottom:38px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
+          <span style="color:#fff;font-size:17px;font-weight:700;">叁</span>
+        </div>
+        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">出道即巅峰：八百骑，斩首两千</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        公元前123年，17岁的霍去病第一次跟着舅舅卫青出征。卫青给了外甥八百精锐壮士，然后霍去病带着这八百人，脱离大部队，直插大漠深处。
+      </p>
+
+      <!-- 战绩卡 -->
+      <div style="background:linear-gradient(160deg,#0d0800,#1e1200,#2e1c00);border-radius:12px;padding:24px 22px;margin:20px 0;">
+        <div style="color:#c8a030;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:16px;text-align:center;">⚔ 首战战报 · 公元前123年</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div style="background:rgba(210,160,30,0.1);border:1px solid rgba(210,160,30,0.2);border-radius:8px;padding:14px;text-align:center;">
+            <div style="color:#d2a01e;font-size:26px;font-weight:800;line-height:1;">800</div>
+            <div style="color:rgba(245,237,204,0.6);font-size:12px;margin-top:4px;">出征骑兵</div>
+          </div>
+          <div style="background:rgba(210,160,30,0.1);border:1px solid rgba(210,160,30,0.2);border-radius:8px;padding:14px;text-align:center;">
+            <div style="color:#d2a01e;font-size:26px;font-weight:800;line-height:1;">2028</div>
+            <div style="color:rgba(245,237,204,0.6);font-size:12px;margin-top:4px;">斩首+俘虏</div>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:12px 14px;">
+          <p style="margin:0;color:#e8d090;font-size:13px;line-height:1.9;">
+            俘获匈奴相国、当户等高级官员，斩杀匈奴大单于的祖父若侯铲，俘虏单于的叔父罗姑比。
+          </p>
+        </div>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        与此同时，汉军主力右将军苏建、前将军赵信率三千骑兵与匈奴激战，全军覆没，赵信更是直接投降了匈奴。
+      </p>
+
+      <div style="background:#fdf6e8;border-radius:8px;padding:16px 18px;border:1px solid #e8c878;margin-bottom:16px;">
+        <p style="margin:0;color:#5a3800;font-size:14px;line-height:1.9;">
+          <strong style="color:#8b5e00;">有对比，才知道天才和普通人的差距。</strong>八百 vs 两千，出道即巅峰的霍去病，成了汉武帝刘彻心中那个"亲临战场的化身"。
+        </p>
+      </div>
+
+      <div style="background:linear-gradient(135deg,#1a0e00,#2e1a00);border-radius:10px;padding:18px 20px;">
+        <p style="margin:0 0 8px;color:#d2a01e;font-size:15px;line-height:1.9;font-weight:600;text-align:center;">刘彻封霍去病为冠军侯</p>
+        <p style="margin:0;color:rgba(240,208,128,0.8);font-size:13px;text-align:center;line-height:1.8;">赐豪华宅邸，让他去住。霍去病说——</p>
+        <p style="margin:10px 0 0;color:#f0e090;font-size:16px;text-align:center;font-weight:700;letter-spacing:3px;">"匈奴未灭，无以家为。"</p>
+      </div>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+      <span style="color:#c8900a;font-size:15px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+    </div>
+
+    <!-- 肆：河西大战 -->
+    <div style="margin-bottom:38px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
+          <span style="color:#fff;font-size:17px;font-weight:700;">肆</span>
+        </div>
+        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">两打河西，打通丝绸之路</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        公元前121年，刘彻将目光投向河西走廊——中原通往西域的咽喉要道，当时被匈奴浑邪王和休屠王控制，与羌人联合，从西边威胁大汉。刘彻想要剁掉匈奴的这条右臂，为最终的漠北决战扫清后路。
+      </p>
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        这年春天，19岁的霍去病率一万骑兵出征。他越乌鞘岭，渡黄河，六天转战千余里，踏破匈奴五王国。匈奴单于的儿子不服，想和霍去病过两招，被瞬间打崩，险些被活捉。
+      </p>
+
+      <!-- 两次河西战役对比 -->
+      <div style="margin:20px 0;">
+        <div style="color:#8b5e08;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:12px;text-align:center;">📜 河西两战战绩对比</div>
+        <div style="overflow:hidden;border-radius:10px;border:1px solid #e8c878;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#f9f0d8;">
+            <div style="padding:10px 12px;color:#8b5e08;font-size:12px;font-weight:600;border-right:1px solid #e8c878;"></div>
+            <div style="padding:10px 12px;color:#8b5e08;font-size:12px;font-weight:600;text-align:center;border-right:1px solid #e8c878;">春季第一战</div>
+            <div style="padding:10px 12px;color:#8b5e08;font-size:12px;font-weight:600;text-align:center;">夏季第二战</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#fff;border-top:1px solid #e8c878;">
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;border-right:1px solid #e8c878;">兵力</div>
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;border-right:1px solid #e8c878;">10,000骑</div>
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;">孤军深入</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#fdf8ee;border-top:1px solid #e8c878;">
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;border-right:1px solid #e8c878;">斩获</div>
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;border-right:1px solid #e8c878;">8,960级</div>
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;">歼敌3万+</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#fff;border-top:1px solid #e8c878;">
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;border-right:1px solid #e8c878;">战果</div>
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;border-right:1px solid #e8c878;">斩折兰王、卢侯王，俘浑邪王子</div>
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;">俘获单于阏氏、王子等59人</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#fdf8ee;border-top:1px solid #e8c878;">
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;border-right:1px solid #e8c878;">特殊战利品</div>
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;border-right:1px solid #e8c878;">抢走匈奴祭天金人</div>
+            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;">封侯部将3人</div>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin:16px 0;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        第二次河西之战，霍去病发现队友全是拖后腿的——公孙敖走岔了路，李广又一次被包围差点全军覆没，张骞迷路来晚了。四路人马只剩霍去病孤军深入2000余里，绕到敌军侧后突然猛攻。
+      </p>
+
+      <div style="background:#fdf6e8;border-radius:8px;padding:16px 18px;border-left:3px solid #c8900a;margin-bottom:20px;">
+        <p style="margin:0;color:#5a3800;font-size:14px;line-height:1.9;">
+          骄傲的骠骑将军眼里只有陛下和舅舅，至于一些累赘，<strong style="color:#8b5e00;">跟不上就别跟。</strong>
+        </p>
+      </div>
+
+      <!-- 霍去病的用人秘密 -->
+      <div style="background:linear-gradient(135deg,#0d0800,#1e1200);border-radius:10px;padding:20px 20px;margin-bottom:20px;">
+        <div style="color:#c8a030;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:14px;">🔍 霍去病能深入大漠2000里还能找到敌人的秘密</div>
+        <p style="margin:0 0 12px;color:#e0c880;font-size:14px;line-height:1.9;">
+          他敢于、善于用匈奴人当手下——
+        </p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="background:rgba(210,160,30,0.1);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:10px;">
+            <span style="color:#d2a01e;font-size:18px;flex-shrink:0;">◈</span>
+            <span style="color:#e8d090;font-size:13.5px;line-height:1.7;">校尉高不识 — 匈奴小王出身，本家人带路</span>
+          </div>
+          <div style="background:rgba(210,160,30,0.1);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:10px;">
+            <span style="color:#d2a01e;font-size:18px;flex-shrink:0;">◈</span>
+            <span style="color:#e8d090;font-size:13.5px;line-height:1.7;">司马赵破奴 — 长期生活在匈奴的汉人，熟悉地形</span>
+          </div>
+          <div style="background:rgba(210,160,30,0.1);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:10px;">
+            <span style="color:#d2a01e;font-size:18px;flex-shrink:0;">◈</span>
+            <span style="color:#e8d090;font-size:13.5px;line-height:1.7;">部署几乎全是匈奴人 — 以战养战，轻装奔袭</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 匈奴悲歌 -->
+      <div style="background:linear-gradient(135deg,#f0ede0,#ede8d5);border-radius:10px;padding:20px 22px;border:1px solid #d8c890;">
+        <p style="margin:0 0 8px;color:#8b6e20;font-size:12px;letter-spacing:2px;font-weight:600;">匈奴之歌（哀歌）</p>
+        <p style="margin:0;color:#4a3800;font-size:15px;line-height:2;font-style:italic;letter-spacing:2px;">
+          失我祁连山，使我六畜不蕃息；<br>
+          失我焉支山，令我妇女无颜色。
+        </p>
+        <p style="margin:10px 0 0;color:#8b6e20;font-size:12.5px;line-height:1.7;">
+          对匈奴，这是耻辱的哀歌；对大汉，这是踏血的荣耀。
+        </p>
+      </div>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+      <span style="color:#c8900a;font-size:15px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+    </div>
+
+    <!-- 伍：漠北大决战 -->
+    <div style="margin-bottom:38px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
+          <span style="color:#fff;font-size:17px;font-weight:700;">伍</span>
+        </div>
+        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">漠北大决战：封狼居胥，饮马瀚海</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        公元前119年，汉武帝刘彻发动了对匈奴最大规模的决战。卫青、霍去病各率五万骑兵，分两路深入漠北，力求一战定乾坤。
+      </p>
+      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        原定由霍去病直取匈奴大单于，但俘虏透露大单于已向东移动，于是舅舅与外甥换了位置。卫青西出，遭遇大单于；霍去病东出代郡，迎战左贤王。
+      </p>
+
+      <!-- 战役对比卡 -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;">
+        <div style="background:linear-gradient(160deg,#1a1a2e,#0d0d1e);border-radius:10px;padding:16px 14px;">
+          <div style="color:#8898d8;font-size:12px;font-weight:600;margin-bottom:10px;letter-spacing:1px;">卫青路线</div>
+          <div style="color:#c0c8f0;font-size:13px;line-height:1.9;">
+            <div style="padding:4px 0;border-bottom:1px solid rgba(136,152,216,0.2);">出定襄，遇大单于主力</div>
+            <div style="padding:4px 0;border-bottom:1px solid rgba(136,152,216,0.2);">趁沙尘暴双翼包抄</div>
+            <div style="padding:4px 0;border-bottom:1px solid rgba(136,152,216,0.2);">歼敌 19,000 人</div>
+            <div style="padding:4px 0;">大单于西北突围逃遁</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(160deg,#1e0e00,#2e1600);border-radius:10px;padding:16px 14px;">
+          <div style="color:#d2a030;font-size:12px;font-weight:600;margin-bottom:10px;letter-spacing:1px;">霍去病路线</div>
+          <div style="color:#f0d090;font-size:13px;line-height:1.9;">
+            <div style="padding:4px 0;border-bottom:1px solid rgba(210,160,48,0.2);">出代郡，北进 2000+ 里</div>
+            <div style="padding:4px 0;border-bottom:1px solid rgba(210,160,48,0.2);">大破左贤王，歼敌 70,000</div>
+            <div style="padding:4px 0;border-bottom:1px solid rgba(210,160,48,0.2);">俘获王侯将相 80+ 人</div>
+            <div style="padding:4px 0;">追至狼居胥山，封禅</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 封狼居胥高潮段 -->
+      <div style="background:linear-gradient(160deg,#0a0600,#190e00,#2a1800,#3c2200);border-radius:14px;padding:30px 24px;margin:24px 0;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle at 100% 0%,rgba(210,160,30,0.08),transparent 70%);"></div>
+        <div style="position:absolute;bottom:0;left:0;width:120px;height:120px;background:radial-gradient(circle at 0% 100%,rgba(210,160,30,0.05),transparent 70%);"></div>
+
+        <p style="margin:0 0 18px;color:#d2a01e;font-size:13px;font-weight:600;letter-spacing:3px;text-align:center;position:relative;z-index:1;">⚑ 公元前119年 · 狼居胥山顶 ⚑</p>
+
+        <p style="margin:0 0 16px;color:#e8d090;font-size:15.5px;line-height:2;position:relative;z-index:1;">
+          这个21岁的青年，站在匈奴人的神山之上，筑坛祭拜大汉的天。
+        </p>
+        <p style="margin:0 0 16px;color:#e8d090;font-size:15.5px;line-height:2;position:relative;z-index:1;">
+          随后，又马不停蹄赶到姑衍山，筑坛祭拜大汉的地。
+        </p>
+        <p style="margin:0 0 20px;color:#e8d090;font-size:15.5px;line-height:2;position:relative;z-index:1;">
+          在那个封建迷信的年代，这是在<strong style="color:#d2a01e;">杀人诛心</strong>——他要斩断匈奴的龙脉，断绝匈奴的国运。
+        </p>
+        <div style="border-top:1px solid rgba(210,160,30,0.2);padding-top:18px;position:relative;z-index:1;">
+          <p style="margin:0 0 10px;color:#c8c0f0;font-size:15px;line-height:2;">
+            完成封禅后，霍去病率军一路向北，直抵今天的贝加尔湖畔。
+          </p>
+          <p style="margin:0;color:#d2a01e;font-size:16px;font-weight:700;text-align:center;letter-spacing:3px;">
+            饮马瀚海，遥望长安。
+          </p>
+        </div>
+      </div>
+
+      <p style="margin:0;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        漠北大决战后，匈奴势力被严重削弱，大单于逃至漠北，<strong style="color:#7a3e00;">匈奴远遁漠南，再无王庭。</strong>
+      </p>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+      <span style="color:#c8900a;font-size:15px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+    </div>
+
+    <!-- 陆：英年早逝 -->
+    <div style="margin-bottom:38px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,#3a3a4a,#5a5a6a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <span style="color:#fff;font-size:17px;font-weight:700;">陆</span>
+        </div>
+        <h3 style="margin:0;color:#2a2a3a;font-size:19px;font-weight:700;letter-spacing:1px;">流星划过，年仅二十三岁</h3>
+      </div>
+
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        公元前117年，就在汉武帝准备再次出击匈奴时，才发现他的这张最强战牌，到期了。
+      </p>
+      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        或许是多次领兵千里奔袭后的积劳成疾，或许是感染了大漠中的瘟疫，年仅23岁的霍去病突然病逝。
+      </p>
+      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        痛苦万分的武帝刘彻，下令让霍去病陪葬茂陵，赐谥号"景桓"，调遣河西五郡的铁甲军列阵为他送葬，并将坟墓修成祁连山的形状，以彰显他克敌制胜的奇功。
+      </p>
+
+      <!-- 墓志意象 -->
+      <div style="background:linear-gradient(160deg,#1a1a1a,#2a2a2a,#1e1e1e);border-radius:12px;padding:26px 24px;text-align:center;">
+        <p style="margin:0 0 16px;color:#c0c0c0;font-size:13px;letter-spacing:3px;">坟墓形如祁连山 · 铁甲军送葬</p>
+        <p style="margin:0 0 20px;color:#e0e0e0;font-size:15px;line-height:2;">
+          千年已过，那个在河西、在祁连山、在狼居胥、<br>在瀚海纵马狂奔的少年，
+        </p>
+        <p style="margin:0;color:#d2a01e;font-size:17px;font-weight:700;letter-spacing:2px;line-height:1.8;">
+          已经成为了一颗耀眼的流星，<br>永远铭刻在汉家儿郎的脑海里。
+        </p>
+      </div>
+    </div>
+
+    <!-- 分割线 -->
+    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+      <span style="color:#c8900a;font-size:15px;">✦</span>
+      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
+    </div>
+
+    <!-- 结语 -->
+    <div style="margin-bottom:10px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
+          <span style="color:#fff;font-size:14px;font-weight:700;">终</span>
+        </div>
+        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">开疆拓土，是刻在基因里的荣耀</h3>
+      </div>
+
+      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
+        霍去病留给这个民族的，不只是那一场场战役的胜利，而是一种精神——无论什么时代，为民族、为国家收复失地、开疆拓土，永远是华夏儿郎最高的功勋。
+      </p>
+
+      <!-- 名言卡 -->
+      <div style="background:linear-gradient(135deg,#fdf6e0,#fff8e8);border-radius:10px;padding:22px 22px;margin-bottom:20px;border:1px solid #e0c870;">
+        <p style="margin:0 0 12px;color:#8b5e00;font-size:13px;letter-spacing:2px;font-weight:600;">流传千古的名言</p>
+        <p style="margin:0 0 10px;color:#4a2e00;font-size:18px;font-weight:700;letter-spacing:4px;line-height:1.8;">匈奴未灭，无以家为。</p>
+        <p style="margin:0;color:#6b4800;font-size:13px;line-height:1.7;">这五个字，是一个少年的志向，也是一个时代的回响。</p>
+      </div>
+
+      <!-- 最终寄语 -->
+      <div style="background:linear-gradient(160deg,#0d0800,#1e1200,#3c2800,#6b4500);border-radius:14px;padding:32px 26px;text-align:center;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(to right,transparent,rgba(210,160,30,0.5),transparent);"></div>
+        <p style="margin:0 0 18px;color:#e8d090;font-size:15px;line-height:2;">
+          这一颗流星虽然短暂，<br>却给了后人喊出那句话的底气——
+        </p>
+        <p style="margin:0 0 22px;color:#d2a01e;font-size:19px;font-weight:800;letter-spacing:4px;line-height:1.7;">
+          犯强汉者，虽远必诛。
+        </p>
+        <p style="margin:0 0 20px;color:rgba(232,208,144,0.75);font-size:14px;line-height:1.9;">
+          汉武、长平、冠军，他们让开疆拓土，<br>成为每一个汉人铭刻在基因里的荣耀使命。
+        </p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px;">
+          <div style="flex:1;max-width:50px;height:1px;background:rgba(210,160,30,0.3);"></div>
+          <span style="color:#d2a01e;font-size:13px;letter-spacing:3px;">大 汉 荣 耀</span>
+          <div style="flex:1;max-width:50px;height:1px;background:rgba(210,160,30,0.3);"></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end 正文 -->
+
+  <!-- ===== 底部 ===== -->
+  <div style="background:#0d0800;padding:24px 28px;text-align:center;">
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;">
+      <div style="flex:1;max-width:60px;height:1px;background:rgba(210,160,30,0.25);"></div>
+      <span style="color:#c8a030;font-size:13px;letter-spacing:3px;">中国历史文化人物</span>
+      <div style="flex:1;max-width:60px;height:1px;background:rgba(210,160,30,0.25);"></div>
+    </div>
+    <p style="margin:0;color:rgba(232,208,144,0.35);font-size:12px;line-height:1.8;">在历史中寻找力量，在人物中看见自己</p>
+  </div>
+
+</div><!-- end 外层容器 -->
+
+</body>
+</html>
+]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>汉朝</tag>
+        <tag>战神</tag>
+      </tags>
   </entry>
   <entry>
     <title>千古第一意难平-陆游与唐婉的爱情故事</title>
@@ -5606,495 +6095,6 @@ utterances:
       <tags>
         <tag>唐朝</tag>
         <tag>行书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>封狼居胥霍去病——那个用一生燃烧大汉荣耀的少年</title>
-    <url>/2026/05/05/%E9%9C%8D%E5%8E%BB%E7%97%85_%E5%85%AC%E4%BC%97%E5%8F%B7/</url>
-    <content><![CDATA[
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>封狼居胥——那个用一生燃烧大汉荣耀的少年</title>
-</head>
-<body style="margin:0;padding:0;background:#f0ece2;font-family:'PingFang SC','Helvetica Neue',Arial,sans-serif;">
-
-<!-- 外层容器 -->
-<div style="max-width:680px;margin:0 auto;background:#fff;">
-
-  <!-- ===== 封面 ===== -->
-  <div style="position:relative;background:linear-gradient(170deg,#0d0800 0%,#1e1200 25%,#3a2000 55%,#6b4500 80%,#8b6914 100%);padding:64px 32px 56px;text-align:center;overflow:hidden;">
-    <!-- 背景装饰：沙纹圆环 -->
-    <div style="position:absolute;top:-40px;right:-40px;width:220px;height:220px;border:1px solid rgba(210,160,30,0.12);border-radius:50%;"></div>
-    <div style="position:absolute;top:-20px;right:-20px;width:180px;height:180px;border:1px solid rgba(210,160,30,0.08);border-radius:50%;"></div>
-    <!-- 印章 -->
-    <div style="position:absolute;bottom:28px;left:26px;width:56px;height:56px;border:2px solid rgba(210,160,30,0.35);border-radius:4px;display:flex;align-items:center;justify-content:center;transform:rotate(-8deg);">
-      <span style="color:rgba(210,160,30,0.55);font-size:22px;font-weight:700;letter-spacing:0;">漢</span>
-    </div>
-    <!-- 小标签 -->
-    <div style="display:inline-block;background:rgba(210,160,30,0.12);border:1px solid rgba(210,160,30,0.4);border-radius:2px;padding:4px 16px;margin-bottom:24px;">
-      <span style="color:#d2a01e;font-size:12px;letter-spacing:4px;font-weight:500;">大汉战神 · 霍去病</span>
-    </div>
-    <!-- 主标题 -->
-    <h1 style="margin:0 0 14px;color:#f5edcc;font-size:34px;font-weight:800;line-height:1.3;letter-spacing:3px;text-shadow:0 3px 12px rgba(0,0,0,0.6);">
-      封狼居胥
-    </h1>
-    <p style="margin:0 0 26px;color:#c8a040;font-size:15px;letter-spacing:5px;font-weight:400;">那个用一生燃烧大汉荣耀的少年</p>
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:22px;">
-      <div style="flex:1;max-width:90px;height:1px;background:linear-gradient(to right,transparent,rgba(210,160,30,0.7));"></div>
-      <div style="width:5px;height:5px;background:#d2a01e;transform:rotate(45deg);"></div>
-      <div style="width:32px;height:1px;background:rgba(210,160,30,0.7);"></div>
-      <div style="width:5px;height:5px;background:#d2a01e;transform:rotate(45deg);"></div>
-      <div style="flex:1;max-width:90px;height:1px;background:linear-gradient(to left,transparent,rgba(210,160,30,0.7));"></div>
-    </div>
-    <!-- 数字亮点 -->
-    <div style="display:flex;justify-content:center;gap:28px;">
-      <div style="text-align:center;">
-        <div style="color:#d2a01e;font-size:24px;font-weight:800;line-height:1;">23</div>
-        <div style="color:rgba(245,237,204,0.6);font-size:11px;margin-top:4px;letter-spacing:1px;">岁辞世</div>
-      </div>
-      <div style="width:1px;background:rgba(210,160,30,0.25);"></div>
-      <div style="text-align:center;">
-        <div style="color:#d2a01e;font-size:24px;font-weight:800;line-height:1;">6</div>
-        <div style="color:rgba(245,237,204,0.6);font-size:11px;margin-top:4px;letter-spacing:1px;">次出征</div>
-      </div>
-      <div style="width:1px;background:rgba(210,160,30,0.25);"></div>
-      <div style="text-align:center;">
-        <div style="color:#d2a01e;font-size:24px;font-weight:800;line-height:1;">11万+</div>
-        <div style="color:rgba(245,237,204,0.6);font-size:11px;margin-top:4px;letter-spacing:1px;">斩首俘获</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== 导语 ===== -->
-  <div style="padding:32px 28px 0;">
-    <div style="background:linear-gradient(135deg,#fdf8ec,#fff9e8);border-left:4px solid #c8900a;border-radius:0 8px 8px 0;padding:18px 20px;">
-      <p style="margin:0;color:#4a2e00;font-size:15px;line-height:2;font-style:italic;">
-        公元前119年，狼居胥山上站着一个21岁的青年。他在匈奴人的神山之上，祭拜了汉人的天地。这是华夏历史上，唯一一个非帝王身份的男人完成的封禅，也是第一个在敌人领土上进行的封禅。<br>
-        <span style="color:#8b5e08;font-weight:600;">他叫霍去病。</span>
-      </p>
-    </div>
-  </div>
-
-  <!-- ===== 正文 ===== -->
-  <div style="padding:28px 28px;">
-
-    <!-- 壹：大汉的屈辱与愤怒 -->
-    <div style="margin-bottom:38px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
-          <span style="color:#fff;font-size:17px;font-weight:700;">壹</span>
-        </div>
-        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">七十年的屈辱，一朝清算</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        公元前200年，刘邦一时头脑发热，亲率几千人追着几万匈奴猛砍，结果被匈奴单于冒顿来了个"回首掏"，被困白登山七天七夜。这场白登之围，让大汉丢尽了脸面，此后七十余年，汉朝只能靠送公主、送财物换来表面的和平。
-      </p>
-      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        然而匈奴依然年年南下劫掠，杀人放火，如入无人之境。这种屈辱，一直压到一个叫刘彻的皇帝登基。
-      </p>
-
-      <!-- 高亮框 -->
-      <div style="background:linear-gradient(135deg,#1a0e00,#2e1a00);border-radius:10px;padding:20px 22px;margin:20px 0;">
-        <p style="margin:0;color:#f0d080;font-size:15px;line-height:1.9;text-align:center;letter-spacing:1px;">
-          汉武帝刘彻恨透了靠女人和亲换来的和平。<br>
-          <span style="color:#d2a01e;font-weight:600;font-size:16px;">他要彻底扭转——汉守匈攻的局面。</span>
-        </p>
-      </div>
-
-      <p style="margin:0;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        于是，这位野心极大的皇帝在走访姐姐平阳公主府时，随手就从一个舞女身上，给大汉抽到了三张SSR——卫青、霍去病、霍光。
-      </p>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-      <span style="color:#c8900a;font-size:15px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-    </div>
-
-    <!-- 贰：霍去病的出身 -->
-    <div style="margin-bottom:38px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
-          <span style="color:#fff;font-size:17px;font-weight:700;">贰</span>
-        </div>
-        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">私生子出道，天子亲自调教</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        公元前140年，平阳侯府的女奴魏少儿为一个小吏生下了一个私生子，那个渣男叫霍仲儒，提上裤子就跑，从此断了联系。
-      </p>
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        但霍仲儒可能做梦也没想到，魏少儿的妹妹卫子夫后来上了刘彻的龙床，老魏家瞬间草鸡变凤凰，成了皇家外戚。而这个叫霍去病的私生子，因为极强的骑射天赋被刘彻看中，提拔为近臣侍中——天子亲信。
-      </p>
-      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        刘彻太喜欢这个孩子了，准备亲自传授他孙吴兵法。然而霍去病直接婉拒了：
-      </p>
-
-      <!-- 名言引用 -->
-      <div style="background:linear-gradient(135deg,#fdf8ec,#fff6e0);border-radius:10px;padding:22px 24px;margin:0 0 20px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-8px;left:12px;font-size:88px;color:rgba(200,144,10,0.08);font-family:serif;line-height:1;">"</div>
-        <p style="margin:0 0 10px;color:#5a3500;font-size:16px;line-height:1.9;font-weight:500;position:relative;z-index:1;">
-          顾方略何如耳，不至学古兵法。
-        </p>
-        <p style="margin:0;color:#6b4010;font-size:13.5px;line-height:1.7;position:relative;z-index:1;">
-          打仗只需要看准方针策略，不需要学古人那些用不着的东西。
-        </p>
-        <div style="margin-top:12px;color:#a87020;font-size:12px;">—— 霍去病，拒绝天子教授兵法</div>
-      </div>
-
-      <p style="margin:0;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        刘彻没有生气，反而更爱了。因为这个孩子身上有一种让他着迷的东西——纯粹的、不可遏制的战场直觉。
-      </p>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-      <span style="color:#c8900a;font-size:15px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-    </div>
-
-    <!-- 叁：初出茅庐，八百破两千 -->
-    <div style="margin-bottom:38px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
-          <span style="color:#fff;font-size:17px;font-weight:700;">叁</span>
-        </div>
-        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">出道即巅峰：八百骑，斩首两千</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        公元前123年，17岁的霍去病第一次跟着舅舅卫青出征。卫青给了外甥八百精锐壮士，然后霍去病带着这八百人，脱离大部队，直插大漠深处。
-      </p>
-
-      <!-- 战绩卡 -->
-      <div style="background:linear-gradient(160deg,#0d0800,#1e1200,#2e1c00);border-radius:12px;padding:24px 22px;margin:20px 0;">
-        <div style="color:#c8a030;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:16px;text-align:center;">⚔ 首战战报 · 公元前123年</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
-          <div style="background:rgba(210,160,30,0.1);border:1px solid rgba(210,160,30,0.2);border-radius:8px;padding:14px;text-align:center;">
-            <div style="color:#d2a01e;font-size:26px;font-weight:800;line-height:1;">800</div>
-            <div style="color:rgba(245,237,204,0.6);font-size:12px;margin-top:4px;">出征骑兵</div>
-          </div>
-          <div style="background:rgba(210,160,30,0.1);border:1px solid rgba(210,160,30,0.2);border-radius:8px;padding:14px;text-align:center;">
-            <div style="color:#d2a01e;font-size:26px;font-weight:800;line-height:1;">2028</div>
-            <div style="color:rgba(245,237,204,0.6);font-size:12px;margin-top:4px;">斩首+俘虏</div>
-          </div>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:12px 14px;">
-          <p style="margin:0;color:#e8d090;font-size:13px;line-height:1.9;">
-            俘获匈奴相国、当户等高级官员，斩杀匈奴大单于的祖父若侯铲，俘虏单于的叔父罗姑比。
-          </p>
-        </div>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        与此同时，汉军主力右将军苏建、前将军赵信率三千骑兵与匈奴激战，全军覆没，赵信更是直接投降了匈奴。
-      </p>
-
-      <div style="background:#fdf6e8;border-radius:8px;padding:16px 18px;border:1px solid #e8c878;margin-bottom:16px;">
-        <p style="margin:0;color:#5a3800;font-size:14px;line-height:1.9;">
-          <strong style="color:#8b5e00;">有对比，才知道天才和普通人的差距。</strong>八百 vs 两千，出道即巅峰的霍去病，成了汉武帝刘彻心中那个"亲临战场的化身"。
-        </p>
-      </div>
-
-      <div style="background:linear-gradient(135deg,#1a0e00,#2e1a00);border-radius:10px;padding:18px 20px;">
-        <p style="margin:0 0 8px;color:#d2a01e;font-size:15px;line-height:1.9;font-weight:600;text-align:center;">刘彻封霍去病为冠军侯</p>
-        <p style="margin:0;color:rgba(240,208,128,0.8);font-size:13px;text-align:center;line-height:1.8;">赐豪华宅邸，让他去住。霍去病说——</p>
-        <p style="margin:10px 0 0;color:#f0e090;font-size:16px;text-align:center;font-weight:700;letter-spacing:3px;">"匈奴未灭，无以家为。"</p>
-      </div>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-      <span style="color:#c8900a;font-size:15px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-    </div>
-
-    <!-- 肆：河西大战 -->
-    <div style="margin-bottom:38px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
-          <span style="color:#fff;font-size:17px;font-weight:700;">肆</span>
-        </div>
-        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">两打河西，打通丝绸之路</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        公元前121年，刘彻将目光投向河西走廊——中原通往西域的咽喉要道，当时被匈奴浑邪王和休屠王控制，与羌人联合，从西边威胁大汉。刘彻想要剁掉匈奴的这条右臂，为最终的漠北决战扫清后路。
-      </p>
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        这年春天，19岁的霍去病率一万骑兵出征。他越乌鞘岭，渡黄河，六天转战千余里，踏破匈奴五王国。匈奴单于的儿子不服，想和霍去病过两招，被瞬间打崩，险些被活捉。
-      </p>
-
-      <!-- 两次河西战役对比 -->
-      <div style="margin:20px 0;">
-        <div style="color:#8b5e08;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:12px;text-align:center;">📜 河西两战战绩对比</div>
-        <div style="overflow:hidden;border-radius:10px;border:1px solid #e8c878;">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#f9f0d8;">
-            <div style="padding:10px 12px;color:#8b5e08;font-size:12px;font-weight:600;border-right:1px solid #e8c878;"></div>
-            <div style="padding:10px 12px;color:#8b5e08;font-size:12px;font-weight:600;text-align:center;border-right:1px solid #e8c878;">春季第一战</div>
-            <div style="padding:10px 12px;color:#8b5e08;font-size:12px;font-weight:600;text-align:center;">夏季第二战</div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#fff;border-top:1px solid #e8c878;">
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;border-right:1px solid #e8c878;">兵力</div>
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;border-right:1px solid #e8c878;">10,000骑</div>
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;">孤军深入</div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#fdf8ee;border-top:1px solid #e8c878;">
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;border-right:1px solid #e8c878;">斩获</div>
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;border-right:1px solid #e8c878;">8,960级</div>
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;">歼敌3万+</div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#fff;border-top:1px solid #e8c878;">
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;border-right:1px solid #e8c878;">战果</div>
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;border-right:1px solid #e8c878;">斩折兰王、卢侯王，俘浑邪王子</div>
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;">俘获单于阏氏、王子等59人</div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#fdf8ee;border-top:1px solid #e8c878;">
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;border-right:1px solid #e8c878;">特殊战利品</div>
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;border-right:1px solid #e8c878;">抢走匈奴祭天金人</div>
-            <div style="padding:10px 12px;color:#5a3800;font-size:13px;text-align:center;">封侯部将3人</div>
-          </div>
-        </div>
-      </div>
-
-      <p style="margin:16px 0;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        第二次河西之战，霍去病发现队友全是拖后腿的——公孙敖走岔了路，李广又一次被包围差点全军覆没，张骞迷路来晚了。四路人马只剩霍去病孤军深入2000余里，绕到敌军侧后突然猛攻。
-      </p>
-
-      <div style="background:#fdf6e8;border-radius:8px;padding:16px 18px;border-left:3px solid #c8900a;margin-bottom:20px;">
-        <p style="margin:0;color:#5a3800;font-size:14px;line-height:1.9;">
-          骄傲的骠骑将军眼里只有陛下和舅舅，至于一些累赘，<strong style="color:#8b5e00;">跟不上就别跟。</strong>
-        </p>
-      </div>
-
-      <!-- 霍去病的用人秘密 -->
-      <div style="background:linear-gradient(135deg,#0d0800,#1e1200);border-radius:10px;padding:20px 20px;margin-bottom:20px;">
-        <div style="color:#c8a030;font-size:13px;font-weight:600;letter-spacing:2px;margin-bottom:14px;">🔍 霍去病能深入大漠2000里还能找到敌人的秘密</div>
-        <p style="margin:0 0 12px;color:#e0c880;font-size:14px;line-height:1.9;">
-          他敢于、善于用匈奴人当手下——
-        </p>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="background:rgba(210,160,30,0.1);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:10px;">
-            <span style="color:#d2a01e;font-size:18px;flex-shrink:0;">◈</span>
-            <span style="color:#e8d090;font-size:13.5px;line-height:1.7;">校尉高不识 — 匈奴小王出身，本家人带路</span>
-          </div>
-          <div style="background:rgba(210,160,30,0.1);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:10px;">
-            <span style="color:#d2a01e;font-size:18px;flex-shrink:0;">◈</span>
-            <span style="color:#e8d090;font-size:13.5px;line-height:1.7;">司马赵破奴 — 长期生活在匈奴的汉人，熟悉地形</span>
-          </div>
-          <div style="background:rgba(210,160,30,0.1);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:10px;">
-            <span style="color:#d2a01e;font-size:18px;flex-shrink:0;">◈</span>
-            <span style="color:#e8d090;font-size:13.5px;line-height:1.7;">部署几乎全是匈奴人 — 以战养战，轻装奔袭</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 匈奴悲歌 -->
-      <div style="background:linear-gradient(135deg,#f0ede0,#ede8d5);border-radius:10px;padding:20px 22px;border:1px solid #d8c890;">
-        <p style="margin:0 0 8px;color:#8b6e20;font-size:12px;letter-spacing:2px;font-weight:600;">匈奴之歌（哀歌）</p>
-        <p style="margin:0;color:#4a3800;font-size:15px;line-height:2;font-style:italic;letter-spacing:2px;">
-          失我祁连山，使我六畜不蕃息；<br>
-          失我焉支山，令我妇女无颜色。
-        </p>
-        <p style="margin:10px 0 0;color:#8b6e20;font-size:12.5px;line-height:1.7;">
-          对匈奴，这是耻辱的哀歌；对大汉，这是踏血的荣耀。
-        </p>
-      </div>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-      <span style="color:#c8900a;font-size:15px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-    </div>
-
-    <!-- 伍：漠北大决战 -->
-    <div style="margin-bottom:38px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
-          <span style="color:#fff;font-size:17px;font-weight:700;">伍</span>
-        </div>
-        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">漠北大决战：封狼居胥，饮马瀚海</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        公元前119年，汉武帝刘彻发动了对匈奴最大规模的决战。卫青、霍去病各率五万骑兵，分两路深入漠北，力求一战定乾坤。
-      </p>
-      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        原定由霍去病直取匈奴大单于，但俘虏透露大单于已向东移动，于是舅舅与外甥换了位置。卫青西出，遭遇大单于；霍去病东出代郡，迎战左贤王。
-      </p>
-
-      <!-- 战役对比卡 -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;">
-        <div style="background:linear-gradient(160deg,#1a1a2e,#0d0d1e);border-radius:10px;padding:16px 14px;">
-          <div style="color:#8898d8;font-size:12px;font-weight:600;margin-bottom:10px;letter-spacing:1px;">卫青路线</div>
-          <div style="color:#c0c8f0;font-size:13px;line-height:1.9;">
-            <div style="padding:4px 0;border-bottom:1px solid rgba(136,152,216,0.2);">出定襄，遇大单于主力</div>
-            <div style="padding:4px 0;border-bottom:1px solid rgba(136,152,216,0.2);">趁沙尘暴双翼包抄</div>
-            <div style="padding:4px 0;border-bottom:1px solid rgba(136,152,216,0.2);">歼敌 19,000 人</div>
-            <div style="padding:4px 0;">大单于西北突围逃遁</div>
-          </div>
-        </div>
-        <div style="background:linear-gradient(160deg,#1e0e00,#2e1600);border-radius:10px;padding:16px 14px;">
-          <div style="color:#d2a030;font-size:12px;font-weight:600;margin-bottom:10px;letter-spacing:1px;">霍去病路线</div>
-          <div style="color:#f0d090;font-size:13px;line-height:1.9;">
-            <div style="padding:4px 0;border-bottom:1px solid rgba(210,160,48,0.2);">出代郡，北进 2000+ 里</div>
-            <div style="padding:4px 0;border-bottom:1px solid rgba(210,160,48,0.2);">大破左贤王，歼敌 70,000</div>
-            <div style="padding:4px 0;border-bottom:1px solid rgba(210,160,48,0.2);">俘获王侯将相 80+ 人</div>
-            <div style="padding:4px 0;">追至狼居胥山，封禅</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 封狼居胥高潮段 -->
-      <div style="background:linear-gradient(160deg,#0a0600,#190e00,#2a1800,#3c2200);border-radius:14px;padding:30px 24px;margin:24px 0;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:radial-gradient(circle at 100% 0%,rgba(210,160,30,0.08),transparent 70%);"></div>
-        <div style="position:absolute;bottom:0;left:0;width:120px;height:120px;background:radial-gradient(circle at 0% 100%,rgba(210,160,30,0.05),transparent 70%);"></div>
-
-        <p style="margin:0 0 18px;color:#d2a01e;font-size:13px;font-weight:600;letter-spacing:3px;text-align:center;position:relative;z-index:1;">⚑ 公元前119年 · 狼居胥山顶 ⚑</p>
-
-        <p style="margin:0 0 16px;color:#e8d090;font-size:15.5px;line-height:2;position:relative;z-index:1;">
-          这个21岁的青年，站在匈奴人的神山之上，筑坛祭拜大汉的天。
-        </p>
-        <p style="margin:0 0 16px;color:#e8d090;font-size:15.5px;line-height:2;position:relative;z-index:1;">
-          随后，又马不停蹄赶到姑衍山，筑坛祭拜大汉的地。
-        </p>
-        <p style="margin:0 0 20px;color:#e8d090;font-size:15.5px;line-height:2;position:relative;z-index:1;">
-          在那个封建迷信的年代，这是在<strong style="color:#d2a01e;">杀人诛心</strong>——他要斩断匈奴的龙脉，断绝匈奴的国运。
-        </p>
-        <div style="border-top:1px solid rgba(210,160,30,0.2);padding-top:18px;position:relative;z-index:1;">
-          <p style="margin:0 0 10px;color:#c8c0f0;font-size:15px;line-height:2;">
-            完成封禅后，霍去病率军一路向北，直抵今天的贝加尔湖畔。
-          </p>
-          <p style="margin:0;color:#d2a01e;font-size:16px;font-weight:700;text-align:center;letter-spacing:3px;">
-            饮马瀚海，遥望长安。
-          </p>
-        </div>
-      </div>
-
-      <p style="margin:0;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        漠北大决战后，匈奴势力被严重削弱，大单于逃至漠北，<strong style="color:#7a3e00;">匈奴远遁漠南，再无王庭。</strong>
-      </p>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-      <span style="color:#c8900a;font-size:15px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-    </div>
-
-    <!-- 陆：英年早逝 -->
-    <div style="margin-bottom:38px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:38px;height:38px;background:linear-gradient(135deg,#3a3a4a,#5a5a6a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="color:#fff;font-size:17px;font-weight:700;">陆</span>
-        </div>
-        <h3 style="margin:0;color:#2a2a3a;font-size:19px;font-weight:700;letter-spacing:1px;">流星划过，年仅二十三岁</h3>
-      </div>
-
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        公元前117年，就在汉武帝准备再次出击匈奴时，才发现他的这张最强战牌，到期了。
-      </p>
-      <p style="margin:0 0 16px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        或许是多次领兵千里奔袭后的积劳成疾，或许是感染了大漠中的瘟疫，年仅23岁的霍去病突然病逝。
-      </p>
-      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        痛苦万分的武帝刘彻，下令让霍去病陪葬茂陵，赐谥号"景桓"，调遣河西五郡的铁甲军列阵为他送葬，并将坟墓修成祁连山的形状，以彰显他克敌制胜的奇功。
-      </p>
-
-      <!-- 墓志意象 -->
-      <div style="background:linear-gradient(160deg,#1a1a1a,#2a2a2a,#1e1e1e);border-radius:12px;padding:26px 24px;text-align:center;">
-        <p style="margin:0 0 16px;color:#c0c0c0;font-size:13px;letter-spacing:3px;">坟墓形如祁连山 · 铁甲军送葬</p>
-        <p style="margin:0 0 20px;color:#e0e0e0;font-size:15px;line-height:2;">
-          千年已过，那个在河西、在祁连山、在狼居胥、<br>在瀚海纵马狂奔的少年，
-        </p>
-        <p style="margin:0;color:#d2a01e;font-size:17px;font-weight:700;letter-spacing:2px;line-height:1.8;">
-          已经成为了一颗耀眼的流星，<br>永远铭刻在汉家儿郎的脑海里。
-        </p>
-      </div>
-    </div>
-
-    <!-- 分割线 -->
-    <div style="display:flex;align-items:center;gap:8px;margin:30px 0;">
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-      <span style="color:#c8900a;font-size:15px;">✦</span>
-      <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,#c8a030,transparent);"></div>
-    </div>
-
-    <!-- 结语 -->
-    <div style="margin-bottom:10px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-        <div style="width:38px;height:38px;background:linear-gradient(135deg,#7a4500,#c8820a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(200,130,10,0.3);">
-          <span style="color:#fff;font-size:14px;font-weight:700;">终</span>
-        </div>
-        <h3 style="margin:0;color:#3a1e00;font-size:19px;font-weight:700;letter-spacing:1px;">开疆拓土，是刻在基因里的荣耀</h3>
-      </div>
-
-      <p style="margin:0 0 20px;color:#3a2000;font-size:15px;line-height:2;text-indent:2em;">
-        霍去病留给这个民族的，不只是那一场场战役的胜利，而是一种精神——无论什么时代，为民族、为国家收复失地、开疆拓土，永远是华夏儿郎最高的功勋。
-      </p>
-
-      <!-- 名言卡 -->
-      <div style="background:linear-gradient(135deg,#fdf6e0,#fff8e8);border-radius:10px;padding:22px 22px;margin-bottom:20px;border:1px solid #e0c870;">
-        <p style="margin:0 0 12px;color:#8b5e00;font-size:13px;letter-spacing:2px;font-weight:600;">流传千古的名言</p>
-        <p style="margin:0 0 10px;color:#4a2e00;font-size:18px;font-weight:700;letter-spacing:4px;line-height:1.8;">匈奴未灭，无以家为。</p>
-        <p style="margin:0;color:#6b4800;font-size:13px;line-height:1.7;">这五个字，是一个少年的志向，也是一个时代的回响。</p>
-      </div>
-
-      <!-- 最终寄语 -->
-      <div style="background:linear-gradient(160deg,#0d0800,#1e1200,#3c2800,#6b4500);border-radius:14px;padding:32px 26px;text-align:center;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:200px;height:1px;background:linear-gradient(to right,transparent,rgba(210,160,30,0.5),transparent);"></div>
-        <p style="margin:0 0 18px;color:#e8d090;font-size:15px;line-height:2;">
-          这一颗流星虽然短暂，<br>却给了后人喊出那句话的底气——
-        </p>
-        <p style="margin:0 0 22px;color:#d2a01e;font-size:19px;font-weight:800;letter-spacing:4px;line-height:1.7;">
-          犯强汉者，虽远必诛。
-        </p>
-        <p style="margin:0 0 20px;color:rgba(232,208,144,0.75);font-size:14px;line-height:1.9;">
-          汉武、长平、冠军，他们让开疆拓土，<br>成为每一个汉人铭刻在基因里的荣耀使命。
-        </p>
-        <div style="display:flex;align-items:center;justify-content:center;gap:8px;">
-          <div style="flex:1;max-width:50px;height:1px;background:rgba(210,160,30,0.3);"></div>
-          <span style="color:#d2a01e;font-size:13px;letter-spacing:3px;">大 汉 荣 耀</span>
-          <div style="flex:1;max-width:50px;height:1px;background:rgba(210,160,30,0.3);"></div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- end 正文 -->
-
-  <!-- ===== 底部 ===== -->
-  <div style="background:#0d0800;padding:24px 28px;text-align:center;">
-    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;">
-      <div style="flex:1;max-width:60px;height:1px;background:rgba(210,160,30,0.25);"></div>
-      <span style="color:#c8a030;font-size:13px;letter-spacing:3px;">中国历史文化人物</span>
-      <div style="flex:1;max-width:60px;height:1px;background:rgba(210,160,30,0.25);"></div>
-    </div>
-    <p style="margin:0;color:rgba(232,208,144,0.35);font-size:12px;line-height:1.8;">在历史中寻找力量，在人物中看见自己</p>
-  </div>
-
-</div><!-- end 外层容器 -->
-
-</body>
-</html>
-]]></content>
-      <categories>
-        <category>Diary</category>
-      </categories>
-      <tags>
-        <tag>汉朝</tag>
-        <tag>战神</tag>
       </tags>
   </entry>
 </search>
