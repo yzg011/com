@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, Saimen</rights>
   <subtitle>读史可以明智,知古方能鉴今。喜欢读历史，一个十几年安防的老安防人，也会分享更多的安防知识</subtitle>
   <title>个人博客</title>
-  <updated>2026-05-13T02:47:41.561Z</updated>
+  <updated>2026-05-13T08:45:04.379Z</updated>
+  <entry>
+    <author>
+      <name>Saimen</name>
+    </author>
+    <category term="技术" scheme="https://com.z2m.store/tags/%E6%8A%80%E6%9C%AF/"/>
+    <content>
+      <![CDATA[<h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><p>由于我用的是butterfly主题，而在我写文章之前，主题文档内并没有和RSS订阅有关的教程，不过我在寻找各大搜索引擎时发现了这么一个插件，用的人也挺多。我也是打算写一篇文章记录一下我在hexo第一次折腾的事迹哈哈</p><h3 id="二、安装rss插件并在主题中设置"><a href="#二、安装rss插件并在主题中设置" class="headerlink" title="二、安装rss插件并在主题中设置"></a>二、安装rss插件并在主题中设置</h3><p>在butterfly的插件推荐中有说明了hexo的rss插件，叫hexo-generator-feed</p><p>首先添加插件，这里使用的是npm添加<br>npm install hexo-generator-feed –save<br>然后在根目录中的_config.yml中添加如下配置</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br></pre></td></tr></table></figure><p>官网还说明了一些其他的参数，如：</p><p>enable: 默认开启可以省略<br>type: RSS的类型(atom&#x2F;rss2)<br>path: 文件路径，默认是 atom.xml&#x2F;rss2.xml<br>limit: 展示文章的数量,使用 0 或则 false 代表展示全部<br>hub: 如果使用不到可以为空<br>content: （可选）设置 true 可以在 RSS 文件中包含文章全部内容，默认：false<br>content_limit: （可选）摘要中使用的帖子内容的默认长度。 仅在内容设置为false且未显示自定义帖子描述时才使用。<br>content_limit_delim :（可选）如果content_limit用于缩短帖子内容，则仅在达到字符限制之前在此分隔符的最后一次出现处剪切。默认不使用。<br>icon: (可选）自定义图标。默认为主配置中指定的电子邮件头像。<br>autodiscovery: 添加提要自动发现，默认开启<br>template : 自定义模板路径。该文件用于生成 xml 文件<br>然后去主题的_config.yml中添加配置</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">rss:</span> <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure><p>这样你在用hexo g生成静态网页的时候会在public文件夹中（也就是你静态网页文件夹中）生成一个atom.xml文件</p><p>（可选）如果你想让别人知道你的RSS链接，可以在主题中的social settings中添加如下配置（就是在那侧边栏个人资料下面添加一个图标并链接到你的RSS文件）</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fas fa-rss:</span> <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure><p>因为butterfly主题中有自带的fas图标，所以直接可以使用</p>]]>
+    </content>
+    <id>https://com.z2m.store/2026/05/13/butterfly%E5%AE%89%E8%A3%85rss%E6%8F%92%E4%BB%B6/</id>
+    <link href="https://com.z2m.store/2026/05/13/butterfly%E5%AE%89%E8%A3%85rss%E6%8F%92%E4%BB%B6/"/>
+    <published>2026-05-13T08:40:09.239Z</published>
+    <summary>
+      <![CDATA[<h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><p>由于我用的是butterfly主题，而在我写文章之前，主题文档内并没有和RSS订阅有关的教程，不过我在寻找各大搜索引擎时发现]]>
+    </summary>
+    <title>butterfly安装rss插件</title>
+    <updated>2026-05-13T08:45:04.379Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Saimen</name>
@@ -379,22 +396,5 @@
     </summary>
     <title>blog添加algolia搜索</title>
     <updated>2026-05-03T02:42:16.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Saimen</name>
-    </author>
-    <content>
-      <![CDATA[<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><ol><li>这部分免费图床就太多了，我会把我目前发现的可以免费白嫖一定额度的图床做一个总结列在下面</li><li>这部分图床的搭建门槛较低，所以速度和稳定性良莠不齐，大家自行选择使用哪个</li><li>我这里只给大家演示一种的使用方法，其他图床使用方法也类似</li><li>大家可以看看哪个比较好用的或者自己知道的好用的这里没有，可以留言我会进行补充</li></ol><table><thead><tr><th align="center">🍕</th><th align="center">🥗</th><th align="center">🍤</th></tr></thead><tbody><tr><td align="center"><a href="https://smms.app/">SMMS</a></td><td align="center"><a href="https://www.superbed.cn/">聚合图床</a></td><td align="center"><a href="https://www.hualigs.cn/">遇见图床</a></td></tr><tr><td align="center"><a href="https://postimages.org/">PostImage</a></td><td align="center"><a href="https://imgse.com/">路过图床</a></td><td align="center"><a href="https://www.imgurl.org/">imgURL</a></td></tr><tr><td align="center"><a href="https://imgbox.com/">imgbox</a></td><td align="center"><a href="https://pic.iqy.ink/upload">Lsky Pro</a></td><td align="center"><a href="https://upload.cc/">Upload.cc</a></td></tr><tr><td align="center"><a href="https://imagelol.com/">imagelol</a></td><td align="center"><a href="https://imgtp.com/">imgtp</a></td><td align="center"><a href="https://cloudimge.com/">云图床</a></td></tr><tr><td align="center"><a href="https://mcecy.com/">载涂图床</a></td><td align="center"><a href="https://tuchuang.voooe.cn/">Sky Chart Bed</a></td><td align="center"><a href="https://www.imgbed.link/">风筝图床</a></td></tr><tr><td align="center"><a href="https://pz.al/">喷子图床</a></td><td align="center"><a href="https://imgkb.com/">imgkb</a></td><td align="center"><a href="https://imgloc.com/#google_vignette">imgloc</a></td></tr></tbody></table><ul><li>使用方法：直接进入官网，上传图片然后粘贴地址即可，地址的样式有多样，自行选择</li></ul>]]>
-    </content>
-    <id>https://com.z2m.store/2026/05/03/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</id>
-    <link href="https://com.z2m.store/2026/05/03/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/"/>
-    <published>2026-05-02T23:03:27.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><ol>
-<li>这部分免费图床就太多了，我会把我目前发现的可以免费白嫖一定额度的图床做一个总结列在下面</li>]]>
-    </summary>
-    <title>免费图床</title>
-    <updated>2026-05-03T05:19:40.000Z</updated>
   </entry>
 </feed>
