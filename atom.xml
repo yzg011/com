@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, Saimen</rights>
   <subtitle>读史可以明智,知古方能鉴今。喜欢读历史，一个十几年安防的老安防人，也会分享更多的安防知识</subtitle>
   <title>个人博客</title>
-  <updated>2026-05-13T08:45:04.379Z</updated>
+  <updated>2026-05-15T10:27:14.141Z</updated>
+  <entry>
+    <author>
+      <name>Saimen</name>
+    </author>
+    <category term="技术" scheme="https://com.z2m.store/tags/%E6%8A%80%E6%9C%AF/"/>
+    <content>
+      <![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><p>Hexo-butterfly主题增加友链界面<br>在从 Stellar 切换到 Butterfly 主题的过程中，友链界面的配置往往是容易卡壳的一环。经过实测和填坑，我整理了这套标准的部署流程，希望能帮你快速搭建出理想的友链展示区。</p><p>一、 初始化页面文件<br>首先，你需要在博客根目录下手动创建对应的页面文件夹。</p><p>在 source&#x2F;link 路径下新建一个 index.md 文件。打开该文件，将 Front-matter 区域配置如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友链展示</span><br><span class="line">date: 2025-11-16</span><br><span class="line">type: &quot;link&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure><p>设置 type: “link” 是关键，这会告诉主题调用专门的友链模板来渲染该页面。</p><p>二、 构建友链数据池<br>Butterfly 采用数据驱动的方式管理友链。你需要在博客根目录的 _data 文件夹下新建 link.yml 文件。</p><p>按照以下格式填入你的友链信息：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- class_name: 友情链接</span><br><span class="line">  class_desc: 这里的每个站点，都耐人寻味……</span><br><span class="line">  flink_style: flexcard</span><br><span class="line">  link_list:</span><br><span class="line">    - name: Saimen</span><br><span class="line">      link: https://com.z2m.store</span><br><span class="line">      avatar: </span><br><span class="line">      descr: </span><br></pre></td></tr></table></figure><p>name： 网站名称。 link： 网站跳转链接。 avatar： 站长头像地址。 descr： 网站的一句话介绍。</p><p>后续每增加一个朋友，只需在 link_list 下按格式新增这四项信息即可。</p><p>三、 挂载到导航菜单<br>页面和数据准备好后，需要让它在导航栏显示出来。</p><p>打开主题配置文件 _config.butterfly.yml，在 menu 栏目下新增一行入口：</p><p>友链展示: &#x2F;link&#x2F; || fas fa-link<br>四、 编译与发布<br>最后，执行 Hexo 标准的“三连”命令来清理缓存并部署上线：</p><p>小结<br>折腾个人博客的乐趣就在于这种从零到一的 DIY 过程。现在刷新一下你的站点，应该就能看到那个整齐划一、极客范儿十足的友链展示区了。</p>]]>
+    </content>
+    <id>https://com.z2m.store/2026/05/15/Hexo-butterfly%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E5%8F%8B%E9%93%BE%E7%95%8C%E9%9D%A2/</id>
+    <link href="https://com.z2m.store/2026/05/15/Hexo-butterfly%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E5%8F%8B%E9%93%BE%E7%95%8C%E9%9D%A2/"/>
+    <published>2026-05-15T10:18:57.589Z</published>
+    <summary>
+      <![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="创建"><a href="#创建" class="head]]>
+    </summary>
+    <title>Hexo-butterfly主题增加友链界面</title>
+    <updated>2026-05-15T10:27:14.141Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Saimen</name>
@@ -379,22 +396,5 @@
     </summary>
     <title>刘邦与项羽：一个实用帝王与一个悲剧英雄的千年对决</title>
     <updated>2026-05-01T13:33:56.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Saimen</name>
-    </author>
-    <category term="技术" scheme="https://com.z2m.store/tags/%E6%8A%80%E6%9C%AF/"/>
-    <content>
-      <![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>插件地址在：<a href="https://github.com/LouisBarranqueiro/hexo-algoliasearch">https://github.com/LouisBarranqueiro/hexo-algoliasearch</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure><h2 id="注册-Algolia-并获取配置"><a href="#注册-Algolia-并获取配置" class="headerlink" title="注册 Algolia 并获取配置"></a>注册 Algolia 并获取配置</h2><p><a href="https://www.algolia.com/">https://www.algolia.com/</a></p><p><a href="https://blog.linkinstars.com/blog/blog-hexo-butterfly-algolia-1.png"><img src="https://blog.linkinstars.com/blog/blog-hexo-butterfly-algolia-1.png" alt="https:&#x2F;&#x2F;blog.linkinstars.com&#x2F;blog&#x2F;blog-hexo-butterfly-algolia-1.png"></a></p><p><a href="https://blog.linkinstars.com/blog/blog-hexo-butterfly-algolia-2.png"><img src="https://blog.linkinstars.com/blog/blog-hexo-butterfly-algolia-2.png" alt="https:&#x2F;&#x2F;blog.linkinstars.com&#x2F;blog&#x2F;blog-hexo-butterfly-algolia-2.png"></a></p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>修改博客<strong>根目录</strong>的配置文件 <code>_config.yml</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">algolia:</span><br><span class="line">  appId: &quot;Z7A3XW4R2I&quot;</span><br><span class="line">  apiKey: &quot;12db1ad54372045549ef465881c17e743&quot;</span><br><span class="line">  adminApiKey: &quot;40321c7c207e7f73b63a19aa24c4761b&quot;</span><br><span class="line">  chunkSize: 5000</span><br><span class="line">  indexName: &quot;my-hexo-blog&quot;</span><br><span class="line">  fields:</span><br><span class="line">    - content:strip:truncate,0,500</span><br><span class="line">    - excerpt:strip</span><br><span class="line">    - gallery</span><br><span class="line">    - permalink</span><br><span class="line">    - photos</span><br><span class="line">    - slug</span><br><span class="line">    - tags</span><br><span class="line">    - title</span><br></pre></td></tr></table></figure><p>修改主题目录下的配置文件 <code>themes/butterfly/_config.yml</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">algolia_search:</span><br><span class="line">  enable: true</span><br><span class="line">  hits:</span><br><span class="line">    per_page: 10</span><br><span class="line">  labels:</span><br><span class="line">    input_placeholder: Search for Posts</span><br><span class="line">    hits_empty: &quot;我们没有找到任何搜索结果: $&#123;query&#125;&quot;</span><br><span class="line">    hits_stats: &quot;找到$&#123;hits&#125;条结果（用时$&#123;time&#125; ms）&quot;</span><br></pre></td></tr></table></figure><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo algolia</span><br></pre></td></tr></table></figure><p>其他命令照常就可以</p><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><blockquote><p>虽然有很多博客已经写过如何添加这个插件，如何使用，但是我在实际过程中还是遇到了很多奇怪的问题</p></blockquote>]]>
-    </content>
-    <id>https://com.z2m.store/2026/05/03/blog%E6%B7%BB%E5%8A%A0algolia%E6%90%9C%E7%B4%A2/</id>
-    <link href="https://com.z2m.store/2026/05/03/blog%E6%B7%BB%E5%8A%A0algolia%E6%90%9C%E7%B4%A2/"/>
-    <published>2026-05-03T01:08:57.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>插件地址在：<a href="https://github.com/LouisBarranqueiro/hexo-algoliasearch]]>
-    </summary>
-    <title>blog添加algolia搜索</title>
-    <updated>2026-05-03T02:42:16.000Z</updated>
   </entry>
 </feed>
