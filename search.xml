@@ -21,189 +21,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Cloudflare Pages 部署免费图床</title>
-    <url>/2026/05/18/Cloudflare%20Pages%20%E9%83%A8%E7%BD%B2%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h1 id="Cloudflare-Pages-部署"><a href="#Cloudflare-Pages-部署" class="headerlink" title="Cloudflare Pages 部署"></a>Cloudflare Pages 部署</h1><p>Cloudflare Pages 是推荐的部署方式，提供免费托管、全球 CDN 加速和无需服务器维护的优势。</p>
-<h2 id="📂-第一步：Fork-项目"><a href="#📂-第一步：Fork-项目" class="headerlink" title="📂 第一步：Fork 项目"></a>📂 第一步：Fork 项目</h2><ol>
-<li>访问 <a href="https://github.com/MarSeventh/CloudFlare-ImgBed">CloudFlare ImgBed 项目</a></li>
-<li>点击右上角的 “Fork” 按钮</li>
-<li>选择您的 GitHub 账户</li>
-<li>确认 Fork 完成</li>
-</ol>
-<h2 id="🏗️-第二步：创建-Pages-项目"><a href="#🏗️-第二步：创建-Pages-项目" class="headerlink" title="🏗️ 第二步：创建 Pages 项目"></a>🏗️ 第二步：创建 Pages 项目</h2><h3 id="2-1-访问-Cloudflare-Dashboard"><a href="#2-1-访问-Cloudflare-Dashboard" class="headerlink" title="2.1 访问 Cloudflare Dashboard"></a>2.1 访问 Cloudflare Dashboard</h3><ol>
-<li>登录 <a href="https://dash.cloudflare.com/">Cloudflare Dashboard</a></li>
-<li>选择左侧菜单的 “计算和AI” -&gt; “Workers &amp; Pages”</li>
-<li>点击 “创建应用程序”</li>
-<li>在最下方 <code>Looking to deploy Pages? </code>选择 “Get started”</li>
-<li>在 “导入现有 Git 存储库” 处点击 “开始使用”</li>
-</ol>
-<p><img src="https://cfbed.sanyue.de/images/deployment/pages-create.png" alt="创建 Pages 项目"><img src="https://cfbed.sanyue.de/images/deployment/pages-create-1.png" alt="创建 Pages 项目"></p>
-<h3 id="2-2-连接-GitHub-仓库"><a href="#2-2-连接-GitHub-仓库" class="headerlink" title="2.2 连接 GitHub 仓库"></a>2.2 连接 GitHub 仓库</h3><ol>
-<li>如果首次使用，需要授权 Cloudflare 访问 GitHub</li>
-<li>选择您 Fork 的 <code>CloudFlare-ImgBed</code> 仓库</li>
-<li>点击 “开始设置”</li>
-</ol>
-<h3 id="2-3-配置项目设置"><a href="#2-3-配置项目设置" class="headerlink" title="2.3 配置项目设置"></a>2.3 配置项目设置</h3><table>
-<thead>
-<tr>
-<th align="left">配置项</th>
-<th align="left">值</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">项目名称</td>
-<td align="left"><code>cloudflare-imgbed</code>（或自定义）</td>
-<td align="left">项目标识符</td>
-</tr>
-<tr>
-<td align="left">生产分支</td>
-<td align="left"><code>main</code></td>
-<td align="left">生产环境分支</td>
-</tr>
-<tr>
-<td align="left">构建命令</td>
-<td align="left"><code>npm install</code></td>
-<td align="left"><strong>重要：v2.0 新构建命令</strong></td>
-</tr>
-<tr>
-<td align="left">构建输出目录</td>
-<td align="left"><code>/frontend-dist</code></td>
-<td align="left">前端构建产物目录</td>
-</tr>
-</tbody></table>
-<p><img src="https://cfbed.sanyue.de/images/deployment/pages-build-config.png" alt="配置项目设置"></p>
-<p>重要提醒</p>
-<p>v2.0 版本的构建命令已变更为 <code>npm install</code>，请确保使用正确的构建命令。</p>
-<h3 id="2-4-部署项目"><a href="#2-4-部署项目" class="headerlink" title="2.4 部署项目"></a>2.4 部署项目</h3><ol>
-<li>点击 “保存并部署”</li>
-<li>等待首次部署完成（约 2-3 分钟）</li>
-</ol>
-<h2 id="🗄️-第三步：配置数据库"><a href="#🗄️-第三步：配置数据库" class="headerlink" title="🗄️ 第三步：配置数据库"></a>🗄️ 第三步：配置数据库</h2><p>数据库用于存储文件元数据，是必需的组件，可选数据库为 <code>KV</code> 数据库和 <code>D1</code> 数据库。两者对比如下表所示，根据自己使用场景<strong>从其中选择一种配置即可</strong>。</p>
-<table>
-<thead>
-<tr>
-<th align="left">特点</th>
-<th align="left">KV 数据库</th>
-<th align="left">D1 数据库</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">读写性能</td>
-<td align="left">高</td>
-<td align="left">较低</td>
-</tr>
-<tr>
-<td align="left">免费额度</td>
-<td align="left">少</td>
-<td align="left">多</td>
-</tr>
-</tbody></table>
-<p>重要提示</p>
-<p>KV 数据库和 D1 数据库<strong>只需要配置其中一个</strong>即可，不需要同时配置两个！建议根据上表选择适合自己的数据库类型。</p>
-<h3 id="3-1-KV-数据库配置"><a href="#3-1-KV-数据库配置" class="headerlink" title="3.1 KV 数据库配置"></a>3.1 KV 数据库配置</h3><h4 id="创建-KV-命名空间"><a href="#创建-KV-命名空间" class="headerlink" title="创建 KV 命名空间"></a>创建 KV 命名空间</h4><ol>
-<li>在 Cloudflare Dashboard 中选择 “存储和数据库”</li>
-<li>点击 “Workers KV”</li>
-<li>点击 “创建实例”</li>
-<li>输入命名空间名称：<code>img_url</code>（建议使用此名称）</li>
-<li>点击 “创建”</li>
-</ol>
-<p><img src="https://cfbed.sanyue.de/images/deployment/kv-create.png" alt="创建 KV 命名空间"><img src="https://cfbed.sanyue.de/images/deployment/kv-create-1.png" alt="创建 KV 命名空间"></p>
-<h4 id="绑定-KV-到项目"><a href="#绑定-KV-到项目" class="headerlink" title="绑定 KV 到项目"></a>绑定 KV 到项目</h4><ol>
-<li>返回您的 Pages 项目</li>
-<li>选择 “设置” → “绑定”</li>
-<li>点击 “添加” → “KV 命名空间”</li>
-<li>填写绑定信息： <ul>
-<li><strong>变量名称</strong>：<code>img_url</code>（必须是这个名称）</li>
-<li><strong>KV 命名空间</strong>：选择刚创建的命名空间</li>
-</ul>
-</li>
-<li>点击 “保存”</li>
-</ol>
-<p>注意</p>
-<p>绑定 KV 时，变量名称必须为 <code>img_url</code>，这是项目预设的变量名，填错会出现无法进入管理界面等情况。</p>
-<h3 id="3-2-D1-数据库配置"><a href="#3-2-D1-数据库配置" class="headerlink" title="3.2 D1 数据库配置"></a>3.2 D1 数据库配置</h3><h4 id="创建-D1-数据库"><a href="#创建-D1-数据库" class="headerlink" title="创建 D1 数据库"></a>创建 D1 数据库</h4><ol>
-<li>在 Cloudflare Dashboard 中选择 “存储和数据库”</li>
-<li>点击 “D1 SQL 数据库”</li>
-<li>点击 “创建数据库”</li>
-<li>输入数据库名称：<code>img_d1</code>（建议使用此名称）</li>
-<li>点击 “创建”</li>
-</ol>
-<h4 id="初始化-D1-数据库"><a href="#初始化-D1-数据库" class="headerlink" title="初始化 D1 数据库"></a>初始化 D1 数据库</h4><ol>
-<li>创建完成后，点击进入数据库详情页</li>
-<li>选择 “控制台” 选项卡</li>
-<li>在 SQL 输入框中粘贴并执行注释区域以下的内容（见<a href="https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql">项目仓库</a>）</li>
-<li>点击 “执行”</li>
-</ol>
-<h4 id="绑定-D1-到项目"><a href="#绑定-D1-到项目" class="headerlink" title="绑定 D1 到项目"></a>绑定 D1 到项目</h4><ol>
-<li>返回您的 Pages 项目</li>
-<li>选择 “设置” → “绑定”</li>
-<li>点击 “添加” → “D1 数据库”</li>
-<li>填写绑定信息： <ul>
-<li><strong>变量名称</strong>：<code>img_d1</code>（必须是这个名称）</li>
-<li><strong>D1 数据库</strong>：选择刚创建的数据库</li>
-</ul>
-</li>
-<li>点击 “保存”</li>
-</ol>
-<h2 id="🔄-第四步：重新部署"><a href="#🔄-第四步：重新部署" class="headerlink" title="🔄 第四步：重新部署"></a>🔄 第四步：重新部署</h2><p>绑定数据库后需要重新部署以生效：</p>
-<ol>
-<li>进入项目的 “部署” 页面</li>
-<li>找到最新的部署记录</li>
-<li>点击右侧的 “…” 菜单</li>
-<li>选择 “重试部署”</li>
-<li>等待部署完成</li>
-</ol>
-<p><img src="https://cfbed.sanyue.de/images/deployment/redeploy.png" alt="重新部署"></p>
-<h2 id="🚀-下一步"><a href="#🚀-下一步" class="headerlink" title="🚀 下一步"></a>🚀 下一步</h2><p>至此已经完成项目在 Cloudflare Pages 的部署，但是尚未添加存储渠道，添加存储渠道和进行其他设置的方式请参考 </p>
-<h3 id="配置-R2-渠道"><a href="#配置-R2-渠道" class="headerlink" title="配置 R2 渠道"></a>配置 R2 渠道</h3><p>服务器部署时默认添加了 Cloudflare R2 存储方式，以下步骤仅针对 Cloudflare 部署方式：</p>
-<ol>
-<li>在项目设置中绑定 R2 存储桶： <ul>
-<li>选择 “设置” → “绑定”</li>
-<li>添加 “R2 存储桶”</li>
-<li><strong>变量名称</strong>：<code>img_r2</code></li>
-<li><strong>R2 存储桶</strong>：选择已创建的存储桶</li>
-</ul>
-</li>
-</ol>
-<p><img src="https://cfbed.sanyue.de/images/deployment/r2-config.png" alt="配置 R2 渠道"></p>
-<ol>
-<li>在管理后台配置： <ul>
-<li>进入 “系统设置” → “上传设置”</li>
-<li>配置 R2 渠道参数</li>
-<li>如需图像审查，填入 R2 公开访问链接</li>
-</ul>
-</li>
-</ol>
-<p>提示</p>
-<p>请注意Cloudflare R2 的免费额度限制，超过后可能会产生费用。 <img src="https://cfbed.sanyue.de/images/deployment/r2-free-tier.png" alt="注意"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hexo-butterfly主题增加友链界面</title>
-    <url>/2026/05/18/Hexo-butterfly%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E5%8F%8B%E9%93%BE%E7%95%8C%E9%9D%A2/</url>
-    <content><![CDATA[<h2 id="Hexo-butterfly主题增加友链界面"><a href="#Hexo-butterfly主题增加友链界面" class="headerlink" title="Hexo-butterfly主题增加友链界面"></a>Hexo-butterfly主题增加友链界面</h2><p>在从 Stellar 切换到 Butterfly 主题的过程中，友链界面的配置往往是容易卡壳的一环。经过实测和填坑，我整理了这套标准的部署流程，希望能帮你快速搭建出理想的友链展示区。</p>
-<p>一、 初始化页面文件<br>首先，你需要在博客根目录下手动创建对应的页面文件夹。</p>
-<p>在 source&#x2F;link 路径下新建一个 index.md 文件。打开该文件，将 Front-matter 区域配置如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友链展示</span><br><span class="line">date: 2025-11-16</span><br><span class="line">type: &quot;link&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>设置 type: “link” 是关键，这会告诉主题调用专门的友链模板来渲染该页面。</p>
-<p>二、 构建友链数据池<br>Butterfly 采用数据驱动的方式管理友链。你需要在博客根目录的 _data 文件夹下新建 link.yml 文件。</p>
-<p>按照以下格式填入你的友链信息：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- class_name: 友情链接</span><br><span class="line">  class_desc: 这里的每个站点，都耐人寻味……</span><br><span class="line">  flink_style: flexcard</span><br><span class="line">  link_list:</span><br><span class="line">    - name: Saimen</span><br><span class="line">      link: https://com.z2m.store</span><br><span class="line">      avatar: https://img.z2m.store/file/public/1778862620159_g.png</span><br><span class="line">      descr: &quot;读史可以明智,知古方能鉴今。&quot;</span><br></pre></td></tr></table></figure>
-
-<p>name： 网站名称。 link： 网站跳转链接。 avatar： 站长头像地址。 descr： 网站的一句话介绍。</p>
-<p>后续每增加一个朋友，只需在 link_list 下按格式新增这四项信息即可。</p>
-<p>三、 挂载到导航菜单<br>页面和数据准备好后，需要让它在导航栏显示出来。</p>
-<p>打开主题配置文件 _config.butterfly.yml，在 menu 栏目下新增一行入口：</p>
-<p>友链展示: &#x2F;link&#x2F; || fas fa-link<br>四、 编译与发布<br>最后，执行 Hexo 标准的“三连”命令来清理缓存并部署上线：</p>
-<p>小结<br>折腾个人博客的乐趣就在于这种从零到一的 DIY 过程。现在刷新一下你的站点，应该就能看到那个整齐划一、极客范儿十足的友链展示区了。</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>blog添加algolia搜索</title>
     <url>/2026/05/03/blog%E6%B7%BB%E5%8A%A0algolia%E6%90%9C%E7%B4%A2/</url>
     <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>插件地址在：<a href="https://github.com/LouisBarranqueiro/hexo-algoliasearch">https://github.com/LouisBarranqueiro/hexo-algoliasearch</a></p>
@@ -243,6 +60,30 @@
 <p>（可选）如果你想让别人知道你的RSS链接，可以在主题中的social settings中添加如下配置（就是在那侧边栏个人资料下面添加一个图标并链接到你的RSS文件）</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">fas fa-rss:</span> <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure>
 <p>因为butterfly主题中有自带的fas图标，所以直接可以使用</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-butterfly主题增加友链界面</title>
+    <url>/2026/05/18/Hexo-butterfly%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E5%8F%8B%E9%93%BE%E7%95%8C%E9%9D%A2/</url>
+    <content><![CDATA[<h2 id="Hexo-butterfly主题增加友链界面"><a href="#Hexo-butterfly主题增加友链界面" class="headerlink" title="Hexo-butterfly主题增加友链界面"></a>Hexo-butterfly主题增加友链界面</h2><p>在从 Stellar 切换到 Butterfly 主题的过程中，友链界面的配置往往是容易卡壳的一环。经过实测和填坑，我整理了这套标准的部署流程，希望能帮你快速搭建出理想的友链展示区。</p>
+<p>一、 初始化页面文件<br>首先，你需要在博客根目录下手动创建对应的页面文件夹。</p>
+<p>在 source&#x2F;link 路径下新建一个 index.md 文件。打开该文件，将 Front-matter 区域配置如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友链展示</span><br><span class="line">date: 2025-11-16</span><br><span class="line">type: &quot;link&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>设置 type: “link” 是关键，这会告诉主题调用专门的友链模板来渲染该页面。</p>
+<p>二、 构建友链数据池<br>Butterfly 采用数据驱动的方式管理友链。你需要在博客根目录的 _data 文件夹下新建 link.yml 文件。</p>
+<p>按照以下格式填入你的友链信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- class_name: 友情链接</span><br><span class="line">  class_desc: 这里的每个站点，都耐人寻味……</span><br><span class="line">  flink_style: flexcard</span><br><span class="line">  link_list:</span><br><span class="line">    - name: Saimen</span><br><span class="line">      link: https://com.z2m.store</span><br><span class="line">      avatar: https://img.z2m.store/file/public/1778862620159_g.png</span><br><span class="line">      descr: &quot;读史可以明智,知古方能鉴今。&quot;</span><br></pre></td></tr></table></figure>
+
+<p>name： 网站名称。 link： 网站跳转链接。 avatar： 站长头像地址。 descr： 网站的一句话介绍。</p>
+<p>后续每增加一个朋友，只需在 link_list 下按格式新增这四项信息即可。</p>
+<p>三、 挂载到导航菜单<br>页面和数据准备好后，需要让它在导航栏显示出来。</p>
+<p>打开主题配置文件 _config.butterfly.yml，在 menu 栏目下新增一行入口：</p>
+<p>友链展示: &#x2F;link&#x2F; || fas fa-link<br>四、 编译与发布<br>最后，执行 Hexo 标准的“三连”命令来清理缓存并部署上线：</p>
+<p>小结<br>折腾个人博客的乐趣就在于这种从零到一的 DIY 过程。现在刷新一下你的站点，应该就能看到那个整齐划一、极客范儿十足的友链展示区了。</p>
 ]]></content>
       <tags>
         <tag>技术</tag>
@@ -506,15 +347,172 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo 框架更新</title>
-    <url>/2026/05/18/hexo%20%E6%A1%86%E6%9E%B6%E6%9B%B4%E6%96%B0/</url>
-    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>安装</p>
-<p>$ npm install -g hexo-cli</p>
-<p>运行</p>
-<p>$ npm install hexo</p>
+    <title>Cloudflare Pages 部署免费图床</title>
+    <url>/2026/05/18/Cloudflare%20Pages%20%E9%83%A8%E7%BD%B2%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h1 id="Cloudflare-Pages-部署"><a href="#Cloudflare-Pages-部署" class="headerlink" title="Cloudflare Pages 部署"></a>Cloudflare Pages 部署</h1><p>Cloudflare Pages 是推荐的部署方式，提供免费托管、全球 CDN 加速和无需服务器维护的优势。</p>
+<h2 id="📂-第一步：Fork-项目"><a href="#📂-第一步：Fork-项目" class="headerlink" title="📂 第一步：Fork 项目"></a>📂 第一步：Fork 项目</h2><ol>
+<li>访问 <a href="https://github.com/MarSeventh/CloudFlare-ImgBed">CloudFlare ImgBed 项目</a></li>
+<li>点击右上角的 “Fork” 按钮</li>
+<li>选择您的 GitHub 账户</li>
+<li>确认 Fork 完成</li>
+</ol>
+<h2 id="🏗️-第二步：创建-Pages-项目"><a href="#🏗️-第二步：创建-Pages-项目" class="headerlink" title="🏗️ 第二步：创建 Pages 项目"></a>🏗️ 第二步：创建 Pages 项目</h2><h3 id="2-1-访问-Cloudflare-Dashboard"><a href="#2-1-访问-Cloudflare-Dashboard" class="headerlink" title="2.1 访问 Cloudflare Dashboard"></a>2.1 访问 Cloudflare Dashboard</h3><ol>
+<li>登录 <a href="https://dash.cloudflare.com/">Cloudflare Dashboard</a></li>
+<li>选择左侧菜单的 “计算和AI” -&gt; “Workers &amp; Pages”</li>
+<li>点击 “创建应用程序”</li>
+<li>在最下方 <code>Looking to deploy Pages? </code>选择 “Get started”</li>
+<li>在 “导入现有 Git 存储库” 处点击 “开始使用”</li>
+</ol>
+<p><img src="https://cfbed.sanyue.de/images/deployment/pages-create.png" alt="创建 Pages 项目"><img src="https://cfbed.sanyue.de/images/deployment/pages-create-1.png" alt="创建 Pages 项目"></p>
+<h3 id="2-2-连接-GitHub-仓库"><a href="#2-2-连接-GitHub-仓库" class="headerlink" title="2.2 连接 GitHub 仓库"></a>2.2 连接 GitHub 仓库</h3><ol>
+<li>如果首次使用，需要授权 Cloudflare 访问 GitHub</li>
+<li>选择您 Fork 的 <code>CloudFlare-ImgBed</code> 仓库</li>
+<li>点击 “开始设置”</li>
+</ol>
+<h3 id="2-3-配置项目设置"><a href="#2-3-配置项目设置" class="headerlink" title="2.3 配置项目设置"></a>2.3 配置项目设置</h3><table>
+<thead>
+<tr>
+<th align="left">配置项</th>
+<th align="left">值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">项目名称</td>
+<td align="left"><code>cloudflare-imgbed</code>（或自定义）</td>
+<td align="left">项目标识符</td>
+</tr>
+<tr>
+<td align="left">生产分支</td>
+<td align="left"><code>main</code></td>
+<td align="left">生产环境分支</td>
+</tr>
+<tr>
+<td align="left">构建命令</td>
+<td align="left"><code>npm install</code></td>
+<td align="left"><strong>重要：v2.0 新构建命令</strong></td>
+</tr>
+<tr>
+<td align="left">构建输出目录</td>
+<td align="left"><code>/frontend-dist</code></td>
+<td align="left">前端构建产物目录</td>
+</tr>
+</tbody></table>
+<p><img src="https://cfbed.sanyue.de/images/deployment/pages-build-config.png" alt="配置项目设置"></p>
+<p>重要提醒</p>
+<p>v2.0 版本的构建命令已变更为 <code>npm install</code>，请确保使用正确的构建命令。</p>
+<h3 id="2-4-部署项目"><a href="#2-4-部署项目" class="headerlink" title="2.4 部署项目"></a>2.4 部署项目</h3><ol>
+<li>点击 “保存并部署”</li>
+<li>等待首次部署完成（约 2-3 分钟）</li>
+</ol>
+<h2 id="🗄️-第三步：配置数据库"><a href="#🗄️-第三步：配置数据库" class="headerlink" title="🗄️ 第三步：配置数据库"></a>🗄️ 第三步：配置数据库</h2><p>数据库用于存储文件元数据，是必需的组件，可选数据库为 <code>KV</code> 数据库和 <code>D1</code> 数据库。两者对比如下表所示，根据自己使用场景<strong>从其中选择一种配置即可</strong>。</p>
+<table>
+<thead>
+<tr>
+<th align="left">特点</th>
+<th align="left">KV 数据库</th>
+<th align="left">D1 数据库</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">读写性能</td>
+<td align="left">高</td>
+<td align="left">较低</td>
+</tr>
+<tr>
+<td align="left">免费额度</td>
+<td align="left">少</td>
+<td align="left">多</td>
+</tr>
+</tbody></table>
+<p>重要提示</p>
+<p>KV 数据库和 D1 数据库<strong>只需要配置其中一个</strong>即可，不需要同时配置两个！建议根据上表选择适合自己的数据库类型。</p>
+<h3 id="3-1-KV-数据库配置"><a href="#3-1-KV-数据库配置" class="headerlink" title="3.1 KV 数据库配置"></a>3.1 KV 数据库配置</h3><h4 id="创建-KV-命名空间"><a href="#创建-KV-命名空间" class="headerlink" title="创建 KV 命名空间"></a>创建 KV 命名空间</h4><ol>
+<li>在 Cloudflare Dashboard 中选择 “存储和数据库”</li>
+<li>点击 “Workers KV”</li>
+<li>点击 “创建实例”</li>
+<li>输入命名空间名称：<code>img_url</code>（建议使用此名称）</li>
+<li>点击 “创建”</li>
+</ol>
+<p><img src="https://cfbed.sanyue.de/images/deployment/kv-create.png" alt="创建 KV 命名空间"><img src="https://cfbed.sanyue.de/images/deployment/kv-create-1.png" alt="创建 KV 命名空间"></p>
+<h4 id="绑定-KV-到项目"><a href="#绑定-KV-到项目" class="headerlink" title="绑定 KV 到项目"></a>绑定 KV 到项目</h4><ol>
+<li>返回您的 Pages 项目</li>
+<li>选择 “设置” → “绑定”</li>
+<li>点击 “添加” → “KV 命名空间”</li>
+<li>填写绑定信息： <ul>
+<li><strong>变量名称</strong>：<code>img_url</code>（必须是这个名称）</li>
+<li><strong>KV 命名空间</strong>：选择刚创建的命名空间</li>
+</ul>
+</li>
+<li>点击 “保存”</li>
+</ol>
+<p>注意</p>
+<p>绑定 KV 时，变量名称必须为 <code>img_url</code>，这是项目预设的变量名，填错会出现无法进入管理界面等情况。</p>
+<h3 id="3-2-D1-数据库配置"><a href="#3-2-D1-数据库配置" class="headerlink" title="3.2 D1 数据库配置"></a>3.2 D1 数据库配置</h3><h4 id="创建-D1-数据库"><a href="#创建-D1-数据库" class="headerlink" title="创建 D1 数据库"></a>创建 D1 数据库</h4><ol>
+<li>在 Cloudflare Dashboard 中选择 “存储和数据库”</li>
+<li>点击 “D1 SQL 数据库”</li>
+<li>点击 “创建数据库”</li>
+<li>输入数据库名称：<code>img_d1</code>（建议使用此名称）</li>
+<li>点击 “创建”</li>
+</ol>
+<h4 id="初始化-D1-数据库"><a href="#初始化-D1-数据库" class="headerlink" title="初始化 D1 数据库"></a>初始化 D1 数据库</h4><ol>
+<li>创建完成后，点击进入数据库详情页</li>
+<li>选择 “控制台” 选项卡</li>
+<li>在 SQL 输入框中粘贴并执行注释区域以下的内容（见<a href="https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql">项目仓库</a>）</li>
+<li>点击 “执行”</li>
+</ol>
+<h4 id="绑定-D1-到项目"><a href="#绑定-D1-到项目" class="headerlink" title="绑定 D1 到项目"></a>绑定 D1 到项目</h4><ol>
+<li>返回您的 Pages 项目</li>
+<li>选择 “设置” → “绑定”</li>
+<li>点击 “添加” → “D1 数据库”</li>
+<li>填写绑定信息： <ul>
+<li><strong>变量名称</strong>：<code>img_d1</code>（必须是这个名称）</li>
+<li><strong>D1 数据库</strong>：选择刚创建的数据库</li>
+</ul>
+</li>
+<li>点击 “保存”</li>
+</ol>
+<h2 id="🔄-第四步：重新部署"><a href="#🔄-第四步：重新部署" class="headerlink" title="🔄 第四步：重新部署"></a>🔄 第四步：重新部署</h2><p>绑定数据库后需要重新部署以生效：</p>
+<ol>
+<li>进入项目的 “部署” 页面</li>
+<li>找到最新的部署记录</li>
+<li>点击右侧的 “…” 菜单</li>
+<li>选择 “重试部署”</li>
+<li>等待部署完成</li>
+</ol>
+<p><img src="https://cfbed.sanyue.de/images/deployment/redeploy.png" alt="重新部署"></p>
+<h2 id="🚀-下一步"><a href="#🚀-下一步" class="headerlink" title="🚀 下一步"></a>🚀 下一步</h2><p>至此已经完成项目在 Cloudflare Pages 的部署，但是尚未添加存储渠道，添加存储渠道和进行其他设置的方式请参考 </p>
+<h3 id="配置-R2-渠道"><a href="#配置-R2-渠道" class="headerlink" title="配置 R2 渠道"></a>配置 R2 渠道</h3><p>服务器部署时默认添加了 Cloudflare R2 存储方式，以下步骤仅针对 Cloudflare 部署方式：</p>
+<ol>
+<li>在项目设置中绑定 R2 存储桶： <ul>
+<li>选择 “设置” → “绑定”</li>
+<li>添加 “R2 存储桶”</li>
+<li><strong>变量名称</strong>：<code>img_r2</code></li>
+<li><strong>R2 存储桶</strong>：选择已创建的存储桶</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://cfbed.sanyue.de/images/deployment/r2-config.png" alt="配置 R2 渠道"></p>
+<ol>
+<li>在管理后台配置： <ul>
+<li>进入 “系统设置” → “上传设置”</li>
+<li>配置 R2 渠道参数</li>
+<li>如需图像审查，填入 R2 公开访问链接</li>
+</ul>
+</li>
+</ol>
+<p>提示</p>
+<p>请注意Cloudflare R2 的免费额度限制，超过后可能会产生费用。 <img src="https://cfbed.sanyue.de/images/deployment/r2-free-tier.png" alt="注意"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>tuya摄像机5G wifi问题</title>
+    <url>/2026/05/20/tuya5-g-wifi/</url>
+    <content><![CDATA[<p>客户测试发现有些5G wifi连接不上，具体见下表：<br><img src="https://img.z2m.store/file/1779268884422_image.png" alt="image.png"></p>
+<p>需要登录tuya后台 增加5G配网能力<br><img src="https://img.z2m.store/file/1779269222300_image.png" alt="image.png"></p>
 ]]></content>
       <tags>
-        <tag>技术</tag>
+        <tag>安防</tag>
       </tags>
   </entry>
   <entry>
@@ -746,16 +744,6 @@
 </ul>
 <h3 id="💬-Join-缩写-join"><a href="#💬-Join-缩写-join" class="headerlink" title="💬 Join 缩写: join"></a>💬 <a href="https://joaoapps.com/join/">Join</a> 缩写: <code>join</code></h3><p>示例 token: <code>apiKey#deviceId</code></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>tuya摄像机5G wifi问题</title>
-    <url>/2026/05/20/tuya5-g-wifi/</url>
-    <content><![CDATA[<p>客户测试发现有些5G wifi连接不上，具体见下表：<br><img src="https://img.z2m.store/file/1779268884422_image.png" alt="image.png"></p>
-<p>需要登录tuya后台 增加5G配网能力<br><img src="https://img.z2m.store/file/1779269222300_image.png" alt="image.png"></p>
-]]></content>
-      <tags>
-        <tag>安防</tag>
-      </tags>
   </entry>
   <entry>
     <title>W11 FAQ</title>
@@ -1007,6 +995,39 @@
       </tags>
   </entry>
   <entry>
+    <title>免费图床</title>
+    <url>/2026/05/03/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><ol>
+<li>这部分免费图床就太多了，我会把我目前发现的可以免费白嫖一定额度的图床做一个总结列在下面</li>
+<li>这部分图床的搭建门槛较低，所以速度和稳定性良莠不齐，大家自行选择使用哪个</li>
+<li>我这里只给大家演示一种的使用方法，其他图床使用方法也类似</li>
+<li>大家可以看看哪个比较好用的或者自己知道的好用的这里没有，可以留言我会进行补充</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">🍕</th>
+<th align="center">🥗</th>
+<th align="center">🍤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a href="https://img.z2m.store/">等你图床</a></td>
+<td align="center"><a href="https://imgloc.com/#google_vignette">imgloc</a></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ul>
+<li>使用方法：直接进入官网，上传图片然后粘贴地址即可，地址的样式有多样，自行选择</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>于谦：一个扶大厦之将倾的功臣，最后的结局令人唏嘘</title>
     <url>/2026/05/18/%E4%BA%8E%E8%B0%A6%EF%BC%9A%E4%B8%80%E4%B8%AA%E6%89%B6%E5%A4%A7%E5%8E%A6%E4%B9%8B%E5%B0%86%E5%80%BE%E7%9A%84%E5%8A%9F%E8%87%A3%EF%BC%8C%E6%9C%80%E5%90%8E%E7%9A%84%E7%BB%93%E5%B1%80%E4%BB%A4%E4%BA%BA%E5%94%8F%E5%98%98/</url>
     <content><![CDATA[
@@ -1019,6 +1040,384 @@
       </categories>
       <tags>
         <tag>明朝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>千古第一骈文：滕王阁序</title>
+    <url>/2026/05/18/%E5%8D%83%E5%8F%A4%E7%AC%AC%E4%B8%80%E9%AA%88%E6%96%87%EF%BC%9A%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F/</url>
+    <content><![CDATA[
+<section data-role="outer" class="article135" label="edit by 135editor">
+	<section style="margin:0 auto;background:linear-gradient(180deg,#fff9f0 0%,#ffffff 100%);border-radius:12px;box-shadow:0 4px 20px rgba(139,90,43,0.1);overflow:hidden;box-sizing:border-box;">
+		<section style="position:relative;height:380px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 30px;box-sizing:border-box;">
+			<section style="background:linear-gradient(135deg,#d4a574 0%,#c9956c 100%);color:#fff;font-size:12px;padding:6px 16px;border-radius:20px;letter-spacing:2px;margin-bottom:25px;box-sizing:border-box;" >
+				历史人物 · 深度解读
+			</section>
+			<h1 style="font-size:32px;color:#fff;letter-spacing:6px;margin:0 0 20px;text-shadow:0 0.063em 0.313em rgba(0,0,0,0.3);">
+				<strong>滕王阁序</strong>
+			</h1>
+			<p style="font-size:16px;color:rgba(255,255,255,0.8);letter-spacing:4px;margin:0;">
+				千古第一骈文
+			</p>
+			<p style="font-size:18px;color:#d4a574;margin-top:30px;letter-spacing:2px;font-family:KaiTi,STKaiti,serif;">
+				落霞与孤鹜齐飞，秋水共长天一色
+			</p>
+		</section><!-- 内容区 -->
+		<section style="padding:40px 30px 50px;box-sizing:border-box;" class="">
+			<!-- 引言 -->
+			<section style="background:linear-gradient(135deg,#fef9f3 0%,#fdf6ed 100%);border-left:4px solid #c9956c;padding:25px 25px 25px 30px;margin-bottom:35px;border-radius:0 8px 8px 0;box-sizing:border-box;">
+				<p style="padding-left:15px;margin:0;font-size:16px;color:#5a5a5a;text-indent:0;">
+					这是一篇被称为<strong>千古第一骈文</strong>的神作，他一出世就碾压了现场所有准备走后门的关系户。他让一代文豪韩愈赞叹不已，甚至传说诗仙李白读到他之后都默默撕掉了自己的稿子。他就是唐朝天才——<strong>王勃</strong>。
+				</p>
+			</section><!-- 第一部分 -->
+			<h2 style="font-size:22px;color:#1a1a2e;margin:35px 0 20px;padding-left:15px;border-left:4px solid #c9956c;">
+				<strong>一场精心策划的名利局</strong>
+			</h2>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				<strong>公元675年</strong>，洪州都督阎公重修滕王阁，打算举办一场盛大宴会。其实他早就安排好了——让女婿提前写好稿子，准备在宴会上念一念，走个过场。
+			</p>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				宴会气氛热烈，高朋满座，酒过三巡。阎都督假客气地问：&quot;今日诸公齐聚于此，可有愿为滕王阁作赋者？&quot;只见满座名流都心照不宣，纷纷摆手推辞。
+			</p>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				谁知，坐在最角落的一个年轻人站了起来说：<strong style="color:#c9956c;">&quot;我来。&quot;</strong>
+			</p><!-- 名言块 -->
+			<section style="background:linear-gradient(135deg,#f8f4ef 0%,#f5efe7 100%);border-radius:12px;padding:25px;margin:25px 0;text-align:center;box-sizing:border-box;">
+				<p style="font-size:18px;color:#2c2c2c;letter-spacing:2px;margin:0 0 8px;font-family:KaiTi,STKaiti,serif;">
+					这人就是王勃。
+				</p>
+				<p style="font-size:13px;color:#999;margin:10px 0 0;">
+					——26岁，即兴挥毫
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				现场的空气瞬间凝固。阎都督的笑容僵在脸上，内心的怒火可想而知——他气得直接离席，留下尴尬的满座宾朋。
+			</p>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				但他万万没想到，这个年轻人即将用一篇文章让他和这座楼<strong style="color:#c9956c;">名垂千古</strong>。
+			</p><!-- 诗句高亮 -->
+			<section style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border-radius:12px;padding:30px;margin:30px 0;text-align:center;box-sizing:border-box;">
+				<p style="font-size:20px;color:#fff;letter-spacing:3px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					豫章故郡，洪都新府。
+				</p>
+				<p style="font-size:20px;color:#fff;letter-spacing:3px;line-height:2;margin:8px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					星分翼轸，地接衡庐。
+				</p>
+				<p style="font-size:13px;color:#d4a574;margin:20px 0 0;padding-top:15px;border-top:1px solid rgba(255,255,255,0.2);">
+					——开篇从天文和地理两方面点明滕王阁所在地点
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				阎都督听后嗤之以鼻：&quot;不过是老生常谈。&quot;
+			</p>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				然而当小吏气喘吁吁地跑回来报出下一句时，在场所有人都愣住了：
+			</p><!-- 诗句高亮 -->
+			<section style="background:linear-gradient(135deg,#faf6f0 0%,#f8f2e8 100%);border-radius:12px;padding:30px;margin:30px 0;text-align:center;border:1px solid #e8dfd3;box-sizing:border-box;">
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					物华天宝，龙光射牛斗之墟；
+				</p>
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:8px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					人杰地灵，徐孺下陈蕃之榻。
+				</p>
+				<p style="font-size:13px;color:#888;margin:20px 0 0;padding-top:15px;border-top:1px dashed #ddd;">
+					物产丰饶，人才济济——仅用寥寥数语，便勾勒出气象万千的画卷
+				</p>
+			</section><!-- 分隔线 -->
+			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
+				<span style="letter-spacing:6px;">─── ◆ ───</span>
+			</section><!-- 典故卡片 -->
+			<section style="background:linear-gradient(135deg,#fff8f0 0%,#fff5eb 100%);border-radius:10px;padding:20px;margin:20px 0;border-left:3px solid #d4a574;box-sizing:border-box;" class="">
+				<p style="font-size:15px;color:#c9956c;margin:0 0 10px;">
+					<strong>📖 典故解析：徐孺下陈蕃之榻</strong>
+				</p>
+				<p style="font-size:15px;color:#555;line-height:1.8;margin:0;text-indent:0;">
+					东汉名臣陈蕃非常敬重当地名士徐孺，特意为他准备了一张坐榻。他每次徐孺来访，都会请他入座畅谈。由此，<strong>&quot;下榻&quot;</strong>这一说法便流传开来，沿用至今。
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				短短几句话，不仅写出了地方之美，还赞扬了人文之盛，用典精准，对仗工整。一开口就把宴会的格调瞬间拉满。
+			</p>
+			<h2 style="font-size:22px;color:#1a1a2e;margin:35px 0 20px;padding-left:15px;border-left:4px solid #c9956c;">
+				<strong>一幅前所未有的秋景图</strong>
+			</h2>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				紧接着，一幅秋景图随着文字铺陈开来：
+			</p><!-- 诗句高亮 -->
+			<section style="background:linear-gradient(135deg,#faf6f0 0%,#f8f2e8 100%);border-radius:12px;padding:30px;margin:30px 0;text-align:center;border:1px solid #e8dfd3;box-sizing:border-box;">
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					潦水尽而寒潭清，烟光凝而暮山紫。
+				</p>
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:10px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					层峦耸翠，上出重霄；
+				</p>
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0 0 15px;font-family:KaiTi,STKaiti,FangSong,serif;">
+					飞阁流丹，下临无地。
+				</p>
+				<p style="font-size:13px;color:#888;padding-top:15px;border-top:1px dashed #ddd;margin:0;">
+					水色山光，清澈与朦胧交织——仅用寥寥数语，便勾勒出仿佛莫奈笔下的印象派光影
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				要知道，这可是<strong style="color:#c9956c;">即兴发挥</strong>，王勃竟能做到如此引经据典！在场的所有人纷纷好奇：这到底是从哪来的大神？
+			</p><!-- 分隔线 -->
+			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
+				<span style="letter-spacing:6px;">─── ◆ ───</span>
+			</section><!-- 数据统计 -->
+			<section style="display:flex;justify-content:space-around;margin:30px 0;padding:25px 15px;background:linear-gradient(135deg,#f8f4ef 0%,#f5efe7 100%);border-radius:12px;box-sizing:border-box;" class="">
+				<section style="text-align:center;">
+					<span style="font-size:32px;color:#c9956c;display:block;"><strong>773</strong></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px;color:#888;margin-top:5px;display:block;">全文字数</span>
+				</section>
+				<section style="text-align:center;">
+					<span style="font-size:32px;color:#c9956c;display:block;"><strong>40</strong></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px;color:#888;margin-top:5px;display:block;">成语数量</span>
+				</section>
+				<section style="text-align:center;">
+					<span style="font-size:32px;color:#c9956c;display:block;"><strong>37</strong></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px;color:#888;margin-top:5px;display:block;">典故数量</span>
+				</section>
+			</section><!-- 千古绝唱 -->
+			<section style="text-align:center;margin:40px 0;" class="">
+				<h1 style="font-size:24px;color:#2c2c2c;position:relative;display:inline-block;">
+					<span style="color:#c9956c;margin:0 12px;"><strong>◆</strong></span><strong>&nbsp; &nbsp; 千古绝唱 &nbsp; </strong><span style="color:#c9956c;margin:0 12px;"><strong>◆</strong></span>
+				</h1>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				然而，真正的王炸还在后面。
+			</p><!-- 故事卡片 -->
+			<section style="background:#fff;border-radius:12px;padding:20px;margin:20px 0;box-shadow:0 3px 15px rgba(0,0,0,0.06);border:1px solid #f0e6d8;box-sizing:border-box;">
+				<p style="font-size:14px;color:#c9956c;margin:0 0 10px;">
+					<strong>📜 推开窗户，看到窗外的景色</strong>
+				</p>
+				<p style="font-size:15px;color:#555;margin:0;text-indent:0;">
+					当小吏气喘吁吁地奔来，高声爆出那句千古绝唱时，整个滕王阁都为之一振——
+				</p>
+			</section><!-- 核心诗句 -->
+			<section style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border-radius:12px;padding:35px 30px;text-align:center;box-sizing:border-box;">
+				<p style="font-size:26px;color:#d4a574;letter-spacing:3px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					<strong>落霞与孤鹜齐飞，</strong>
+				</p>
+				<p style="font-size:26px;color:#d4a574;letter-spacing:3px;line-height:2;margin:10px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					<strong>秋水共长天一色。</strong>
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;margin-top:25px;text-align:justify;" align="justify">
+				多少人写黄昏，不是夕阳西下，就是残阳如血。可王勃偏要把<strong style="color:#c9956c;">落霞、孤鹜、秋水、长天</strong>四个意象揉在一起：
+			</p>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				天边的晚霞慢慢下沉，孤独的野鸭掠过水面，秋水与天空连成一片，分不清哪里是水，哪里是天。没有一个&quot;美&quot;字，却把黄昏的辽阔、宁静、略带苍凉的意境，写得像一幅流动的画。
+			</p><!-- 名言块 -->
+			<section style="background:linear-gradient(135deg,#fef9f3 0%,#fdf6ed 100%);border-radius:8px;padding:20px 25px;margin:25px 0;text-align:center;box-sizing:border-box;">
+				<p style="font-size:15px;color:#555;margin:0;letter-spacing:1px;">
+					这就是天才与俗手的区别：<br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong style="font-size:18px;color:#2c2c2c;font-family:KaiTi,STKaiti,serif;">别人写景，王勃造境</strong>
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				上世纪20年代，著名音乐家娄树华先生受王勃笔下意境的启发，创作出了中国最广为流传的古筝独奏曲<strong style="color:#c9956c;">《渔舟唱晚》</strong>。这首曲子后来被央视天气预报选作背景音乐，几乎成了家喻户晓的旋律。
+			</p><!-- 分隔线 -->
+			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
+				<span style="letter-spacing:6px;">─── ◆ ───</span>
+			</section>
+			<h2 style="font-size:22px;color:#1a1a2e;margin:35px 0 20px;padding-left:15px;border-left:4px solid #c9956c;">
+				<strong>从宴会到宇宙，从悲伤到坚定</strong>
+			</h2>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				在尽情描绘了滕王阁的壮丽与饮宴的欢愉后，王勃笔锋陡然一转：
+			</p><!-- 诗句 -->
+			<section style="background:linear-gradient(135deg,#faf6f0 0%,#f8f2e8 100%);border-radius:12px;padding:30px;margin:25px 0;text-align:center;border:1px solid #e8dfd3;box-sizing:border-box;">
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					天高地迥，觉宇宙之无穷；
+				</p>
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:8px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					兴尽悲来，识盈虚之有数。
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				这一句将文章的境界从地理的滕王阁拉升到了哲学的浩瀚苍穹。欢乐的底色下，是对生命本质悲凉的深刻洞察。
+			</p><!-- 名言 -->
+			<section style="background:linear-gradient(135deg,#fef9f3 0%,#fdf6ed 100%);border-radius:8px;padding:20px 25px;margin:25px 0;text-align:center;box-sizing:border-box;">
+				<p style="font-size:18px;color:#2c2c2c;letter-spacing:2px;margin:0 0 5px;font-family:KaiTi,STKaiti,serif;">
+					关山难越，谁悲失路之人？
+				</p>
+				<p style="font-size:18px;color:#2c2c2c;letter-spacing:2px;margin:0 0 10px;font-family:KaiTi,STKaiti,serif;">
+					萍水相逢，尽是他乡之客。
+				</p>
+				<p style="font-size:13px;color:#999;margin:0;">
+					——这哪里是在写他乡之客，分明是在写自己
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				他从长安一路南下，前路漫漫，像个失路之人。在宴会上认识的宾客都是萍水相逢，没人知道他心里的委屈。
+			</p>
+			<h3 style="font-size:18px;color:#444;margin:25px 0 15px;">
+				<strong>典故中的自我映射</strong>
+			</h3><!-- 典故卡片 -->
+			<section style="background:linear-gradient(135deg,#fff8f0 0%,#fff5eb 100%);border-radius:10px;padding:20px;margin:20px 0;border-left:3px solid #d4a574;box-sizing:border-box;" class="">
+				<p style="font-size:15px;color:#c9956c;margin:0 0 10px;">
+					<strong>📖 冯唐易老，李广难封</strong>
+				</p>
+				<p style="font-size:15px;color:#555;line-height:1.8;margin:0;text-indent:0;">
+					冯唐那么有才华，却到老都没被重用；李广战功赫赫，让敌人闻风丧胆，却始终没被封侯。贾谊、梁鸿都是大才，却也饱经蹉跎。
+				</p>
+				<p style="font-size:15px;color:#555;line-height:1.8;margin:10px 0 0;text-indent:0;">
+					王勃在说：<strong>我和他们一样，不是没有才华，只是没遇到机会。</strong>
+				</p>
+			</section><!-- 分隔线 -->
+			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
+				<span style="letter-spacing:6px;">─── ◆ ───</span>
+			</section><!-- 核心精神 -->
+			<section style="text-align:center;margin:40px 0;" class="">
+				<h1 style="font-size:24px;color:#2c2c2c;position:relative;display:inline-block;">
+					<strong>&nbsp; &nbsp; &nbsp; &nbsp;穷且益坚，不坠青云之志&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong>
+				</h1>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				然而王勃没有沉溺于悲伤，他借历史人物自比之后，话锋一转——
+			</p><!-- 核心诗句 -->
+			<section style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border-radius:12px;padding:35px 30px;text-align:center;box-sizing:border-box;" class="">
+				<p style="font-size:22px;color:#fff;letter-spacing:3px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					老当益壮，宁移白首之心？
+				</p>
+				<p style="font-size:22px;color:#d4a574;letter-spacing:3px;line-height:2;margin:15px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					<strong>穷且益坚，不坠青云之志。</strong>
+				</p>
+			</section><!-- 名言 -->
+			<section style="background:linear-gradient(135deg,#fef9f3 0%,#fdf6ed 100%);border-radius:8px;padding:20px 25px;margin:25px 0;text-align:center;box-sizing:border-box;">
+				<p style="font-size:15px;color:#555;margin:0;line-height:2;">
+					这不是少年不识愁滋味的狂言，<br/>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;而是<strong style="color:#c9956c;">看透生活真相之后，依然热爱生活的英雄主义</strong>。
+				</p>
+			</section><!-- 典故卡片 -->
+			<section style="background:linear-gradient(135deg,#fff8f0 0%,#fff5eb 100%);border-radius:10px;padding:20px;margin:20px 0;border-left:3px solid #d4a574;box-sizing:border-box;">
+				<p style="font-size:15px;color:#c9956c;margin:0 0 10px;">
+					<strong>📖 孟尝高洁，空余报国之情</strong>
+				</p>
+				<p style="font-size:15px;color:#555;line-height:1.8;margin:0;text-indent:0;">
+					孟尝品行高洁，却只能空有报国之心。阮籍遇到困境就哭，我可不会像他那样。这是在表明态度：就算处境艰难，我也不会消沉，更不会放弃报国的志向。
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				这就是王勃的格局。他不只会写美景，更会借美景说心事；他不只会抒情，更会在抒情里立住自己的志。
+			</p><!-- 分隔线 -->
+			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
+				<span style="letter-spacing:6px;">─── ◆ ───</span>
+			</section><!-- 结尾部分 -->
+			<h2 style="font-size:22px;color:#1a1a2e;margin:35px 0 20px;padding-left:15px;border-left:4px solid #c9956c;">
+				<strong>千古绝唱，生命绝笔</strong>
+			</h2>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				文章写成，满座皆惊。阎都督对他礼敬有加。这场原本为他人准备的名利场，彻底成为了王勃一个人的<strong style="color:#c9956c;">封神台</strong>。
+			</p><!-- 诗句 -->
+			<section style="background:linear-gradient(135deg,#faf6f0 0%,#f8f2e8 100%);border-radius:12px;padding:30px;margin:25px 0;text-align:center;border:1px solid #e8dfd3;box-sizing:border-box;">
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					阁中帝子今何在？
+				</p>
+				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:8px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
+					槛外长江空自流。
+				</p>
+				<p style="font-size:13px;color:#888;padding-top:15px;border-top:1px dashed #ddd;margin:15px 0 0;">
+					昔日的滕王早已化作尘土，唯有楼外的江水依旧奔腾不息
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				然而，天妒英才。这篇千古绝唱，竟成了王勃的<strong style="color:#c9956c;">生命绝笔</strong>。
+			</p><!-- 故事卡片 -->
+			<section style="background:#fff;border-radius:12px;padding:20px;margin:20px 0;box-shadow:0 3px 15px rgba(0,0,0,0.06);border:1px solid #f0e6d8;box-sizing:border-box;">
+				<p style="font-size:14px;color:#c9956c;margin:0 0 10px;">
+					<strong>🕯️ 四年后</strong>
+				</p>
+				<p style="font-size:15px;color:#555;margin:0;text-indent:0;">
+					就在他叹赋归来时，渡海溺水，惊悸而亡，<strong style="color:#c9956c;font-size:18px;">年仅27岁</strong>。
+				</p>
+			</section>
+			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
+				他就像一颗流星，在最黑暗的夜空中爆发出最璀璨的光芒，然后骤然熄灭。
+			</p><!-- 结语 -->
+			<section style="background:linear-gradient(180deg,#f8f4ef 0%,#fdf6ed 100%);border-radius:12px;padding:30px;margin-top:40px;text-align:center;position:relative;box-sizing:border-box;">
+				<section style="position:absolute;top:-1px;left:50%;width:60px;height:3px;background:linear-gradient(90deg,transparent,#c9956c,transparent);box-sizing:border-box;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-o-transform: translateX(-50%);"></section>
+				<p style="font-size:15px;color:#555;line-height:2;letter-spacing:1px;margin:0 0 15px;">
+					我们喜欢王勃，或许就是因为他像极了每一个心怀梦想却又偶尔失意的自己。
+				</p>
+				<p style="font-size:15px;color:#555;line-height:2;letter-spacing:1px;margin:0 0 20px;">
+					他年少成名，也曾犯错坠入谷底，但在滕王阁上，他抓住了那唯一的机会，绽放了所有光芒。
+				</p>
+				<p style="font-size:20px;color:#c9956c;margin:0 0 20px;letter-spacing:2px;font-family:KaiTi,STKaiti,serif;">
+					<strong>穷且益坚，不坠青云之志。</strong>
+				</p>
+				<p style="font-size:15px;color:#555;line-height:2;letter-spacing:1px;margin:0 0 15px;">
+					1300多年过去了，滕王阁几经损毁又重建，南昌的江水涨了又落——
+				</p>
+				<p style="font-size:18px;color:#2c2c2c;margin:0;letter-spacing:2px;font-family:KaiTi,STKaiti,serif;">
+					可「落霞与孤鹜齐飞，秋水共长天一色」的句子<br/>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;还在课本里，在试卷上，在每个失意又不甘的人的心里。
+				</p>
+			</section><!-- 签名 -->
+			<section style="margin-top:40px;text-align:right;font-size:14px;color:#999;padding-top:20px;border-top:1px solid #eee;box-sizing:border-box;">
+				<p style="margin:0;">
+					全文完
+				</p>
+				<p style="margin:8px 0 0;">
+					2026年4月
+				</p>
+			</section>
+		</section>
+	</section><!--!doctype-->
+</section>]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>唐朝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>印度STQC认证所需文件</title>
+    <url>/2026/05/18/%E5%8D%B0%E5%BA%A6STQC%E8%AE%A4%E8%AF%81%E6%89%80%E9%9C%80%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="Documents-Requirements-Listed-in-the-Guidelines"><a href="#Documents-Requirements-Listed-in-the-Guidelines" class="headerlink" title="Documents &#x2F; Requirements Listed in the Guidelines:"></a>Documents &#x2F; Requirements Listed in the Guidelines:</h1><p>Hardware-Level Documentation</p>
+<h3 id="1-SoC-Datasheet"><a href="#1-SoC-Datasheet" class="headerlink" title="1.SoC Datasheet"></a>1.SoC Datasheet</h3><p>oDetails on debugging interfaces (USB, UART, JTAG, SWD).<br>oTEE&#x2F;TPM&#x2F;SE availability.<br>oRNG capability (hardware-based).</p>
+<h3 id="2-Device-Technical-Specifications"><a href="#2-Device-Technical-Specifications" class="headerlink" title="2.Device Technical Specifications"></a>2.Device Technical Specifications</h3><p>oIncludes secure boot architecture, communication protocols, and memory protection.</p>
+<h3 id="3-Block-Connection-Diagrams"><a href="#3-Block-Connection-Diagrams" class="headerlink" title="3.Block Connection Diagrams"></a>3.Block Connection Diagrams</h3><p>oShowing microcontroller and peripheral interactions.</p>
+<h3 id="4-Access-Control-Mechanism-Documents"><a href="#4-Access-Control-Mechanism-Documents" class="headerlink" title="4.Access Control Mechanism Documents"></a>4.Access Control Mechanism Documents</h3><p>oDocumentation on enabled&#x2F;disabled ports and protection schemes.</p>
+<h3 id="5-Manufacturing-Provisioning-Process-Flow"><a href="#5-Manufacturing-Provisioning-Process-Flow" class="headerlink" title="5.Manufacturing&#x2F;Provisioning Process Flow"></a>5.Manufacturing&#x2F;Provisioning Process Flow</h3><p>oEspecially for disabling debugging interfaces and secure boot provisioning.</p>
+<h3 id="6-Key-and-Certificate-List"><a href="#6-Key-and-Certificate-List" class="headerlink" title="6.Key and Certificate List"></a>6.Key and Certificate List</h3><p>oAll keys and certs used in the device ecosystem.</p>
+<h3 id="7-Key-Management-Lifecycle-Document"><a href="#7-Key-Management-Lifecycle-Document" class="headerlink" title="7.Key Management Lifecycle Document"></a>7.Key Management Lifecycle Document</h3><p>oPurpose, generation, storage, destruction, validity, rotation.</p>
+<h3 id="8-Secure-Storage-Configuration"><a href="#8-Secure-Storage-Configuration" class="headerlink" title="8.Secure Storage Configuration"></a>8.Secure Storage Configuration</h3><p>oStorage mechanism and configuration of sensitive data (keys, certificates).</p>
+<h3 id="9-Tamper-Protection-Documentation"><a href="#9-Tamper-Protection-Documentation" class="headerlink" title="9.Tamper Protection Documentation"></a>9.Tamper Protection Documentation</h3><p>oSoftware and hardware anti-tamper measures.</p>
+<h3 id="10-IP-Protection-Documentation"><a href="#10-IP-Protection-Documentation" class="headerlink" title="10.IP Protection Documentation"></a>10.IP Protection Documentation</h3><p>From chip manufacturer, or declaration if unavailable.</p>
+<h3 id="11-Boot-Image-Validation-Report"><a href="#11-Boot-Image-Validation-Report" class="headerlink" title="11.Boot Image Validation Report"></a>11.Boot Image Validation Report</h3><p>Secure boot process validation (pass&#x2F;fail cases).</p>
+<h3 id="12-Random-Number-Generator-Usage"><a href="#12-Random-Number-Generator-Usage" class="headerlink" title="12.Random Number Generator Usage"></a>12.Random Number Generator Usage</h3><p>Description of RNG used (hardware or software) and supporting libraries.</p>
+<h2 id="🖥️-Software-Firmware-Documentation"><a href="#🖥️-Software-Firmware-Documentation" class="headerlink" title="🖥️ Software &amp; Firmware Documentation"></a>🖥️ Software &amp; Firmware Documentation</h2><h3 id="13-Firmware-Code-Snippets"><a href="#13-Firmware-Code-Snippets" class="headerlink" title="13.Firmware Code Snippets"></a>13.Firmware Code Snippets</h3><p>Related to TEE APIs, secure boot, RNG, TLS, etc.</p>
+<h3 id="14-Memory-Protection-Declaration"><a href="#14-Memory-Protection-Declaration" class="headerlink" title="14.Memory Protection Declaration"></a>14.Memory Protection Declaration</h3><p>Statement showing ASLR, DEP enabled if applicable.</p>
+<h3 id="15-TLS-Communication-Documentation"><a href="#15-TLS-Communication-Documentation" class="headerlink" title="15.TLS Communication Documentation"></a>15.TLS Communication Documentation</h3><p>Details on TLS configuration, cipher suites, certificate validation.</p>
+<h3 id="16-Digital-Signature-Verification-Use-Cases"><a href="#16-Digital-Signature-Verification-Use-Cases" class="headerlink" title="16.Digital Signature Verification Use-Cases"></a>16.Digital Signature Verification Use-Cases</h3><p>When and how signatures are validated for server communication.</p>
+<h3 id="17-SBOM-Software-Bill-of-Materials"><a href="#17-SBOM-Software-Bill-of-Materials" class="headerlink" title="17.SBOM (Software Bill of Materials)"></a>17.SBOM (Software Bill of Materials)</h3><p>Third-party components, versions, and known vulnerabilities.</p>
+<h3 id="18-Static-Code-Analysis-Report"><a href="#18-Static-Code-Analysis-Report" class="headerlink" title="18.Static Code Analysis Report"></a>18.Static Code Analysis Report</h3><p>Proving banned C functions are replaced.</p>
+<h3 id="19-Hardcoded-Credential-Audit-Report"><a href="#19-Hardcoded-Credential-Audit-Report" class="headerlink" title="19.Hardcoded Credential Audit Report"></a>19.Hardcoded Credential Audit Report</h3><p>From secure code review (manual&#x2F;automated).</p>
+<h3 id="20-Secure-Firmware-Update-Procedure"><a href="#20-Secure-Firmware-Update-Procedure" class="headerlink" title="20.Secure Firmware Update Procedure"></a>20.Secure Firmware Update Procedure</h3><p>Process for secure OTA&#x2F;manual updates with rollback prevention.</p>
+<h3 id="21-Anti-Downgrade-Declaration"><a href="#21-Anti-Downgrade-Declaration" class="headerlink" title="21.Anti-Downgrade Declaration"></a>21.Anti-Downgrade Declaration</h3><p>Proof device doesn’t allow rollback to older firmware.</p>
+<h3 id="22-Scheduled-Update-Policy"><a href="#22-Scheduled-Update-Policy" class="headerlink" title="22.Scheduled Update Policy"></a>22.Scheduled Update Policy</h3><p>Procedure for OTA or manual firmware update schedule.</p>
+<h2 id="📡-Wireless-Communication-Security-If-Applicable"><a href="#📡-Wireless-Communication-Security-If-Applicable" class="headerlink" title="📡 Wireless &amp; Communication Security (If Applicable)"></a>📡 Wireless &amp; Communication Security (If Applicable)</h2><h3 id="23-Mutual-Authentication-Process-Document"><a href="#23-Mutual-Authentication-Process-Document" class="headerlink" title="23.Mutual Authentication Process Document"></a>23.Mutual Authentication Process Document</h3><p>For wireless communication initiation.</p>
+<h3 id="24-Wireless-Encryption-Mechanism"><a href="#24-Wireless-Encryption-Mechanism" class="headerlink" title="24.Wireless Encryption Mechanism"></a>24.Wireless Encryption Mechanism</h3><p>Data-in-transit protection via encryption.</p>
+<h3 id="25-Wireless-Capability-Declaration"><a href="#25-Wireless-Capability-Declaration" class="headerlink" title="25.Wireless Capability Declaration"></a>25.Wireless Capability Declaration</h3><p>If wireless not supported, submit a signed declaration.</p>
+<h2 id="🔗-Supply-Chain-Risk-Management"><a href="#🔗-Supply-Chain-Risk-Management" class="headerlink" title="🔗 Supply Chain &amp; Risk Management"></a>🔗 Supply Chain &amp; Risk Management</h2><p>26.Component BOM with Source Traceability<br>For SoC and other critical security components.</p>
+<h3 id="27-Supply-Chain-Risk-Management-Plan"><a href="#27-Supply-Chain-Risk-Management-Plan" class="headerlink" title="27.Supply Chain Risk Management Plan"></a>27.Supply Chain Risk Management Plan</h3><p>Risk identification, assessment, prioritization, and mitigation.</p>
+<h3 id="28-Business-Continuity-Plan"><a href="#28-Business-Continuity-Plan" class="headerlink" title="28.Business Continuity Plan"></a>28.Business Continuity Plan</h3><p>Post-incident reports, playbooks, continuity strategies.</p>
+<h2 id="✅-Submission-Requirements"><a href="#✅-Submission-Requirements" class="headerlink" title="✅ Submission Requirements"></a>✅ Submission Requirements</h2><h3 id="29-Test-Reports-from-BIS-Recognized-Labs"><a href="#29-Test-Reports-from-BIS-Recognized-Labs" class="headerlink" title="29.Test Reports from BIS Recognized Labs"></a>29.Test Reports from BIS Recognized Labs</h3><p>As per Scheme II of BIS Conformity Assessment Regulations, 2018.</p>
+<h3 id="30-Compliance-Checklist"><a href="#30-Compliance-Checklist" class="headerlink" title="30.Compliance Checklist"></a>30.Compliance Checklist</h3><p>Summary showing each requirement met and corresponding document reference.</p>
+<h2 id="Essential-Testing-Procedures-for-CCTV-Cameras"><a href="#Essential-Testing-Procedures-for-CCTV-Cameras" class="headerlink" title="Essential Testing Procedures for CCTV Cameras"></a>Essential Testing Procedures for CCTV Cameras</h2><h3 id="1-Hardware-Level-Security"><a href="#1-Hardware-Level-Security" class="headerlink" title="1. Hardware-Level Security"></a>1. Hardware-Level Security</h3><p>Debugging Interface Protection: Verify USB, UART, JTAG, SWD are disabled or protected (e.g., password-protected).<br>Unique Keys and Certificates: Confirm each device has unique cryptographic keys and certificates.<br>Trusted Execution Environment (TEE): Verify availability and use of TEE&#x2F;TPM&#x2F;SE for crypto operations.<br>Secure Storage: Ensure sensitive data, private keys, and certificates are stored securely.<br>Tamper Resistance: Test tamper detection and resistance features (software&#x2F;hardware).<br>Intellectual Property Protection: Check IP protection tech from SoC vendor is enabled (if available).<br>Secure Boot: Validate boot image signature before loading.<br>Random Number Generation: Use cryptographically secure pseudo-random number generators.</p>
+<h3 id="2-Software-Firmware-Security"><a href="#2-Software-Firmware-Security" class="headerlink" title="2. Software&#x2F;Firmware Security"></a>2. Software&#x2F;Firmware Security</h3><p>Memory Protection: Verify ASLR and DEP are enabled.<br>Transport Layer Security (TLS): Confirm data in transit is encrypted using secure TLS protocols.<br>Digital Signature Validation: Validate server connection signatures and certificates.<br>Use of Safe C Functions: Replace banned C functions with secure equivalents (via static analysis).<br>Component Disclosure (SBOM): Maintain Software Bill of Materials (third-party libraries, versions).<br>No Hardcoded Credentials: Ensure no hardcoded usernames&#x2F;passwords&#x2F;backdoors.<br>Secure Firmware Update: Use secure bootloader and prevent downgrade attacks.<br>Scheduled Updates: Device must support scheduled OTA or manual secure updates.</p>
+<p>Step-by-Step Testing Procedure for CCTV Cameras (BIS-CRS Compliance)</p>
+<p>Phase 1: Preparation &amp; Documentation<br>Phase 2: Hardware-Level Security Testing<br>Phase 3: Software &amp; Firmware Security Testing<br>Phase 4: Communication &amp; Supply Chain Assurance<br>Phase 5: Final Documentation &amp; Compliance</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>印度STQC 流程和批准要求</title>
+    <url>/2026/05/18/%E5%8D%B0%E5%BA%A6STQC%20%E6%B5%81%E7%A8%8B%E5%92%8C%E6%89%B9%E5%87%86%E8%A6%81%E6%B1%82/</url>
+    <content><![CDATA[<h1 id="STQC-process-and-approval-requirements"><a href="#STQC-process-and-approval-requirements" class="headerlink" title="STQC process and approval requirements"></a>STQC process and approval requirements</h1><p>List of documents and explanations required-<br>1.Datasheet of the SoC.<br>2.Design and architecture documents till the PCBA and SoC level.<br>3.Documentation related to ports&#x2F;interfaces and protection mechanism for the same.<br>4.Process flow of the Manufacturing&#x2F;Provisioning.<br>5.All keys and certificates being used in the device ecosystem.<br>6.Key management life cycle.<br>7.User manual&#x2F; Technical specifications of the device.<br>8.Code snippets of the TEE API call, wherever applicable.<br>9.List of all the sensitive data with their intended usage and secure storage mechanism.<br>10.Measures available in the device to prevent software tampering.<br>11.Measures available in the device to prevent hardware tampering.<br>12.Documentation regarding the Intellectual Property protection technologies provided by the chip manufacturer which have been enabled.<br>13.In case, no Intellectual Property protection technologies are being provided by the chip manufacturer, then a declaration stating the same.<br>14.Technical specifications of the device regarding random generators, in case, software based random number generators are being used, vendors shall provide the libraries being used for the same.<br>15.Declaration of the memory protection controls available and enabled in the device.<br>16.Document mentioning the use-cases when the device establishes server connections with the external world, with detailed information about the security measures in place while validating the digital signatures of the server connections.<br>17.Firmware binaries for code review.<br>18.Internal code review reports.<br>19.software bill of materials, including third party components and versions.<br>20.documentation regarding the security controls in place to hinder firmware reverse engineering.<br>21.Process of achieving secure firmware upgrade which should consist of keys involved and their management life cycle, signature validation process and any other secure mechanisms if implemented.<br>22.Modes of updates available i.e. automatic, manual or both.<br>23.Organizational process and policies regarding the issuing of updates to the devices.<br>24.Process of mutual authentication as implemented in the device when wireless communications are initiated.<br>25.Bill of materials for critical hardware components (related to security functions like SoC).<br>26.Supply chain risk identification, assessment, prioritization, and mitigation documents.<br>27.Document for Network protocols used in the device.<br>28.Supply chain risk&#x2F;business continuity planning policy documents, playbooks reflecting how to handle supply chain disruption, post-incident summary documents need to be submitted and demonstrate the same.</p>
+<h1 id="STQC-流程和批准要求"><a href="#STQC-流程和批准要求" class="headerlink" title="STQC 流程和批准要求"></a>STQC 流程和批准要求</h1><p>所需文件及说明清单-<br>1.SoC 的数据表。<br>2.直至 PCBA 和 SoC 级别的设计和架构文档。<br>3.与端口&#x2F;接口及其保护机制相关的文档。<br>4.制造&#x2F;供应的流程。<br>5.设备生态系统中使用的所有密钥和证书。<br>6.密钥管理生命周期。<br>7.设备的用户手册&#x2F;技术规格。<br>8.TEE API 调用的代码片段（如果适用）。<br>9.列出所有敏感数据及其预期用途和安全存储机制。<br>10.设备中可用的措施可防止软件被篡改。<br>11.设备中可用的措施可防止硬件篡改。<br>12.芯片制造商提供的已启用的知识产权保护技术文档。<br>13.如果芯片制造商未提供任何知识产权保护技术，则需要提供一份声明来说明。<br>14.设备有关随机数生成器的技术规格，如果使用基于软件的随机数生成器，则供应商应提供用于该生成器的库。<br>15.声明设备中可用且启用的内存保护控制。<br>16.该文档提及了设备与外部世界建立服务器连接时的用例，并提供了有关验证服务器连接的数字签名时所采取的安全措施的详细信息。<br>17.用于代码审查的固件二进制文件。<br>18.内部代码审查报告。<br>19.软件物料清单，包括第三方组件和版本。<br>20.有关阻止固件逆向工程的安全控制的文档。<br>21.实现安全固件升级的过程应包括所涉及的密钥及其管理生命周期、签名验证过程以及任何其他安全机制（如果实施）。<br>22.可用的更新模式包括自动、手动或两者。<br>23.有关发布设备更新的组织流程和政策。<br>24.启动无线通信时在设备中实施的相互认证过程。<br>25.关键硬件组件的物料清单（与 SoC 等安全功能相关）。<br>26.供应链风险识别、评估、优先排序和缓解文件。<br>27.设备中使用的网络协议的文档。<br>28.需要提交并证明供应链风险&#x2F;业务连续性计划政策文件、反映如何处理供应链中断的剧本、事件后摘要文件。</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -1518,417 +1917,6 @@
       </tags>
   </entry>
   <entry>
-    <title>免费图床</title>
-    <url>/2026/05/03/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><ol>
-<li>这部分免费图床就太多了，我会把我目前发现的可以免费白嫖一定额度的图床做一个总结列在下面</li>
-<li>这部分图床的搭建门槛较低，所以速度和稳定性良莠不齐，大家自行选择使用哪个</li>
-<li>我这里只给大家演示一种的使用方法，其他图床使用方法也类似</li>
-<li>大家可以看看哪个比较好用的或者自己知道的好用的这里没有，可以留言我会进行补充</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center">🍕</th>
-<th align="center">🥗</th>
-<th align="center">🍤</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><a href="https://img.z2m.store/">等你图床</a></td>
-<td align="center"><a href="https://imgloc.com/#google_vignette">imgloc</a></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<ul>
-<li>使用方法：直接进入官网，上传图片然后粘贴地址即可，地址的样式有多样，自行选择</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>千古第一骈文：滕王阁序</title>
-    <url>/2026/05/18/%E5%8D%83%E5%8F%A4%E7%AC%AC%E4%B8%80%E9%AA%88%E6%96%87%EF%BC%9A%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F/</url>
-    <content><![CDATA[
-<section data-role="outer" class="article135" label="edit by 135editor">
-	<section style="margin:0 auto;background:linear-gradient(180deg,#fff9f0 0%,#ffffff 100%);border-radius:12px;box-shadow:0 4px 20px rgba(139,90,43,0.1);overflow:hidden;box-sizing:border-box;">
-		<section style="position:relative;height:380px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 30px;box-sizing:border-box;">
-			<section style="background:linear-gradient(135deg,#d4a574 0%,#c9956c 100%);color:#fff;font-size:12px;padding:6px 16px;border-radius:20px;letter-spacing:2px;margin-bottom:25px;box-sizing:border-box;" >
-				历史人物 · 深度解读
-			</section>
-			<h1 style="font-size:32px;color:#fff;letter-spacing:6px;margin:0 0 20px;text-shadow:0 0.063em 0.313em rgba(0,0,0,0.3);">
-				<strong>滕王阁序</strong>
-			</h1>
-			<p style="font-size:16px;color:rgba(255,255,255,0.8);letter-spacing:4px;margin:0;">
-				千古第一骈文
-			</p>
-			<p style="font-size:18px;color:#d4a574;margin-top:30px;letter-spacing:2px;font-family:KaiTi,STKaiti,serif;">
-				落霞与孤鹜齐飞，秋水共长天一色
-			</p>
-		</section><!-- 内容区 -->
-		<section style="padding:40px 30px 50px;box-sizing:border-box;" class="">
-			<!-- 引言 -->
-			<section style="background:linear-gradient(135deg,#fef9f3 0%,#fdf6ed 100%);border-left:4px solid #c9956c;padding:25px 25px 25px 30px;margin-bottom:35px;border-radius:0 8px 8px 0;box-sizing:border-box;">
-				<p style="padding-left:15px;margin:0;font-size:16px;color:#5a5a5a;text-indent:0;">
-					这是一篇被称为<strong>千古第一骈文</strong>的神作，他一出世就碾压了现场所有准备走后门的关系户。他让一代文豪韩愈赞叹不已，甚至传说诗仙李白读到他之后都默默撕掉了自己的稿子。他就是唐朝天才——<strong>王勃</strong>。
-				</p>
-			</section><!-- 第一部分 -->
-			<h2 style="font-size:22px;color:#1a1a2e;margin:35px 0 20px;padding-left:15px;border-left:4px solid #c9956c;">
-				<strong>一场精心策划的名利局</strong>
-			</h2>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				<strong>公元675年</strong>，洪州都督阎公重修滕王阁，打算举办一场盛大宴会。其实他早就安排好了——让女婿提前写好稿子，准备在宴会上念一念，走个过场。
-			</p>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				宴会气氛热烈，高朋满座，酒过三巡。阎都督假客气地问：&quot;今日诸公齐聚于此，可有愿为滕王阁作赋者？&quot;只见满座名流都心照不宣，纷纷摆手推辞。
-			</p>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				谁知，坐在最角落的一个年轻人站了起来说：<strong style="color:#c9956c;">&quot;我来。&quot;</strong>
-			</p><!-- 名言块 -->
-			<section style="background:linear-gradient(135deg,#f8f4ef 0%,#f5efe7 100%);border-radius:12px;padding:25px;margin:25px 0;text-align:center;box-sizing:border-box;">
-				<p style="font-size:18px;color:#2c2c2c;letter-spacing:2px;margin:0 0 8px;font-family:KaiTi,STKaiti,serif;">
-					这人就是王勃。
-				</p>
-				<p style="font-size:13px;color:#999;margin:10px 0 0;">
-					——26岁，即兴挥毫
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				现场的空气瞬间凝固。阎都督的笑容僵在脸上，内心的怒火可想而知——他气得直接离席，留下尴尬的满座宾朋。
-			</p>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				但他万万没想到，这个年轻人即将用一篇文章让他和这座楼<strong style="color:#c9956c;">名垂千古</strong>。
-			</p><!-- 诗句高亮 -->
-			<section style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border-radius:12px;padding:30px;margin:30px 0;text-align:center;box-sizing:border-box;">
-				<p style="font-size:20px;color:#fff;letter-spacing:3px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					豫章故郡，洪都新府。
-				</p>
-				<p style="font-size:20px;color:#fff;letter-spacing:3px;line-height:2;margin:8px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					星分翼轸，地接衡庐。
-				</p>
-				<p style="font-size:13px;color:#d4a574;margin:20px 0 0;padding-top:15px;border-top:1px solid rgba(255,255,255,0.2);">
-					——开篇从天文和地理两方面点明滕王阁所在地点
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				阎都督听后嗤之以鼻：&quot;不过是老生常谈。&quot;
-			</p>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				然而当小吏气喘吁吁地跑回来报出下一句时，在场所有人都愣住了：
-			</p><!-- 诗句高亮 -->
-			<section style="background:linear-gradient(135deg,#faf6f0 0%,#f8f2e8 100%);border-radius:12px;padding:30px;margin:30px 0;text-align:center;border:1px solid #e8dfd3;box-sizing:border-box;">
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					物华天宝，龙光射牛斗之墟；
-				</p>
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:8px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					人杰地灵，徐孺下陈蕃之榻。
-				</p>
-				<p style="font-size:13px;color:#888;margin:20px 0 0;padding-top:15px;border-top:1px dashed #ddd;">
-					物产丰饶，人才济济——仅用寥寥数语，便勾勒出气象万千的画卷
-				</p>
-			</section><!-- 分隔线 -->
-			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
-				<span style="letter-spacing:6px;">─── ◆ ───</span>
-			</section><!-- 典故卡片 -->
-			<section style="background:linear-gradient(135deg,#fff8f0 0%,#fff5eb 100%);border-radius:10px;padding:20px;margin:20px 0;border-left:3px solid #d4a574;box-sizing:border-box;" class="">
-				<p style="font-size:15px;color:#c9956c;margin:0 0 10px;">
-					<strong>📖 典故解析：徐孺下陈蕃之榻</strong>
-				</p>
-				<p style="font-size:15px;color:#555;line-height:1.8;margin:0;text-indent:0;">
-					东汉名臣陈蕃非常敬重当地名士徐孺，特意为他准备了一张坐榻。他每次徐孺来访，都会请他入座畅谈。由此，<strong>&quot;下榻&quot;</strong>这一说法便流传开来，沿用至今。
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				短短几句话，不仅写出了地方之美，还赞扬了人文之盛，用典精准，对仗工整。一开口就把宴会的格调瞬间拉满。
-			</p>
-			<h2 style="font-size:22px;color:#1a1a2e;margin:35px 0 20px;padding-left:15px;border-left:4px solid #c9956c;">
-				<strong>一幅前所未有的秋景图</strong>
-			</h2>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				紧接着，一幅秋景图随着文字铺陈开来：
-			</p><!-- 诗句高亮 -->
-			<section style="background:linear-gradient(135deg,#faf6f0 0%,#f8f2e8 100%);border-radius:12px;padding:30px;margin:30px 0;text-align:center;border:1px solid #e8dfd3;box-sizing:border-box;">
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					潦水尽而寒潭清，烟光凝而暮山紫。
-				</p>
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:10px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					层峦耸翠，上出重霄；
-				</p>
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0 0 15px;font-family:KaiTi,STKaiti,FangSong,serif;">
-					飞阁流丹，下临无地。
-				</p>
-				<p style="font-size:13px;color:#888;padding-top:15px;border-top:1px dashed #ddd;margin:0;">
-					水色山光，清澈与朦胧交织——仅用寥寥数语，便勾勒出仿佛莫奈笔下的印象派光影
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				要知道，这可是<strong style="color:#c9956c;">即兴发挥</strong>，王勃竟能做到如此引经据典！在场的所有人纷纷好奇：这到底是从哪来的大神？
-			</p><!-- 分隔线 -->
-			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
-				<span style="letter-spacing:6px;">─── ◆ ───</span>
-			</section><!-- 数据统计 -->
-			<section style="display:flex;justify-content:space-around;margin:30px 0;padding:25px 15px;background:linear-gradient(135deg,#f8f4ef 0%,#f5efe7 100%);border-radius:12px;box-sizing:border-box;" class="">
-				<section style="text-align:center;">
-					<span style="font-size:32px;color:#c9956c;display:block;"><strong>773</strong></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px;color:#888;margin-top:5px;display:block;">全文字数</span>
-				</section>
-				<section style="text-align:center;">
-					<span style="font-size:32px;color:#c9956c;display:block;"><strong>40</strong></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px;color:#888;margin-top:5px;display:block;">成语数量</span>
-				</section>
-				<section style="text-align:center;">
-					<span style="font-size:32px;color:#c9956c;display:block;"><strong>37</strong></span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:13px;color:#888;margin-top:5px;display:block;">典故数量</span>
-				</section>
-			</section><!-- 千古绝唱 -->
-			<section style="text-align:center;margin:40px 0;" class="">
-				<h1 style="font-size:24px;color:#2c2c2c;position:relative;display:inline-block;">
-					<span style="color:#c9956c;margin:0 12px;"><strong>◆</strong></span><strong>&nbsp; &nbsp; 千古绝唱 &nbsp; </strong><span style="color:#c9956c;margin:0 12px;"><strong>◆</strong></span>
-				</h1>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				然而，真正的王炸还在后面。
-			</p><!-- 故事卡片 -->
-			<section style="background:#fff;border-radius:12px;padding:20px;margin:20px 0;box-shadow:0 3px 15px rgba(0,0,0,0.06);border:1px solid #f0e6d8;box-sizing:border-box;">
-				<p style="font-size:14px;color:#c9956c;margin:0 0 10px;">
-					<strong>📜 推开窗户，看到窗外的景色</strong>
-				</p>
-				<p style="font-size:15px;color:#555;margin:0;text-indent:0;">
-					当小吏气喘吁吁地奔来，高声爆出那句千古绝唱时，整个滕王阁都为之一振——
-				</p>
-			</section><!-- 核心诗句 -->
-			<section style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border-radius:12px;padding:35px 30px;text-align:center;box-sizing:border-box;">
-				<p style="font-size:26px;color:#d4a574;letter-spacing:3px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					<strong>落霞与孤鹜齐飞，</strong>
-				</p>
-				<p style="font-size:26px;color:#d4a574;letter-spacing:3px;line-height:2;margin:10px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					<strong>秋水共长天一色。</strong>
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;margin-top:25px;text-align:justify;" align="justify">
-				多少人写黄昏，不是夕阳西下，就是残阳如血。可王勃偏要把<strong style="color:#c9956c;">落霞、孤鹜、秋水、长天</strong>四个意象揉在一起：
-			</p>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				天边的晚霞慢慢下沉，孤独的野鸭掠过水面，秋水与天空连成一片，分不清哪里是水，哪里是天。没有一个&quot;美&quot;字，却把黄昏的辽阔、宁静、略带苍凉的意境，写得像一幅流动的画。
-			</p><!-- 名言块 -->
-			<section style="background:linear-gradient(135deg,#fef9f3 0%,#fdf6ed 100%);border-radius:8px;padding:20px 25px;margin:25px 0;text-align:center;box-sizing:border-box;">
-				<p style="font-size:15px;color:#555;margin:0;letter-spacing:1px;">
-					这就是天才与俗手的区别：<br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong style="font-size:18px;color:#2c2c2c;font-family:KaiTi,STKaiti,serif;">别人写景，王勃造境</strong>
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				上世纪20年代，著名音乐家娄树华先生受王勃笔下意境的启发，创作出了中国最广为流传的古筝独奏曲<strong style="color:#c9956c;">《渔舟唱晚》</strong>。这首曲子后来被央视天气预报选作背景音乐，几乎成了家喻户晓的旋律。
-			</p><!-- 分隔线 -->
-			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
-				<span style="letter-spacing:6px;">─── ◆ ───</span>
-			</section>
-			<h2 style="font-size:22px;color:#1a1a2e;margin:35px 0 20px;padding-left:15px;border-left:4px solid #c9956c;">
-				<strong>从宴会到宇宙，从悲伤到坚定</strong>
-			</h2>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				在尽情描绘了滕王阁的壮丽与饮宴的欢愉后，王勃笔锋陡然一转：
-			</p><!-- 诗句 -->
-			<section style="background:linear-gradient(135deg,#faf6f0 0%,#f8f2e8 100%);border-radius:12px;padding:30px;margin:25px 0;text-align:center;border:1px solid #e8dfd3;box-sizing:border-box;">
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					天高地迥，觉宇宙之无穷；
-				</p>
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:8px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					兴尽悲来，识盈虚之有数。
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				这一句将文章的境界从地理的滕王阁拉升到了哲学的浩瀚苍穹。欢乐的底色下，是对生命本质悲凉的深刻洞察。
-			</p><!-- 名言 -->
-			<section style="background:linear-gradient(135deg,#fef9f3 0%,#fdf6ed 100%);border-radius:8px;padding:20px 25px;margin:25px 0;text-align:center;box-sizing:border-box;">
-				<p style="font-size:18px;color:#2c2c2c;letter-spacing:2px;margin:0 0 5px;font-family:KaiTi,STKaiti,serif;">
-					关山难越，谁悲失路之人？
-				</p>
-				<p style="font-size:18px;color:#2c2c2c;letter-spacing:2px;margin:0 0 10px;font-family:KaiTi,STKaiti,serif;">
-					萍水相逢，尽是他乡之客。
-				</p>
-				<p style="font-size:13px;color:#999;margin:0;">
-					——这哪里是在写他乡之客，分明是在写自己
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				他从长安一路南下，前路漫漫，像个失路之人。在宴会上认识的宾客都是萍水相逢，没人知道他心里的委屈。
-			</p>
-			<h3 style="font-size:18px;color:#444;margin:25px 0 15px;">
-				<strong>典故中的自我映射</strong>
-			</h3><!-- 典故卡片 -->
-			<section style="background:linear-gradient(135deg,#fff8f0 0%,#fff5eb 100%);border-radius:10px;padding:20px;margin:20px 0;border-left:3px solid #d4a574;box-sizing:border-box;" class="">
-				<p style="font-size:15px;color:#c9956c;margin:0 0 10px;">
-					<strong>📖 冯唐易老，李广难封</strong>
-				</p>
-				<p style="font-size:15px;color:#555;line-height:1.8;margin:0;text-indent:0;">
-					冯唐那么有才华，却到老都没被重用；李广战功赫赫，让敌人闻风丧胆，却始终没被封侯。贾谊、梁鸿都是大才，却也饱经蹉跎。
-				</p>
-				<p style="font-size:15px;color:#555;line-height:1.8;margin:10px 0 0;text-indent:0;">
-					王勃在说：<strong>我和他们一样，不是没有才华，只是没遇到机会。</strong>
-				</p>
-			</section><!-- 分隔线 -->
-			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
-				<span style="letter-spacing:6px;">─── ◆ ───</span>
-			</section><!-- 核心精神 -->
-			<section style="text-align:center;margin:40px 0;" class="">
-				<h1 style="font-size:24px;color:#2c2c2c;position:relative;display:inline-block;">
-					<strong>&nbsp; &nbsp; &nbsp; &nbsp;穷且益坚，不坠青云之志&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong>
-				</h1>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				然而王勃没有沉溺于悲伤，他借历史人物自比之后，话锋一转——
-			</p><!-- 核心诗句 -->
-			<section style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);border-radius:12px;padding:35px 30px;text-align:center;box-sizing:border-box;" class="">
-				<p style="font-size:22px;color:#fff;letter-spacing:3px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					老当益壮，宁移白首之心？
-				</p>
-				<p style="font-size:22px;color:#d4a574;letter-spacing:3px;line-height:2;margin:15px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					<strong>穷且益坚，不坠青云之志。</strong>
-				</p>
-			</section><!-- 名言 -->
-			<section style="background:linear-gradient(135deg,#fef9f3 0%,#fdf6ed 100%);border-radius:8px;padding:20px 25px;margin:25px 0;text-align:center;box-sizing:border-box;">
-				<p style="font-size:15px;color:#555;margin:0;line-height:2;">
-					这不是少年不识愁滋味的狂言，<br/>
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;而是<strong style="color:#c9956c;">看透生活真相之后，依然热爱生活的英雄主义</strong>。
-				</p>
-			</section><!-- 典故卡片 -->
-			<section style="background:linear-gradient(135deg,#fff8f0 0%,#fff5eb 100%);border-radius:10px;padding:20px;margin:20px 0;border-left:3px solid #d4a574;box-sizing:border-box;">
-				<p style="font-size:15px;color:#c9956c;margin:0 0 10px;">
-					<strong>📖 孟尝高洁，空余报国之情</strong>
-				</p>
-				<p style="font-size:15px;color:#555;line-height:1.8;margin:0;text-indent:0;">
-					孟尝品行高洁，却只能空有报国之心。阮籍遇到困境就哭，我可不会像他那样。这是在表明态度：就算处境艰难，我也不会消沉，更不会放弃报国的志向。
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				这就是王勃的格局。他不只会写美景，更会借美景说心事；他不只会抒情，更会在抒情里立住自己的志。
-			</p><!-- 分隔线 -->
-			<section style="text-align:center;margin:35px 0;color:#d4a574;font-size:14px;" class="">
-				<span style="letter-spacing:6px;">─── ◆ ───</span>
-			</section><!-- 结尾部分 -->
-			<h2 style="font-size:22px;color:#1a1a2e;margin:35px 0 20px;padding-left:15px;border-left:4px solid #c9956c;">
-				<strong>千古绝唱，生命绝笔</strong>
-			</h2>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				文章写成，满座皆惊。阎都督对他礼敬有加。这场原本为他人准备的名利场，彻底成为了王勃一个人的<strong style="color:#c9956c;">封神台</strong>。
-			</p><!-- 诗句 -->
-			<section style="background:linear-gradient(135deg,#faf6f0 0%,#f8f2e8 100%);border-radius:12px;padding:30px;margin:25px 0;text-align:center;border:1px solid #e8dfd3;box-sizing:border-box;">
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					阁中帝子今何在？
-				</p>
-				<p style="font-size:19px;color:#2c2c2c;letter-spacing:2px;line-height:2;margin:8px 0 0;font-family:KaiTi,STKaiti,FangSong,serif;">
-					槛外长江空自流。
-				</p>
-				<p style="font-size:13px;color:#888;padding-top:15px;border-top:1px dashed #ddd;margin:15px 0 0;">
-					昔日的滕王早已化作尘土，唯有楼外的江水依旧奔腾不息
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				然而，天妒英才。这篇千古绝唱，竟成了王勃的<strong style="color:#c9956c;">生命绝笔</strong>。
-			</p><!-- 故事卡片 -->
-			<section style="background:#fff;border-radius:12px;padding:20px;margin:20px 0;box-shadow:0 3px 15px rgba(0,0,0,0.06);border:1px solid #f0e6d8;box-sizing:border-box;">
-				<p style="font-size:14px;color:#c9956c;margin:0 0 10px;">
-					<strong>🕯️ 四年后</strong>
-				</p>
-				<p style="font-size:15px;color:#555;margin:0;text-indent:0;">
-					就在他叹赋归来时，渡海溺水，惊悸而亡，<strong style="color:#c9956c;font-size:18px;">年仅27岁</strong>。
-				</p>
-			</section>
-			<p style="text-indent:2em;margin-bottom:18px;color:#3a3a3a;text-align:justify;" align="justify">
-				他就像一颗流星，在最黑暗的夜空中爆发出最璀璨的光芒，然后骤然熄灭。
-			</p><!-- 结语 -->
-			<section style="background:linear-gradient(180deg,#f8f4ef 0%,#fdf6ed 100%);border-radius:12px;padding:30px;margin-top:40px;text-align:center;position:relative;box-sizing:border-box;">
-				<section style="position:absolute;top:-1px;left:50%;width:60px;height:3px;background:linear-gradient(90deg,transparent,#c9956c,transparent);box-sizing:border-box;transform: translateX(-50%);-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-o-transform: translateX(-50%);"></section>
-				<p style="font-size:15px;color:#555;line-height:2;letter-spacing:1px;margin:0 0 15px;">
-					我们喜欢王勃，或许就是因为他像极了每一个心怀梦想却又偶尔失意的自己。
-				</p>
-				<p style="font-size:15px;color:#555;line-height:2;letter-spacing:1px;margin:0 0 20px;">
-					他年少成名，也曾犯错坠入谷底，但在滕王阁上，他抓住了那唯一的机会，绽放了所有光芒。
-				</p>
-				<p style="font-size:20px;color:#c9956c;margin:0 0 20px;letter-spacing:2px;font-family:KaiTi,STKaiti,serif;">
-					<strong>穷且益坚，不坠青云之志。</strong>
-				</p>
-				<p style="font-size:15px;color:#555;line-height:2;letter-spacing:1px;margin:0 0 15px;">
-					1300多年过去了，滕王阁几经损毁又重建，南昌的江水涨了又落——
-				</p>
-				<p style="font-size:18px;color:#2c2c2c;margin:0;letter-spacing:2px;font-family:KaiTi,STKaiti,serif;">
-					可「落霞与孤鹜齐飞，秋水共长天一色」的句子<br/>
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;还在课本里，在试卷上，在每个失意又不甘的人的心里。
-				</p>
-			</section><!-- 签名 -->
-			<section style="margin-top:40px;text-align:right;font-size:14px;color:#999;padding-top:20px;border-top:1px solid #eee;box-sizing:border-box;">
-				<p style="margin:0;">
-					全文完
-				</p>
-				<p style="margin:8px 0 0;">
-					2026年4月
-				</p>
-			</section>
-		</section>
-	</section><!--!doctype-->
-</section>]]></content>
-      <categories>
-        <category>Diary</category>
-      </categories>
-      <tags>
-        <tag>唐朝</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>印度STQC 流程和批准要求</title>
-    <url>/2026/05/18/%E5%8D%B0%E5%BA%A6STQC%20%E6%B5%81%E7%A8%8B%E5%92%8C%E6%89%B9%E5%87%86%E8%A6%81%E6%B1%82/</url>
-    <content><![CDATA[<h1 id="STQC-process-and-approval-requirements"><a href="#STQC-process-and-approval-requirements" class="headerlink" title="STQC process and approval requirements"></a>STQC process and approval requirements</h1><p>List of documents and explanations required-<br>1.Datasheet of the SoC.<br>2.Design and architecture documents till the PCBA and SoC level.<br>3.Documentation related to ports&#x2F;interfaces and protection mechanism for the same.<br>4.Process flow of the Manufacturing&#x2F;Provisioning.<br>5.All keys and certificates being used in the device ecosystem.<br>6.Key management life cycle.<br>7.User manual&#x2F; Technical specifications of the device.<br>8.Code snippets of the TEE API call, wherever applicable.<br>9.List of all the sensitive data with their intended usage and secure storage mechanism.<br>10.Measures available in the device to prevent software tampering.<br>11.Measures available in the device to prevent hardware tampering.<br>12.Documentation regarding the Intellectual Property protection technologies provided by the chip manufacturer which have been enabled.<br>13.In case, no Intellectual Property protection technologies are being provided by the chip manufacturer, then a declaration stating the same.<br>14.Technical specifications of the device regarding random generators, in case, software based random number generators are being used, vendors shall provide the libraries being used for the same.<br>15.Declaration of the memory protection controls available and enabled in the device.<br>16.Document mentioning the use-cases when the device establishes server connections with the external world, with detailed information about the security measures in place while validating the digital signatures of the server connections.<br>17.Firmware binaries for code review.<br>18.Internal code review reports.<br>19.software bill of materials, including third party components and versions.<br>20.documentation regarding the security controls in place to hinder firmware reverse engineering.<br>21.Process of achieving secure firmware upgrade which should consist of keys involved and their management life cycle, signature validation process and any other secure mechanisms if implemented.<br>22.Modes of updates available i.e. automatic, manual or both.<br>23.Organizational process and policies regarding the issuing of updates to the devices.<br>24.Process of mutual authentication as implemented in the device when wireless communications are initiated.<br>25.Bill of materials for critical hardware components (related to security functions like SoC).<br>26.Supply chain risk identification, assessment, prioritization, and mitigation documents.<br>27.Document for Network protocols used in the device.<br>28.Supply chain risk&#x2F;business continuity planning policy documents, playbooks reflecting how to handle supply chain disruption, post-incident summary documents need to be submitted and demonstrate the same.</p>
-<h1 id="STQC-流程和批准要求"><a href="#STQC-流程和批准要求" class="headerlink" title="STQC 流程和批准要求"></a>STQC 流程和批准要求</h1><p>所需文件及说明清单-<br>1.SoC 的数据表。<br>2.直至 PCBA 和 SoC 级别的设计和架构文档。<br>3.与端口&#x2F;接口及其保护机制相关的文档。<br>4.制造&#x2F;供应的流程。<br>5.设备生态系统中使用的所有密钥和证书。<br>6.密钥管理生命周期。<br>7.设备的用户手册&#x2F;技术规格。<br>8.TEE API 调用的代码片段（如果适用）。<br>9.列出所有敏感数据及其预期用途和安全存储机制。<br>10.设备中可用的措施可防止软件被篡改。<br>11.设备中可用的措施可防止硬件篡改。<br>12.芯片制造商提供的已启用的知识产权保护技术文档。<br>13.如果芯片制造商未提供任何知识产权保护技术，则需要提供一份声明来说明。<br>14.设备有关随机数生成器的技术规格，如果使用基于软件的随机数生成器，则供应商应提供用于该生成器的库。<br>15.声明设备中可用且启用的内存保护控制。<br>16.该文档提及了设备与外部世界建立服务器连接时的用例，并提供了有关验证服务器连接的数字签名时所采取的安全措施的详细信息。<br>17.用于代码审查的固件二进制文件。<br>18.内部代码审查报告。<br>19.软件物料清单，包括第三方组件和版本。<br>20.有关阻止固件逆向工程的安全控制的文档。<br>21.实现安全固件升级的过程应包括所涉及的密钥及其管理生命周期、签名验证过程以及任何其他安全机制（如果实施）。<br>22.可用的更新模式包括自动、手动或两者。<br>23.有关发布设备更新的组织流程和政策。<br>24.启动无线通信时在设备中实施的相互认证过程。<br>25.关键硬件组件的物料清单（与 SoC 等安全功能相关）。<br>26.供应链风险识别、评估、优先排序和缓解文件。<br>27.设备中使用的网络协议的文档。<br>28.需要提交并证明供应链风险&#x2F;业务连续性计划政策文件、反映如何处理供应链中断的剧本、事件后摘要文件。</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>印度STQC认证所需文件</title>
-    <url>/2026/05/18/%E5%8D%B0%E5%BA%A6STQC%E8%AE%A4%E8%AF%81%E6%89%80%E9%9C%80%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="Documents-Requirements-Listed-in-the-Guidelines"><a href="#Documents-Requirements-Listed-in-the-Guidelines" class="headerlink" title="Documents &#x2F; Requirements Listed in the Guidelines:"></a>Documents &#x2F; Requirements Listed in the Guidelines:</h1><p>Hardware-Level Documentation</p>
-<h3 id="1-SoC-Datasheet"><a href="#1-SoC-Datasheet" class="headerlink" title="1.SoC Datasheet"></a>1.SoC Datasheet</h3><p>oDetails on debugging interfaces (USB, UART, JTAG, SWD).<br>oTEE&#x2F;TPM&#x2F;SE availability.<br>oRNG capability (hardware-based).</p>
-<h3 id="2-Device-Technical-Specifications"><a href="#2-Device-Technical-Specifications" class="headerlink" title="2.Device Technical Specifications"></a>2.Device Technical Specifications</h3><p>oIncludes secure boot architecture, communication protocols, and memory protection.</p>
-<h3 id="3-Block-Connection-Diagrams"><a href="#3-Block-Connection-Diagrams" class="headerlink" title="3.Block Connection Diagrams"></a>3.Block Connection Diagrams</h3><p>oShowing microcontroller and peripheral interactions.</p>
-<h3 id="4-Access-Control-Mechanism-Documents"><a href="#4-Access-Control-Mechanism-Documents" class="headerlink" title="4.Access Control Mechanism Documents"></a>4.Access Control Mechanism Documents</h3><p>oDocumentation on enabled&#x2F;disabled ports and protection schemes.</p>
-<h3 id="5-Manufacturing-Provisioning-Process-Flow"><a href="#5-Manufacturing-Provisioning-Process-Flow" class="headerlink" title="5.Manufacturing&#x2F;Provisioning Process Flow"></a>5.Manufacturing&#x2F;Provisioning Process Flow</h3><p>oEspecially for disabling debugging interfaces and secure boot provisioning.</p>
-<h3 id="6-Key-and-Certificate-List"><a href="#6-Key-and-Certificate-List" class="headerlink" title="6.Key and Certificate List"></a>6.Key and Certificate List</h3><p>oAll keys and certs used in the device ecosystem.</p>
-<h3 id="7-Key-Management-Lifecycle-Document"><a href="#7-Key-Management-Lifecycle-Document" class="headerlink" title="7.Key Management Lifecycle Document"></a>7.Key Management Lifecycle Document</h3><p>oPurpose, generation, storage, destruction, validity, rotation.</p>
-<h3 id="8-Secure-Storage-Configuration"><a href="#8-Secure-Storage-Configuration" class="headerlink" title="8.Secure Storage Configuration"></a>8.Secure Storage Configuration</h3><p>oStorage mechanism and configuration of sensitive data (keys, certificates).</p>
-<h3 id="9-Tamper-Protection-Documentation"><a href="#9-Tamper-Protection-Documentation" class="headerlink" title="9.Tamper Protection Documentation"></a>9.Tamper Protection Documentation</h3><p>oSoftware and hardware anti-tamper measures.</p>
-<h3 id="10-IP-Protection-Documentation"><a href="#10-IP-Protection-Documentation" class="headerlink" title="10.IP Protection Documentation"></a>10.IP Protection Documentation</h3><p>From chip manufacturer, or declaration if unavailable.</p>
-<h3 id="11-Boot-Image-Validation-Report"><a href="#11-Boot-Image-Validation-Report" class="headerlink" title="11.Boot Image Validation Report"></a>11.Boot Image Validation Report</h3><p>Secure boot process validation (pass&#x2F;fail cases).</p>
-<h3 id="12-Random-Number-Generator-Usage"><a href="#12-Random-Number-Generator-Usage" class="headerlink" title="12.Random Number Generator Usage"></a>12.Random Number Generator Usage</h3><p>Description of RNG used (hardware or software) and supporting libraries.</p>
-<h2 id="🖥️-Software-Firmware-Documentation"><a href="#🖥️-Software-Firmware-Documentation" class="headerlink" title="🖥️ Software &amp; Firmware Documentation"></a>🖥️ Software &amp; Firmware Documentation</h2><h3 id="13-Firmware-Code-Snippets"><a href="#13-Firmware-Code-Snippets" class="headerlink" title="13.Firmware Code Snippets"></a>13.Firmware Code Snippets</h3><p>Related to TEE APIs, secure boot, RNG, TLS, etc.</p>
-<h3 id="14-Memory-Protection-Declaration"><a href="#14-Memory-Protection-Declaration" class="headerlink" title="14.Memory Protection Declaration"></a>14.Memory Protection Declaration</h3><p>Statement showing ASLR, DEP enabled if applicable.</p>
-<h3 id="15-TLS-Communication-Documentation"><a href="#15-TLS-Communication-Documentation" class="headerlink" title="15.TLS Communication Documentation"></a>15.TLS Communication Documentation</h3><p>Details on TLS configuration, cipher suites, certificate validation.</p>
-<h3 id="16-Digital-Signature-Verification-Use-Cases"><a href="#16-Digital-Signature-Verification-Use-Cases" class="headerlink" title="16.Digital Signature Verification Use-Cases"></a>16.Digital Signature Verification Use-Cases</h3><p>When and how signatures are validated for server communication.</p>
-<h3 id="17-SBOM-Software-Bill-of-Materials"><a href="#17-SBOM-Software-Bill-of-Materials" class="headerlink" title="17.SBOM (Software Bill of Materials)"></a>17.SBOM (Software Bill of Materials)</h3><p>Third-party components, versions, and known vulnerabilities.</p>
-<h3 id="18-Static-Code-Analysis-Report"><a href="#18-Static-Code-Analysis-Report" class="headerlink" title="18.Static Code Analysis Report"></a>18.Static Code Analysis Report</h3><p>Proving banned C functions are replaced.</p>
-<h3 id="19-Hardcoded-Credential-Audit-Report"><a href="#19-Hardcoded-Credential-Audit-Report" class="headerlink" title="19.Hardcoded Credential Audit Report"></a>19.Hardcoded Credential Audit Report</h3><p>From secure code review (manual&#x2F;automated).</p>
-<h3 id="20-Secure-Firmware-Update-Procedure"><a href="#20-Secure-Firmware-Update-Procedure" class="headerlink" title="20.Secure Firmware Update Procedure"></a>20.Secure Firmware Update Procedure</h3><p>Process for secure OTA&#x2F;manual updates with rollback prevention.</p>
-<h3 id="21-Anti-Downgrade-Declaration"><a href="#21-Anti-Downgrade-Declaration" class="headerlink" title="21.Anti-Downgrade Declaration"></a>21.Anti-Downgrade Declaration</h3><p>Proof device doesn’t allow rollback to older firmware.</p>
-<h3 id="22-Scheduled-Update-Policy"><a href="#22-Scheduled-Update-Policy" class="headerlink" title="22.Scheduled Update Policy"></a>22.Scheduled Update Policy</h3><p>Procedure for OTA or manual firmware update schedule.</p>
-<h2 id="📡-Wireless-Communication-Security-If-Applicable"><a href="#📡-Wireless-Communication-Security-If-Applicable" class="headerlink" title="📡 Wireless &amp; Communication Security (If Applicable)"></a>📡 Wireless &amp; Communication Security (If Applicable)</h2><h3 id="23-Mutual-Authentication-Process-Document"><a href="#23-Mutual-Authentication-Process-Document" class="headerlink" title="23.Mutual Authentication Process Document"></a>23.Mutual Authentication Process Document</h3><p>For wireless communication initiation.</p>
-<h3 id="24-Wireless-Encryption-Mechanism"><a href="#24-Wireless-Encryption-Mechanism" class="headerlink" title="24.Wireless Encryption Mechanism"></a>24.Wireless Encryption Mechanism</h3><p>Data-in-transit protection via encryption.</p>
-<h3 id="25-Wireless-Capability-Declaration"><a href="#25-Wireless-Capability-Declaration" class="headerlink" title="25.Wireless Capability Declaration"></a>25.Wireless Capability Declaration</h3><p>If wireless not supported, submit a signed declaration.</p>
-<h2 id="🔗-Supply-Chain-Risk-Management"><a href="#🔗-Supply-Chain-Risk-Management" class="headerlink" title="🔗 Supply Chain &amp; Risk Management"></a>🔗 Supply Chain &amp; Risk Management</h2><p>26.Component BOM with Source Traceability<br>For SoC and other critical security components.</p>
-<h3 id="27-Supply-Chain-Risk-Management-Plan"><a href="#27-Supply-Chain-Risk-Management-Plan" class="headerlink" title="27.Supply Chain Risk Management Plan"></a>27.Supply Chain Risk Management Plan</h3><p>Risk identification, assessment, prioritization, and mitigation.</p>
-<h3 id="28-Business-Continuity-Plan"><a href="#28-Business-Continuity-Plan" class="headerlink" title="28.Business Continuity Plan"></a>28.Business Continuity Plan</h3><p>Post-incident reports, playbooks, continuity strategies.</p>
-<h2 id="✅-Submission-Requirements"><a href="#✅-Submission-Requirements" class="headerlink" title="✅ Submission Requirements"></a>✅ Submission Requirements</h2><h3 id="29-Test-Reports-from-BIS-Recognized-Labs"><a href="#29-Test-Reports-from-BIS-Recognized-Labs" class="headerlink" title="29.Test Reports from BIS Recognized Labs"></a>29.Test Reports from BIS Recognized Labs</h3><p>As per Scheme II of BIS Conformity Assessment Regulations, 2018.</p>
-<h3 id="30-Compliance-Checklist"><a href="#30-Compliance-Checklist" class="headerlink" title="30.Compliance Checklist"></a>30.Compliance Checklist</h3><p>Summary showing each requirement met and corresponding document reference.</p>
-<h2 id="Essential-Testing-Procedures-for-CCTV-Cameras"><a href="#Essential-Testing-Procedures-for-CCTV-Cameras" class="headerlink" title="Essential Testing Procedures for CCTV Cameras"></a>Essential Testing Procedures for CCTV Cameras</h2><h3 id="1-Hardware-Level-Security"><a href="#1-Hardware-Level-Security" class="headerlink" title="1. Hardware-Level Security"></a>1. Hardware-Level Security</h3><p>Debugging Interface Protection: Verify USB, UART, JTAG, SWD are disabled or protected (e.g., password-protected).<br>Unique Keys and Certificates: Confirm each device has unique cryptographic keys and certificates.<br>Trusted Execution Environment (TEE): Verify availability and use of TEE&#x2F;TPM&#x2F;SE for crypto operations.<br>Secure Storage: Ensure sensitive data, private keys, and certificates are stored securely.<br>Tamper Resistance: Test tamper detection and resistance features (software&#x2F;hardware).<br>Intellectual Property Protection: Check IP protection tech from SoC vendor is enabled (if available).<br>Secure Boot: Validate boot image signature before loading.<br>Random Number Generation: Use cryptographically secure pseudo-random number generators.</p>
-<h3 id="2-Software-Firmware-Security"><a href="#2-Software-Firmware-Security" class="headerlink" title="2. Software&#x2F;Firmware Security"></a>2. Software&#x2F;Firmware Security</h3><p>Memory Protection: Verify ASLR and DEP are enabled.<br>Transport Layer Security (TLS): Confirm data in transit is encrypted using secure TLS protocols.<br>Digital Signature Validation: Validate server connection signatures and certificates.<br>Use of Safe C Functions: Replace banned C functions with secure equivalents (via static analysis).<br>Component Disclosure (SBOM): Maintain Software Bill of Materials (third-party libraries, versions).<br>No Hardcoded Credentials: Ensure no hardcoded usernames&#x2F;passwords&#x2F;backdoors.<br>Secure Firmware Update: Use secure bootloader and prevent downgrade attacks.<br>Scheduled Updates: Device must support scheduled OTA or manual secure updates.</p>
-<p>Step-by-Step Testing Procedure for CCTV Cameras (BIS-CRS Compliance)</p>
-<p>Phase 1: Preparation &amp; Documentation<br>Phase 2: Hardware-Level Security Testing<br>Phase 3: Software &amp; Firmware Security Testing<br>Phase 4: Communication &amp; Supply Chain Assurance<br>Phase 5: Final Documentation &amp; Compliance</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文章发布指令</title>
     <url>/2026/05/18/%E5%8F%91%E5%B8%83%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
@@ -1951,6 +1939,42 @@
 <p>VSCODE 终端首次执行报错</p>
 <p>使用管理员身份打开 powershell ,输入以下命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开启评论</title>
+    <url>/2026/04/30/%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA/</url>
+    <content><![CDATA[<h1 id="开启评论"><a href="#开启评论" class="headerlink" title="开启评论"></a>开启评论</h1><p>下面我们来给博客添加一个评论功能，这里我们使用这个 <a href="https://github.com/apps/utterances" title="utterances">utterances</a>插件，它是一个基于 GitHub Issue 的，开源评论插件。</p>
+<p>我们点击安装它，然后选择对应的仓库给它授权。然后在 GitHub 仓库，点击设置，找到 features 下面这个 Discussion 选项，然后点击勾选上这个选项。</p>
+<p>接着我们需要修改 _config.fluid.yml 配置文件，在文件中填入下面的内容，保存就可以了。</p>
+<pre><code>comments:
+  # Up to two comments system, the first will be shown as default
+  # Leave it empty if you don&#39;t need comments
+  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
+  # Format of two comments system : Disqus,Waline
+  use: utterances
+  # Display the comment name next to the button
+  text: true
+  # Lazyload: The comment system will be load when comment element enters the browser&#39;s viewport.
+  # If you set it to true, the comment count will be invalid
+  lazyload: false
+  # Display comment count in post&#39;s top_img
+  count: true
+  # Display comment count in Home Page
+  card_post_count: false
+
+
+utterances:
+  repo: yzg011/com
+  issue_term: title
+  label: utterances
+  theme: github-light
+  theme_dark: github-dark
+  crossorigin: anonymous 
+</code></pre>
 ]]></content>
       <tags>
         <tag>技术</tag>
@@ -2664,42 +2688,6 @@
 
 </body>
 </html>]]></content>
-  </entry>
-  <entry>
-    <title>开启评论</title>
-    <url>/2026/04/30/%E5%BC%80%E5%90%AF%E8%AF%84%E8%AE%BA/</url>
-    <content><![CDATA[<h1 id="开启评论"><a href="#开启评论" class="headerlink" title="开启评论"></a>开启评论</h1><p>下面我们来给博客添加一个评论功能，这里我们使用这个 <a href="https://github.com/apps/utterances" title="utterances">utterances</a>插件，它是一个基于 GitHub Issue 的，开源评论插件。</p>
-<p>我们点击安装它，然后选择对应的仓库给它授权。然后在 GitHub 仓库，点击设置，找到 features 下面这个 Discussion 选项，然后点击勾选上这个选项。</p>
-<p>接着我们需要修改 _config.fluid.yml 配置文件，在文件中填入下面的内容，保存就可以了。</p>
-<pre><code>comments:
-  # Up to two comments system, the first will be shown as default
-  # Leave it empty if you don&#39;t need comments
-  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  # Format of two comments system : Disqus,Waline
-  use: utterances
-  # Display the comment name next to the button
-  text: true
-  # Lazyload: The comment system will be load when comment element enters the browser&#39;s viewport.
-  # If you set it to true, the comment count will be invalid
-  lazyload: false
-  # Display comment count in post&#39;s top_img
-  count: true
-  # Display comment count in Home Page
-  card_post_count: false
-
-
-utterances:
-  repo: yzg011/com
-  issue_term: title
-  label: utterances
-  theme: github-light
-  theme_dark: github-dark
-  crossorigin: anonymous 
-</code></pre>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
   </entry>
   <entry>
     <title>张居正：一根燃烧自己的脊梁</title>
@@ -3595,6 +3583,612 @@ utterances:
         <tag>宋朝</tag>
         <tag>才女</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>诗圣杜甫：一生坎坷的伟大灵魂</title>
+    <url>/2026/04/30/%E6%9D%9C%E7%94%AB%E4%B8%80%E7%94%9F%E4%BC%A0%E8%AE%B0/</url>
+    <content><![CDATA[
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>诗圣杜甫：一生坎坷的伟大灵魂</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', 'STSong', serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d4bc 100%);
+            color: #2c1810;
+            line-height: 2;
+            min-height: 100vh;
+        }
+        
+        /* 装饰性顶部横幅 */
+        .header-banner {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .header-banner h1 {
+            font-size: 3em;
+            color: #FFF8DC;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 1;
+            font-weight: bold;
+        }
+        
+        .header-banner .subtitle {
+            font-size: 1.3em;
+            color: #FFEFD5;
+            margin-top: 15px;
+            letter-spacing: 4px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-banner .quote {
+            font-size: 1.15em;
+            color: #FAEBD7;
+            margin-top: 20px;
+            font-style: italic;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        /* 开篇引言 */
+        .intro {
+            background: linear-gradient(145deg, #fffaf0, #fffbf5);
+            border-left: 6px solid #8B4513;
+            padding: 35px 40px;
+            margin-bottom: 45px;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 4px 20px rgba(139,69,19,0.12);
+        }
+        
+        .intro p {
+            font-size: 1.2em;
+            text-indent: 2em;
+            color: #4a3728;
+        }
+        
+        /* 章节标题 */
+        .chapter {
+            margin-bottom: 55px;
+            scroll-margin-top: 20px;
+        }
+        
+        .chapter-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 3px solid #D2691E;
+        }
+        
+        .chapter-number {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6em;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(139,69,19,0.35);
+        }
+        
+        .chapter-title h2 {
+            margin-left: 22px;
+            font-size: 1.85em;
+            color: #8B4513;
+            font-weight: bold;
+        }
+        
+        .chapter-title .period {
+            margin-left: auto;
+            font-size: 1em;
+            color: #A0522D;
+            font-weight: normal;
+            background: #f5e6d3;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+        
+        /* 正文段落 */
+        .content p {
+            text-indent: 2em;
+            margin-bottom: 18px;
+            font-size: 1.1em;
+            text-align: justify;
+            color: #3d2914;
+        }
+        
+        /* 诗词引用 */
+        .poem-quote {
+            background: linear-gradient(135deg, #faf3eb, #f9f0e3);
+            border: 2px solid #DEB887;
+            border-radius: 10px;
+            padding: 25px 35px;
+            margin: 30px auto;
+            max-width: 650px;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(139,69,19,0.1);
+        }
+        
+        .poem-quote::before,
+        .poem-quote::after {
+            content: '"';
+            font-size: 4em;
+            color: #CD853F;
+            position: absolute;
+            opacity: 0.25;
+            font-family: Georgia, serif;
+        }
+        
+        .poem-quote::before {
+            top: -10px;
+            left: 15px;
+        }
+        
+        .poem-quote::after {
+            bottom: -35px;
+            right: 15px;
+        }
+        
+        .poem-quote .poem-text {
+            font-size: 1.25em;
+            text-align: center;
+            color: #5c3d2e;
+            line-height: 2.2;
+            font-weight: 500;
+        }
+        
+        .poem-quote .poem-source {
+            text-align: right;
+            margin-top: 14px;
+            font-size: 0.95em;
+            color: #8B7355;
+            font-style: italic;
+        }
+        
+        /* 图片容器 */
+        .image-container {
+            margin: 38px auto;
+            text-align: center;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(139,69,19,0.2);
+            background: #fff;
+            padding: 12px;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .image-caption {
+            margin-top: 14px;
+            font-size: 0.98em;
+            color: #8B7355;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        /* 重点段落高亮 */
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5e6, #ffe8d0);
+            border-radius: 12px;
+            padding: 28px 34px;
+            margin: 28px 0;
+            border-left: 5px solid #D2691E;
+            box-shadow: 0 3px 15px rgba(210,105,30,0.12);
+        }
+        
+        .highlight-box p {
+            text-indent: 0;
+            margin-bottom: 0;
+            font-size: 1.08em;
+            color: #5c3317;
+        }
+        
+        /* 时间线 */
+        .timeline {
+            background: linear-gradient(180deg, #fdf8f3, #faf5ef);
+            border-radius: 14px;
+            padding: 32px;
+            margin: 28px 0;
+            border: 1px solid #E8DCC8;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-year {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            flex-shrink: 0;
+            min-width: 90px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(139,69,19,0.25);
+        }
+        
+        .timeline-content {
+            margin-left: 20px;
+            color: #4a3728;
+            padding-top: 6px;
+            font-size: 1.05em;
+        }
+        
+        /* 结尾 */
+        .conclusion {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 48px 42px;
+            border-radius: 16px;
+            margin-top: 52px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(139,69,19,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .conclusion::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+        }
+        
+        .conclusion h2 {
+            font-size: 2em;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 4px;
+        }
+        
+        .conclusion p {
+            font-size: 1.2em;
+            line-height: 2.2;
+            text-indent: 2em;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 36px 20px;
+            color: #8B7355;
+            font-size: 0.95em;
+            border-top: 1px solid #DDBEA8;
+            margin-top: 48px;
+            background: rgba(245,230,211,0.5);
+        }
+        
+        /* 分隔装饰 */
+        .divider {
+            text-align: center;
+            margin: 44px 0;
+            color: #CD853F;
+            font-size: 1.6em;
+            letter-spacing: 14px;
+            opacity: 0.65;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-banner h1 { font-size: 2em; letter-spacing: 4px; }
+            .header-banner .subtitle { font-size: 1em; }
+            .container { padding: 12px; margin: 20px auto; }
+            .intro { padding: 24px; }
+            .chapter-title h2 { font-size: 1.45em; }
+            .chapter-number { width: 46px; height: 46px; font-size: 1.3em; }
+            .content p { font-size: 1.05em; }
+            .poem-quote { padding: 20px 22px; }
+            .poem-quote .poem-text { font-size: 1.1em; }
+            .conclusion h2 { font-size: 1.6em; }
+            .conclusion p { font-size: 1.05em; }
+            .timeline { padding: 20px; }
+            .timeline-year { min-width: 72px; padding: 6px 10px; font-size: 0.88em; }
+            .timeline-content { font-size: 0.95em; margin-left: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 页面头部 -->
+<div class="header-banner">
+    <h1>诗圣杜甫</h1>
+    <div class="subtitle">一生坎坷 · 忧国忧民 · 诗史千秋</div>
+    <div class="quote">"安得广厦千万间，大庇天下寒士俱欢颜"</div>
+</div>
+
+<div class="container">
+
+    <!-- 引言 -->
+    <div class="intro">
+        <p>在中国文学浩瀚的长河中，有这样一位诗人：他生于盛唐繁华之世，却亲历安史之乱的腥风血雨；他才华盖世、志存高远，却一生仕途坎坷、穷困潦倒；他身处泥泞之中，心中却始终装着天下苍生。他就是被后世尊为"诗圣"的伟大诗人——杜甫。他的一千五百余首诗作，如同一部用血泪书写的史诗，记录了一个王朝由盛转衰的历史巨变，也映照出一个伟大灵魂在苦难中永不熄灭的光芒。</p>
+    </div>
+
+    <!-- 第一章 -->
+    <div class="chapter" id="chapter1">
+        <div class="chapter-title">
+            <div class="chapter-number">壹</div>
+            <h2>少年壮志：书香门第的璀璨起点</h2>
+            <span class="period">公元712年 — 735年</span>
+        </div>
+        <div class="content">
+            <p>唐睿宗先天元年（公元712年），杜甫出生于河南巩县（今河南巩义市）一个显赫的书香世家。他的祖父杜审言是初唐时期著名的诗人，官至修文馆直学士；父亲杜闲曾任奉天县令。在这样的家庭环境中，杜甫自幼便浸润在浓郁的文化氛围中，展现出惊人的天赋与对文学的热爱。</p>
+
+            <div class="highlight-box">
+                <p><strong>📖 少年轶事：</strong>据史料记载，杜甫七岁便能作诗，曾写下"凤凰鸣旭日，龙跃云汉津"这样气魄非凡的诗句。九岁时便已将大量经典诗文烂熟于心，十五岁时已在家乡文坛崭露头角，与当时的名士们诗文酬唱，被誉为"神童"。</p>
+            </div>
+
+            <p>青年时代的杜甫，意气风发，胸怀大志。他在一首回忆少年生活的诗中写道："忆年十五心尚孩，健如黄犊走复来。庭前八月梨枣熟，一日上树能千回。"这生动描绘了他少年时代活泼好动、充满活力的形象。然而，杜甫并非只知玩耍的顽童，他更是一位有着远大抱负的读书人。"读书破万卷，下笔如有神"，这句后来成为千古名言的诗句，正是他对自己刻苦攻读生涯的真实写照。</p>
+
+            <div class="poem-quote">
+                <div class="poem-text">
+                    岱宗夫如何？齐鲁青未了。<br>
+                    造化钟神秀，阴阳割昏晓。<br>
+                    荡胸生曾云，决眦入归鸟。<br>
+                    会当凌绝顶，一览众山小。
+                </div>
+                <div class="poem-source">——《望岳》· 杜甫（二十四岁时登泰山所作）</div>
+            </div>
+
+            <p>开元十九年至二十三年（731—735年），年轻的杜甫开始了人生中的第一次远游。他漫游吴越（今江苏、浙江一带），足迹遍及江南山水之间。这次游历不仅开阔了他的眼界，也让他饱览了祖国的大好河山，为他日后的诗歌创作积累了丰富的素材和情感体验。二十岁时，他又来到当时的东都洛阳，在那里度过了四年的时光，结识了许多文人雅士，进一步提升了文学修养。</p>
+
+            <p>开元二十四年（736年），二十四岁的杜甫来到山东，登上五岳之首的泰山。面对巍峨雄伟的泰山，这位年轻诗人豪情万丈，挥笔写下了那首脍炙人口的《望岳》。其中"会当凌绝顶，一览众山小"两句，不仅是对泰山壮美景色的赞美，更是年轻杜甫远大志向的自我写照——他要登上人生和艺术的最高峰，俯瞰世间一切艰难险阻！</p>
+
+            <!-- 少年读书配图 -->
+            <div class="image-container">
+                <img src="./generated-images/中国唐代诗人杜甫少年读书画像_古代书房场景_年轻书生在烛光下_2026-04-14T04-08-11.png" alt="杜甫少年读书画像">
+                <div class="image-caption">📜 少年杜甫苦读诗书 —— "读书破万卷，下笔如有神"</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- 第二章 -->
+    <div class="chapter" id="chapter2">
+        <div class="chapter-title">
+            <div class="chapter-number">贰</div>
+            <h2>长安十年：梦想与现实的残酷碰撞</h2>
+            <span class="period">公元735年 — 755年</span>
+        </div>
+        <div class="content">
+            <p>开元二十三年（735年），二十四岁的杜甫第一次参加进士考试。然而，命运似乎有意要考验这位天才——他落榜了。这次失利并没有让杜甫气馁，相反，他选择继续漫游，充实自己。此后几年，他游历齐赵大地，过着"放荡齐赵间，裘马颇清狂"的生活。这一时期，他与好友李白相识，两位伟大的诗人在洛阳相遇，结下了深厚的友谊。李白比杜甫大十一岁，当时已是名满天下的大诗人，而杜甫还是一位默默无闻的后辈。但两人一见如故，携手同游梁宋一带，饮酒赋诗，畅谈理想。这段珍贵的友谊成为中国文学史上最动人的佳话之一。</p>
+
+            <div class="highlight-box">
+                <p><strong>🤝 李杜之交：</strong>天宝三载（744年），杜甫与李白在洛阳初次相见。两人一起游历梁宋（今河南商丘、开封一带）、齐鲁等地，"醉眠秋共被，携手日同行"。尽管相处时间不长，但这份真挚的友情影响了杜甫的一生，他后来写下了许多怀念李白的动人诗篇。</p>
+            </div>
+
+            <p>然而，美好的日子终究是短暂的。天宝五载（746年），三十五岁的杜甫怀着满腔热忱来到长安，希望能在政治上有所作为。他以为凭借自己的才华和家族背景，一定能够获得朝廷的重用，实现"致君尧舜上，再使风俗淳"的政治理想。但他万万没想到，这一待就是整整十年，而等待他的却是接二连三的打击与失望。</p>
+
+            <p>长安十年是杜甫人生中最黑暗、最痛苦的时期之一。当时的朝政已被权相李林甫把持，科举制度形同虚设。天宝六载（747年），唐玄宗下诏选拔天下贤才，杜甫满怀希望地参加，结果李林甫为了独揽大权，竟然上奏称"野无遗贤"，让所有应试者全部落榜。这对杜甫来说无疑是晴天霹雳。</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">747年</div>
+                    <div class="timeline-content">应诏试而落榜，李林甫以"野无遗贤"蒙蔽皇帝，杜甫的政治梦想首次遭受重创</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">751年</div>
+                    <div class="timeline-content">向玄宗进献《三大礼赋》，得到赏识，命待制集贤院，但仍未获实际任用</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">755年</div>
+                    <div class="timeline-content">四十四岁终于获得右卫率府胄曹参军的小官，负责看守兵器钥匙，俸禄微薄</div>
+                </div>
+            </div>
+
+            <p>在长安的漫长岁月里，杜甫的生活日益困顿。他不得不依靠亲友的接济维持生计，甚至一度寄居在大女婿家中，过着寄人篱下的生活。他曾写道："朝扣富儿门，暮随肥马尘。残杯与冷炙，到处潜悲辛。"这几句诗真实地记录了他当年在长安四处碰壁、饱受冷眼的屈辱经历。一个曾经意气风发的才子，如今竟沦落到如此境地，其中的辛酸与无奈可想而知。</p>
+
+            <p>然而，正是这段痛苦的经历，使杜甫真正接触到了底层人民的生活，深刻体会到了社会的不公与黑暗。他的诗歌风格开始发生转变，从早期的浪漫主义逐渐转向现实主义。他开始关注普通人的疾苦，用自己的笔触记录社会的真相，为那些被遗忘的人发出声音。长安十年虽然摧毁了杜甫的政治梦想，但却成就了一位伟大的现实主义诗人。</p>
+        </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- 第三章 -->
+    <div class="chapter" id="chapter3">
+        <div class="chapter-title">
+            <div class="chapter-number">叁</div>
+            <h2>安史之乱：家国破碎的血泪岁月</h2>
+            <span class="period">公元755年 — 759年</span>
+        </div>
+        <div class="content">
+            <p>天宝十四载（755年）十一月，范阳节度使安禄山起兵反唐，安史之乱爆发。这场持续八年之久的战乱彻底改变了大唐帝国的命运，也彻底改变了杜甫的人生轨迹。当时，杜甫将家人安置在鄜州（今陕西富县）的羌村，独自北上灵武投奔新即位的唐肃宗，想要为国效力。不幸的是，他在途中被叛军俘获，押解回长安。</p>
+
+            <div class="poem-quote">
+                <div class="poem-text">
+                    国破山河在，城春草木深。<br>
+                    感时花溅泪，恨别鸟惊心。<br>
+                    烽火连三月，家书抵万金。<br>
+                    白头搔更短，浑欲不胜簪。
+                </div>
+                <div class="poem-source">——《春望》· 杜甫（被囚长安时所作）</div>
+            </div>
+
+            <p>在被叛军软禁的长安城中，杜甫目睹了昔日繁华的京城沦为废墟的惨状。曾经热闹非凡的大街小巷如今杂草丛生，昔日的歌舞升平变成了断壁残垣。这种强烈的对比让杜甫心如刀绞，他含泪写下了千古绝唱《春望》。"国破山河在，城春草木深"——短短十个字，道尽了对国家命运的深切忧虑和个人身世的无限感慨。"烽火连三月，家书抵万金"则表达了对远方家人的深切思念和对和平的渴望。这首诗不仅是杜甫个人情感的抒发，更是整个民族在那个动荡年代共同心声的表达。</p>
+
+            <p>至德二载（757年）夏，杜甫冒险逃出长安，穿过叛军的重重封锁，历经千难万险，终于抵达凤翔（今陕西凤翔）行在所。唐肃宗对他的忠诚深感欣慰，任命他为左拾遗。这是杜甫一生中担任过的最高官职，也是他离政治理想最近的一次。然而好景不长，仅仅几个月后，因为营救房琯一事触怒肃宗，杜甫遭到贬斥，从此再未受到重用。</p>
+
+            <p>乾元二年（759年），杜甫辞去华州司功参军的职务，开始了更为艰辛的流亡生活。他携全家西行，先后流寓秦州（今甘肃天水）、同谷（今甘肃成县）等地。这是一段极其艰苦的旅程，一路上饥寒交迫，甚至到了靠挖掘野生植物充饥的地步。他在《秦州杂诗》中描述当时的处境："满目悲生事，因人作远游。西征问烽火，心折此淹留。"字里行间充满了无尽的凄凉与无奈。</p>
+
+            <div class="highlight-box">
+                <p><strong>📜 "三吏三别"——战争最真实的写照：</strong></p>
+                <p style="margin-top:12px;">在这一时期，杜甫创作了中国文学史上最杰出的现实主义组诗——"三吏"（《石壕吏》《潼关吏》《新安吏》）和"三别"（《新婚别》《垂老别》《无家别》）。这些诗歌以第一人称或第三人称的视角，深刻揭露了战争给百姓带来的深重灾难。《石壕吏》中有这样的描写："吏呼一何怒！妇啼一何苦！"老翁逾墙走，老妇出门看。差役的凶残暴虐与百姓的无助绝望形成了强烈对比，读来令人潸然泪下。</p>
+            </div>
+
+            <p>在从华州前往秦州的途中，杜甫亲眼目睹了无数百姓因战争而家破人亡的惨剧。他在《石壕吏》中记录了一户农家在深夜遭遇差役抓丁的场景：老翁翻墙逃跑，老妇硬着头皮出门应对。最终，老妇被带走服役，留下老弱病残的一家老小相依为命。这首诗没有一句议论，只是冷静地叙述事件的经过，但其蕴含的情感力量却足以震撼每一个读者的心灵。这正是杜甫诗歌最了不起的地方——他用最朴素的语言，讲述最震撼人心的故事。</p>
+        </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- 第四章 -->
+    <div class="chapter" id="chapter4">
+        <div class="chapter-title">
+            <div class="chapter-number">肆</div>
+            <h2>成都草堂：风雨中的短暂安宁</h2>
+            <span class="period">公元759年 — 768年</span>
+        </div>
+        <div class="content">
+            <p>乾元二年（759年）年底，在经历了漫长的颠沛流离之后，杜甫带着家人来到了成都。在这里，在朋友严武等人的帮助下，他在成都西郊浣花溪畔建起了一座简陋的茅草屋，这就是后来闻名天下的"杜甫草堂"（又称"浣花草堂"）。对于漂泊多年的杜甫来说，这间小小的草屋意味着难得的安宁与稳定。</p>
+
+            <p>成都时期是杜甫晚年生活中相对平静的一段时光。这里气候温和、物产丰富，远离了北方的战火硝烟。在这段时间里，杜甫创作了大量优秀的作品，《春夜喜雨》《蜀相》《客至》《江村》等名篇都是这一时期的产物。《春夜喜雨》中"好雨知时节，当春乃发生。随风潜入夜，润物细无声"几句，以细腻的笔触描绘了春夜降雨的美景，表达了诗人对自然万物生长的喜悦之情。这首诗语言清新自然，意境优美，千百年来一直深受人们的喜爱。</p>
+
+            <div class="poem-quote">
+                <div class="poem-text">
+                    八月秋高风怒号，卷我屋上三重茅。<br>
+                    茅飞渡江洒江郊，高者挂罥长林梢，<br>
+                    下者飘转沉塘坳……<br><br>
+                    安得广厦千万间，<br>
+                    大庇天下寒士俱欢颜！<br>
+                    风雨不动安如山。<br>
+                    呜呼！<br>
+                    何时眼前突兀见此屋，<br>
+                    吾庐独破受冻死亦足！
+                </div>
+                <div class="poem-source">——《茅屋为秋风所破歌》· 节选</div>
+            </div>
+
+            <p>然而，即便是在这短暂的安宁时刻，杜甫依然无法忘记天下苍生的疾苦。上元二年（761年）秋天的一个夜晚，狂风骤起，吹破了杜甫草堂的屋顶。大雨倾盆而下，漏得屋里没有一块干燥的地方。全家人蜷缩在被雨水打湿的被褥里，瑟瑟发抖。面对这样的困境，普通人可能会怨天尤人或哀叹自己的不幸，但杜甫想到的却是普天下所有像自己一样遭受苦难的人。</p>
+
+            <p>"安得广厦千万间，大庇天下寒士俱欢颜！"——这是何等的博大胸怀！在自己最困难的时候，杜甫关心的不是个人的得失，而是千千万万个与自己一样贫苦的知识分子能否有一个遮风避雨的地方。"何时眼前突兀见此屋，吾庐独破受冻死亦足！"他宁愿自己一个人承受所有的苦难，也希望所有人都能过上幸福的生活。这种推己及人、舍己为人的精神，让一千多年后的我们依然为之动容。这就是杜甫之所以被称为"诗圣"的原因——他不仅仅是一个伟大的诗人，更是一个拥有伟大人格和高尚情操的人！</p>
+
+            <p>广德二年（764年），经严武推荐，杜甫担任检校工部员外郎，因此后世也称他为"杜工部"。这是杜甫最后一次出仕。然而，由于身体状况和政治环境的原因，他在这个职位上没待多久就辞职了。永泰元年（765年）四月，严武病逝，杜甫失去了在成都最大的依靠。五月，他带着家人离开了居住了近六年的草堂，再次踏上了漂泊之路。</p>
+        </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- 第五章 -->
+    <div class="chapter" id="chapter5">
+        <div class="chapter-title">
+            <div class="chapter-number">伍</div>
+            <h2>漂泊西南：生命最后的孤独旅程</h2>
+            <span class="period">公元768年 — 770年</span>
+        </div>
+        <div class="content">
+            <p>离开成都之后，杜甫的生命进入了最后的阶段。他先是乘船沿长江东下，经过嘉州（今四川乐山）、戎州（今四川宜宾）、渝州（今重庆）、夔州（今重庆奉节）等地，最终到达夔州并在此居住了将近两年时间。夔州时期是杜甫创作的又一个高峰期，他在此期间创作了约四百首诗歌，包括《秋兴八首》《登高》等代表作。</p>
+
+            <div class="poem-quote">
+                <div class="poem-text">
+                    风急天高猿啸哀，渚清沙白鸟飞回。<br>
+                    无边落木萧萧下，不尽长江滚滚来。<br>
+                    万里悲秋常作客，百年多病独登台。<br>
+                    艰难苦恨繁霜鬓，潦倒新停浊酒杯。
+                </div>
+                <div class="poem-source">——《登高》· 杜甫（夔州时期代表作）</div>
+            </div>
+
+            <p>《登高》被公认为杜甫最杰出的作品之一，也是中国古典诗歌中七言律诗的巅峰之作。"无边落木萧萧下，不尽长江滚滚来"这两句，以宏大的时空视角展现了自然的永恒与人生的渺小，意境深远，气势磅礴。而"万里悲秋常作客，百年多病独登台"则浓缩了杜甫一生的悲剧经历——万里漂泊、暮年作客、多病缠身、佳节登高、无人陪伴……短短十四个字包含了八重悲愁，令人读来不禁扼腕叹息。</p>
+
+            <p>大历三年（768年），杜甫再次踏上旅途，乘船出三峡，继续向东漂泊。此时的他已经是一个风烛残年的老人，疾病缠身，贫困交加。他先后辗转于江陵（今湖北荆州）、公安（今湖北公安）等地，最终于大历四年（769年）抵达潭州（今湖南长沙）和衡州（今湖南衡阳）。这一路上，杜甫的生活极为艰难，有时甚至需要靠乞讨度日。他在诗中写道："饥借家家米，愁征处处杯。"可见其境遇之窘迫。</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">768年</div>
+                    <div class="timeline-content">离开夔州，乘舟出峡，开始最后的漂泊旅程</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">769年</div>
+                    <div class="timeline-content">辗转潭州、衡州等地，生活极度贫困，疾病缠身</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">770年</div>
+                    <div class="timeline-content">冬，在由潭州往岳阳的一条小船上病逝，享年五十九岁</div>
+                </div>
+            </div>
+
+            <p>大历五年（770年）四月，潭州发生兵乱，杜甫再次被迫逃亡。他原本计划前往郴州投靠亲戚，但在逆流而上的途中遭遇洪水，被困在耒阳一带数天，几乎饿死。幸亏有县令送来牛肉和白酒，他才得以活下来。然而，这次劫难严重损害了本就虚弱的身体。杜甫改变了计划，顺流而下返回潭州。</p>
+
+            <p>大历五年（770年）冬天，杜甫在一条由潭州驶往岳阳的小船上永远地闭上了双眼，享年五十九岁。据记载，他临终前的最后时刻仍然在吟诗。这位伟大的诗人就这样在贫穷与疾病中结束了他坎坷的一生。他死后，家人无力将其归葬故乡，只能临时将他安葬在岳阳。直到四十三年后（813年），他的孙子杜嗣业才将他的灵柩迁回故乡河南偃师，与夫人杨氏合葬。</p>
+
+            <div class="highlight-box">
+                <p><strong>🏛️ 绝唱：</strong>杜甫生前最后一首重要作品是《登岳阳楼》。当时他途经岳阳，登上著名的岳阳楼，面对浩瀚的洞庭湖，写下了"吴楚东南坼，乾坤日夜浮"的千古名句。这首诗既写出了洞庭湖气象万千的壮观景象，也隐含了诗人对国家破碎、身世飘零的深沉感伤。一个即将走到生命终点的老人，面对浩瀚的湖山，心中装的依然是家国天下——这就是杜甫，这就是诗圣！</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <!-- 结语 -->
+    <div class="conclusion">
+        <h2>千秋诗圣 万古流芳</h2>
+        <p>回顾杜甫的一生，我们看到的是一部充满苦难与奋斗的史诗。他生于盛唐，却经历了唐朝由极盛转向衰落的全过程；他有旷世之才，却一生怀才不遇、穷困潦倒；他自身难保，却始终心怀天下苍生。正是这些看似矛盾的因素，造就了中国文学史上独一无二的"诗圣"。</p>
+        <p style="text-indent: 2em; margin-top: 20px;">杜甫留给我们的，不仅仅是一千五百多首优秀的诗歌，更是一种崇高的人格力量和精神境界。在他身上，我们看到了什么是真正的忧国忧民，什么是推己及人的博大情怀，什么是在逆境中坚守理想的执着精神。他的诗歌被誉为"诗史"，因为他忠实地记录了自己所处的时代；他被尊为"诗圣"，因为他用生命诠释了什么是真正的文人风骨。</p>
+        <p style="text-indent: 2em; margin-top: 20px;">一千二百多年过去了，当我们今天重新诵读杜甫的诗篇时，依然会被其中蕴含的深厚情感所打动。"朱门酒肉臭，路有冻死骨"——对社会不公的控诉至今振聋发聩；"安得广厦千万间，大庇天下寒士俱欢颜"——对他人的关怀依然温暖人心；"无边落木萧萧下，不尽长江滚滚来"——对宇宙人生的思考依然启迪着我们。杜甫的精神早已融入中华民族的文化血脉之中，成为我们宝贵的精神财富。</p>
+    </div>
+
+</div>
+
+<footer style="text-align:center;padding:28px 16px;color:#8B7355;font-size:13px;border-top:1px solid #DDBEA8;margin-top:36px;background:rgba(245,230,211,0.4)">
+    <p style="margin-bottom:8px">✍️ 文章整理 | 诗圣杜甫生平传记</p>
+    <p style="font-size:12px;margin:0;opacity:0.8">"文章千古事，得失寸心知。" —— 致敬伟大的诗圣杜甫</p>
+</footer>
+
+</body>
+</html>
+]]></content>
   </entry>
   <entry>
     <title>技术支持知识库</title>
@@ -4767,610 +5361,24 @@ utterances:
       </tags>
   </entry>
   <entry>
-    <title>诗圣杜甫：一生坎坷的伟大灵魂</title>
-    <url>/2026/04/30/%E6%9D%9C%E7%94%AB%E4%B8%80%E7%94%9F%E4%BC%A0%E8%AE%B0/</url>
-    <content><![CDATA[
-
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>诗圣杜甫：一生坎坷的伟大灵魂</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Georgia', 'Noto Serif SC', 'STSong', serif;
-            background: linear-gradient(135deg, #f5e6d3 0%, #e8d4bc 100%);
-            color: #2c1810;
-            line-height: 2;
-            min-height: 100vh;
-        }
-        
-        /* 装饰性顶部横幅 */
-        .header-banner {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
-            padding: 40px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
-            opacity: 0.3;
-        }
-        
-        .header-banner h1 {
-            font-size: 3em;
-            color: #FFF8DC;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-            letter-spacing: 8px;
-            position: relative;
-            z-index: 1;
-            font-weight: bold;
-        }
-        
-        .header-banner .subtitle {
-            font-size: 1.3em;
-            color: #FFEFD5;
-            margin-top: 15px;
-            letter-spacing: 4px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .header-banner .quote {
-            font-size: 1.15em;
-            color: #FAEBD7;
-            margin-top: 20px;
-            font-style: italic;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.95;
-            position: relative;
-            z-index: 1;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        
-        /* 开篇引言 */
-        .intro {
-            background: linear-gradient(145deg, #fffaf0, #fffbf5);
-            border-left: 6px solid #8B4513;
-            padding: 35px 40px;
-            margin-bottom: 45px;
-            border-radius: 0 12px 12px 0;
-            box-shadow: 0 4px 20px rgba(139,69,19,0.12);
-        }
-        
-        .intro p {
-            font-size: 1.2em;
-            text-indent: 2em;
-            color: #4a3728;
-        }
-        
-        /* 章节标题 */
-        .chapter {
-            margin-bottom: 55px;
-            scroll-margin-top: 20px;
-        }
-        
-        .chapter-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 28px;
-            padding-bottom: 18px;
-            border-bottom: 3px solid #D2691E;
-        }
-        
-        .chapter-number {
-            background: linear-gradient(135deg, #8B4513, #A0522D);
-            color: white;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6em;
-            font-weight: bold;
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(139,69,19,0.35);
-        }
-        
-        .chapter-title h2 {
-            margin-left: 22px;
-            font-size: 1.85em;
-            color: #8B4513;
-            font-weight: bold;
-        }
-        
-        .chapter-title .period {
-            margin-left: auto;
-            font-size: 1em;
-            color: #A0522D;
-            font-weight: normal;
-            background: #f5e6d3;
-            padding: 6px 16px;
-            border-radius: 20px;
-        }
-        
-        /* 正文段落 */
-        .content p {
-            text-indent: 2em;
-            margin-bottom: 18px;
-            font-size: 1.1em;
-            text-align: justify;
-            color: #3d2914;
-        }
-        
-        /* 诗词引用 */
-        .poem-quote {
-            background: linear-gradient(135deg, #faf3eb, #f9f0e3);
-            border: 2px solid #DEB887;
-            border-radius: 10px;
-            padding: 25px 35px;
-            margin: 30px auto;
-            max-width: 650px;
-            position: relative;
-            box-shadow: 0 4px 15px rgba(139,69,19,0.1);
-        }
-        
-        .poem-quote::before,
-        .poem-quote::after {
-            content: '"';
-            font-size: 4em;
-            color: #CD853F;
-            position: absolute;
-            opacity: 0.25;
-            font-family: Georgia, serif;
-        }
-        
-        .poem-quote::before {
-            top: -10px;
-            left: 15px;
-        }
-        
-        .poem-quote::after {
-            bottom: -35px;
-            right: 15px;
-        }
-        
-        .poem-quote .poem-text {
-            font-size: 1.25em;
-            text-align: center;
-            color: #5c3d2e;
-            line-height: 2.2;
-            font-weight: 500;
-        }
-        
-        .poem-quote .poem-source {
-            text-align: right;
-            margin-top: 14px;
-            font-size: 0.95em;
-            color: #8B7355;
-            font-style: italic;
-        }
-        
-        /* 图片容器 */
-        .image-container {
-            margin: 38px auto;
-            text-align: center;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(139,69,19,0.2);
-            background: #fff;
-            padding: 12px;
-        }
-        
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            display: block;
-            margin: 0 auto;
-        }
-        
-        .image-caption {
-            margin-top: 14px;
-            font-size: 0.98em;
-            color: #8B7355;
-            font-style: italic;
-            text-align: center;
-        }
-        
-        /* 重点段落高亮 */
-        .highlight-box {
-            background: linear-gradient(135deg, #fff5e6, #ffe8d0);
-            border-radius: 12px;
-            padding: 28px 34px;
-            margin: 28px 0;
-            border-left: 5px solid #D2691E;
-            box-shadow: 0 3px 15px rgba(210,105,30,0.12);
-        }
-        
-        .highlight-box p {
-            text-indent: 0;
-            margin-bottom: 0;
-            font-size: 1.08em;
-            color: #5c3317;
-        }
-        
-        /* 时间线 */
-        .timeline {
-            background: linear-gradient(180deg, #fdf8f3, #faf5ef);
-            border-radius: 14px;
-            padding: 32px;
-            margin: 28px 0;
-            border: 1px solid #E8DCC8;
-        }
-        
-        .timeline-item {
-            display: flex;
-            margin-bottom: 24px;
-            align-items: flex-start;
-        }
-        
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .timeline-year {
-            background: linear-gradient(135deg, #8B4513, #A0522D);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: bold;
-            flex-shrink: 0;
-            min-width: 90px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(139,69,19,0.25);
-        }
-        
-        .timeline-content {
-            margin-left: 20px;
-            color: #4a3728;
-            padding-top: 6px;
-            font-size: 1.05em;
-        }
-        
-        /* 结尾 */
-        .conclusion {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            color: white;
-            padding: 48px 42px;
-            border-radius: 16px;
-            margin-top: 52px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(139,69,19,0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .conclusion::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-        }
-        
-        .conclusion h2 {
-            font-size: 2em;
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 1;
-            letter-spacing: 4px;
-        }
-        
-        .conclusion p {
-            font-size: 1.2em;
-            line-height: 2.2;
-            text-indent: 2em;
-            text-align: justify;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* 页脚 */
-        footer {
-            text-align: center;
-            padding: 36px 20px;
-            color: #8B7355;
-            font-size: 0.95em;
-            border-top: 1px solid #DDBEA8;
-            margin-top: 48px;
-            background: rgba(245,230,211,0.5);
-        }
-        
-        /* 分隔装饰 */
-        .divider {
-            text-align: center;
-            margin: 44px 0;
-            color: #CD853F;
-            font-size: 1.6em;
-            letter-spacing: 14px;
-            opacity: 0.65;
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .header-banner h1 { font-size: 2em; letter-spacing: 4px; }
-            .header-banner .subtitle { font-size: 1em; }
-            .container { padding: 12px; margin: 20px auto; }
-            .intro { padding: 24px; }
-            .chapter-title h2 { font-size: 1.45em; }
-            .chapter-number { width: 46px; height: 46px; font-size: 1.3em; }
-            .content p { font-size: 1.05em; }
-            .poem-quote { padding: 20px 22px; }
-            .poem-quote .poem-text { font-size: 1.1em; }
-            .conclusion h2 { font-size: 1.6em; }
-            .conclusion p { font-size: 1.05em; }
-            .timeline { padding: 20px; }
-            .timeline-year { min-width: 72px; padding: 6px 10px; font-size: 0.88em; }
-            .timeline-content { font-size: 0.95em; margin-left: 14px; }
-        }
-    </style>
-</head>
-<body>
-
-<!-- 页面头部 -->
-<div class="header-banner">
-    <h1>诗圣杜甫</h1>
-    <div class="subtitle">一生坎坷 · 忧国忧民 · 诗史千秋</div>
-    <div class="quote">"安得广厦千万间，大庇天下寒士俱欢颜"</div>
-</div>
-
-<div class="container">
-
-    <!-- 引言 -->
-    <div class="intro">
-        <p>在中国文学浩瀚的长河中，有这样一位诗人：他生于盛唐繁华之世，却亲历安史之乱的腥风血雨；他才华盖世、志存高远，却一生仕途坎坷、穷困潦倒；他身处泥泞之中，心中却始终装着天下苍生。他就是被后世尊为"诗圣"的伟大诗人——杜甫。他的一千五百余首诗作，如同一部用血泪书写的史诗，记录了一个王朝由盛转衰的历史巨变，也映照出一个伟大灵魂在苦难中永不熄灭的光芒。</p>
-    </div>
-
-    <!-- 第一章 -->
-    <div class="chapter" id="chapter1">
-        <div class="chapter-title">
-            <div class="chapter-number">壹</div>
-            <h2>少年壮志：书香门第的璀璨起点</h2>
-            <span class="period">公元712年 — 735年</span>
-        </div>
-        <div class="content">
-            <p>唐睿宗先天元年（公元712年），杜甫出生于河南巩县（今河南巩义市）一个显赫的书香世家。他的祖父杜审言是初唐时期著名的诗人，官至修文馆直学士；父亲杜闲曾任奉天县令。在这样的家庭环境中，杜甫自幼便浸润在浓郁的文化氛围中，展现出惊人的天赋与对文学的热爱。</p>
-
-            <div class="highlight-box">
-                <p><strong>📖 少年轶事：</strong>据史料记载，杜甫七岁便能作诗，曾写下"凤凰鸣旭日，龙跃云汉津"这样气魄非凡的诗句。九岁时便已将大量经典诗文烂熟于心，十五岁时已在家乡文坛崭露头角，与当时的名士们诗文酬唱，被誉为"神童"。</p>
-            </div>
-
-            <p>青年时代的杜甫，意气风发，胸怀大志。他在一首回忆少年生活的诗中写道："忆年十五心尚孩，健如黄犊走复来。庭前八月梨枣熟，一日上树能千回。"这生动描绘了他少年时代活泼好动、充满活力的形象。然而，杜甫并非只知玩耍的顽童，他更是一位有着远大抱负的读书人。"读书破万卷，下笔如有神"，这句后来成为千古名言的诗句，正是他对自己刻苦攻读生涯的真实写照。</p>
-
-            <div class="poem-quote">
-                <div class="poem-text">
-                    岱宗夫如何？齐鲁青未了。<br>
-                    造化钟神秀，阴阳割昏晓。<br>
-                    荡胸生曾云，决眦入归鸟。<br>
-                    会当凌绝顶，一览众山小。
-                </div>
-                <div class="poem-source">——《望岳》· 杜甫（二十四岁时登泰山所作）</div>
-            </div>
-
-            <p>开元十九年至二十三年（731—735年），年轻的杜甫开始了人生中的第一次远游。他漫游吴越（今江苏、浙江一带），足迹遍及江南山水之间。这次游历不仅开阔了他的眼界，也让他饱览了祖国的大好河山，为他日后的诗歌创作积累了丰富的素材和情感体验。二十岁时，他又来到当时的东都洛阳，在那里度过了四年的时光，结识了许多文人雅士，进一步提升了文学修养。</p>
-
-            <p>开元二十四年（736年），二十四岁的杜甫来到山东，登上五岳之首的泰山。面对巍峨雄伟的泰山，这位年轻诗人豪情万丈，挥笔写下了那首脍炙人口的《望岳》。其中"会当凌绝顶，一览众山小"两句，不仅是对泰山壮美景色的赞美，更是年轻杜甫远大志向的自我写照——他要登上人生和艺术的最高峰，俯瞰世间一切艰难险阻！</p>
-
-            <!-- 少年读书配图 -->
-            <div class="image-container">
-                <img src="./generated-images/中国唐代诗人杜甫少年读书画像_古代书房场景_年轻书生在烛光下_2026-04-14T04-08-11.png" alt="杜甫少年读书画像">
-                <div class="image-caption">📜 少年杜甫苦读诗书 —— "读书破万卷，下笔如有神"</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="divider">✦ ✦ ✦</div>
-
-    <!-- 第二章 -->
-    <div class="chapter" id="chapter2">
-        <div class="chapter-title">
-            <div class="chapter-number">贰</div>
-            <h2>长安十年：梦想与现实的残酷碰撞</h2>
-            <span class="period">公元735年 — 755年</span>
-        </div>
-        <div class="content">
-            <p>开元二十三年（735年），二十四岁的杜甫第一次参加进士考试。然而，命运似乎有意要考验这位天才——他落榜了。这次失利并没有让杜甫气馁，相反，他选择继续漫游，充实自己。此后几年，他游历齐赵大地，过着"放荡齐赵间，裘马颇清狂"的生活。这一时期，他与好友李白相识，两位伟大的诗人在洛阳相遇，结下了深厚的友谊。李白比杜甫大十一岁，当时已是名满天下的大诗人，而杜甫还是一位默默无闻的后辈。但两人一见如故，携手同游梁宋一带，饮酒赋诗，畅谈理想。这段珍贵的友谊成为中国文学史上最动人的佳话之一。</p>
-
-            <div class="highlight-box">
-                <p><strong>🤝 李杜之交：</strong>天宝三载（744年），杜甫与李白在洛阳初次相见。两人一起游历梁宋（今河南商丘、开封一带）、齐鲁等地，"醉眠秋共被，携手日同行"。尽管相处时间不长，但这份真挚的友情影响了杜甫的一生，他后来写下了许多怀念李白的动人诗篇。</p>
-            </div>
-
-            <p>然而，美好的日子终究是短暂的。天宝五载（746年），三十五岁的杜甫怀着满腔热忱来到长安，希望能在政治上有所作为。他以为凭借自己的才华和家族背景，一定能够获得朝廷的重用，实现"致君尧舜上，再使风俗淳"的政治理想。但他万万没想到，这一待就是整整十年，而等待他的却是接二连三的打击与失望。</p>
-
-            <p>长安十年是杜甫人生中最黑暗、最痛苦的时期之一。当时的朝政已被权相李林甫把持，科举制度形同虚设。天宝六载（747年），唐玄宗下诏选拔天下贤才，杜甫满怀希望地参加，结果李林甫为了独揽大权，竟然上奏称"野无遗贤"，让所有应试者全部落榜。这对杜甫来说无疑是晴天霹雳。</p>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">747年</div>
-                    <div class="timeline-content">应诏试而落榜，李林甫以"野无遗贤"蒙蔽皇帝，杜甫的政治梦想首次遭受重创</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">751年</div>
-                    <div class="timeline-content">向玄宗进献《三大礼赋》，得到赏识，命待制集贤院，但仍未获实际任用</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">755年</div>
-                    <div class="timeline-content">四十四岁终于获得右卫率府胄曹参军的小官，负责看守兵器钥匙，俸禄微薄</div>
-                </div>
-            </div>
-
-            <p>在长安的漫长岁月里，杜甫的生活日益困顿。他不得不依靠亲友的接济维持生计，甚至一度寄居在大女婿家中，过着寄人篱下的生活。他曾写道："朝扣富儿门，暮随肥马尘。残杯与冷炙，到处潜悲辛。"这几句诗真实地记录了他当年在长安四处碰壁、饱受冷眼的屈辱经历。一个曾经意气风发的才子，如今竟沦落到如此境地，其中的辛酸与无奈可想而知。</p>
-
-            <p>然而，正是这段痛苦的经历，使杜甫真正接触到了底层人民的生活，深刻体会到了社会的不公与黑暗。他的诗歌风格开始发生转变，从早期的浪漫主义逐渐转向现实主义。他开始关注普通人的疾苦，用自己的笔触记录社会的真相，为那些被遗忘的人发出声音。长安十年虽然摧毁了杜甫的政治梦想，但却成就了一位伟大的现实主义诗人。</p>
-        </div>
-    </div>
-
-    <div class="divider">✦ ✦ ✦</div>
-
-    <!-- 第三章 -->
-    <div class="chapter" id="chapter3">
-        <div class="chapter-title">
-            <div class="chapter-number">叁</div>
-            <h2>安史之乱：家国破碎的血泪岁月</h2>
-            <span class="period">公元755年 — 759年</span>
-        </div>
-        <div class="content">
-            <p>天宝十四载（755年）十一月，范阳节度使安禄山起兵反唐，安史之乱爆发。这场持续八年之久的战乱彻底改变了大唐帝国的命运，也彻底改变了杜甫的人生轨迹。当时，杜甫将家人安置在鄜州（今陕西富县）的羌村，独自北上灵武投奔新即位的唐肃宗，想要为国效力。不幸的是，他在途中被叛军俘获，押解回长安。</p>
-
-            <div class="poem-quote">
-                <div class="poem-text">
-                    国破山河在，城春草木深。<br>
-                    感时花溅泪，恨别鸟惊心。<br>
-                    烽火连三月，家书抵万金。<br>
-                    白头搔更短，浑欲不胜簪。
-                </div>
-                <div class="poem-source">——《春望》· 杜甫（被囚长安时所作）</div>
-            </div>
-
-            <p>在被叛军软禁的长安城中，杜甫目睹了昔日繁华的京城沦为废墟的惨状。曾经热闹非凡的大街小巷如今杂草丛生，昔日的歌舞升平变成了断壁残垣。这种强烈的对比让杜甫心如刀绞，他含泪写下了千古绝唱《春望》。"国破山河在，城春草木深"——短短十个字，道尽了对国家命运的深切忧虑和个人身世的无限感慨。"烽火连三月，家书抵万金"则表达了对远方家人的深切思念和对和平的渴望。这首诗不仅是杜甫个人情感的抒发，更是整个民族在那个动荡年代共同心声的表达。</p>
-
-            <p>至德二载（757年）夏，杜甫冒险逃出长安，穿过叛军的重重封锁，历经千难万险，终于抵达凤翔（今陕西凤翔）行在所。唐肃宗对他的忠诚深感欣慰，任命他为左拾遗。这是杜甫一生中担任过的最高官职，也是他离政治理想最近的一次。然而好景不长，仅仅几个月后，因为营救房琯一事触怒肃宗，杜甫遭到贬斥，从此再未受到重用。</p>
-
-            <p>乾元二年（759年），杜甫辞去华州司功参军的职务，开始了更为艰辛的流亡生活。他携全家西行，先后流寓秦州（今甘肃天水）、同谷（今甘肃成县）等地。这是一段极其艰苦的旅程，一路上饥寒交迫，甚至到了靠挖掘野生植物充饥的地步。他在《秦州杂诗》中描述当时的处境："满目悲生事，因人作远游。西征问烽火，心折此淹留。"字里行间充满了无尽的凄凉与无奈。</p>
-
-            <div class="highlight-box">
-                <p><strong>📜 "三吏三别"——战争最真实的写照：</strong></p>
-                <p style="margin-top:12px;">在这一时期，杜甫创作了中国文学史上最杰出的现实主义组诗——"三吏"（《石壕吏》《潼关吏》《新安吏》）和"三别"（《新婚别》《垂老别》《无家别》）。这些诗歌以第一人称或第三人称的视角，深刻揭露了战争给百姓带来的深重灾难。《石壕吏》中有这样的描写："吏呼一何怒！妇啼一何苦！"老翁逾墙走，老妇出门看。差役的凶残暴虐与百姓的无助绝望形成了强烈对比，读来令人潸然泪下。</p>
-            </div>
-
-            <p>在从华州前往秦州的途中，杜甫亲眼目睹了无数百姓因战争而家破人亡的惨剧。他在《石壕吏》中记录了一户农家在深夜遭遇差役抓丁的场景：老翁翻墙逃跑，老妇硬着头皮出门应对。最终，老妇被带走服役，留下老弱病残的一家老小相依为命。这首诗没有一句议论，只是冷静地叙述事件的经过，但其蕴含的情感力量却足以震撼每一个读者的心灵。这正是杜甫诗歌最了不起的地方——他用最朴素的语言，讲述最震撼人心的故事。</p>
-        </div>
-    </div>
-
-    <div class="divider">✦ ✦ ✦</div>
-
-    <!-- 第四章 -->
-    <div class="chapter" id="chapter4">
-        <div class="chapter-title">
-            <div class="chapter-number">肆</div>
-            <h2>成都草堂：风雨中的短暂安宁</h2>
-            <span class="period">公元759年 — 768年</span>
-        </div>
-        <div class="content">
-            <p>乾元二年（759年）年底，在经历了漫长的颠沛流离之后，杜甫带着家人来到了成都。在这里，在朋友严武等人的帮助下，他在成都西郊浣花溪畔建起了一座简陋的茅草屋，这就是后来闻名天下的"杜甫草堂"（又称"浣花草堂"）。对于漂泊多年的杜甫来说，这间小小的草屋意味着难得的安宁与稳定。</p>
-
-            <p>成都时期是杜甫晚年生活中相对平静的一段时光。这里气候温和、物产丰富，远离了北方的战火硝烟。在这段时间里，杜甫创作了大量优秀的作品，《春夜喜雨》《蜀相》《客至》《江村》等名篇都是这一时期的产物。《春夜喜雨》中"好雨知时节，当春乃发生。随风潜入夜，润物细无声"几句，以细腻的笔触描绘了春夜降雨的美景，表达了诗人对自然万物生长的喜悦之情。这首诗语言清新自然，意境优美，千百年来一直深受人们的喜爱。</p>
-
-            <div class="poem-quote">
-                <div class="poem-text">
-                    八月秋高风怒号，卷我屋上三重茅。<br>
-                    茅飞渡江洒江郊，高者挂罥长林梢，<br>
-                    下者飘转沉塘坳……<br><br>
-                    安得广厦千万间，<br>
-                    大庇天下寒士俱欢颜！<br>
-                    风雨不动安如山。<br>
-                    呜呼！<br>
-                    何时眼前突兀见此屋，<br>
-                    吾庐独破受冻死亦足！
-                </div>
-                <div class="poem-source">——《茅屋为秋风所破歌》· 节选</div>
-            </div>
-
-            <p>然而，即便是在这短暂的安宁时刻，杜甫依然无法忘记天下苍生的疾苦。上元二年（761年）秋天的一个夜晚，狂风骤起，吹破了杜甫草堂的屋顶。大雨倾盆而下，漏得屋里没有一块干燥的地方。全家人蜷缩在被雨水打湿的被褥里，瑟瑟发抖。面对这样的困境，普通人可能会怨天尤人或哀叹自己的不幸，但杜甫想到的却是普天下所有像自己一样遭受苦难的人。</p>
-
-            <p>"安得广厦千万间，大庇天下寒士俱欢颜！"——这是何等的博大胸怀！在自己最困难的时候，杜甫关心的不是个人的得失，而是千千万万个与自己一样贫苦的知识分子能否有一个遮风避雨的地方。"何时眼前突兀见此屋，吾庐独破受冻死亦足！"他宁愿自己一个人承受所有的苦难，也希望所有人都能过上幸福的生活。这种推己及人、舍己为人的精神，让一千多年后的我们依然为之动容。这就是杜甫之所以被称为"诗圣"的原因——他不仅仅是一个伟大的诗人，更是一个拥有伟大人格和高尚情操的人！</p>
-
-            <p>广德二年（764年），经严武推荐，杜甫担任检校工部员外郎，因此后世也称他为"杜工部"。这是杜甫最后一次出仕。然而，由于身体状况和政治环境的原因，他在这个职位上没待多久就辞职了。永泰元年（765年）四月，严武病逝，杜甫失去了在成都最大的依靠。五月，他带着家人离开了居住了近六年的草堂，再次踏上了漂泊之路。</p>
-        </div>
-    </div>
-
-    <div class="divider">✦ ✦ ✦</div>
-
-    <!-- 第五章 -->
-    <div class="chapter" id="chapter5">
-        <div class="chapter-title">
-            <div class="chapter-number">伍</div>
-            <h2>漂泊西南：生命最后的孤独旅程</h2>
-            <span class="period">公元768年 — 770年</span>
-        </div>
-        <div class="content">
-            <p>离开成都之后，杜甫的生命进入了最后的阶段。他先是乘船沿长江东下，经过嘉州（今四川乐山）、戎州（今四川宜宾）、渝州（今重庆）、夔州（今重庆奉节）等地，最终到达夔州并在此居住了将近两年时间。夔州时期是杜甫创作的又一个高峰期，他在此期间创作了约四百首诗歌，包括《秋兴八首》《登高》等代表作。</p>
-
-            <div class="poem-quote">
-                <div class="poem-text">
-                    风急天高猿啸哀，渚清沙白鸟飞回。<br>
-                    无边落木萧萧下，不尽长江滚滚来。<br>
-                    万里悲秋常作客，百年多病独登台。<br>
-                    艰难苦恨繁霜鬓，潦倒新停浊酒杯。
-                </div>
-                <div class="poem-source">——《登高》· 杜甫（夔州时期代表作）</div>
-            </div>
-
-            <p>《登高》被公认为杜甫最杰出的作品之一，也是中国古典诗歌中七言律诗的巅峰之作。"无边落木萧萧下，不尽长江滚滚来"这两句，以宏大的时空视角展现了自然的永恒与人生的渺小，意境深远，气势磅礴。而"万里悲秋常作客，百年多病独登台"则浓缩了杜甫一生的悲剧经历——万里漂泊、暮年作客、多病缠身、佳节登高、无人陪伴……短短十四个字包含了八重悲愁，令人读来不禁扼腕叹息。</p>
-
-            <p>大历三年（768年），杜甫再次踏上旅途，乘船出三峡，继续向东漂泊。此时的他已经是一个风烛残年的老人，疾病缠身，贫困交加。他先后辗转于江陵（今湖北荆州）、公安（今湖北公安）等地，最终于大历四年（769年）抵达潭州（今湖南长沙）和衡州（今湖南衡阳）。这一路上，杜甫的生活极为艰难，有时甚至需要靠乞讨度日。他在诗中写道："饥借家家米，愁征处处杯。"可见其境遇之窘迫。</p>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">768年</div>
-                    <div class="timeline-content">离开夔州，乘舟出峡，开始最后的漂泊旅程</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">769年</div>
-                    <div class="timeline-content">辗转潭州、衡州等地，生活极度贫困，疾病缠身</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-year">770年</div>
-                    <div class="timeline-content">冬，在由潭州往岳阳的一条小船上病逝，享年五十九岁</div>
-                </div>
-            </div>
-
-            <p>大历五年（770年）四月，潭州发生兵乱，杜甫再次被迫逃亡。他原本计划前往郴州投靠亲戚，但在逆流而上的途中遭遇洪水，被困在耒阳一带数天，几乎饿死。幸亏有县令送来牛肉和白酒，他才得以活下来。然而，这次劫难严重损害了本就虚弱的身体。杜甫改变了计划，顺流而下返回潭州。</p>
-
-            <p>大历五年（770年）冬天，杜甫在一条由潭州驶往岳阳的小船上永远地闭上了双眼，享年五十九岁。据记载，他临终前的最后时刻仍然在吟诗。这位伟大的诗人就这样在贫穷与疾病中结束了他坎坷的一生。他死后，家人无力将其归葬故乡，只能临时将他安葬在岳阳。直到四十三年后（813年），他的孙子杜嗣业才将他的灵柩迁回故乡河南偃师，与夫人杨氏合葬。</p>
-
-            <div class="highlight-box">
-                <p><strong>🏛️ 绝唱：</strong>杜甫生前最后一首重要作品是《登岳阳楼》。当时他途经岳阳，登上著名的岳阳楼，面对浩瀚的洞庭湖，写下了"吴楚东南坼，乾坤日夜浮"的千古名句。这首诗既写出了洞庭湖气象万千的壮观景象，也隐含了诗人对国家破碎、身世飘零的深沉感伤。一个即将走到生命终点的老人，面对浩瀚的湖山，心中装的依然是家国天下——这就是杜甫，这就是诗圣！</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="divider">✦ ✦ ✦</div>
-
-    <!-- 结语 -->
-    <div class="conclusion">
-        <h2>千秋诗圣 万古流芳</h2>
-        <p>回顾杜甫的一生，我们看到的是一部充满苦难与奋斗的史诗。他生于盛唐，却经历了唐朝由极盛转向衰落的全过程；他有旷世之才，却一生怀才不遇、穷困潦倒；他自身难保，却始终心怀天下苍生。正是这些看似矛盾的因素，造就了中国文学史上独一无二的"诗圣"。</p>
-        <p style="text-indent: 2em; margin-top: 20px;">杜甫留给我们的，不仅仅是一千五百多首优秀的诗歌，更是一种崇高的人格力量和精神境界。在他身上，我们看到了什么是真正的忧国忧民，什么是推己及人的博大情怀，什么是在逆境中坚守理想的执着精神。他的诗歌被誉为"诗史"，因为他忠实地记录了自己所处的时代；他被尊为"诗圣"，因为他用生命诠释了什么是真正的文人风骨。</p>
-        <p style="text-indent: 2em; margin-top: 20px;">一千二百多年过去了，当我们今天重新诵读杜甫的诗篇时，依然会被其中蕴含的深厚情感所打动。"朱门酒肉臭，路有冻死骨"——对社会不公的控诉至今振聋发聩；"安得广厦千万间，大庇天下寒士俱欢颜"——对他人的关怀依然温暖人心；"无边落木萧萧下，不尽长江滚滚来"——对宇宙人生的思考依然启迪着我们。杜甫的精神早已融入中华民族的文化血脉之中，成为我们宝贵的精神财富。</p>
-    </div>
-
-</div>
-
-<footer style="text-align:center;padding:28px 16px;color:#8B7355;font-size:13px;border-top:1px solid #DDBEA8;margin-top:36px;background:rgba(245,230,211,0.4)">
-    <p style="margin-bottom:8px">✍️ 文章整理 | 诗圣杜甫生平传记</p>
-    <p style="font-size:12px;margin:0;opacity:0.8">"文章千古事，得失寸心知。" —— 致敬伟大的诗圣杜甫</p>
-</footer>
-
-</body>
-</html>
+    <title>自动生成相册</title>
+    <url>/2026/05/18/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%B8%E5%86%8C/</url>
+    <content><![CDATA[<h1 id="自动生成相册文件"><a href="#自动生成相册文件" class="headerlink" title="自动生成相册文件"></a>自动生成相册文件</h1><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ul>
+<li><strong>新建相册文件</strong>: 在博客根目录新建相册文件夹blog\source\album</li>
+<li><strong>新建相册文件夹名称</strong>: 如旅行&#x2F;工作等</li>
+<li><strong>在对应的文件夹下建相册简介文件</strong>: 新建desc.txt文件<br>第一行写相册名称<br>第二行写相册简介</li>
+<li><strong>保存相片</strong>: 把相片保存在相应的文件夹</li>
+<li><strong>生成博客代码</strong>: 执行命令自动生成博客识别的相册代码</li>
+</ul>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p>执行下列代码自动生成</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node pic.js</span><br></pre></td></tr></table></figure>
+<p>下次增加完相片，执行下上述代码就可以啦！</p>
+<p>看看我的相册就知道啦</p>
+<p><strong>祝您使用愉快！</strong></p>
 ]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
   </entry>
   <entry>
     <title>晚清首富胡雪岩的江南第一豪宅</title>
@@ -5619,24 +5627,77 @@ utterances:
       </tags>
   </entry>
   <entry>
-    <title>自动生成相册</title>
-    <url>/2026/05/18/%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%B8%E5%86%8C/</url>
-    <content><![CDATA[<h1 id="自动生成相册文件"><a href="#自动生成相册文件" class="headerlink" title="自动生成相册文件"></a>自动生成相册文件</h1><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ul>
-<li><strong>新建相册文件</strong>: 在博客根目录新建相册文件夹blog\source\album</li>
-<li><strong>新建相册文件夹名称</strong>: 如旅行&#x2F;工作等</li>
-<li><strong>在对应的文件夹下建相册简介文件</strong>: 新建desc.txt文件<br>第一行写相册名称<br>第二行写相册简介</li>
-<li><strong>保存相片</strong>: 把相片保存在相应的文件夹</li>
-<li><strong>生成博客代码</strong>: 执行命令自动生成博客识别的相册代码</li>
+    <title>部署Twikoo到cloudflaer</title>
+    <url>/2026/05/18/%E9%83%A8%E7%BD%B2Twikoo%E5%88%B0cloudflaer/</url>
+    <content><![CDATA[<h2 id="部署Twikoo"><a href="#部署Twikoo" class="headerlink" title="部署Twikoo"></a>部署Twikoo</h2><h3 id="复制仓库"><a href="#复制仓库" class="headerlink" title="复制仓库"></a>复制仓库</h3><p>首先 <a href="https://github.com/wuzhengmao/twikoo-cloudflare/fork">Fork</a> 博主的仓库，输入你自己的仓库名称，点击 <code>Create fork</code> 按钮创建自己的仓库。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/github-fork.png" alt="img"></p>
+<blockquote>
+<p><strong>国内对github的访问向来是时断时续的，如果安装失败可以等一等，或者使用科学上网工具，这里推荐可以 <a href="https://speedv.219226.xyz/#/register">注册</a> 一个，目前有免费流量可以薅羊毛。</strong></p>
+</blockquote>
+<h3 id="创建D1数据库"><a href="#创建D1数据库" class="headerlink" title="创建D1数据库"></a>创建D1数据库</h3><p>登录 <a href="https://dash.cloudflare.com/">Cloudflare</a>，点击左侧栏 <code>存储和数据库</code> - <code>D1 SQL数据库</code>，点击 <code>创建</code> 按钮，填入 <code>twikoo</code> 作为数据库名后，点击 <code>创建</code> 按钮。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-d1.png" alt="img"></p>
+<p>创建成功后回到列表页面，可以找到对应红框中的 <code>ID</code> 复制出来。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-get-database-id.png" alt="img"></p>
+<p>然后点击 <code>twikoo</code> 数据库，选择 <code>控制台</code> 页签，将仓库根目录下的 <code>schema.sql</code> 文件中的内容全部复制到输入框中，点击 <code>执行</code> 按钮。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-table.png" alt="img"></p>
+<p>很快数据库表就创建完了，最后修改仓库根目录下的 <code>wrangler.toml</code> 文件中的 <code>database_id</code> 值。</p>
+<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[[d1_databases]]</span></span><br><span class="line"><span class="attr">binding</span> = <span class="string">&quot;DB&quot;</span> <span class="comment"># available in your Worker on env.DB</span></span><br><span class="line"><span class="attr">database_name</span> = <span class="string">&quot;twikoo&quot;</span></span><br><span class="line"><span class="attr">database_id</span> = <span class="string">&quot;b35e0bd5-6d17-42eb-a597-ff4869a74461&quot;</span> <span class="comment"># 这里替换成你前面红框里的内容</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建R2存储"><a href="#创建R2存储" class="headerlink" title="创建R2存储"></a>创建R2存储</h3><p>点击左侧栏 <code>R2 对象存储</code>，点击 <code>创建存储桶</code>，填入 <code>twikoo</code> 作为存储桶名称，点击 <code>创建存储桶</code> 按钮。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-r2.png" alt="img"></p>
+<p>创建成功后后回到列表页面，就可以看到刚才创建的存储桶了。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-r2-done.png" alt="img"></p>
+<p>再点击 <code>twikoo</code> 进入存储桶，点击 <code>设置</code> 页签，在 <code>公开访问</code> 点击 <code>连接域</code>， 输入你想设置的域名比如 <code>twikoo.r2.example.org</code>。如果还没有个人域名的可以看我的另外一篇博客 <a href="https://blog.mingy.org/2024/12/register-domain-with-cloudflare/">如何注册一个域名并托管到Cloudflare</a>。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-r2-bind-domain.png" alt="img"></p>
+<p>然后点击 <code>继续</code>，再点击 <code>连接域</code> 就会回到设置页面，这时你会看到你设置的域状态为 <code>正在初始化</code>，过几分钟再次刷新状态就变成了 <code>活动</code>。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-r2-bind-done.png" alt="img"></p>
+<p>接下来还需要将刚才的域名写入修改仓库根目录下的 <code>wrangler.toml</code> 文件中。</p>
+<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[vars]</span></span><br><span class="line"><span class="attr">R2_PUBLIC_URL</span> = <span class="string">&quot;https://twikoo.r2.example.org&quot;</span> <span class="comment"># 这里替换成你设置的域名</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Worker部署"><a href="#Worker部署" class="headerlink" title="Worker部署"></a>Worker部署</h3><p>在 <code>Cloudflare</code> 的左侧栏点击 <code>Workers 和 Pages</code>，点击 <code>创建</code>，再点击 <code>创建 Worker</code>，输入名称 <code>cf-create-worker</code>。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-worker.png" alt="img"></p>
+<p>然后点击 <code>部署</code>，过一会显示部署成功，再点击 <code>继续处理项目</code>，选择 <code>设置</code> 页签，滚动到构建区域，点击 <code>连接</code> 按钮。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-worker-connect.png" alt="img"></p>
+<p>此时右侧会弹出一个面板，先连接你的 <code>Github</code> 账号，然后选择你的仓库，如果列表中找不到可以直接输入仓库名，比如 <code>twikoo-cloudflare</code>，再选择 <code>main</code> 分支。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-worker-deploy.png" alt="img"></p>
+<p>然后在 <code>部署命令</code> 的输入框中填入 <code>npx wrangler deploy --minify</code>，最后点击 <code>连接</code> 按钮保存。</p>
+<p>如果在前一步的列表中仓库名是手动输入的，你需要在这里点击 <code>管理</code> 按钮，跳转到 <code>Github</code> 登录账号。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-connect-github.png" alt="img"></p>
+<p>完成登录后进入 <code>Repository access</code> 页面，点击 <code>Select repositories</code> 按钮，选择你的仓库后点击 <code>Save</code> 按钮。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/github-select-repo.png" alt="img"></p>
+<p>此时页面会跳转回 <code>Cloudflare</code>，有可能会报一个错误，不用管它，直接关闭页面就可以了。</p>
+<p>现在把前面修改的 <code>wrangler.toml</code> 文件保存并提交到 <code>Github</code> 仓库，此时就会触发 <code>Worker</code> 的自动构建了，过一会你就会在 <code>Workers 和 Pages</code> 页面看到部署已经更新，点击 <code>访问</code> 按钮，一切正常的话，你会看到这样的内容。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">100</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Twikoo 云函数运行正常，请参考 https://twikoo.js.org/frontend.html 完成前端的配置&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.6.40&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>再次点击 <code>twikoo-cloudflare</code> 进入 <code>设置</code> 页签，在 <code>域和路由</code> 中点击 <code>添加</code>，右侧弹出 <code>域和路由</code> 面板。点击 <code>自定义域</code>，输入你想要绑定的域名，比如 <code>twikoo.example.org</code>，点击 <code>添加域</code> 按钮。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-worker-bind-domain.png" alt="img"></p>
+<p>添加完成后你的域名就和部署的 <code>Worker</code> 绑定好了。</p>
+<h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><h3 id="修改主题配置"><a href="#修改主题配置" class="headerlink" title="修改主题配置"></a>修改主题配置</h3><p>回到上一篇创建的个人博客仓库，在 <code>themes/hexo-theme-matery</code> 目录下打开 <code>_config.yml</code> 文件进行编辑，搜索关键字 <code>twikoo</code> 将 <code>enabled</code> 改为 <code>true</code>，再将 <code>envId</code> 改成前面部署绑定的域名。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">twikoo:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">envId:</span> <span class="string">https://twikoo.example.org</span> <span class="comment"># 这里改成前面部署绑定的域名</span></span><br><span class="line">  <span class="comment"># region: ap-guangzhou # 环境地域，默认为 ap-shanghai</span></span><br><span class="line">  <span class="comment"># path: &#x27;window.location.pathname&#x27; # 自定义文章路径</span></span><br></pre></td></tr></table></figure>
+
+<p>修改完提交到 <code>Github</code> 后 <code>Cloudflare Pages</code> 会自动部署，等部署完打开你的个人博客，在你的博文最下面就可以看到评论区了。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/hexo-show-comments.png" alt="img"></p>
+<h3 id="配置评论模块"><a href="#配置评论模块" class="headerlink" title="配置评论模块"></a>配置评论模块</h3><p>点击评论区的小齿轮图标，首次进入需要设置密码，设置完就会进入管理面板，点击 <code>配置管理</code> 页签进行初始配置。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/twikoo-config-panel.png" alt="img"></p>
+<p>点开 <code>隐私</code>，在 <code>IMAGE_CDN</code> 处输入 <code>cloudflare</code>，点击 <code>保存</code> 按钮启用图片上传功能。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/twikoo-set-image-cdn.png" alt="img"></p>
+<p>其余每个配置项都有很详细的说明，大家可以自行慢慢摸索，不修改也已经可以正常使用了。</p>
+<h3 id="防止机器人"><a href="#防止机器人" class="headerlink" title="防止机器人"></a>防止机器人</h3><p>发表评论时可以使用 <code>Cloudflare Turnstile</code> 的检查来阻止机器人，如果需要启用先在 <code>Cloudflare</code> 的左侧栏点击 <code>Turnstile</code>，点击 <code>添加小组件</code> 按钮。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-turnstile.png" alt="img"></p>
+<p>小组件名称可以随便填写，比如 <code>twikoo</code>，点击下面的 <code>添加主机名</code> 按钮会在右侧弹出面板。在最上面的输入框填入个人博客的域名，比如 <code>blog.example.org</code>，点击右侧的 <code>添加</code> 按钮，主机名就会出现在下面的已选择主机名列表中。再点击最下面的 <code>添加</code> 按钮，右侧面板关闭，主机名会添加到 <code>主机名管理</code> 区域的列表中。最后点击右下角的 <code>创建</code> 按钮，就会显示已成功创建 <code>Turnstile</code> 小组件。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-turnstile-ok.png" alt="img"></p>
+<p>在这个页面上 <code>站点密钥</code> 和 <code>密钥</code> 是你需要复制下来配置到 <code>Twikoo</code> 的管理面板中的。接下来再次打开管理面板，点开 <code>反垃圾</code>，在 <code>TURNSTILE_SITE_KEY</code> 处填入 <code>站点密钥</code> 的内容，在 <code>TURNSTILE_SECRET_KEY</code> 处填入 <code>密钥</code> 的内容，点击 <code>保存</code> 关闭面板。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/twikoo-config-turnstile.png" alt="img"></p>
+<p>完成后再次发表评论就会出现 <code>Cloudflare</code> 的机器人检查框了，大部分情况下等一会就会显示成功，或者出现一个勾选框确认后检查成功，只有极少数情况会发起 <code>JS质询</code> 进行挑战。</p>
+<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/twikoo-post-comments.png" alt="img"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>至此，一个基本上完整的评论系统就上线了，对于 <code>Twikoo</code> 的其他配置，还有一些建议：</p>
+<ul>
+<li>使用隐藏入口不要暴露管理面板的配置按钮；</li>
+<li>设置一个复杂的密码不要让别人轻易猜出来；</li>
+<li>添加评论通知，<a href="https://pushoo.js.org/">pushoo.js</a> 提供了丰富的通知方式，可以自行看文档选择最适合的方式。</li>
 </ul>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p>执行下列代码自动生成</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node pic.js</span><br></pre></td></tr></table></figure>
-<p>下次增加完相片，执行下上述代码就可以啦！</p>
-<p>看看我的相册就知道啦</p>
-<p><strong>祝您使用愉快！</strong></p>
+<p>来源: 一梦一孤舟<br>文章作者: Mingy<br>文章链接: <a href="https://blog.mingy.org/2024/12/hexo-add-twikoo/">https://blog.mingy.org/2024/12/hexo-add-twikoo/</a><br>本文章著作权归作者所有，任何形式的转载都请注明出处。</p>
 ]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
   </entry>
   <entry>
     <title>苏轼与苏辙：千年兄弟情的传奇</title>
@@ -6365,79 +6426,6 @@ utterances:
     </div>
 </body>
 </html>]]></content>
-  </entry>
-  <entry>
-    <title>部署Twikoo到cloudflaer</title>
-    <url>/2026/05/18/%E9%83%A8%E7%BD%B2Twikoo%E5%88%B0cloudflaer/</url>
-    <content><![CDATA[<h2 id="部署Twikoo"><a href="#部署Twikoo" class="headerlink" title="部署Twikoo"></a>部署Twikoo</h2><h3 id="复制仓库"><a href="#复制仓库" class="headerlink" title="复制仓库"></a>复制仓库</h3><p>首先 <a href="https://github.com/wuzhengmao/twikoo-cloudflare/fork">Fork</a> 博主的仓库，输入你自己的仓库名称，点击 <code>Create fork</code> 按钮创建自己的仓库。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/github-fork.png" alt="img"></p>
-<blockquote>
-<p><strong>国内对github的访问向来是时断时续的，如果安装失败可以等一等，或者使用科学上网工具，这里推荐可以 <a href="https://speedv.219226.xyz/#/register">注册</a> 一个，目前有免费流量可以薅羊毛。</strong></p>
-</blockquote>
-<h3 id="创建D1数据库"><a href="#创建D1数据库" class="headerlink" title="创建D1数据库"></a>创建D1数据库</h3><p>登录 <a href="https://dash.cloudflare.com/">Cloudflare</a>，点击左侧栏 <code>存储和数据库</code> - <code>D1 SQL数据库</code>，点击 <code>创建</code> 按钮，填入 <code>twikoo</code> 作为数据库名后，点击 <code>创建</code> 按钮。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-d1.png" alt="img"></p>
-<p>创建成功后回到列表页面，可以找到对应红框中的 <code>ID</code> 复制出来。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-get-database-id.png" alt="img"></p>
-<p>然后点击 <code>twikoo</code> 数据库，选择 <code>控制台</code> 页签，将仓库根目录下的 <code>schema.sql</code> 文件中的内容全部复制到输入框中，点击 <code>执行</code> 按钮。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-table.png" alt="img"></p>
-<p>很快数据库表就创建完了，最后修改仓库根目录下的 <code>wrangler.toml</code> 文件中的 <code>database_id</code> 值。</p>
-<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[[d1_databases]]</span></span><br><span class="line"><span class="attr">binding</span> = <span class="string">&quot;DB&quot;</span> <span class="comment"># available in your Worker on env.DB</span></span><br><span class="line"><span class="attr">database_name</span> = <span class="string">&quot;twikoo&quot;</span></span><br><span class="line"><span class="attr">database_id</span> = <span class="string">&quot;b35e0bd5-6d17-42eb-a597-ff4869a74461&quot;</span> <span class="comment"># 这里替换成你前面红框里的内容</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建R2存储"><a href="#创建R2存储" class="headerlink" title="创建R2存储"></a>创建R2存储</h3><p>点击左侧栏 <code>R2 对象存储</code>，点击 <code>创建存储桶</code>，填入 <code>twikoo</code> 作为存储桶名称，点击 <code>创建存储桶</code> 按钮。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-r2.png" alt="img"></p>
-<p>创建成功后后回到列表页面，就可以看到刚才创建的存储桶了。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-r2-done.png" alt="img"></p>
-<p>再点击 <code>twikoo</code> 进入存储桶，点击 <code>设置</code> 页签，在 <code>公开访问</code> 点击 <code>连接域</code>， 输入你想设置的域名比如 <code>twikoo.r2.example.org</code>。如果还没有个人域名的可以看我的另外一篇博客 <a href="https://blog.mingy.org/2024/12/register-domain-with-cloudflare/">如何注册一个域名并托管到Cloudflare</a>。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-r2-bind-domain.png" alt="img"></p>
-<p>然后点击 <code>继续</code>，再点击 <code>连接域</code> 就会回到设置页面，这时你会看到你设置的域状态为 <code>正在初始化</code>，过几分钟再次刷新状态就变成了 <code>活动</code>。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-r2-bind-done.png" alt="img"></p>
-<p>接下来还需要将刚才的域名写入修改仓库根目录下的 <code>wrangler.toml</code> 文件中。</p>
-<figure class="highlight toml"><table><tr><td class="code"><pre><span class="line"><span class="section">[vars]</span></span><br><span class="line"><span class="attr">R2_PUBLIC_URL</span> = <span class="string">&quot;https://twikoo.r2.example.org&quot;</span> <span class="comment"># 这里替换成你设置的域名</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Worker部署"><a href="#Worker部署" class="headerlink" title="Worker部署"></a>Worker部署</h3><p>在 <code>Cloudflare</code> 的左侧栏点击 <code>Workers 和 Pages</code>，点击 <code>创建</code>，再点击 <code>创建 Worker</code>，输入名称 <code>cf-create-worker</code>。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-worker.png" alt="img"></p>
-<p>然后点击 <code>部署</code>，过一会显示部署成功，再点击 <code>继续处理项目</code>，选择 <code>设置</code> 页签，滚动到构建区域，点击 <code>连接</code> 按钮。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-worker-connect.png" alt="img"></p>
-<p>此时右侧会弹出一个面板，先连接你的 <code>Github</code> 账号，然后选择你的仓库，如果列表中找不到可以直接输入仓库名，比如 <code>twikoo-cloudflare</code>，再选择 <code>main</code> 分支。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-worker-deploy.png" alt="img"></p>
-<p>然后在 <code>部署命令</code> 的输入框中填入 <code>npx wrangler deploy --minify</code>，最后点击 <code>连接</code> 按钮保存。</p>
-<p>如果在前一步的列表中仓库名是手动输入的，你需要在这里点击 <code>管理</code> 按钮，跳转到 <code>Github</code> 登录账号。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-connect-github.png" alt="img"></p>
-<p>完成登录后进入 <code>Repository access</code> 页面，点击 <code>Select repositories</code> 按钮，选择你的仓库后点击 <code>Save</code> 按钮。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/github-select-repo.png" alt="img"></p>
-<p>此时页面会跳转回 <code>Cloudflare</code>，有可能会报一个错误，不用管它，直接关闭页面就可以了。</p>
-<p>现在把前面修改的 <code>wrangler.toml</code> 文件保存并提交到 <code>Github</code> 仓库，此时就会触发 <code>Worker</code> 的自动构建了，过一会你就会在 <code>Workers 和 Pages</code> 页面看到部署已经更新，点击 <code>访问</code> 按钮，一切正常的话，你会看到这样的内容。</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">100</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Twikoo 云函数运行正常，请参考 https://twikoo.js.org/frontend.html 完成前端的配置&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.6.40&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>再次点击 <code>twikoo-cloudflare</code> 进入 <code>设置</code> 页签，在 <code>域和路由</code> 中点击 <code>添加</code>，右侧弹出 <code>域和路由</code> 面板。点击 <code>自定义域</code>，输入你想要绑定的域名，比如 <code>twikoo.example.org</code>，点击 <code>添加域</code> 按钮。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-worker-bind-domain.png" alt="img"></p>
-<p>添加完成后你的域名就和部署的 <code>Worker</code> 绑定好了。</p>
-<h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><h3 id="修改主题配置"><a href="#修改主题配置" class="headerlink" title="修改主题配置"></a>修改主题配置</h3><p>回到上一篇创建的个人博客仓库，在 <code>themes/hexo-theme-matery</code> 目录下打开 <code>_config.yml</code> 文件进行编辑，搜索关键字 <code>twikoo</code> 将 <code>enabled</code> 改为 <code>true</code>，再将 <code>envId</code> 改成前面部署绑定的域名。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">twikoo:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">envId:</span> <span class="string">https://twikoo.example.org</span> <span class="comment"># 这里改成前面部署绑定的域名</span></span><br><span class="line">  <span class="comment"># region: ap-guangzhou # 环境地域，默认为 ap-shanghai</span></span><br><span class="line">  <span class="comment"># path: &#x27;window.location.pathname&#x27; # 自定义文章路径</span></span><br></pre></td></tr></table></figure>
-
-<p>修改完提交到 <code>Github</code> 后 <code>Cloudflare Pages</code> 会自动部署，等部署完打开你的个人博客，在你的博文最下面就可以看到评论区了。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/hexo-show-comments.png" alt="img"></p>
-<h3 id="配置评论模块"><a href="#配置评论模块" class="headerlink" title="配置评论模块"></a>配置评论模块</h3><p>点击评论区的小齿轮图标，首次进入需要设置密码，设置完就会进入管理面板，点击 <code>配置管理</code> 页签进行初始配置。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/twikoo-config-panel.png" alt="img"></p>
-<p>点开 <code>隐私</code>，在 <code>IMAGE_CDN</code> 处输入 <code>cloudflare</code>，点击 <code>保存</code> 按钮启用图片上传功能。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/twikoo-set-image-cdn.png" alt="img"></p>
-<p>其余每个配置项都有很详细的说明，大家可以自行慢慢摸索，不修改也已经可以正常使用了。</p>
-<h3 id="防止机器人"><a href="#防止机器人" class="headerlink" title="防止机器人"></a>防止机器人</h3><p>发表评论时可以使用 <code>Cloudflare Turnstile</code> 的检查来阻止机器人，如果需要启用先在 <code>Cloudflare</code> 的左侧栏点击 <code>Turnstile</code>，点击 <code>添加小组件</code> 按钮。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-turnstile.png" alt="img"></p>
-<p>小组件名称可以随便填写，比如 <code>twikoo</code>，点击下面的 <code>添加主机名</code> 按钮会在右侧弹出面板。在最上面的输入框填入个人博客的域名，比如 <code>blog.example.org</code>，点击右侧的 <code>添加</code> 按钮，主机名就会出现在下面的已选择主机名列表中。再点击最下面的 <code>添加</code> 按钮，右侧面板关闭，主机名会添加到 <code>主机名管理</code> 区域的列表中。最后点击右下角的 <code>创建</code> 按钮，就会显示已成功创建 <code>Turnstile</code> 小组件。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/cf-create-turnstile-ok.png" alt="img"></p>
-<p>在这个页面上 <code>站点密钥</code> 和 <code>密钥</code> 是你需要复制下来配置到 <code>Twikoo</code> 的管理面板中的。接下来再次打开管理面板，点开 <code>反垃圾</code>，在 <code>TURNSTILE_SITE_KEY</code> 处填入 <code>站点密钥</code> 的内容，在 <code>TURNSTILE_SECRET_KEY</code> 处填入 <code>密钥</code> 的内容，点击 <code>保存</code> 关闭面板。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/twikoo-config-turnstile.png" alt="img"></p>
-<p>完成后再次发表评论就会出现 <code>Cloudflare</code> 的机器人检查框了，大部分情况下等一会就会显示成功，或者出现一个勾选框确认后检查成功，只有极少数情况会发起 <code>JS质询</code> 进行挑战。</p>
-<p><img src="https://blog.mingy.org/2024/12/hexo-add-twikoo/twikoo-post-comments.png" alt="img"></p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>至此，一个基本上完整的评论系统就上线了，对于 <code>Twikoo</code> 的其他配置，还有一些建议：</p>
-<ul>
-<li>使用隐藏入口不要暴露管理面板的配置按钮；</li>
-<li>设置一个复杂的密码不要让别人轻易猜出来；</li>
-<li>添加评论通知，<a href="https://pushoo.js.org/">pushoo.js</a> 提供了丰富的通知方式，可以自行看文档选择最适合的方式。</li>
-</ul>
-<p>来源: 一梦一孤舟<br>文章作者: Mingy<br>文章链接: <a href="https://blog.mingy.org/2024/12/hexo-add-twikoo/">https://blog.mingy.org/2024/12/hexo-add-twikoo/</a><br>本文章著作权归作者所有，任何形式的转载都请注明出处。</p>
-]]></content>
   </entry>
   <entry>
     <title>千古第一意难平-陆游与唐婉的爱情故事</title>
@@ -8048,6 +8036,18 @@ utterances:
       <tags>
         <tag>唐朝</tag>
         <tag>行书</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 框架更新</title>
+    <url>/2026/05/18/hexo%20%E6%A1%86%E6%9E%B6%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p>安装</p>
+<p>$ npm install -g hexo-cli</p>
+<p>运行</p>
+<p>$ npm install hexo</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
       </tags>
   </entry>
 </search>
