@@ -1,0 +1,33 @@
+/*=====Twikoo改成说说气泡样式=====*/
+.twikoo .tk-comment{padding:12px 8px;display:flex;gap:10px;margin:14px 0;}
+/*访客：头像在左、气泡在右、左三角*/
+.tk-comment:not(.tk-master){flex-direction:row;}
+.tk-comment:not(.tk-master) .tk-content{
+    max-width:75%;width:fit-content;background:#f5f5f7;border-radius:12px;padding:9px 13px;position:relative;overflow:visible;
+}
+.tk-comment:not(.tk-master) .tk-content::before{
+    content:"";position:absolute;left:-11px;top:16px;border:7px solid transparent;border-right:8px solid #f5f5f7;
+}
+/*博主：头像在右、气泡在左、右三角（说说自己发言靠右）*/
+.tk-master{flex-direction:row-reverse;}
+.tk-master .tk-content{
+    max-width:75%;width:fit-content;background:#5298ff;color:#fff;border-radius:12px;padding:9px 13px;position:relative;overflow:visible;
+}
+.tk-master .tk-content::before{
+    content:"";position:absolute;right:-11px;top:16px;border:7px solid transparent;border-left:8px solid #5298ff;
+}
+/*头像统一大小*/
+.tk-avatar img{width:42px;height:42px;border-radius:50%!important;object-fit:cover;}
+/*楼中楼回复缩进*/
+.tk-replies{margin-left:52px;margin-top:8px;}
+.tk-replies .tk-comment{padding:6px 0;}
+/*深色模式适配*/
+[data-theme="dark"] .tk-comment:not(.tk-master) .tk-content{background:#3a3a3f;color:#eee;}
+[data-theme="dark"] .tk-comment:not(.tk-master) .tk-content::before{border-right-color:#3a3a3f;}
+[data-theme="dark"] .tk-master .tk-content{background:#2979e2;}
+[data-theme="dark"] .tk-master .tk-content::before{border-left-color:#2979e2;}
+/*隐藏多余分割线、边框*/
+.tk-comment-header{margin-bottom:4px;}
+.twikoo .tk-comment{border:none!important;background:transparent!important;}
+/*评论输入框微调*/
+.tk-submit{margin-top:20px;border-radius:12px;}
