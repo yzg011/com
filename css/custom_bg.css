@@ -1,0 +1,23 @@
+/* 全局背景样式 */
+#web_bg {
+  background-size: contain !important;
+  background-position: center top !important;
+  background-attachment: local !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 平板 */
+@media (max-width: 992px) and (min-width: 768px) {
+  #web_bg {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
+/* 手机端 */
+@media (max-width: 767px) {
+  #web_bg {
+    background-size: 100% auto !important;
+    background-position: center top !important;
+  }
+}
