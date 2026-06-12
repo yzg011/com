@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>说说 | 个人博客</title><meta name="author" content="Saimen"><meta name="copyright" content="Saimen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="&#x2F;* 全局基础重置 *&#x2F; * {   margin: 0;   padding: 0;   box-sizing: border-box; }  &#x2F;* 容器居中 *&#x2F; .memos-container {   max-width: 800px;   margin: 2rem auto;   padding: 0 1rem; }  &#x2F;* 聊天式卡片样式 *&#x2F; .memos-item {   dis">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>说说 | 个人博客</title><meta name="author" content="Saimen"><meta name="copyright" content="Saimen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="&#x2F;* 全局基础重置 *&#x2F; * {   margin: 0;   padding: 0;   box-sizing: border-box; } &#x2F;* 容器居中 *&#x2F; .memos-container {   max-width: 800px;   margin: 2rem auto;   padding: 0 1rem; } &#x2F;* 聊天式卡片样式 *&#x2F; .memos-item {   displ">
 <meta property="og:type" content="website">
 <meta property="og:title" content="说说">
 <meta property="og:url" content="https://com.z2m.store/talk/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="&#x2F;* 全局基础重置 *&#x2F; * {   margin: 0;   padding: 0;   box-sizing: border-box; }  &#x2F;* 容器居中 *&#x2F; .memos-container {   max-width: 800px;   margin: 2rem auto;   padding: 0 1rem; }  &#x2F;* 聊天式卡片样式 *&#x2F; .memos-item {   dis">
+<meta property="og:description" content="&#x2F;* 全局基础重置 *&#x2F; * {   margin: 0;   padding: 0;   box-sizing: border-box; } &#x2F;* 容器居中 *&#x2F; .memos-container {   max-width: 800px;   margin: 2rem auto;   padding: 0 1rem; } &#x2F;* 聊天式卡片样式 *&#x2F; .memos-item {   displ">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://com.z2m.store/img/butterfly-icon.png">
 <meta property="article:published_time" content="2026-06-09T02:00:00.000Z">
-<meta property="article:modified_time" content="2026-06-12T02:29:16.868Z">
+<meta property="article:modified_time" content="2026-06-12T03:06:44.614Z">
 <meta property="article:author" content="Saimen">
 <meta property="article:tag" content="历史故事 安防监控">
 <meta name="twitter:card" content="summary">
@@ -162,14 +162,12 @@ btf.addGlobalFn('pjaxComplete', () => {
   padding: 0;
   box-sizing: border-box;
 }
-
 /* 容器居中 */
 .memos-container {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
-
 /* 聊天式卡片样式 */
 .memos-item {
   display: flex;
@@ -180,7 +178,6 @@ btf.addGlobalFn('pjaxComplete', () => {
   margin-bottom: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-
 /* 头像容器 */
 .avatar-wrap {
   flex-shrink: 0;
@@ -194,13 +191,12 @@ btf.addGlobalFn('pjaxComplete', () => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background: none !important;
 }
-
 /* 右侧内容区 */
 .memos-content-wrap {
   flex: 1;
 }
-
 /* 用户名+时间栏 */
 .user-header {
   display: flex;
@@ -217,7 +213,6 @@ btf.addGlobalFn('pjaxComplete', () => {
   font-size: 12px;
   color: var(--text-secondary);
 }
-
 /* 正文文本 */
 .memos-content {
   line-height: 1.6;
@@ -225,56 +220,50 @@ btf.addGlobalFn('pjaxComplete', () => {
   margin-bottom: 10px;
   word-break: break-word;
 }
-
-/* 图片网格：保持列数，不再强制正方形 */
+/* 图片网格 */
 .img-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 8px;
 }
-
-/* 核心：列表图 = 大图等比例缩小，不裁剪、不拉伸 */
 .img-grid img {
   width: 100% !important;
-  height: auto !important;         /* 高度自适应，保持原图比例 */
-  object-fit: contain !important; /* 完整显示，不裁切 */
+  height: auto !important;
+  object-fit: contain !important;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s ease;
   background: #f5f5f5;
+  background-image: none !important;
 }
 .img-grid img:hover {
   transform: scale(1.02);
 }
-
-/* 大图预览弹窗 - 核心修改区 */
+/* 大图预览弹窗 固定视口 */
 .img-preview {
   display: none;
   position: fixed;
-  max-height: 100vh; /* 不超过视口高度*/
+  max-height: 100vh;
   inset: 0;
   background: rgba(0,0,0,0.9);
   z-index: 9999;
-  /* 移除原有的 align-items/justify-content，改用自定义布局 */
-  overflow: auto; /* 防止图片超出视口时无法滚动 */
+  overflow: auto;
 }
-/* 新增预览图容器，实现上下居中、左右保持原图宽度 */
 .preview-img-wrapper {
   position: absolute;
-  left: 0; /* 左右保持原图位置，不居中 */
-  top: 50%; /* 垂直居中第一步：顶部定位50% */
-  transform: translateY(-50%); /* 垂直居中第二步：向上偏移自身50% */
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
-  padding: 20px; /* 预留边距 */
+  padding: 20px;
 }
 .img-preview img {
-  max-width: 100%; /* 不超过容器宽度 */
-  max-height: 90vh; /* 不超过视口高度90% */
+  max-width: 100%;
+  max-height: 90vh;
   object-fit: contain;
   border-radius: 8px;
-  display: block; /* 消除图片默认行内间隙 */
+  display: block;
 }
-
 /* 加载/空状态提示 */
 .loading-tips {
   text-align: center;
@@ -287,7 +276,6 @@ btf.addGlobalFn('pjaxComplete', () => {
   <div class="loading-tips">加载中...</div>
 </div>
 
-<!-- 大图预览弹窗 - 结构修改：新增wrapper容器 -->
 <div class="img-preview" id="imgPreview">
   <div class="preview-img-wrapper">
     <img id="previewImg" alt="大图预览">
@@ -295,110 +283,135 @@ btf.addGlobalFn('pjaxComplete', () => {
 </div>
 
 <script>
-const API = "https://ss.z2m.store/api/v1/memos?limit=20&sort=createTime&order=desc";
-const LINK = "https://ss.z2m.store/explore";
-const DOMAIN = "https://ss.z2m.store";
-const wrap = document.getElementById("memosList");
-const imgPreview = document.getElementById("imgPreview");
-const previewImg = document.getElementById("previewImg");
+// 【关键1】使用全局作用域判断，防止变量重复声明
+if (!window.MemosInit) {
+  // 全局常量，仅声明一次
+  window.API = "https://ss.z2m.store/api/v1/memos?limit=20&sort=createTime&order=desc";
+  window.DOMAIN = "https://ss.z2m.store";
+  window.MemosInit = true; // 标记已初始化
 
-// 关闭大图预览
-imgPreview.addEventListener('click', (e) => {
-  // 仅点击遮罩层时关闭，点击图片本身不关闭
-  if (e.target === imgPreview) {
-    imgPreview.style.display = 'none';
-  }
-});
-document.addEventListener('keydown', e => e.key === 'Escape' && (imgPreview.style.display = 'none'));
+  const wrap = document.getElementById("memosList");
+  const imgPreview = document.getElementById("imgPreview");
+  const previewImg = document.getElementById("previewImg");
 
-// 时间格式化（和参考图格式对齐）
-function fmtTime(str) {
-  const d = new Date(str);
-  const pad = (n) => n.toString().padStart(2, '0');
-  return `${d.getFullYear()}年${pad(d.getMonth()+1)}月${pad(d.getDate())}日 ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
-}
-
-// 主逻辑
-async function init() {
-  try {
-    const res = await fetch(API, { mode: "cors", cache: "no-cache" });
-    if (!res.ok) throw new Error("接口请求失败");
-    const json = await res.json();
-    const list = json.memos || [];
-
-    if (list.length === 0) {
-      wrap.innerHTML = '<div class="loading-tips">暂无说说</div>';
-      return;
+  // 关闭预览
+  imgPreview && imgPreview.addEventListener('click', (e) => {
+    if (e.target === imgPreview) {
+      imgPreview.style.display = 'none';
     }
+  });
+  document.addEventListener('keydown', e => e.key === 'Escape' && (imgPreview.style.display = 'none'));
 
-    let html = "";
-    list.forEach(item => {
-      const text = item.content || "";
-      let imgHtml = '';
-      if (Array.isArray(item.attachments) && item.attachments.length > 0) {
-        imgHtml = '<div class="img-grid">';
-        item.attachments.forEach(att => {
-          if (att.type && att.type.startsWith('image/')) {
-            const originUrl = `${DOMAIN}/file/attachments/${att.uid}/${att.filename}`;
-            // 直接用原图，不缩略、不裁剪
-            imgHtml += `
-              <img 
-                src="${originUrl}" 
-                alt="说说图片" 
-                data-origin="${originUrl}"
-              >
-            `;
-          }
-        });
-        imgHtml += '</div>';
+  // 时间格式化
+  function fmtTime(str) {
+    const d = new Date(str);
+    const pad = (n) => n.toString().padStart(2, '0');
+    return `${d.getFullYear()}年${pad(d.getMonth()+1)}月${pad(d.getDate())}日 ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+  }
+
+  // 安全创建图片，屏蔽懒加载占位图
+  function createSafeImg(originUrl) {
+    const img = new Image();
+    img.alt = "说说图片";
+    img.dataset.origin = originUrl;
+    img.dataset.noLazy = "1";
+    img.loading = "eager";
+    img.src = originUrl;
+    return img.outerHTML;
+  }
+
+  // 主渲染函数
+  async function renderMemos() {
+    if (!wrap) return;
+    try {
+      const res = await fetch(window.API, { mode: "cors", cache: "no-cache" });
+      if (!res.ok) throw new Error("接口请求失败");
+      const json = await res.json();
+      const list = json.memos || [];
+
+      if (list.length === 0) {
+        wrap.innerHTML = '<div class="loading-tips">暂无说说</div>';
+        return;
       }
 
+      let html = "";
+      list.forEach(item => {
+        const text = item.content || "";
+        let imgHtml = '';
+        if (Array.isArray(item.attachments) && item.attachments.length > 0) {
+          imgHtml = '<div class="img-grid">';
+          item.attachments.forEach(att => {
+            if (att.type && att.type.startsWith('image/')) {
+              const originUrl = `${window.DOMAIN}/file/attachments/${att.uid}/${att.filename}`;
+              imgHtml += createSafeImg(originUrl);
+            }
+          });
+          imgHtml += '</div>';
+        }
 
-      html += `
-        <div class="memos-item">
-          <div class="avatar-wrap">
-            <img src="https://cdn.jsdelivr.net/gh/butterfly-theme/CDN/img/loading/loading2.gif" data-original="https://com.z2m.store/img/butterfly-icon.png" alt="头像">
-          </div>
-          <div class="memos-content-wrap">
-            <div class="user-header">
-              <span class="username">深漂小鱼</span>
-              <span class="time">${fmtTime(item.createTime)}</span>
+        html += `
+          <div class="memos-item">
+            <div class="avatar-wrap">
+              <img src="https://com.z2m.store/img/butterfly-icon.png" alt="头像" data-no-lazy="1" loading="eager">
             </div>
-            <div class="memos-content">${text}</div>
-            ${imgHtml}
+            <div class="memos-content-wrap">
+              <div class="user-header">
+                <span class="username">深漂小鱼</span>
+                <span class="time">${fmtTime(item.createTime)}</span>
+              </div>
+              <div class="memos-content">${text}</div>
+              ${imgHtml}
+            </div>
           </div>
-        </div>
-      `;
-    });
-    wrap.innerHTML = html;
-
-    // 绑定缩略图点击预览事件
-    document.querySelectorAll('.img-grid img').forEach(img => {
-      img.addEventListener('click', () => {
-        previewImg.src = img.dataset.origin;
-        imgPreview.style.display = 'block'; // 改为block（原flex）
+        `;
       });
-    });
-  } catch (e) {
-    wrap.innerHTML = `<div class="loading-tips">加载异常：${e.message}</div>`;
-    console.error(e);
-  }
-}
+      wrap.innerHTML = html;
 
-// 启动
-init();
+      // 绑定点击预览
+      document.querySelectorAll('.img-grid img').forEach(img => {
+        img.onclick = () => {
+          previewImg.src = img.dataset.origin;
+          imgPreview.style.display = 'block';
+        };
+      });
+
+      // 兜底修复占位图替换
+      setInterval(() => {
+        document.querySelectorAll('.img-grid img').forEach(img => {
+          const origin = img.dataset.origin;
+          if (origin && img.src.includes("loading2.gif")) {
+            img.src = origin;
+          }
+        });
+      }, 300);
+
+    } catch (e) {
+      wrap.innerHTML = `<div class="loading-tips">加载异常：${e.message}</div>`;
+      console.error(e);
+    }
+  }
+
+  // 【关键2】兼容 PJAX / 普通刷新，延迟执行
+  function startInit() {
+    setTimeout(renderMemos, 400);
+  }
+
+  // 页面首次加载 + PJAX 跳转都执行
+  startInit();
+  document.addEventListener('pjax:end', startInit);
+}
 </script></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/butterfly-theme/CDN/img/loading/loading2.gif" data-original="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Saimen</div><div class="author-info-description">读史可以明智,知古方能鉴今</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://work.weixin.qq.com/kfid/kfc90518b0eacba59c3"><i class="fab fa-weixin"></i><span>chat with me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/yzg011" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:357239268@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">扫码订阅，查看最新文章</div></div><div class="card-widget wechat-card" id="wechat-qrcode"><div class="item-headline"><i class="fab fa-weixin"></i><span>微信联系</span></div><div class="item-content"><div style="text-align:center;padding:10px 0;">
   <img src="https://cdn.jsdelivr.net/gh/butterfly-theme/CDN/img/loading/loading2.gif" data-original="https://img.z2m.store/file/1779067710712_1.png" style="width:85%;border-radius:12px;margin:0 auto;display:block;">
   <p style="margin-top:10px;color:#666;font-size:14px;">扫码关注公众号</p >
 </div>
-</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/04/ac3000/" title="ac3000路由器刷机">ac3000路由器刷机</a><time datetime="2026-06-03T16:00:00.000Z" title="发表于 2026-06-04 00:00:00">2026-06-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/02/camera-function/" title="摄像机常用功能英语表达">摄像机常用功能英语表达</a><time datetime="2026-06-01T16:00:00.000Z" title="发表于 2026-06-02 00:00:00">2026-06-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/02/htmltomd/" title="html转md文件">html转md文件</a><time datetime="2026-06-01T16:00:00.000Z" title="发表于 2026-06-02 00:00:00">2026-06-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/02/stqc-clause-11-and-13-requirements-tracker/" title="STQC Clause 1.1 and 1.3 Requirements Tracker">STQC Clause 1.1 and 1.3 Requirements Tracker</a><time datetime="2026-06-01T16:00:00.000Z" title="发表于 2026-06-02 00:00:00">2026-06-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/22/%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81%E7%9F%A5%E8%AF%86%E5%BA%93/" title="技术支持知识库">技术支持知识库</a><time datetime="2026-05-22T07:59:21.000Z" title="发表于 2026-05-22 15:59:21">2026-05-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/04/ac3000/" title="ac3000路由器刷机">ac3000路由器刷机</a><time datetime="2026-06-03T16:00:00.000Z" title="发表于 2026-06-04 00:00:00">2026-06-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/02/htmltomd/" title="html转md文件">html转md文件</a><time datetime="2026-06-01T16:00:00.000Z" title="发表于 2026-06-02 00:00:00">2026-06-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/02/camera-function/" title="摄像机常用功能英语表达">摄像机常用功能英语表达</a><time datetime="2026-06-01T16:00:00.000Z" title="发表于 2026-06-02 00:00:00">2026-06-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/02/stqc-clause-11-and-13-requirements-tracker/" title="STQC Clause 1.1 and 1.3 Requirements Tracker">STQC Clause 1.1 and 1.3 Requirements Tracker</a><time datetime="2026-06-01T16:00:00.000Z" title="发表于 2026-06-02 00:00:00">2026-06-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/22/%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81%E7%9F%A5%E8%AF%86%E5%BA%93/" title="技术支持知识库">技术支持知识库</a><time datetime="2026-05-22T07:59:21.000Z" title="发表于 2026-05-22 15:59:21">2026-05-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
           </div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Diary/"><span class="card-category-list-name">Diary</span><span class="card-category-list-count">6</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%89%8D%E5%A5%B3/" style="font-size: 1.1em; color: #999">才女</a> <a href="/tags/%E6%98%8E%E6%9C%9D/" style="font-size: 1.1em; color: #999">明朝</a> <a href="/tags/%E5%AE%89%E9%98%B2/" style="font-size: 1.37em; color: #99a4b2">安防</a> <a href="/tags/%E6%B1%89%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">汉朝</a> <a href="/tags/%E6%B8%85%E6%9C%9D/" style="font-size: 1.1em; color: #999">清朝</a> <a href="/tags/%E6%88%98%E7%A5%9E/" style="font-size: 1.1em; color: #999">战神</a> <a href="/tags/%E5%AE%8B%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">宋朝</a> <a href="/tags/%E8%A1%8C%E4%B9%A6/" style="font-size: 1.1em; color: #999">行书</a> <a href="/tags/%E5%94%90%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">唐朝</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a></div></div><div class="card-widget card-archives">
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%89%E9%98%B2/" style="font-size: 1.37em; color: #99a4b2">安防</a> <a href="/tags/%E6%89%8D%E5%A5%B3/" style="font-size: 1.1em; color: #999">才女</a> <a href="/tags/%E6%88%98%E7%A5%9E/" style="font-size: 1.1em; color: #999">战神</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a> <a href="/tags/%E6%B8%85%E6%9C%9D/" style="font-size: 1.1em; color: #999">清朝</a> <a href="/tags/%E5%94%90%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">唐朝</a> <a href="/tags/%E8%A1%8C%E4%B9%A6/" style="font-size: 1.1em; color: #999">行书</a> <a href="/tags/%E6%B1%89%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">汉朝</a> <a href="/tags/%E6%98%8E%E6%9C%9D/" style="font-size: 1.1em; color: #999">明朝</a> <a href="/tags/%E5%AE%8B%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">宋朝</a></div></div><div class="card-widget card-archives">
     <div class="item-headline">
       <i class="fas fa-archive"></i>
       <span>归档</span>
@@ -435,7 +448,7 @@ init();
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">37</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-12T02:30:19.998Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Saimen</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat-btn" type="button" title="聊天" style="display:none"><i class="fas fa-message"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">37</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-12T03:12:18.296Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Saimen</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat-btn" type="button" title="聊天" style="display:none"><i class="fas fa-message"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
   const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
   const option = null
 
