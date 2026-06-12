@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://com.z2m.store/img/butterfly-icon.png">
 <meta property="article:published_time" content="2026-06-09T02:00:00.000Z">
-<meta property="article:modified_time" content="2026-06-11T11:00:31.363Z">
+<meta property="article:modified_time" content="2026-06-12T02:29:16.868Z">
 <meta property="article:author" content="Saimen">
 <meta property="article:tag" content="历史故事 安防监控">
 <meta name="twitter:card" content="summary">
@@ -247,21 +247,32 @@ btf.addGlobalFn('pjaxComplete', () => {
   transform: scale(1.02);
 }
 
-/* 大图预览弹窗 */
+/* 大图预览弹窗 - 核心修改区 */
 .img-preview {
   display: none;
   position: fixed;
+  max-height: 100vh; /* 不超过视口高度*/
   inset: 0;
   background: rgba(0,0,0,0.9);
   z-index: 9999;
-  align-items: center;
-  justify-content: center;
+  /* 移除原有的 align-items/justify-content，改用自定义布局 */
+  overflow: auto; /* 防止图片超出视口时无法滚动 */
+}
+/* 新增预览图容器，实现上下居中、左右保持原图宽度 */
+.preview-img-wrapper {
+  position: absolute;
+  left: 0; /* 左右保持原图位置，不居中 */
+  top: 50%; /* 垂直居中第一步：顶部定位50% */
+  transform: translateY(-50%); /* 垂直居中第二步：向上偏移自身50% */
+  width: 100%;
+  padding: 20px; /* 预留边距 */
 }
 .img-preview img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%; /* 不超过容器宽度 */
+  max-height: 90vh; /* 不超过视口高度90% */
   object-fit: contain;
   border-radius: 8px;
+  display: block; /* 消除图片默认行内间隙 */
 }
 
 /* 加载/空状态提示 */
@@ -276,9 +287,11 @@ btf.addGlobalFn('pjaxComplete', () => {
   <div class="loading-tips">加载中...</div>
 </div>
 
-<!-- 大图预览弹窗 -->
+<!-- 大图预览弹窗 - 结构修改：新增wrapper容器 -->
 <div class="img-preview" id="imgPreview">
-  <img id="previewImg" alt="大图预览">
+  <div class="preview-img-wrapper">
+    <img id="previewImg" alt="大图预览">
+  </div>
 </div>
 
 <script>
@@ -290,7 +303,12 @@ const imgPreview = document.getElementById("imgPreview");
 const previewImg = document.getElementById("previewImg");
 
 // 关闭大图预览
-imgPreview.addEventListener('click', () => imgPreview.style.display = 'none');
+imgPreview.addEventListener('click', (e) => {
+  // 仅点击遮罩层时关闭，点击图片本身不关闭
+  if (e.target === imgPreview) {
+    imgPreview.style.display = 'none';
+  }
+});
 document.addEventListener('keydown', e => e.key === 'Escape' && (imgPreview.style.display = 'none'));
 
 // 时间格式化（和参考图格式对齐）
@@ -335,12 +353,11 @@ async function init() {
         imgHtml += '</div>';
       }
 
-      const avatarUrl = "https://api.dicebear.com/7.x/avataaars/svg?seed=user";
 
       html += `
         <div class="memos-item">
           <div class="avatar-wrap">
-            <img src="https://cdn.jsdelivr.net/gh/butterfly-theme/CDN/img/loading/loading2.gif" data-original="${avatarUrl}" alt="头像">
+            <img src="https://cdn.jsdelivr.net/gh/butterfly-theme/CDN/img/loading/loading2.gif" data-original="https://com.z2m.store/img/butterfly-icon.png" alt="头像">
           </div>
           <div class="memos-content-wrap">
             <div class="user-header">
@@ -359,7 +376,7 @@ async function init() {
     document.querySelectorAll('.img-grid img').forEach(img => {
       img.addEventListener('click', () => {
         previewImg.src = img.dataset.origin;
-        imgPreview.style.display = 'flex';
+        imgPreview.style.display = 'block'; // 改为block（原flex）
       });
     });
   } catch (e) {
@@ -381,7 +398,7 @@ init();
           </div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Diary/"><span class="card-category-list-name">Diary</span><span class="card-category-list-count">6</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%8B%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">宋朝</a> <a href="/tags/%E5%AE%89%E9%98%B2/" style="font-size: 1.37em; color: #99a4b2">安防</a> <a href="/tags/%E6%89%8D%E5%A5%B3/" style="font-size: 1.1em; color: #999">才女</a> <a href="/tags/%E6%B8%85%E6%9C%9D/" style="font-size: 1.1em; color: #999">清朝</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a> <a href="/tags/%E6%98%8E%E6%9C%9D/" style="font-size: 1.1em; color: #999">明朝</a> <a href="/tags/%E6%B1%89%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">汉朝</a> <a href="/tags/%E8%A1%8C%E4%B9%A6/" style="font-size: 1.1em; color: #999">行书</a> <a href="/tags/%E5%94%90%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">唐朝</a> <a href="/tags/%E6%88%98%E7%A5%9E/" style="font-size: 1.1em; color: #999">战神</a></div></div><div class="card-widget card-archives">
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%89%8D%E5%A5%B3/" style="font-size: 1.1em; color: #999">才女</a> <a href="/tags/%E6%98%8E%E6%9C%9D/" style="font-size: 1.1em; color: #999">明朝</a> <a href="/tags/%E5%AE%89%E9%98%B2/" style="font-size: 1.37em; color: #99a4b2">安防</a> <a href="/tags/%E6%B1%89%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">汉朝</a> <a href="/tags/%E6%B8%85%E6%9C%9D/" style="font-size: 1.1em; color: #999">清朝</a> <a href="/tags/%E6%88%98%E7%A5%9E/" style="font-size: 1.1em; color: #999">战神</a> <a href="/tags/%E5%AE%8B%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">宋朝</a> <a href="/tags/%E8%A1%8C%E4%B9%A6/" style="font-size: 1.1em; color: #999">行书</a> <a href="/tags/%E5%94%90%E6%9C%9D/" style="font-size: 1.23em; color: #999ea6">唐朝</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a></div></div><div class="card-widget card-archives">
     <div class="item-headline">
       <i class="fas fa-archive"></i>
       <span>归档</span>
@@ -418,7 +435,7 @@ init();
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">37</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-11T11:02:36.796Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Saimen</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat-btn" type="button" title="聊天" style="display:none"><i class="fas fa-message"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">37</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-12T02:30:19.998Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Saimen</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat-btn" type="button" title="聊天" style="display:none"><i class="fas fa-message"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.9/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
   const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
   const option = null
 

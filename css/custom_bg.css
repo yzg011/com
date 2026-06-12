@@ -9,15 +9,19 @@
 /* 平板 */
 @media (max-width: 992px) and (min-width: 768px) {
   #web_bg {
-    background-size: cover !important;
-    background-position: center !important;
+    background-size: cover !important; /* 覆盖容器，超出部分裁切 */
+    background-position: center center !important; /* 水平+垂直居中，左右超出裁切 */
+    background-height: 100% !important; /* 强制高度100% */
+    min-height: 100vh !important; /* 确保至少铺满视口高度 */
   }
 }
 
 /* 手机端 */
 @media (max-width: 767px) {
   #web_bg {
-    background-size: 100% auto !important;
-    background-position: center top !important;
+    background-size: cover !important; /* 覆盖容器，超出部分裁切 */
+    background-position: center center !important; /* 水平+垂直居中，左右超出裁切 */
+    background-height: 100% !important; /* 强制高度100% */
+    min-height: 100vh !important; /* 确保至少铺满视口高度 */
   }
 }
