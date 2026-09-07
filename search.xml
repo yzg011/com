@@ -23,25 +23,6 @@
     
     
     <entry>
-      <title>html转md文件</title>
-      <link href="/2026/06/02/htmltomd/"/>
-      <url>/2026/06/02/htmltomd/</url>
-      
-        <content type="html"><![CDATA[<h1 id="html转md文件"><a href="#html转md文件" class="headerlink" title="html转md文件"></a>html转md文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">from markdownify import MarkdownConverter</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line"></span><br><span class="line"># 读取 HTML 文件</span><br><span class="line">with open(&quot;技术支持知识库.html&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">    html_content = f.read()</span><br><span class="line"></span><br><span class="line"># 解析 HTML（支持表格、代码、链接、图片、标题）</span><br><span class="line">soup = BeautifulSoup(html_content, &quot;html.parser&quot;)</span><br><span class="line"></span><br><span class="line"># 高保真转 MD</span><br><span class="line">converter = MarkdownConverter(</span><br><span class="line">    heading_style=&quot;ATX&quot;,        # 保持 # 标题</span><br><span class="line">    code_style=&quot;fenced&quot;,         # 代码块用 ``` 包裹</span><br><span class="line">    strip=None,                  # 不删除任何内容</span><br><span class="line">    keep_xml=True                # 保留功能标签</span><br><span class="line">)</span><br><span class="line">md_content = converter.convert_soup(soup)</span><br><span class="line"></span><br><span class="line"># 保存 MD</span><br><span class="line">with open(&quot;技术支持知识库.md&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">    f.write(md_content)</span><br><span class="line"></span><br><span class="line">print(&quot;✅ 转换完成！已生成：技术支持知识库.md&quot;)</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 技术 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>摄像机常用功能英语表达</title>
       <link href="/2026/06/02/camera-function/"/>
       <url>/2026/06/02/camera-function/</url>
@@ -53,6 +34,25 @@
         <tags>
             
             <tag> 安防 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html转md文件</title>
+      <link href="/2026/06/02/htmltomd/"/>
+      <url>/2026/06/02/htmltomd/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html转md文件"><a href="#html转md文件" class="headerlink" title="html转md文件"></a>html转md文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">from markdownify import MarkdownConverter</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line"></span><br><span class="line"># 读取 HTML 文件</span><br><span class="line">with open(&quot;技术支持知识库.html&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">    html_content = f.read()</span><br><span class="line"></span><br><span class="line"># 解析 HTML（支持表格、代码、链接、图片、标题）</span><br><span class="line">soup = BeautifulSoup(html_content, &quot;html.parser&quot;)</span><br><span class="line"></span><br><span class="line"># 高保真转 MD</span><br><span class="line">converter = MarkdownConverter(</span><br><span class="line">    heading_style=&quot;ATX&quot;,        # 保持 # 标题</span><br><span class="line">    code_style=&quot;fenced&quot;,         # 代码块用 ``` 包裹</span><br><span class="line">    strip=None,                  # 不删除任何内容</span><br><span class="line">    keep_xml=True                # 保留功能标签</span><br><span class="line">)</span><br><span class="line">md_content = converter.convert_soup(soup)</span><br><span class="line"></span><br><span class="line"># 保存 MD</span><br><span class="line">with open(&quot;技术支持知识库.md&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">    f.write(md_content)</span><br><span class="line"></span><br><span class="line">print(&quot;✅ 转换完成！已生成：技术支持知识库.md&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
